@@ -39,3 +39,15 @@ C:\Users\Ajdin\Source\Repos\SeminarskiDRAOS2\LearningJapanese\obj\Debug\Learning
 D:\Github\SeminarskiDRAOS2\LearningJapanese\bin\Debug\LearningJapanese.exe.config
 D:\Github\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.exe
 D:\Github\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.pdb
+D:\Github\SeminarskiDRAOS2\LearningJapanese\bin\Debug\LearningJapanese.exe
+D:\Github\SeminarskiDRAOS2\LearningJapanese\bin\Debug\LearningJapanese.pdb
+D:\Github\SeminarskiDRAOS2\LearningJapanese\bin\Debug\HarisKontrola.dll
+D:\Github\SeminarskiDRAOS2\LearningJapanese\bin\Debug\Lectures.dll
+D:\Github\SeminarskiDRAOS2\LearningJapanese\bin\Debug\HarisKontrola.pdb
+D:\Github\SeminarskiDRAOS2\LearningJapanese\bin\Debug\Lectures.pdb
+D:\Github\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.csprojResolveAssemblyReference.cache
+D:\Github\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.Form1.resources
+D:\Github\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.GlavnaForma.resources
+D:\Github\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.Properties.Resources.resources
+D:\Github\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.Test.resources
+D:\Github\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.csproj.GenerateResource.Cache

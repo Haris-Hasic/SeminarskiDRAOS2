@@ -34,13 +34,13 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.userControl11 = new HarisKontrola.UserControl1();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.lectureMenu1 = new Lectures.LectureMenu();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
             this.test1 = new LearningJapanese.Test();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.lecturesMenu1 = new Lectures.LecturesMenu();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -105,22 +105,14 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.lectureMenu1);
+            this.tabPage3.Controls.Add(this.lecturesMenu1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(404, 604);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Lecture";
+            this.tabPage3.Text = "Lectures";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // lectureMenu1
-            // 
-            this.lectureMenu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
-            this.lectureMenu1.Location = new System.Drawing.Point(2, 2);
-            this.lectureMenu1.Name = "lectureMenu1";
-            this.lectureMenu1.Size = new System.Drawing.Size(400, 600);
-            this.lectureMenu1.TabIndex = 0;
             // 
             // tabPage4
             // 
@@ -163,6 +155,14 @@
             this.tabPage7.Text = "Test";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
+            // test1
+            // 
+            this.test1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.test1.Location = new System.Drawing.Point(2, 2);
+            this.test1.Name = "test1";
+            this.test1.Size = new System.Drawing.Size(400, 600);
+            this.test1.TabIndex = 0;
+            // 
             // tabPage8
             // 
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
@@ -173,13 +173,14 @@
             this.tabPage8.Text = "Help";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
-            // test1
+            // lecturesMenu1
             // 
-            this.test1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
-            this.test1.Location = new System.Drawing.Point(2, 2);
-            this.test1.Name = "test1";
-            this.test1.Size = new System.Drawing.Size(400, 600);
-            this.test1.TabIndex = 0;
+            this.lecturesMenu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.lecturesMenu1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lecturesMenu1.Location = new System.Drawing.Point(3, 3);
+            this.lecturesMenu1.Name = "lecturesMenu1";
+            this.lecturesMenu1.Size = new System.Drawing.Size(398, 598);
+            this.lecturesMenu1.TabIndex = 0;
             // 
             // GlavnaForma
             // 
@@ -210,8 +211,8 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
-        private Lectures.LectureMenu lectureMenu1;
         private HarisKontrola.UserControl2 userControl21;
         private Test test1;
+        private Lectures.LecturesMenu lecturesMenu1;
     }
 }

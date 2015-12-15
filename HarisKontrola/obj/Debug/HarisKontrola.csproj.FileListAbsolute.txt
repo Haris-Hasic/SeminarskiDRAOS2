@@ -16,3 +16,12 @@ C:\Users\Ajdin\Source\Repos\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontro
 C:\Users\Ajdin\Source\Repos\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.csproj.GenerateResource.Cache
 C:\Users\Ajdin\Source\Repos\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.dll
 C:\Users\Ajdin\Source\Repos\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.pdb
+D:\Github\SeminarskiDRAOS2\HarisKontrola\bin\Debug\HarisKontrola.dll
+D:\Github\SeminarskiDRAOS2\HarisKontrola\bin\Debug\HarisKontrola.pdb
+D:\Github\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.csprojResolveAssemblyReference.cache
+D:\Github\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.Properties.Resources.resources
+D:\Github\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.UserControl1.resources
+D:\Github\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.UserControl2.resources
+D:\Github\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.csproj.GenerateResource.Cache
+D:\Github\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.dll
+D:\Github\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.pdb

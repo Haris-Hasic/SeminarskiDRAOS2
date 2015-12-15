@@ -1,0 +1,7 @@
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\HarisKontrola\bin\Debug\HarisKontrola.dll
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\HarisKontrola\bin\Debug\HarisKontrola.pdb
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.csprojResolveAssemblyReference.cache
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.UserControl1.resources
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.csproj.GenerateResource.Cache
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.dll
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.pdb

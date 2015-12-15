@@ -6,3 +6,12 @@ C:\Users\Haris\Desktop\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.LecturesMenu
 C:\Users\Haris\Desktop\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.csproj.GenerateResource.Cache
 C:\Users\Haris\Desktop\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.dll
 C:\Users\Haris\Desktop\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.pdb
+D:\Github\SeminarskiDRAOS2\Lectures\bin\Debug\Lectures.dll
+D:\Github\SeminarskiDRAOS2\Lectures\bin\Debug\Lectures.pdb
+D:\Github\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.csprojResolveAssemblyReference.cache
+D:\Github\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.Greetings.resources
+D:\Github\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.LectureMenu.resources
+D:\Github\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.LecturesMenu.resources
+D:\Github\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.csproj.GenerateResource.Cache
+D:\Github\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.dll
+D:\Github\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.pdb

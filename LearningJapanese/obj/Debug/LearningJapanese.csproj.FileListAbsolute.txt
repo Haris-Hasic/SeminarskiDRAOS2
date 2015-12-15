@@ -36,3 +36,6 @@ C:\Users\Ajdin\Source\Repos\SeminarskiDRAOS2\LearningJapanese\obj\Debug\Learning
 C:\Users\Ajdin\Source\Repos\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.csproj.GenerateResource.Cache
 C:\Users\Ajdin\Source\Repos\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.exe
 C:\Users\Ajdin\Source\Repos\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.pdb
+D:\Github\SeminarskiDRAOS2\LearningJapanese\bin\Debug\LearningJapanese.exe.config
+D:\Github\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.exe
+D:\Github\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.pdb

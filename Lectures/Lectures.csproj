@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Greetings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Greetings.Designer.cs">
+      <DependentUpon>Greetings.cs</DependentUpon>
+    </Compile>
     <Compile Include="LectureMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -58,6 +64,9 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Greetings.resx">
+      <DependentUpon>Greetings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LectureMenu.resx">
       <DependentUpon>LectureMenu.cs</DependentUpon>
     </EmbeddedResource>

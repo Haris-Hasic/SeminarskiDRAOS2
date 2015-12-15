@@ -10,3 +10,12 @@ c:\users\haris\documents\visual studio 2012\Projects\LearningJapanese\LearningJa
 C:\Users\Haris\Desktop\SeminarskiDRAOS2\LearningJapanese\bin\Debug\LearningJapanese.exe.config
 C:\Users\Haris\Desktop\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.exe
 C:\Users\Haris\Desktop\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.pdb
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\LearningJapanese\bin\Debug\LearningJapanese.exe
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\LearningJapanese\bin\Debug\LearningJapanese.pdb
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\LearningJapanese\bin\Debug\HarisKontrola.dll
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\LearningJapanese\bin\Debug\HarisKontrola.pdb
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.csprojResolveAssemblyReference.cache
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.Form1.resources
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.GlavnaForma.resources
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.Properties.Resources.resources
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.csproj.GenerateResource.Cache

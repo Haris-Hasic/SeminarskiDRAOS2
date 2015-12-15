@@ -5,3 +5,5 @@ C:\Users\Haris\Desktop\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.Us
 C:\Users\Haris\Desktop\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.csproj.GenerateResource.Cache
 C:\Users\Haris\Desktop\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.dll
 C:\Users\Haris\Desktop\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.pdb
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.Properties.Resources.resources
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\HarisKontrola\obj\Debug\HarisKontrola.UserControl2.resources

@@ -19,3 +19,5 @@ C:\Users\Haris\Desktop\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapan
 C:\Users\Haris\Desktop\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.GlavnaForma.resources
 C:\Users\Haris\Desktop\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.Properties.Resources.resources
 C:\Users\Haris\Desktop\SeminarskiDRAOS2\LearningJapanese\obj\Debug\LearningJapanese.csproj.GenerateResource.Cache
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\LearningJapanese\bin\Debug\Lectures.dll
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\LearningJapanese\bin\Debug\Lectures.pdb

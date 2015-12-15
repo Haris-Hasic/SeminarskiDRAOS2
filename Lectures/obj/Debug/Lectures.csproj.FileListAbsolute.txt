@@ -1,0 +1,8 @@
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\Lectures\bin\Debug\Lectures.dll
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\Lectures\bin\Debug\Lectures.pdb
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.csprojResolveAssemblyReference.cache
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.LectureMenu.resources
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.LecturesMenu.resources
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.csproj.GenerateResource.Cache
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.dll
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.pdb

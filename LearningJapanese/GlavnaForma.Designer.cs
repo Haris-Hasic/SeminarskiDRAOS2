@@ -38,8 +38,10 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.lectureMenu1 = new Lectures.LectureMenu();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -90,6 +92,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.lectureMenu1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -148,6 +151,14 @@
             this.tabPage8.Text = "Help";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
+            // lectureMenu1
+            // 
+            this.lectureMenu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.lectureMenu1.Location = new System.Drawing.Point(2, 2);
+            this.lectureMenu1.Name = "lectureMenu1";
+            this.lectureMenu1.Size = new System.Drawing.Size(400, 600);
+            this.lectureMenu1.TabIndex = 0;
+            // 
             // GlavnaForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,6 +169,7 @@
             this.Text = "GlavnaForma";
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -174,5 +186,6 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
+        private Lectures.LectureMenu lectureMenu1;
     }
 }

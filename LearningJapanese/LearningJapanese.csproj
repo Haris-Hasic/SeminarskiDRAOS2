@@ -91,6 +91,10 @@
       <Project>{0C6B9EEA-3E66-444E-9BDE-5A48C24AECCD}</Project>
       <Name>HarisKontrola</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Lectures\Lectures.csproj">
+      <Project>{1122125F-E8E6-4260-8046-70F06FC60920}</Project>
+      <Name>Lectures</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

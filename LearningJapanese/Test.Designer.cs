@@ -33,7 +33,7 @@
             this.questionNumberLabel = new System.Windows.Forms.Label();
             this.questionLabel = new System.Windows.Forms.Label();
             this.hintLabel = new System.Windows.Forms.Label();
-            this.asnwer1Btn = new System.Windows.Forms.Button();
+            this.answer1Btn = new System.Windows.Forms.Button();
             this.answer2Btn = new System.Windows.Forms.Button();
             this.answer3Btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -65,6 +65,7 @@
             this.button1.TabIndex = 21;
             this.button1.Text = ">";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // questionNumberLabel
             // 
@@ -98,18 +99,18 @@
             this.hintLabel.TabIndex = 24;
             this.hintLabel.Text = "( Choose one answer )";
             // 
-            // asnwer1Btn
+            // answer1Btn
             // 
-            this.asnwer1Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
-            this.asnwer1Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.asnwer1Btn.Font = new System.Drawing.Font("Berlin Sans FB", 22F);
-            this.asnwer1Btn.ForeColor = System.Drawing.Color.White;
-            this.asnwer1Btn.Location = new System.Drawing.Point(92, 212);
-            this.asnwer1Btn.Name = "asnwer1Btn";
-            this.asnwer1Btn.Size = new System.Drawing.Size(214, 69);
-            this.asnwer1Btn.TabIndex = 25;
-            this.asnwer1Btn.Text = "Story";
-            this.asnwer1Btn.UseVisualStyleBackColor = false;
+            this.answer1Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.answer1Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.answer1Btn.Font = new System.Drawing.Font("Berlin Sans FB", 22F);
+            this.answer1Btn.ForeColor = System.Drawing.Color.White;
+            this.answer1Btn.Location = new System.Drawing.Point(92, 212);
+            this.answer1Btn.Name = "answer1Btn";
+            this.answer1Btn.Size = new System.Drawing.Size(214, 69);
+            this.answer1Btn.TabIndex = 25;
+            this.answer1Btn.Text = "Answer 1";
+            this.answer1Btn.UseVisualStyleBackColor = false;
             // 
             // answer2Btn
             // 
@@ -121,7 +122,7 @@
             this.answer2Btn.Name = "answer2Btn";
             this.answer2Btn.Size = new System.Drawing.Size(214, 69);
             this.answer2Btn.TabIndex = 26;
-            this.answer2Btn.Text = "Story";
+            this.answer2Btn.Text = "Answer 2";
             this.answer2Btn.UseVisualStyleBackColor = false;
             // 
             // answer3Btn
@@ -130,11 +131,11 @@
             this.answer3Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.answer3Btn.Font = new System.Drawing.Font("Berlin Sans FB", 22F);
             this.answer3Btn.ForeColor = System.Drawing.Color.White;
-            this.answer3Btn.Location = new System.Drawing.Point(104, 406);
+            this.answer3Btn.Location = new System.Drawing.Point(92, 409);
             this.answer3Btn.Name = "answer3Btn";
             this.answer3Btn.Size = new System.Drawing.Size(214, 69);
             this.answer3Btn.TabIndex = 27;
-            this.answer3Btn.Text = "Story";
+            this.answer3Btn.Text = "Answer 3";
             this.answer3Btn.UseVisualStyleBackColor = false;
             // 
             // Test
@@ -144,7 +145,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
             this.Controls.Add(this.answer3Btn);
             this.Controls.Add(this.answer2Btn);
-            this.Controls.Add(this.asnwer1Btn);
+            this.Controls.Add(this.answer1Btn);
             this.Controls.Add(this.hintLabel);
             this.Controls.Add(this.questionLabel);
             this.Controls.Add(this.questionNumberLabel);
@@ -164,7 +165,7 @@
         private System.Windows.Forms.Label questionNumberLabel;
         private System.Windows.Forms.Label questionLabel;
         private System.Windows.Forms.Label hintLabel;
-        private System.Windows.Forms.Button asnwer1Btn;
+        private System.Windows.Forms.Button answer1Btn;
         private System.Windows.Forms.Button answer2Btn;
         private System.Windows.Forms.Button answer3Btn;
     }

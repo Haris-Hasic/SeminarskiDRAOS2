@@ -16,5 +16,19 @@ namespace LearningJapanese
         {
             InitializeComponent();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (username_tb.Text.Equals("admin") && password_tb.Text.Equals("admin"))
+                tabControl1.SelectedIndex = 1;
+
+            ocistiKontrole();
+        }
+
+        void ocistiKontrole()
+        {
+            username_tb.Text = "";
+            password_tb.Text = "";
+        }
     }
 }

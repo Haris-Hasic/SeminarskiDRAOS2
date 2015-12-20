@@ -15,3 +15,4 @@ D:\Github\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.LecturesMenu.resources
 D:\Github\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.csproj.GenerateResource.Cache
 D:\Github\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.dll
 D:\Github\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.pdb
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\Lectures\obj\Debug\Lectures.Greetings.resources

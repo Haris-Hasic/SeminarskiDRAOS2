@@ -1,0 +1,9 @@
+c:\users\haris\documents\visual studio 2012\Projects\JapaneseLearningApp\JapaneseLearningApp\bin\Debug\JapaneseLearningApp.exe.config
+c:\users\haris\documents\visual studio 2012\Projects\JapaneseLearningApp\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.csprojResolveAssemblyReference.cache
+c:\users\haris\documents\visual studio 2012\Projects\JapaneseLearningApp\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.GlavnaForma.resources
+c:\users\haris\documents\visual studio 2012\Projects\JapaneseLearningApp\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.Properties.Resources.resources
+c:\users\haris\documents\visual studio 2012\Projects\JapaneseLearningApp\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.csproj.GenerateResource.Cache
+c:\users\haris\documents\visual studio 2012\Projects\JapaneseLearningApp\JapaneseLearningApp\bin\Debug\JapaneseLearningApp.exe
+c:\users\haris\documents\visual studio 2012\Projects\JapaneseLearningApp\JapaneseLearningApp\bin\Debug\JapaneseLearningApp.pdb
+c:\users\haris\documents\visual studio 2012\Projects\JapaneseLearningApp\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.exe
+c:\users\haris\documents\visual studio 2012\Projects\JapaneseLearningApp\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.pdb

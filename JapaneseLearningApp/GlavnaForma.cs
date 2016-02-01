@@ -426,5 +426,24 @@ namespace JapaneseLearningApp
                 konekcija.Close();
             }
         }
+
+        private void bLectures_Click(object sender, EventArgs e)
+        {
+            this.tabControl1.SelectedTab = tpLecturesList;
+        }
+
+        private void tpLecturesList_Enter(object sender, EventArgs e)
+        {
+            //this.mainPanel.Controls.Add(new LecturesList(mainPanel));
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == tabControl1.TabPages.IndexOf(tpLecturesList))
+            {
+                this.mainPanel.Controls.Add(new LecturesList(mainPanel));
+            }
+        }
+
     }
 }

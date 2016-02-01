@@ -8,7 +8,7 @@ namespace JapaneseLearningApp.Klase
 {
     class PitanjeOdaberiSliku: Pitanje
     {
-                String tacanOdgovor;
+        String tacanOdgovor;
         String odgovor1, odgovor2, odgovor3;
 
         public PitanjeOdaberiSliku(Int32 id, String tekst, String o1, String o2, String o3, String tOdg)

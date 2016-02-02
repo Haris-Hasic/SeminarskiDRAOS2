@@ -30,11 +30,11 @@
         {
             this.lJapaneseTitle = new System.Windows.Forms.Label();
             this.bHome = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bLectures = new System.Windows.Forms.Button();
+            this.bVocabulary = new System.Windows.Forms.Button();
             this.pJapanese = new System.Windows.Forms.Panel();
-            this.pEnglish = new System.Windows.Forms.Panel();
             this.lJapaneseText = new System.Windows.Forms.Label();
+            this.pEnglish = new System.Windows.Forms.Panel();
             this.lEnglishText = new System.Windows.Forms.Label();
             this.lEnglishTitle = new System.Windows.Forms.Label();
             this.pJapanese.SuspendLayout();
@@ -65,31 +65,33 @@
             this.bHome.Text = "Home";
             this.bHome.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // bLectures
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(4, 522);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 75);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Lectures";
-            this.button1.UseVisualStyleBackColor = false;
+            this.bLectures.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.bLectures.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bLectures.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bLectures.ForeColor = System.Drawing.Color.White;
+            this.bLectures.Location = new System.Drawing.Point(4, 522);
+            this.bLectures.Name = "bLectures";
+            this.bLectures.Size = new System.Drawing.Size(129, 75);
+            this.bLectures.TabIndex = 20;
+            this.bLectures.Text = "Lectures";
+            this.bLectures.UseVisualStyleBackColor = false;
+            this.bLectures.Click += new System.EventHandler(this.bLectures_Click);
             // 
-            // button2
+            // bVocabulary
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(269, 522);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 75);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Vocab";
-            this.button2.UseVisualStyleBackColor = false;
+            this.bVocabulary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.bVocabulary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bVocabulary.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bVocabulary.ForeColor = System.Drawing.Color.White;
+            this.bVocabulary.Location = new System.Drawing.Point(269, 522);
+            this.bVocabulary.Name = "bVocabulary";
+            this.bVocabulary.Size = new System.Drawing.Size(128, 75);
+            this.bVocabulary.TabIndex = 21;
+            this.bVocabulary.Text = "Vocab";
+            this.bVocabulary.UseVisualStyleBackColor = false;
+            this.bVocabulary.Click += new System.EventHandler(this.bVocabulary_Click);
             // 
             // pJapanese
             // 
@@ -100,16 +102,6 @@
             this.pJapanese.Name = "pJapanese";
             this.pJapanese.Size = new System.Drawing.Size(393, 182);
             this.pJapanese.TabIndex = 22;
-            // 
-            // pEnglish
-            // 
-            this.pEnglish.AutoScroll = true;
-            this.pEnglish.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pEnglish.Controls.Add(this.lEnglishText);
-            this.pEnglish.Location = new System.Drawing.Point(4, 319);
-            this.pEnglish.Name = "pEnglish";
-            this.pEnglish.Size = new System.Drawing.Size(393, 182);
-            this.pEnglish.TabIndex = 23;
             // 
             // lJapaneseText
             // 
@@ -122,6 +114,16 @@
             this.lJapaneseText.Size = new System.Drawing.Size(179, 21);
             this.lJapaneseText.TabIndex = 24;
             this.lJapaneseText.Text = "Story Text - Japanese";
+            // 
+            // pEnglish
+            // 
+            this.pEnglish.AutoScroll = true;
+            this.pEnglish.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pEnglish.Controls.Add(this.lEnglishText);
+            this.pEnglish.Location = new System.Drawing.Point(4, 319);
+            this.pEnglish.Name = "pEnglish";
+            this.pEnglish.Size = new System.Drawing.Size(393, 182);
+            this.pEnglish.TabIndex = 23;
             // 
             // lEnglishText
             // 
@@ -155,8 +157,8 @@
             this.Controls.Add(this.lEnglishTitle);
             this.Controls.Add(this.pEnglish);
             this.Controls.Add(this.pJapanese);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bVocabulary);
+            this.Controls.Add(this.bLectures);
             this.Controls.Add(this.bHome);
             this.Controls.Add(this.lJapaneseTitle);
             this.Name = "StoryPanel";
@@ -174,8 +176,8 @@
 
         private System.Windows.Forms.Label lJapaneseTitle;
         private System.Windows.Forms.Button bHome;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bLectures;
+        private System.Windows.Forms.Button bVocabulary;
         private System.Windows.Forms.Panel pJapanese;
         private System.Windows.Forms.Panel pEnglish;
         private System.Windows.Forms.Label lJapaneseText;

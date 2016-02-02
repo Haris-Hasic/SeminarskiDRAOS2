@@ -37,6 +37,7 @@
             this.bLecture5 = new System.Windows.Forms.Button();
             this.bLecture6 = new System.Windows.Forms.Button();
             this.bLecture7 = new System.Windows.Forms.Button();
+            this.bHome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -62,6 +63,7 @@
             this.bLectureIntro.TabIndex = 17;
             this.bLectureIntro.Text = "Intro";
             this.bLectureIntro.UseVisualStyleBackColor = false;
+            this.bLectureIntro.Click += new System.EventHandler(this.bLectureIntro_Click);
             // 
             // bLecture1
             // 
@@ -89,6 +91,7 @@
             this.bLecture2.TabIndex = 19;
             this.bLecture2.Text = "2";
             this.bLecture2.UseVisualStyleBackColor = false;
+            this.bLecture2.Click += new System.EventHandler(this.bLecture2_Click);
             // 
             // bLecture3
             // 
@@ -102,6 +105,7 @@
             this.bLecture3.TabIndex = 20;
             this.bLecture3.Text = "3";
             this.bLecture3.UseVisualStyleBackColor = false;
+            this.bLecture3.Click += new System.EventHandler(this.bLecture3_Click);
             // 
             // bLecture4
             // 
@@ -115,6 +119,7 @@
             this.bLecture4.TabIndex = 21;
             this.bLecture4.Text = "4";
             this.bLecture4.UseVisualStyleBackColor = false;
+            this.bLecture4.Click += new System.EventHandler(this.bLecture4_Click);
             // 
             // bLecture5
             // 
@@ -128,6 +133,7 @@
             this.bLecture5.TabIndex = 22;
             this.bLecture5.Text = "5";
             this.bLecture5.UseVisualStyleBackColor = false;
+            this.bLecture5.Click += new System.EventHandler(this.bLecture5_Click);
             // 
             // bLecture6
             // 
@@ -141,6 +147,7 @@
             this.bLecture6.TabIndex = 23;
             this.bLecture6.Text = "6";
             this.bLecture6.UseVisualStyleBackColor = false;
+            this.bLecture6.Click += new System.EventHandler(this.bLecture6_Click);
             // 
             // bLecture7
             // 
@@ -154,12 +161,27 @@
             this.bLecture7.TabIndex = 24;
             this.bLecture7.Text = "7";
             this.bLecture7.UseVisualStyleBackColor = false;
+            this.bLecture7.Click += new System.EventHandler(this.bLecture7_Click);
+            // 
+            // bHome
+            // 
+            this.bHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bHome.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bHome.ForeColor = System.Drawing.Color.White;
+            this.bHome.Location = new System.Drawing.Point(132, 516);
+            this.bHome.Name = "bHome";
+            this.bHome.Size = new System.Drawing.Size(128, 75);
+            this.bHome.TabIndex = 25;
+            this.bHome.Text = "Home";
+            this.bHome.UseVisualStyleBackColor = false;
             // 
             // LecturesList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.Controls.Add(this.bHome);
             this.Controls.Add(this.bLecture7);
             this.Controls.Add(this.bLecture6);
             this.Controls.Add(this.bLecture5);
@@ -187,5 +209,6 @@
         private System.Windows.Forms.Button bLecture5;
         private System.Windows.Forms.Button bLecture6;
         private System.Windows.Forms.Button bLecture7;
+        private System.Windows.Forms.Button bHome;
     }
 }

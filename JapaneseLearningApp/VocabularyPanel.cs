@@ -58,5 +58,17 @@ namespace JapaneseLearningApp
                 flpVocabulary.Controls.Add(error);
             }
         }
+
+        private void bStory_Click(object sender, EventArgs e)
+        {
+            this.mainPanel.Controls.Add(new StoryPanel(this.mainPanel, this.lectureNumber));
+            this.mainPanel.Controls.Remove(this);
+        }
+
+        private void bGrammar_Click(object sender, EventArgs e)
+        {
+            this.mainPanel.Controls.Add(new GrammarPanel(this.mainPanel, this.lectureNumber));
+            this.mainPanel.Controls.Remove(this);
+        }
     }
 }

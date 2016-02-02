@@ -54,20 +54,27 @@ namespace JapaneseLearningApp
         }
 
         private void bStory_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
+        {            
             this.mainPanel.Controls.Add(new StoryPanel(this.mainPanel, this.lectureNumber));
+            this.mainPanel.Controls.Remove(this);
         }
 
         private void bVocabulary_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
+        {            
             this.mainPanel.Controls.Add(new VocabularyPanel(this.mainPanel, this.lectureNumber));
+            this.mainPanel.Controls.Remove(this);
         }
 
         private void bGrammar_Click(object sender, EventArgs e)
-        {
+        {            
+            this.mainPanel.Controls.Add(new GrammarPanel(this.mainPanel, this.lectureNumber));
+            this.mainPanel.Controls.Remove(this);
+        }
 
+        private void bLectures_Click(object sender, EventArgs e)
+        {            
+            this.mainPanel.Controls.Add(new LecturesList(this.mainPanel));
+            this.mainPanel.Controls.Remove(this);
         }
     }
 }

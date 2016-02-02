@@ -30,8 +30,8 @@
         {
             this.lTitle = new System.Windows.Forms.Label();
             this.bHome = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bStory = new System.Windows.Forms.Button();
+            this.bGrammar = new System.Windows.Forms.Button();
             this.flpVocabulary = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
@@ -59,31 +59,33 @@
             this.bHome.Text = "Home";
             this.bHome.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // bStory
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(3, 522);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 75);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Story";
-            this.button1.UseVisualStyleBackColor = false;
+            this.bStory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.bStory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bStory.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bStory.ForeColor = System.Drawing.Color.White;
+            this.bStory.Location = new System.Drawing.Point(3, 522);
+            this.bStory.Name = "bStory";
+            this.bStory.Size = new System.Drawing.Size(128, 75);
+            this.bStory.TabIndex = 20;
+            this.bStory.Text = "Story";
+            this.bStory.UseVisualStyleBackColor = false;
+            this.bStory.Click += new System.EventHandler(this.bStory_Click);
             // 
-            // button2
+            // bGrammar
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Berlin Sans FB", 18.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(269, 522);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 75);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Grammar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.bGrammar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.bGrammar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bGrammar.Font = new System.Drawing.Font("Berlin Sans FB", 18.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bGrammar.ForeColor = System.Drawing.Color.White;
+            this.bGrammar.Location = new System.Drawing.Point(269, 522);
+            this.bGrammar.Name = "bGrammar";
+            this.bGrammar.Size = new System.Drawing.Size(128, 75);
+            this.bGrammar.TabIndex = 21;
+            this.bGrammar.Text = "Grammar";
+            this.bGrammar.UseVisualStyleBackColor = false;
+            this.bGrammar.Click += new System.EventHandler(this.bGrammar_Click);
             // 
             // flpVocabulary
             // 
@@ -99,8 +101,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.Controls.Add(this.flpVocabulary);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bGrammar);
+            this.Controls.Add(this.bStory);
             this.Controls.Add(this.bHome);
             this.Controls.Add(this.lTitle);
             this.Name = "VocabularyPanel";
@@ -114,8 +116,8 @@
 
         private System.Windows.Forms.Label lTitle;
         private System.Windows.Forms.Button bHome;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bStory;
+        private System.Windows.Forms.Button bGrammar;
         private System.Windows.Forms.FlowLayoutPanel flpVocabulary;
     }
 }

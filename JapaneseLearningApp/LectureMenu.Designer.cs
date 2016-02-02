@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lTitle = new System.Windows.Forms.Label();
-            this.bHome = new System.Windows.Forms.Button();
+            this.bLectures = new System.Windows.Forms.Button();
             this.bPrevious = new System.Windows.Forms.Button();
             this.bNext = new System.Windows.Forms.Button();
             this.bStory = new System.Windows.Forms.Button();
@@ -48,18 +48,19 @@
             this.lTitle.TabIndex = 1;
             this.lTitle.Text = "Lecture";
             // 
-            // bHome
+            // bLectures
             // 
-            this.bHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
-            this.bHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bHome.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bHome.ForeColor = System.Drawing.Color.White;
-            this.bHome.Location = new System.Drawing.Point(132, 511);
-            this.bHome.Name = "bHome";
-            this.bHome.Size = new System.Drawing.Size(128, 75);
-            this.bHome.TabIndex = 18;
-            this.bHome.Text = "Home";
-            this.bHome.UseVisualStyleBackColor = false;
+            this.bLectures.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLectures.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bLectures.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bLectures.ForeColor = System.Drawing.Color.White;
+            this.bLectures.Location = new System.Drawing.Point(132, 511);
+            this.bLectures.Name = "bLectures";
+            this.bLectures.Size = new System.Drawing.Size(128, 75);
+            this.bLectures.TabIndex = 18;
+            this.bLectures.Text = "Lectures";
+            this.bLectures.UseVisualStyleBackColor = false;
+            this.bLectures.Click += new System.EventHandler(this.bLectures_Click);
             // 
             // bPrevious
             // 
@@ -141,7 +142,7 @@
             this.Controls.Add(this.bStory);
             this.Controls.Add(this.bNext);
             this.Controls.Add(this.bPrevious);
-            this.Controls.Add(this.bHome);
+            this.Controls.Add(this.bLectures);
             this.Controls.Add(this.lTitle);
             this.Name = "LectureMenu";
             this.Size = new System.Drawing.Size(400, 600);
@@ -153,7 +154,7 @@
         #endregion
 
         private System.Windows.Forms.Label lTitle;
-        private System.Windows.Forms.Button bHome;
+        private System.Windows.Forms.Button bLectures;
         private System.Windows.Forms.Button bPrevious;
         private System.Windows.Forms.Button bNext;
         private System.Windows.Forms.Button bStory;

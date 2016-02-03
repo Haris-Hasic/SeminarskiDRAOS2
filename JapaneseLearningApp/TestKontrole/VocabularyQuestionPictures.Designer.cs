@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lTitle = new System.Windows.Forms.Label();
+            this.lblQUESTION = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblQUESTIONTXT = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblQUESTIONINDICATOR = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
-            // lTitle
+            // lblQUESTION
             // 
-            this.lTitle.AutoSize = true;
-            this.lTitle.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTitle.ForeColor = System.Drawing.Color.White;
-            this.lTitle.Location = new System.Drawing.Point(42, 43);
-            this.lTitle.Name = "lTitle";
-            this.lTitle.Size = new System.Drawing.Size(319, 32);
-            this.lTitle.TabIndex = 28;
-            this.lTitle.Text = "Vocabulary - Question #1";
+            this.lblQUESTION.AutoSize = true;
+            this.lblQUESTION.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQUESTION.ForeColor = System.Drawing.Color.White;
+            this.lblQUESTION.Location = new System.Drawing.Point(42, 43);
+            this.lblQUESTION.Name = "lblQUESTION";
+            this.lblQUESTION.Size = new System.Drawing.Size(319, 32);
+            this.lblQUESTION.TabIndex = 28;
+            this.lblQUESTION.Text = "Vocabulary - Question #1";
             // 
             // label5
             // 
@@ -97,16 +97,16 @@
             this.pictureBox4.TabIndex = 33;
             this.pictureBox4.TabStop = false;
             // 
-            // label1
+            // lblQUESTIONTXT
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(156, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 32);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Word";
+            this.lblQUESTIONTXT.AutoSize = true;
+            this.lblQUESTIONTXT.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQUESTIONTXT.ForeColor = System.Drawing.Color.White;
+            this.lblQUESTIONTXT.Location = new System.Drawing.Point(156, 85);
+            this.lblQUESTIONTXT.Name = "lblQUESTIONTXT";
+            this.lblQUESTIONTXT.Size = new System.Drawing.Size(81, 32);
+            this.lblQUESTIONTXT.TabIndex = 34;
+            this.lblQUESTIONTXT.Text = "Word";
             // 
             // progressBar1
             // 
@@ -115,31 +115,31 @@
             this.progressBar1.Size = new System.Drawing.Size(346, 45);
             this.progressBar1.TabIndex = 35;
             // 
-            // label2
+            // lblQUESTIONINDICATOR
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(167, 522);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 32);
-            this.label2.TabIndex = 36;
-            this.label2.Text = "0/10";
+            this.lblQUESTIONINDICATOR.AutoSize = true;
+            this.lblQUESTIONINDICATOR.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQUESTIONINDICATOR.ForeColor = System.Drawing.Color.White;
+            this.lblQUESTIONINDICATOR.Location = new System.Drawing.Point(167, 522);
+            this.lblQUESTIONINDICATOR.Name = "lblQUESTIONINDICATOR";
+            this.lblQUESTIONINDICATOR.Size = new System.Drawing.Size(65, 32);
+            this.lblQUESTIONINDICATOR.TabIndex = 36;
+            this.lblQUESTIONINDICATOR.Text = "0/10";
             // 
             // VocabularyQuestionPictures
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblQUESTIONINDICATOR);
             this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblQUESTIONTXT);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.lTitle);
+            this.Controls.Add(this.lblQUESTION);
             this.Name = "VocabularyQuestionPictures";
             this.Size = new System.Drawing.Size(400, 600);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -153,14 +153,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lTitle;
+        private System.Windows.Forms.Label lblQUESTION;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblQUESTIONTXT;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblQUESTIONINDICATOR;
     }
 }

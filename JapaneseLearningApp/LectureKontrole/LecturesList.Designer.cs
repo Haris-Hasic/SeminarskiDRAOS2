@@ -45,11 +45,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(136, 36);
+            this.label1.Location = new System.Drawing.Point(80, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 32);
+            this.label1.Size = new System.Drawing.Size(245, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Lectures";
+            this.label1.Text = "Select the chapter !";
             // 
             // bLectureIntro
             // 
@@ -57,9 +57,9 @@
             this.bLectureIntro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLectureIntro.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLectureIntro.ForeColor = System.Drawing.Color.White;
-            this.bLectureIntro.Location = new System.Drawing.Point(42, 114);
+            this.bLectureIntro.Location = new System.Drawing.Point(25, 117);
             this.bLectureIntro.Name = "bLectureIntro";
-            this.bLectureIntro.Size = new System.Drawing.Size(82, 75);
+            this.bLectureIntro.Size = new System.Drawing.Size(110, 100);
             this.bLectureIntro.TabIndex = 17;
             this.bLectureIntro.Text = "Intro";
             this.bLectureIntro.UseVisualStyleBackColor = false;
@@ -71,9 +71,9 @@
             this.bLecture1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture1.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture1.ForeColor = System.Drawing.Color.White;
-            this.bLecture1.Location = new System.Drawing.Point(155, 114);
+            this.bLecture1.Location = new System.Drawing.Point(142, 117);
             this.bLecture1.Name = "bLecture1";
-            this.bLecture1.Size = new System.Drawing.Size(82, 75);
+            this.bLecture1.Size = new System.Drawing.Size(110, 100);
             this.bLecture1.TabIndex = 18;
             this.bLecture1.Text = "1";
             this.bLecture1.UseVisualStyleBackColor = false;
@@ -85,9 +85,9 @@
             this.bLecture2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture2.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture2.ForeColor = System.Drawing.Color.White;
-            this.bLecture2.Location = new System.Drawing.Point(265, 114);
+            this.bLecture2.Location = new System.Drawing.Point(258, 117);
             this.bLecture2.Name = "bLecture2";
-            this.bLecture2.Size = new System.Drawing.Size(82, 75);
+            this.bLecture2.Size = new System.Drawing.Size(110, 100);
             this.bLecture2.TabIndex = 19;
             this.bLecture2.Text = "2";
             this.bLecture2.UseVisualStyleBackColor = false;
@@ -99,9 +99,9 @@
             this.bLecture3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture3.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture3.ForeColor = System.Drawing.Color.White;
-            this.bLecture3.Location = new System.Drawing.Point(42, 221);
+            this.bLecture3.Location = new System.Drawing.Point(25, 223);
             this.bLecture3.Name = "bLecture3";
-            this.bLecture3.Size = new System.Drawing.Size(82, 75);
+            this.bLecture3.Size = new System.Drawing.Size(110, 100);
             this.bLecture3.TabIndex = 20;
             this.bLecture3.Text = "3";
             this.bLecture3.UseVisualStyleBackColor = false;
@@ -113,9 +113,9 @@
             this.bLecture4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture4.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture4.ForeColor = System.Drawing.Color.White;
-            this.bLecture4.Location = new System.Drawing.Point(155, 221);
+            this.bLecture4.Location = new System.Drawing.Point(142, 223);
             this.bLecture4.Name = "bLecture4";
-            this.bLecture4.Size = new System.Drawing.Size(82, 75);
+            this.bLecture4.Size = new System.Drawing.Size(110, 100);
             this.bLecture4.TabIndex = 21;
             this.bLecture4.Text = "4";
             this.bLecture4.UseVisualStyleBackColor = false;
@@ -127,9 +127,9 @@
             this.bLecture5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture5.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture5.ForeColor = System.Drawing.Color.White;
-            this.bLecture5.Location = new System.Drawing.Point(265, 221);
+            this.bLecture5.Location = new System.Drawing.Point(258, 223);
             this.bLecture5.Name = "bLecture5";
-            this.bLecture5.Size = new System.Drawing.Size(82, 75);
+            this.bLecture5.Size = new System.Drawing.Size(110, 100);
             this.bLecture5.TabIndex = 22;
             this.bLecture5.Text = "5";
             this.bLecture5.UseVisualStyleBackColor = false;
@@ -141,9 +141,9 @@
             this.bLecture6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture6.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture6.ForeColor = System.Drawing.Color.White;
-            this.bLecture6.Location = new System.Drawing.Point(42, 327);
+            this.bLecture6.Location = new System.Drawing.Point(25, 329);
             this.bLecture6.Name = "bLecture6";
-            this.bLecture6.Size = new System.Drawing.Size(82, 75);
+            this.bLecture6.Size = new System.Drawing.Size(110, 100);
             this.bLecture6.TabIndex = 23;
             this.bLecture6.Text = "6";
             this.bLecture6.UseVisualStyleBackColor = false;
@@ -155,9 +155,9 @@
             this.bLecture7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture7.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture7.ForeColor = System.Drawing.Color.White;
-            this.bLecture7.Location = new System.Drawing.Point(155, 327);
+            this.bLecture7.Location = new System.Drawing.Point(141, 329);
             this.bLecture7.Name = "bLecture7";
-            this.bLecture7.Size = new System.Drawing.Size(82, 75);
+            this.bLecture7.Size = new System.Drawing.Size(110, 100);
             this.bLecture7.TabIndex = 24;
             this.bLecture7.Text = "7";
             this.bLecture7.UseVisualStyleBackColor = false;

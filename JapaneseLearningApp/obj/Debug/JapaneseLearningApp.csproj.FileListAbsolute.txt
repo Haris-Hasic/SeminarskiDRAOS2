@@ -7,3 +7,17 @@ c:\users\haris\documents\visual studio 2012\Projects\JapaneseLearningApp\Japanes
 c:\users\haris\documents\visual studio 2012\Projects\JapaneseLearningApp\JapaneseLearningApp\bin\Debug\JapaneseLearningApp.pdb
 c:\users\haris\documents\visual studio 2012\Projects\JapaneseLearningApp\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.exe
 c:\users\haris\documents\visual studio 2012\Projects\JapaneseLearningApp\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.pdb
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\bin\Debug\JapaneseLearningApp.exe.config
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.exe
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.pdb
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.csprojResolveAssemblyReference.cache
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.GlavnaForma.resources
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.GrammarPanel.resources
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.LectureMenu.resources
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.LecturesList.resources
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.Properties.Resources.resources
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.StoryPanel.resources
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.VocabularyPanel.resources
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.csproj.GenerateResource.Cache
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\bin\Debug\JapaneseLearningApp.exe
+C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\bin\Debug\JapaneseLearningApp.pdb

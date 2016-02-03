@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GlavnaForma));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpLOGIN = new System.Windows.Forms.TabPage();
+            this.btnLOGIN = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.llblSIGNUP = new System.Windows.Forms.LinkLabel();
             this.llblFORGOTPASS = new System.Windows.Forms.LinkLabel();
@@ -39,6 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tbPASSWORD = new System.Windows.Forms.TextBox();
             this.tbUSERNAME = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tpPRVIMENU = new System.Windows.Forms.TabPage();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -51,6 +53,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.bLectures = new System.Windows.Forms.Button();
             this.tpSIGNUP = new System.Windows.Forms.TabPage();
+            this.btnUPLOAD = new System.Windows.Forms.Button();
+            this.pbSLIKA = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbUNMASKPASS = new System.Windows.Forms.CheckBox();
             this.tbNEWPASSWORD = new System.Windows.Forms.TextBox();
@@ -79,18 +83,25 @@
             this.lblUSER = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.rtbPROFILEC = new System.Windows.Forms.RichTextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.rbPROFILEE = new System.Windows.Forms.RadioButton();
             this.rbPROFILEB = new System.Windows.Forms.RadioButton();
             this.rbPROFILEI = new System.Windows.Forms.RadioButton();
             this.label18 = new System.Windows.Forms.Label();
+            this.btnEDITDATE = new System.Windows.Forms.Button();
+            this.btnEDITLASTNAME = new System.Windows.Forms.Button();
+            this.btnEDITFIRSTNAME = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.tbPROFILEFN = new System.Windows.Forms.TextBox();
             this.tbPROFILELN = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dtpPROFILEBD = new System.Windows.Forms.DateTimePicker();
+            this.btnEDITPROFILEPIC = new System.Windows.Forms.Button();
+            this.pbPROFILESL = new System.Windows.Forms.PictureBox();
             this.tpFORGOTPASS = new System.Windows.Forms.TabPage();
             this.button13 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
@@ -116,31 +127,23 @@
             this.label12 = new System.Windows.Forms.Label();
             this.tpLecturesList = new System.Windows.Forms.TabPage();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.btnLOGIN = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnUPLOAD = new System.Windows.Forms.Button();
-            this.pbSLIKA = new System.Windows.Forms.PictureBox();
-            this.btnEDITPROFILEPIC = new System.Windows.Forms.Button();
-            this.pbPROFILESL = new System.Windows.Forms.PictureBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.btnEDITDATE = new System.Windows.Forms.Button();
-            this.btnEDITLASTNAME = new System.Windows.Forms.Button();
-            this.btnEDITFIRSTNAME = new System.Windows.Forms.Button();
+            this.tpTEST = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tpLOGIN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tpPRVIMENU.SuspendLayout();
             this.tpSIGNUP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSLIKA)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tpPROFILE.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPROFILESL)).BeginInit();
             this.tpFORGOTPASS.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tpLecturesList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSLIKA)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPROFILESL)).BeginInit();
+            this.tpTEST.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -151,6 +154,7 @@
             this.tabControl1.Controls.Add(this.tpPROFILE);
             this.tabControl1.Controls.Add(this.tpFORGOTPASS);
             this.tabControl1.Controls.Add(this.tpLecturesList);
+            this.tabControl1.Controls.Add(this.tpTEST);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -179,6 +183,20 @@
             this.tpLOGIN.TabIndex = 0;
             this.tpLOGIN.Text = "Login";
             this.tpLOGIN.UseVisualStyleBackColor = true;
+            // 
+            // btnLOGIN
+            // 
+            this.btnLOGIN.BackgroundImage = global::JapaneseLearningApp.Properties.Resources.MitchiriNeko2;
+            this.btnLOGIN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLOGIN.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLOGIN.ForeColor = System.Drawing.Color.White;
+            this.btnLOGIN.Location = new System.Drawing.Point(-10, 536);
+            this.btnLOGIN.Name = "btnLOGIN";
+            this.btnLOGIN.Size = new System.Drawing.Size(420, 65);
+            this.btnLOGIN.TabIndex = 4;
+            this.btnLOGIN.Text = "Login";
+            this.btnLOGIN.UseVisualStyleBackColor = true;
+            this.btnLOGIN.Click += new System.EventHandler(this.btnLOGIN_Click);
             // 
             // label4
             // 
@@ -279,6 +297,16 @@
             this.tbUSERNAME.Text = " Username...";
             this.tbUSERNAME.Enter += new System.EventHandler(this.tbUSERNAME_Enter);
             this.tbUSERNAME.Leave += new System.EventHandler(this.tbUSERNAME_Leave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = global::JapaneseLearningApp.Properties.Resources.MitchiriNeko;
+            this.pictureBox1.Location = new System.Drawing.Point(-10, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(419, 502);
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
             // 
             // tpPRVIMENU
             // 
@@ -444,6 +472,32 @@
             this.tpSIGNUP.Size = new System.Drawing.Size(404, 604);
             this.tpSIGNUP.TabIndex = 2;
             this.tpSIGNUP.Text = "Signup";
+            // 
+            // btnUPLOAD
+            // 
+            this.btnUPLOAD.BackColor = System.Drawing.Color.White;
+            this.btnUPLOAD.BackgroundImage = global::JapaneseLearningApp.Properties.Resources.pencil;
+            this.btnUPLOAD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUPLOAD.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUPLOAD.ForeColor = System.Drawing.Color.White;
+            this.btnUPLOAD.Location = new System.Drawing.Point(258, 128);
+            this.btnUPLOAD.Name = "btnUPLOAD";
+            this.btnUPLOAD.Size = new System.Drawing.Size(25, 25);
+            this.btnUPLOAD.TabIndex = 42;
+            this.btnUPLOAD.UseVisualStyleBackColor = false;
+            this.btnUPLOAD.Click += new System.EventHandler(this.btnUPLOAD_Click);
+            // 
+            // pbSLIKA
+            // 
+            this.pbSLIKA.BackColor = System.Drawing.Color.White;
+            this.pbSLIKA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSLIKA.Image = global::JapaneseLearningApp.Properties.Resources.ProfilePicPlaceHolder;
+            this.pbSLIKA.Location = new System.Drawing.Point(126, 26);
+            this.pbSLIKA.Name = "pbSLIKA";
+            this.pbSLIKA.Size = new System.Drawing.Size(160, 130);
+            this.pbSLIKA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSLIKA.TabIndex = 45;
+            this.pbSLIKA.TabStop = false;
             // 
             // groupBox2
             // 
@@ -813,6 +867,34 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "User Info";
             // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.White;
+            this.button11.BackgroundImage = global::JapaneseLearningApp.Properties.Resources.pencil;
+            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button11.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.Location = new System.Drawing.Point(301, 251);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(25, 25);
+            this.button11.TabIndex = 53;
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.button10.BackgroundImage = global::JapaneseLearningApp.Properties.Resources.pencil;
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button10.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(305, 138);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(25, 25);
+            this.button10.TabIndex = 42;
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // rtbPROFILEC
             // 
             this.rtbPROFILEC.Enabled = false;
@@ -890,6 +972,48 @@
             this.label18.TabIndex = 38;
             this.label18.Text = "Rate your current japanese skills?";
             // 
+            // btnEDITDATE
+            // 
+            this.btnEDITDATE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.btnEDITDATE.BackgroundImage = global::JapaneseLearningApp.Properties.Resources.pencil;
+            this.btnEDITDATE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEDITDATE.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEDITDATE.ForeColor = System.Drawing.Color.White;
+            this.btnEDITDATE.Location = new System.Drawing.Point(305, 83);
+            this.btnEDITDATE.Name = "btnEDITDATE";
+            this.btnEDITDATE.Size = new System.Drawing.Size(25, 25);
+            this.btnEDITDATE.TabIndex = 40;
+            this.btnEDITDATE.UseVisualStyleBackColor = false;
+            this.btnEDITDATE.Click += new System.EventHandler(this.btnEDITDATE_Click);
+            // 
+            // btnEDITLASTNAME
+            // 
+            this.btnEDITLASTNAME.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.btnEDITLASTNAME.BackgroundImage = global::JapaneseLearningApp.Properties.Resources.pencil;
+            this.btnEDITLASTNAME.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEDITLASTNAME.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEDITLASTNAME.ForeColor = System.Drawing.Color.White;
+            this.btnEDITLASTNAME.Location = new System.Drawing.Point(305, 52);
+            this.btnEDITLASTNAME.Name = "btnEDITLASTNAME";
+            this.btnEDITLASTNAME.Size = new System.Drawing.Size(25, 25);
+            this.btnEDITLASTNAME.TabIndex = 39;
+            this.btnEDITLASTNAME.UseVisualStyleBackColor = false;
+            this.btnEDITLASTNAME.Click += new System.EventHandler(this.btnEDITLASTNAME_Click);
+            // 
+            // btnEDITFIRSTNAME
+            // 
+            this.btnEDITFIRSTNAME.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.btnEDITFIRSTNAME.BackgroundImage = global::JapaneseLearningApp.Properties.Resources.pencil;
+            this.btnEDITFIRSTNAME.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEDITFIRSTNAME.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEDITFIRSTNAME.ForeColor = System.Drawing.Color.White;
+            this.btnEDITFIRSTNAME.Location = new System.Drawing.Point(305, 21);
+            this.btnEDITFIRSTNAME.Name = "btnEDITFIRSTNAME";
+            this.btnEDITFIRSTNAME.Size = new System.Drawing.Size(25, 25);
+            this.btnEDITFIRSTNAME.TabIndex = 38;
+            this.btnEDITFIRSTNAME.UseVisualStyleBackColor = false;
+            this.btnEDITFIRSTNAME.Click += new System.EventHandler(this.btnEDITFIRSTNAME_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -957,6 +1081,33 @@
             this.dtpPROFILEBD.Name = "dtpPROFILEBD";
             this.dtpPROFILEBD.Size = new System.Drawing.Size(196, 25);
             this.dtpPROFILEBD.TabIndex = 31;
+            // 
+            // btnEDITPROFILEPIC
+            // 
+            this.btnEDITPROFILEPIC.BackColor = System.Drawing.Color.White;
+            this.btnEDITPROFILEPIC.BackgroundImage = global::JapaneseLearningApp.Properties.Resources.pencil;
+            this.btnEDITPROFILEPIC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEDITPROFILEPIC.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEDITPROFILEPIC.ForeColor = System.Drawing.Color.White;
+            this.btnEDITPROFILEPIC.Location = new System.Drawing.Point(258, 182);
+            this.btnEDITPROFILEPIC.Name = "btnEDITPROFILEPIC";
+            this.btnEDITPROFILEPIC.Size = new System.Drawing.Size(25, 25);
+            this.btnEDITPROFILEPIC.TabIndex = 42;
+            this.btnEDITPROFILEPIC.UseVisualStyleBackColor = false;
+            this.btnEDITPROFILEPIC.Click += new System.EventHandler(this.btnEDITPROFILEPIC_Click);
+            // 
+            // pbPROFILESL
+            // 
+            this.pbPROFILESL.BackColor = System.Drawing.Color.White;
+            this.pbPROFILESL.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbPROFILESL.Enabled = false;
+            this.pbPROFILESL.Image = global::JapaneseLearningApp.Properties.Resources.ProfilePicPlaceHolder;
+            this.pbPROFILESL.Location = new System.Drawing.Point(126, 80);
+            this.pbPROFILESL.Name = "pbPROFILESL";
+            this.pbPROFILESL.Size = new System.Drawing.Size(160, 130);
+            this.pbPROFILESL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPROFILESL.TabIndex = 48;
+            this.pbPROFILESL.TabStop = false;
             // 
             // tpFORGOTPASS
             // 
@@ -1265,152 +1416,24 @@
             this.mainPanel.Size = new System.Drawing.Size(398, 598);
             this.mainPanel.TabIndex = 0;
             // 
-            // btnLOGIN
+            // tpTEST
             // 
-            this.btnLOGIN.BackgroundImage = global::JapaneseLearningApp.Properties.Resources.MitchiriNeko2;
-            this.btnLOGIN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLOGIN.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLOGIN.ForeColor = System.Drawing.Color.White;
-            this.btnLOGIN.Location = new System.Drawing.Point(-10, 536);
-            this.btnLOGIN.Name = "btnLOGIN";
-            this.btnLOGIN.Size = new System.Drawing.Size(420, 65);
-            this.btnLOGIN.TabIndex = 4;
-            this.btnLOGIN.Text = "Login";
-            this.btnLOGIN.UseVisualStyleBackColor = true;
-            this.btnLOGIN.Click += new System.EventHandler(this.btnLOGIN_Click);
+            this.tpTEST.Controls.Add(this.panel1);
+            this.tpTEST.Location = new System.Drawing.Point(4, 22);
+            this.tpTEST.Name = "tpTEST";
+            this.tpTEST.Padding = new System.Windows.Forms.Padding(3);
+            this.tpTEST.Size = new System.Drawing.Size(404, 604);
+            this.tpTEST.TabIndex = 6;
+            this.tpTEST.Text = "Test";
+            this.tpTEST.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // panel1
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::JapaneseLearningApp.Properties.Resources.MitchiriNeko;
-            this.pictureBox1.Location = new System.Drawing.Point(-10, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(419, 502);
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnUPLOAD
-            // 
-            this.btnUPLOAD.BackColor = System.Drawing.Color.White;
-            this.btnUPLOAD.BackgroundImage = global::JapaneseLearningApp.Properties.Resources.pencil;
-            this.btnUPLOAD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUPLOAD.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUPLOAD.ForeColor = System.Drawing.Color.White;
-            this.btnUPLOAD.Location = new System.Drawing.Point(258, 128);
-            this.btnUPLOAD.Name = "btnUPLOAD";
-            this.btnUPLOAD.Size = new System.Drawing.Size(25, 25);
-            this.btnUPLOAD.TabIndex = 42;
-            this.btnUPLOAD.UseVisualStyleBackColor = false;
-            this.btnUPLOAD.Click += new System.EventHandler(this.btnUPLOAD_Click);
-            // 
-            // pbSLIKA
-            // 
-            this.pbSLIKA.BackColor = System.Drawing.Color.White;
-            this.pbSLIKA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbSLIKA.Image = global::JapaneseLearningApp.Properties.Resources.ProfilePicPlaceHolder;
-            this.pbSLIKA.Location = new System.Drawing.Point(126, 26);
-            this.pbSLIKA.Name = "pbSLIKA";
-            this.pbSLIKA.Size = new System.Drawing.Size(160, 130);
-            this.pbSLIKA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbSLIKA.TabIndex = 45;
-            this.pbSLIKA.TabStop = false;
-            // 
-            // btnEDITPROFILEPIC
-            // 
-            this.btnEDITPROFILEPIC.BackColor = System.Drawing.Color.White;
-            this.btnEDITPROFILEPIC.BackgroundImage = global::JapaneseLearningApp.Properties.Resources.pencil;
-            this.btnEDITPROFILEPIC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEDITPROFILEPIC.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEDITPROFILEPIC.ForeColor = System.Drawing.Color.White;
-            this.btnEDITPROFILEPIC.Location = new System.Drawing.Point(258, 182);
-            this.btnEDITPROFILEPIC.Name = "btnEDITPROFILEPIC";
-            this.btnEDITPROFILEPIC.Size = new System.Drawing.Size(25, 25);
-            this.btnEDITPROFILEPIC.TabIndex = 42;
-            this.btnEDITPROFILEPIC.UseVisualStyleBackColor = false;
-            this.btnEDITPROFILEPIC.Click += new System.EventHandler(this.btnEDITPROFILEPIC_Click);
-            // 
-            // pbPROFILESL
-            // 
-            this.pbPROFILESL.BackColor = System.Drawing.Color.White;
-            this.pbPROFILESL.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbPROFILESL.Enabled = false;
-            this.pbPROFILESL.Image = global::JapaneseLearningApp.Properties.Resources.ProfilePicPlaceHolder;
-            this.pbPROFILESL.Location = new System.Drawing.Point(126, 80);
-            this.pbPROFILESL.Name = "pbPROFILESL";
-            this.pbPROFILESL.Size = new System.Drawing.Size(160, 130);
-            this.pbPROFILESL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbPROFILESL.TabIndex = 48;
-            this.pbPROFILESL.TabStop = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.White;
-            this.button11.BackgroundImage = global::JapaneseLearningApp.Properties.Resources.pencil;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(301, 251);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(25, 25);
-            this.button11.TabIndex = 53;
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
-            this.button10.BackgroundImage = global::JapaneseLearningApp.Properties.Resources.pencil;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(305, 138);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(25, 25);
-            this.button10.TabIndex = 42;
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // btnEDITDATE
-            // 
-            this.btnEDITDATE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
-            this.btnEDITDATE.BackgroundImage = global::JapaneseLearningApp.Properties.Resources.pencil;
-            this.btnEDITDATE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEDITDATE.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEDITDATE.ForeColor = System.Drawing.Color.White;
-            this.btnEDITDATE.Location = new System.Drawing.Point(305, 83);
-            this.btnEDITDATE.Name = "btnEDITDATE";
-            this.btnEDITDATE.Size = new System.Drawing.Size(25, 25);
-            this.btnEDITDATE.TabIndex = 40;
-            this.btnEDITDATE.UseVisualStyleBackColor = false;
-            this.btnEDITDATE.Click += new System.EventHandler(this.btnEDITDATE_Click);
-            // 
-            // btnEDITLASTNAME
-            // 
-            this.btnEDITLASTNAME.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
-            this.btnEDITLASTNAME.BackgroundImage = global::JapaneseLearningApp.Properties.Resources.pencil;
-            this.btnEDITLASTNAME.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEDITLASTNAME.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEDITLASTNAME.ForeColor = System.Drawing.Color.White;
-            this.btnEDITLASTNAME.Location = new System.Drawing.Point(305, 52);
-            this.btnEDITLASTNAME.Name = "btnEDITLASTNAME";
-            this.btnEDITLASTNAME.Size = new System.Drawing.Size(25, 25);
-            this.btnEDITLASTNAME.TabIndex = 39;
-            this.btnEDITLASTNAME.UseVisualStyleBackColor = false;
-            this.btnEDITLASTNAME.Click += new System.EventHandler(this.btnEDITLASTNAME_Click);
-            // 
-            // btnEDITFIRSTNAME
-            // 
-            this.btnEDITFIRSTNAME.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
-            this.btnEDITFIRSTNAME.BackgroundImage = global::JapaneseLearningApp.Properties.Resources.pencil;
-            this.btnEDITFIRSTNAME.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEDITFIRSTNAME.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEDITFIRSTNAME.ForeColor = System.Drawing.Color.White;
-            this.btnEDITFIRSTNAME.Location = new System.Drawing.Point(305, 21);
-            this.btnEDITFIRSTNAME.Name = "btnEDITFIRSTNAME";
-            this.btnEDITFIRSTNAME.Size = new System.Drawing.Size(25, 25);
-            this.btnEDITFIRSTNAME.TabIndex = 38;
-            this.btnEDITFIRSTNAME.UseVisualStyleBackColor = false;
-            this.btnEDITFIRSTNAME.Click += new System.EventHandler(this.btnEDITFIRSTNAME_Click);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(398, 598);
+            this.panel1.TabIndex = 0;
             // 
             // GlavnaForma
             // 
@@ -1426,10 +1449,12 @@
             this.tabControl1.ResumeLayout(false);
             this.tpLOGIN.ResumeLayout(false);
             this.tpLOGIN.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tpPRVIMENU.ResumeLayout(false);
             this.tpPRVIMENU.PerformLayout();
             this.tpSIGNUP.ResumeLayout(false);
             this.tpSIGNUP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSLIKA)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -1438,14 +1463,13 @@
             this.tpPROFILE.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPROFILESL)).EndInit();
             this.tpFORGOTPASS.ResumeLayout(false);
             this.tpFORGOTPASS.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.tpLecturesList.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSLIKA)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPROFILESL)).EndInit();
+            this.tpTEST.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1550,5 +1574,7 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.TabPage tpLecturesList;
         private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.TabPage tpTEST;
+        private System.Windows.Forms.Panel panel1;
     }
 }

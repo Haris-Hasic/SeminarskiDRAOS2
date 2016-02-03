@@ -47,16 +47,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="draosbazaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>draosbazaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GlavnaForma.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GlavnaForma.Designer.cs">
       <DependentUpon>GlavnaForma.cs</DependentUpon>
     </Compile>
-    <Compile Include="GrammarPanel.cs">
+    <Compile Include="LectureKontrole\GrammarPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GrammarPanel.Designer.cs">
+    <Compile Include="LectureKontrole\GrammarPanel.Designer.cs">
       <DependentUpon>GrammarPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Klase\Grammar.cs" />
@@ -66,42 +71,66 @@
     <Compile Include="Klase\Story.cs" />
     <Compile Include="Klase\User.cs" />
     <Compile Include="Klase\Vocabulary.cs" />
-    <Compile Include="LectureMenu.cs">
+    <Compile Include="LectureKontrole\LectureMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LectureMenu.Designer.cs">
+    <Compile Include="LectureKontrole\LectureMenu.Designer.cs">
       <DependentUpon>LectureMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="LecturesList.cs">
+    <Compile Include="LectureKontrole\LecturesList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LecturesList.Designer.cs">
+    <Compile Include="LectureKontrole\LecturesList.Designer.cs">
       <DependentUpon>LecturesList.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StoryPanel.cs">
+    <Compile Include="LectureKontrole\StoryPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="StoryPanel.Designer.cs">
+    <Compile Include="LectureKontrole\StoryPanel.Designer.cs">
       <DependentUpon>StoryPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="VocabularyPanel.cs">
+    <Compile Include="TestKontrole\TestList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="VocabularyPanel.Designer.cs">
+    <Compile Include="TestKontrole\TestList.Designer.cs">
+      <DependentUpon>TestList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestKontrole\TestMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TestKontrole\TestMenu.Designer.cs">
+      <DependentUpon>TestMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LectureKontrole\VocabularyPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LectureKontrole\VocabularyPanel.Designer.cs">
       <DependentUpon>VocabularyPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestKontrole\VocabularyQuestionPictures.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TestKontrole\VocabularyQuestionPictures.Designer.cs">
+      <DependentUpon>VocabularyQuestionPictures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestKontrole\VocabularyQuestionSimple.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TestKontrole\VocabularyQuestionSimple.Designer.cs">
+      <DependentUpon>VocabularyQuestionSimple.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="GlavnaForma.resx">
       <DependentUpon>GlavnaForma.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GrammarPanel.resx">
+    <EmbeddedResource Include="LectureKontrole\GrammarPanel.resx">
       <DependentUpon>GrammarPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LectureMenu.resx">
+    <EmbeddedResource Include="LectureKontrole\LectureMenu.resx">
       <DependentUpon>LectureMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LecturesList.resx">
+    <EmbeddedResource Include="LectureKontrole\LecturesList.resx">
       <DependentUpon>LecturesList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -114,12 +143,35 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="StoryPanel.resx">
+    <EmbeddedResource Include="LectureKontrole\StoryPanel.resx">
       <DependentUpon>StoryPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VocabularyPanel.resx">
+    <EmbeddedResource Include="LectureKontrole\VocabularyPanel.resx">
       <DependentUpon>VocabularyPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TestKontrole\TestList.resx">
+      <DependentUpon>TestList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestKontrole\TestMenu.resx">
+      <DependentUpon>TestMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestKontrole\VocabularyQuestionPictures.resx">
+      <DependentUpon>VocabularyQuestionPictures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestKontrole\VocabularyQuestionSimple.resx">
+      <DependentUpon>VocabularyQuestionSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="draosbazaDataSet.xsc">
+      <DependentUpon>draosbazaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="draosbazaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>draosbazaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="draosbazaDataSet.xss">
+      <DependentUpon>draosbazaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

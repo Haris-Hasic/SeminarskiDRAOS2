@@ -13,12 +13,14 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Data.SqlClient;
 using JapaneseLearningApp.Properties;
+using JapaneseLearningApp.TestKontrole;
 
 namespace JapaneseLearningApp
 {
     public partial class GlavnaForma : Form
     {
         User aktivniKorisnik;
+        Int32 odabraniNivo;
 
         public GlavnaForma()
         {
@@ -362,6 +364,31 @@ namespace JapaneseLearningApp
             logout();
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            testMenu();
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            menu();
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            profil();
+        }
+
+        private void buttVOCABULARYTEST_Click(object sender, EventArgs e)
+        {
+            ChapterSelect();
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            Questions();
+        }
+
         /* ####################################################################################### */
         /* KORISNIČKI NAPISANE FUNKCIJE */
         /* ####################################################################################### */
@@ -369,6 +396,11 @@ namespace JapaneseLearningApp
         public void menu()
         {
             this.tabControl1.SelectedTab = tpPRVIMENU;
+        }
+
+        public void testMenu()
+        {
+            this.tabControl1.SelectedTab = tpTESTMENU;
         }
 
         public void profil()
@@ -379,6 +411,17 @@ namespace JapaneseLearningApp
         public void logout()
         {
             this.tabControl1.SelectedTab = tpLOGIN;
+        }
+
+        public void ChapterSelect()
+        {
+            this.tabControl1.SelectedTab = tpTESTLIST;
+        }
+
+        public void Questions()
+        {
+            odabraniNivo = 0;
+            this.tabControl1.SelectedTab = tpVOCABQUESTSIMPLE;
         }
 
         public static string GetMd5Hash(string input)
@@ -445,5 +488,67 @@ namespace JapaneseLearningApp
             }
         }
 
+        private void tpVOCABQUESTSIMPLE_Enter(object sender, EventArgs e)
+        {
+            ucitajRandomPitanje(0);
+        }
+
+        void ucitajRandomPitanje(Int32 nivo)
+        {
+            MySqlConnection konekcija = new MySqlConnection("server=localhost;User Id=root;database=draosbaza");
+            MySqlCommand komanda = new MySqlCommand();
+            PitanjeOdaberi p = new PitanjeOdaberi();
+
+            try
+            {
+                komanda.CommandText = "SELECT * FROM draosbaza.obicnopitanje WHERE nivo=@nivo;";
+                komanda.Parameters.AddWithValue("@nivo", odabraniNivo);
+                komanda.Connection = konekcija;
+                konekcija.Open();
+
+                MySqlDataReader dr = komanda.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        Int32 id = Convert.ToInt32(dr["id"]);
+                        Int32 niv = Convert.ToInt32(dr["nivo"]);
+                        String tekst = Convert.ToString(dr["tekst"]);
+                        String todg = Convert.ToString(dr["tacanodgovor"]);
+                        String odg1 = Convert.ToString(dr["odgovor1"]);
+                        String odg2 = Convert.ToString(dr["odgovor2"]);
+                        String odg3 = Convert.ToString(dr["odgovor3"]);
+                        DateTime kre = Convert.ToDateTime(dr["Kreiran"]);
+
+                        p = new PitanjeOdaberi(id, tekst, odg1, odg2, odg3, todg, niv);
+                    }
+
+                    dr.Close();
+                    ((IDisposable)dr).Dispose();
+
+                    lblQUESTIONTXT.Text = p.TekstPitanja;
+                    buttANSWER1.Text = p.Odgovor1;
+                    buttANSWER2.Text = p.Odgovor2;
+                    buttANSWER3.Text = p.Odgovor3;
+                    buttANSWER4.Text = p.TacanOdgovor;
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid username or password!");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                konekcija.Close();
+            }
+        }
     }
 }

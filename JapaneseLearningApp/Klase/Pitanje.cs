@@ -11,6 +11,8 @@ namespace JapaneseLearningApp.Klase
         Int32 idPitanja;
         String tekstPitanja;
 
+        public Pitanje() { }
+
         public Pitanje(Int32 id, String tekst) 
         {
             IdPitanja = id;

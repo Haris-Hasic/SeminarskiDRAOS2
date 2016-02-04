@@ -58,6 +58,7 @@
     <Compile Include="GlavnaForma.Designer.cs">
       <DependentUpon>GlavnaForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Klase\PitanjeOdaberi.cs" />
     <Compile Include="LectureKontrole\GrammarPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -97,18 +98,6 @@
     <Compile Include="TestKontrole\GrammarQuestionSimple.Designer.cs">
       <DependentUpon>GrammarQuestionSimple.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestKontrole\TestList.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TestKontrole\TestList.Designer.cs">
-      <DependentUpon>TestList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TestKontrole\TestMenu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TestKontrole\TestMenu.Designer.cs">
-      <DependentUpon>TestMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="LectureKontrole\VocabularyPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -120,12 +109,6 @@
     </Compile>
     <Compile Include="TestKontrole\VocabularyQuestionPictures.Designer.cs">
       <DependentUpon>VocabularyQuestionPictures.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TestKontrole\VocabularyQuestionSimple.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TestKontrole\VocabularyQuestionSimple.Designer.cs">
-      <DependentUpon>VocabularyQuestionSimple.cs</DependentUpon>
     </Compile>
     <Compile Include="TestKontrole\WritingQuestionSimple.cs">
       <SubType>UserControl</SubType>
@@ -164,17 +147,8 @@
     <EmbeddedResource Include="TestKontrole\GrammarQuestionSimple.resx">
       <DependentUpon>GrammarQuestionSimple.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestKontrole\TestList.resx">
-      <DependentUpon>TestList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestKontrole\TestMenu.resx">
-      <DependentUpon>TestMenu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="TestKontrole\VocabularyQuestionPictures.resx">
       <DependentUpon>VocabularyQuestionPictures.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestKontrole\VocabularyQuestionSimple.resx">
-      <DependentUpon>VocabularyQuestionSimple.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestKontrole\WritingQuestionSimple.resx">
       <DependentUpon>WritingQuestionSimple.cs</DependentUpon>

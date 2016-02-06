@@ -497,12 +497,15 @@ namespace JapaneseLearningApp
         {
             MySqlConnection konekcija = new MySqlConnection("server=localhost;User Id=root;database=draosbaza");
             MySqlCommand komanda = new MySqlCommand();
+
             PitanjeOdaberi p = new PitanjeOdaberi();
+            Random rnd = new Random();
 
             try
             {
-                komanda.CommandText = "SELECT * FROM draosbaza.obicnopitanje WHERE nivo=@nivo;";
+                komanda.CommandText = "SELECT * FROM draosbaza.obicnopitanje WHERE nivo=@nivo ANd id=@id;";
                 komanda.Parameters.AddWithValue("@nivo", odabraniNivo);
+                komanda.Parameters.AddWithValue("@id", rnd.Next(1,16));
                 komanda.Connection = konekcija;
                 konekcija.Open();
 

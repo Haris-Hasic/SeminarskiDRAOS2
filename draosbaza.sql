@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 04, 2016 at 02:58 PM
+-- Generation Time: Feb 06, 2016 at 01:10 PM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.3.13
 
@@ -36,14 +36,29 @@ CREATE TABLE IF NOT EXISTS `obicnopitanje` (
   `odgovor3` varchar(100) CHARACTER SET utf8 NOT NULL,
   `kreiran` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `obicnopitanje`
 --
 
 INSERT INTO `obicnopitanje` (`id`, `nivo`, `tekst`, `tacanodgovor`, `odgovor1`, `odgovor2`, `odgovor3`, `kreiran`) VALUES
-(1, 0, 'おはようございます', 'Good morning.', 'Good evening.', 'Goodbye.', 'Good afternoon.', '2016-02-04');
+(1, 0, 'おはようございます', 'Good morning.', 'Good evening.', 'Goodbye.', 'Good afternoon.', '2016-02-04'),
+(2, 0, 'こんにちは', 'Good afternoon', 'Good evening', 'Good morning', 'Goodbye', '2016-02-06'),
+(3, 0, 'こんばんは', 'Good evening', 'Good afternoon', 'Good morning', 'Goodbye', '2016-02-06'),
+(4, 0, 'さようなら', 'Goodbye', 'Good morning', 'Good afternoon', 'Welcome home', '2016-02-06'),
+(5, 0, 'おやすみなさい', 'Good night', 'Good morning', 'Good afternoon.', 'I am home', '2016-02-06'),
+(6, 0, 'ありがとう ございます', 'Thank you', 'Welcome to our store', 'Hello', 'Nice to meet you', '2016-02-06'),
+(7, 0, 'すみません', 'Excuse me', 'Thank you', 'No, not at all', 'I''m home', '2016-02-06'),
+(8, 0, 'いいえ', 'No, not at all', 'Thank you', 'Goodbye', 'Excuse me', '2016-02-06'),
+(9, 0, 'いってきます', 'I''ll go and come back', 'Please go and come back', 'I''m home', 'Welcome home', '2016-02-06'),
+(10, 0, 'いってらっしゃい', 'Please go and come back', 'I''ll go and come back', 'I''m home', 'Welcome home', '2016-02-06'),
+(11, 0, 'ただいま', 'I''m home', 'Welcome home', 'I''ll go and come back', 'Good evening', '2016-02-06'),
+(12, 0, 'おかえりなさい', 'Welcome home', 'I''ll go and come back', 'I''m home', 'Good night', '2016-02-06'),
+(13, 0, 'いただきます', 'Thank you for the meal (before eating)', 'Thank you for the meal (after eating)', 'Please go and come back', 'I''ll go and come back', '2016-02-06'),
+(14, 0, 'ごちそうさまでした', 'Thank you for the meal (after eating)', 'Thank you for the meal (before eating)', 'Please go and come back', 'I''ll go and come back', '2016-02-06'),
+(15, 0, 'はじめまして', 'How do you do?', 'Thank you for the meal (after eating)', 'I''m home', 'Good evening', '2016-02-06'),
+(16, 0, 'よろしくおねがいします', 'Nice to meet you', 'How do you do?', 'I''m home', 'Good evening', '2016-02-06');
 
 -- --------------------------------------------------------
 

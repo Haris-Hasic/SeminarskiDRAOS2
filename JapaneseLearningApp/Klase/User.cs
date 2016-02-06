@@ -11,6 +11,7 @@ namespace JapaneseLearningApp.Klase
     {
         String ime, prezime, username, password, nivoZnanja, komentar;
         DateTime datumRodenja;
+        Int32 maxLekcija;
         Image profilnaSlika;
 
         public User() { }
@@ -24,6 +25,7 @@ namespace JapaneseLearningApp.Klase
             DatumRodenja = dr;
             NivoZnanja = nz;
             Komentar = k;
+            MaxLekcija = 0;
             ProfilnaSlika = sl;
         }
 
@@ -67,6 +69,12 @@ namespace JapaneseLearningApp.Klase
         {
             get { return komentar; }
             set { komentar = value; }
+        }
+
+        public Int32 MaxLekcija
+        {
+            get { return maxLekcija; }
+            set { maxLekcija = value; }
         }
 
         public Image ProfilnaSlika

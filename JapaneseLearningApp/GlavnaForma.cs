@@ -20,6 +20,7 @@ namespace JapaneseLearningApp
     public partial class GlavnaForma : Form
     {
         User aktivniKorisnik;
+        Test aktivniTest;
         Int32 odabraniNivo;
 
         public GlavnaForma()
@@ -162,7 +163,7 @@ namespace JapaneseLearningApp
             aktivniKorisnik = u;
 
             MySqlCommand komanda = new MySqlCommand();
-            komanda.CommandText = "INSERT INTO draosbaza.users(ime,prezime,username,password,datumrodenja,nivoznanja,komentar,slika,kreiran) VALUES (@ime,@prezime,@username,@password,@datum,@znanje,@komentar,@slika,CURDATE());";
+            komanda.CommandText = "INSERT INTO draosbaza.users(ime,prezime,username,password,datumrodenja,nivoznanja,komentar,maxlekcija,slika,kreiran) VALUES (@ime,@prezime,@username,@password,@datum,@znanje,@komentar,@maxlekcija,@slika,CURDATE());";
             komanda.Parameters.AddWithValue("@ime", tbFIRSTNAME.Text);
             komanda.Parameters.AddWithValue("@prezime", tbLASTNAME.Text);
             komanda.Parameters.AddWithValue("@username", tbNEWUSERNAME.Text);
@@ -170,6 +171,7 @@ namespace JapaneseLearningApp
             komanda.Parameters.AddWithValue("@datum", dtpBIRTHDATE.Value);
             komanda.Parameters.AddWithValue("@znanje", nivoZnanja);
             komanda.Parameters.AddWithValue("@komentar", rtbCOMMENT.Text);
+            komanda.Parameters.AddWithValue("@maxlekcija", 0);
             komanda.Parameters.AddWithValue("@slika", pbSLIKA.Image);
 
             manipulacija(komanda);
@@ -416,12 +418,14 @@ namespace JapaneseLearningApp
         public void ChapterSelect()
         {
             this.tabControl1.SelectedTab = tpTESTLIST;
+            zakljucajNivoe(aktivniKorisnik.MaxLekcija);
         }
 
         public void Questions()
         {
             odabraniNivo = 0;
             this.tabControl1.SelectedTab = tpVOCABQUESTSIMPLE;
+            zapocniTest();
         }
 
         public static string GetMd5Hash(string input)
@@ -443,6 +447,68 @@ namespace JapaneseLearningApp
 
             // Return the hexadecimal string.
             return sBuilder.ToString();
+        }
+
+        void zakljucajNivoe(Int32 nivo)
+        {
+            foreach (var b in tpTESTLIST.Controls.OfType<Button>())
+            {
+                try
+                {
+                    if (Convert.ToInt32(b.Text) > nivo)
+                        b.Enabled = false;
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+        }
+
+        void zapocniTest()
+        {
+            aktivniTest = new Test();
+            aktivniTest.TacanOdgovor = ucitajRandomPitanje(0);
+        }
+
+        Int32 postaviRandomOdgovore(Int32 br, PitanjeOdaberi p)
+        {
+            if (br%4 == 0)
+            {
+                buttANSWER1.Text = p.TacanOdgovor;
+                buttANSWER2.Text = p.Odgovor1;
+                buttANSWER3.Text = p.Odgovor2;
+                buttANSWER4.Text = p.Odgovor3;
+
+                return 1;
+            }
+            else if (br%4 == 1)
+            {
+                buttANSWER1.Text = p.Odgovor1;
+                buttANSWER2.Text = p.TacanOdgovor;
+                buttANSWER3.Text = p.Odgovor3;
+                buttANSWER4.Text = p.Odgovor2;
+
+                return 2;
+            }
+            else if (br%4 == 2)
+            {
+                buttANSWER1.Text = p.Odgovor2;
+                buttANSWER2.Text = p.Odgovor3;
+                buttANSWER3.Text = p.TacanOdgovor;
+                buttANSWER4.Text = p.Odgovor1;
+
+                return 3;
+            }
+            else
+            {
+                buttANSWER1.Text = p.Odgovor3;
+                buttANSWER2.Text = p.Odgovor1;
+                buttANSWER3.Text = p.Odgovor2;
+                buttANSWER4.Text = p.TacanOdgovor;
+
+                return 4;
+            }
         }
 
         /* ####################################################################################### */
@@ -488,24 +554,19 @@ namespace JapaneseLearningApp
             }
         }
 
-        private void tpVOCABQUESTSIMPLE_Enter(object sender, EventArgs e)
-        {
-            ucitajRandomPitanje(0);
-        }
-
-        void ucitajRandomPitanje(Int32 nivo)
+        Int32 ucitajRandomPitanje(Int32 nivo) // Učita pitanje i vrati broj dugmeta sa tačnim odgovorom
         {
             MySqlConnection konekcija = new MySqlConnection("server=localhost;User Id=root;database=draosbaza");
             MySqlCommand komanda = new MySqlCommand();
 
             PitanjeOdaberi p = new PitanjeOdaberi();
-            Random rnd = new Random();
+            Int32 tacanOdgovor = 0;
 
             try
             {
                 komanda.CommandText = "SELECT * FROM draosbaza.obicnopitanje WHERE nivo=@nivo ANd id=@id;";
                 komanda.Parameters.AddWithValue("@nivo", odabraniNivo);
-                komanda.Parameters.AddWithValue("@id", rnd.Next(1,16));
+                komanda.Parameters.AddWithValue("@id", new Random().Next(1,16));
                 komanda.Connection = konekcija;
                 konekcija.Open();
 
@@ -531,10 +592,7 @@ namespace JapaneseLearningApp
                     ((IDisposable)dr).Dispose();
 
                     lblQUESTIONTXT.Text = p.TekstPitanja;
-                    buttANSWER1.Text = p.Odgovor1;
-                    buttANSWER2.Text = p.Odgovor2;
-                    buttANSWER3.Text = p.Odgovor3;
-                    buttANSWER4.Text = p.TacanOdgovor;
+                    tacanOdgovor = postaviRandomOdgovore(new Random().Next(1,100), p);
                 }
 
                 else
@@ -552,6 +610,53 @@ namespace JapaneseLearningApp
             {
                 konekcija.Close();
             }
+
+            return tacanOdgovor;
+        }
+
+        /* ####################################################################################### */
+        /* BUTTONI SA ODGOVORIMA */
+        /* ####################################################################################### */
+
+        private void buttANSWER1_Click(object sender, EventArgs e)
+        {
+            refreshPitanja(aktivniTest.Odgovori(1));
+        }
+
+        private void buttANSWER2_Click(object sender, EventArgs e)
+        {
+            refreshPitanja(aktivniTest.Odgovori(2));
+        }
+
+        private void buttANSWER3_Click(object sender, EventArgs e)
+        {
+            refreshPitanja(aktivniTest.Odgovori(3));
+        }
+
+        private void buttANSWER4_Click(object sender, EventArgs e)
+        {
+            refreshPitanja(aktivniTest.Odgovori(4));
+        }
+
+        void refreshPitanja(Boolean b)
+        {
+            label40.Text = "Vocabulary - Question #" + Convert.ToString(aktivniTest.TrenutnoPitanje+1);
+
+            if (aktivniTest.ZavrsenTest())
+            {
+                this.tabControl1.SelectedTab = tpTESTRESULT;
+                labelSCOREINDICATOR.Text = lblQUESTIONINDICATOR.Text;
+            }
+
+            else
+                aktivniTest.TacanOdgovor = ucitajRandomPitanje(0);
+
+            lblQUESTIONINDICATOR.Text = aktivniTest.Skor + "/10";
+            
+            if(b)
+                ((ProgressBar)tpVOCABQUESTSIMPLE.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje), true)[0]).Value = 100;
+            else
+                ((ProgressBar)tpVOCABQUESTSIMPLE.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje), true)[0]).Value = 0;
         }
     }
 }

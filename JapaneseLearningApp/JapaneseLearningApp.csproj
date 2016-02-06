@@ -59,6 +59,7 @@
       <DependentUpon>GlavnaForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Klase\PitanjeOdaberi.cs" />
+    <Compile Include="Klase\Test.cs" />
     <Compile Include="LectureKontrole\GrammarPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>

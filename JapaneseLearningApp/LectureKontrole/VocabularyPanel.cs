@@ -17,6 +17,12 @@ namespace JapaneseLearningApp
         private int lectureNumber;
         private Panel mainPanel;
 
+        private String[] titles;
+        private String[] japaneseWords;
+        private String[] englishWords;
+
+        private int currentSection;
+
         public VocabularyPanel(Panel mainPanel, int lectureNumber)
         {
             InitializeComponent();
@@ -31,24 +37,36 @@ namespace JapaneseLearningApp
             try
             {
                 Vocabulary vocabulary = new Vocabulary(lectureNumber);
+                titles = vocabulary.Titles;
+                japaneseWords = vocabulary.JapaneseWords;
+                englishWords = vocabulary.EnglishWords;
+                currentSection = 1;
+                lProgress.Text = currentSection + "/" + titles.Length;
 
-                for (int i = 0; i < vocabulary.JapaneseWords.Length; i++)
+                for (int i = 0; i < titles.Length; i++)
                 {
-                    Label japaneseWord = new Label();
-                    japaneseWord.Text = vocabulary.JapaneseWords[i];
-                    japaneseWord.Font = new Font(lTitle.Font.FontFamily, 16);
-                    japaneseWord.ForeColor = Color.White;
-                    japaneseWord.Width = (int)(0.4 * flpVocabulary.Width);
-                    japaneseWord.Height = 30;
-                    flpVocabulary.Controls.Add(japaneseWord);
+                    // Get array of words for the current section
+                    String[] japaneseWordsInSection = japaneseWords[i].Split(new string[] { "\n" }, StringSplitOptions.None);
+                    String[] englishWordsInSection = englishWords[i].Split(new string[] { "\n" }, StringSplitOptions.None);
 
-                    Label englishWord = new Label();
-                    englishWord.Text = vocabulary.EnglishWords[i];
-                    englishWord.Font = new Font(lTitle.Font.FontFamily, 16);
-                    englishWord.ForeColor = Color.White;
-                    englishWord.Width = (int)(0.4 * flpVocabulary.Width);
-                    englishWord.Height = 30;
-                    flpVocabulary.Controls.Add(englishWord);
+                    for (int j = 0; j < japaneseWordsInSection.Length; j++)
+                    {
+                        Label japaneseWord = new Label();
+                        japaneseWord.Text = japaneseWordsInSection[j];
+                        japaneseWord.Font = new Font(lTitle.Font.FontFamily, 16);
+                        japaneseWord.ForeColor = Color.White;
+                        japaneseWord.Width = (int)(0.4 * flpVocabulary.Width);
+                        japaneseWord.Height = 30;
+                        flpVocabulary.Controls.Add(japaneseWord);
+
+                        Label englishWord = new Label();
+                        englishWord.Text = englishWordsInSection[j];
+                        englishWord.Font = new Font(lTitle.Font.FontFamily, 16);
+                        englishWord.ForeColor = Color.White;
+                        englishWord.Width = (int)(0.4 * flpVocabulary.Width);
+                        englishWord.Height = 30;
+                        flpVocabulary.Controls.Add(englishWord);
+                    }
                 }
             }
             catch (Exception e)

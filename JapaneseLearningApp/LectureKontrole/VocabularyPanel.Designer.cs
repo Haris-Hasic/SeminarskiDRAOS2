@@ -33,6 +33,9 @@
             this.bStory = new System.Windows.Forms.Button();
             this.bGrammar = new System.Windows.Forms.Button();
             this.flpVocabulary = new System.Windows.Forms.FlowLayoutPanel();
+            this.bNext = new System.Windows.Forms.Button();
+            this.bPrevious = new System.Windows.Forms.Button();
+            this.lProgress = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lTitle
@@ -90,16 +93,60 @@
             // flpVocabulary
             // 
             this.flpVocabulary.AutoScroll = true;
-            this.flpVocabulary.Location = new System.Drawing.Point(18, 102);
+            this.flpVocabulary.Location = new System.Drawing.Point(19, 90);
             this.flpVocabulary.Name = "flpVocabulary";
-            this.flpVocabulary.Size = new System.Drawing.Size(367, 393);
+            this.flpVocabulary.Size = new System.Drawing.Size(358, 363);
             this.flpVocabulary.TabIndex = 22;
+            // 
+            // bNext
+            // 
+            this.bNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.bNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bNext.Font = new System.Drawing.Font("Berlin Sans FB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bNext.ForeColor = System.Drawing.Color.White;
+            this.bNext.Location = new System.Drawing.Point(232, 465);
+            this.bNext.Margin = new System.Windows.Forms.Padding(0);
+            this.bNext.Name = "bNext";
+            this.bNext.Size = new System.Drawing.Size(33, 38);
+            this.bNext.TabIndex = 32;
+            this.bNext.Text = ">";
+            this.bNext.UseCompatibleTextRendering = true;
+            this.bNext.UseVisualStyleBackColor = false;
+            // 
+            // bPrevious
+            // 
+            this.bPrevious.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.bPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bPrevious.Font = new System.Drawing.Font("Berlin Sans FB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPrevious.ForeColor = System.Drawing.Color.White;
+            this.bPrevious.Location = new System.Drawing.Point(137, 465);
+            this.bPrevious.Margin = new System.Windows.Forms.Padding(0);
+            this.bPrevious.Name = "bPrevious";
+            this.bPrevious.Size = new System.Drawing.Size(33, 38);
+            this.bPrevious.TabIndex = 31;
+            this.bPrevious.Text = "<";
+            this.bPrevious.UseCompatibleTextRendering = true;
+            this.bPrevious.UseVisualStyleBackColor = false;
+            // 
+            // lProgress
+            // 
+            this.lProgress.AutoSize = true;
+            this.lProgress.Font = new System.Drawing.Font("Berlin Sans FB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lProgress.ForeColor = System.Drawing.Color.White;
+            this.lProgress.Location = new System.Drawing.Point(181, 468);
+            this.lProgress.Name = "lProgress";
+            this.lProgress.Size = new System.Drawing.Size(43, 30);
+            this.lProgress.TabIndex = 30;
+            this.lProgress.Text = "1/4";
             // 
             // VocabularyPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.Controls.Add(this.bNext);
+            this.Controls.Add(this.bPrevious);
+            this.Controls.Add(this.lProgress);
             this.Controls.Add(this.flpVocabulary);
             this.Controls.Add(this.bGrammar);
             this.Controls.Add(this.bStory);
@@ -119,5 +166,8 @@
         private System.Windows.Forms.Button bStory;
         private System.Windows.Forms.Button bGrammar;
         private System.Windows.Forms.FlowLayoutPanel flpVocabulary;
+        private System.Windows.Forms.Button bNext;
+        private System.Windows.Forms.Button bPrevious;
+        private System.Windows.Forms.Label lProgress;
     }
 }

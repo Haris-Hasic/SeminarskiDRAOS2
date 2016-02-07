@@ -38,12 +38,31 @@ namespace JapaneseLearningApp
 
                 this.lJapaneseTitle.Left = (this.mainPanel.Width - this.lJapaneseTitle.Width) / 2;
                 this.lEnglishTitle.Left = (this.mainPanel.Width - this.lEnglishTitle.Width) / 2;
+
+                if (lectureNumber == 0)
+                    introductionSetup();
+                else
+                    standardSetup();
             }
             catch (Exception e)
             {
                 this.lJapaneseText.Text = e.Message;
                 this.lEnglishText.Text = e.Message;
             }
+        }
+
+        private void introductionSetup()
+        {
+            pEnglish.Height += pEnglish.Height + (pEnglish.Top - pJapanese.Top - pJapanese.Height);
+            pEnglish.Top = pJapanese.Top;
+            pJapanese.Visible = false;
+        }
+
+        private void standardSetup()
+        {
+            pJapanese.Visible = true;
+            pEnglish.Top = 319; // Magic numbers, YAY!
+            pEnglish.Height = pJapanese.Height;
         }
 
         private void bLectures_Click(object sender, EventArgs e)

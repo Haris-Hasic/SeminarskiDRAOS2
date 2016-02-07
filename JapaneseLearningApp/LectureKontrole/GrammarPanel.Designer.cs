@@ -94,6 +94,7 @@
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.lGrammarText);
             this.panel1.ForeColor = System.Drawing.SystemColors.Control;
@@ -108,7 +109,7 @@
             this.lGrammarText.Font = new System.Drawing.Font("Berlin Sans FB", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lGrammarText.ForeColor = System.Drawing.Color.White;
             this.lGrammarText.Location = new System.Drawing.Point(12, 19);
-            this.lGrammarText.MaximumSize = new System.Drawing.Size(350, 0);
+            this.lGrammarText.MaximumSize = new System.Drawing.Size(325, 0);
             this.lGrammarText.Name = "lGrammarText";
             this.lGrammarText.Size = new System.Drawing.Size(128, 21);
             this.lGrammarText.TabIndex = 25;

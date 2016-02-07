@@ -14,6 +14,7 @@ using System.Security.Cryptography;
 using System.Data.SqlClient;
 using JapaneseLearningApp.Properties;
 using JapaneseLearningApp.TestKontrole;
+using System.Drawing.Imaging;
 
 namespace JapaneseLearningApp
 {
@@ -96,8 +97,8 @@ namespace JapaneseLearningApp
                         String kom = Convert.ToString(dr["Komentar"]);
                         DateTime kre = Convert.ToDateTime(dr["Kreiran"]);
 
-                        // Ne znam očitati sliku :(
-                        Image sl = Resources.ProfilePicPlaceHolder;
+                        Image sl = Image.FromFile(un + ".jpg");
+                        pbSLIKA.Image = sl;
 
                         aktivniKorisnik = new User(i, p, un, pass, dat, nz, kom, sl);
                     }
@@ -145,7 +146,10 @@ namespace JapaneseLearningApp
             OpenFileDialog o = new OpenFileDialog();
 
             if (o.ShowDialog() == DialogResult.OK)
-                pbSLIKA.Image = Image.FromFile(o.FileName);
+            {
+                Image img = Image.FromFile(o.FileName);
+                pbSLIKA.Image = img;
+            }
         }
 
         private void btnSIGNUP_Click(object sender, EventArgs e)
@@ -163,7 +167,7 @@ namespace JapaneseLearningApp
             aktivniKorisnik = u;
 
             MySqlCommand komanda = new MySqlCommand();
-            komanda.CommandText = "INSERT INTO draosbaza.users(ime,prezime,username,password,datumrodenja,nivoznanja,komentar,maxlekcija,slika,kreiran) VALUES (@ime,@prezime,@username,@password,@datum,@znanje,@komentar,@maxlekcija,@slika,CURDATE());";
+            komanda.CommandText = "INSERT INTO draosbaza.users(ime,prezime,username,password,datumrodenja,nivoznanja,komentar,maxlekcija,kreiran) VALUES (@ime,@prezime,@username,@password,@datum,@znanje,@komentar,@maxlekcija,CURDATE());";
             komanda.Parameters.AddWithValue("@ime", tbFIRSTNAME.Text);
             komanda.Parameters.AddWithValue("@prezime", tbLASTNAME.Text);
             komanda.Parameters.AddWithValue("@username", tbNEWUSERNAME.Text);
@@ -172,11 +176,13 @@ namespace JapaneseLearningApp
             komanda.Parameters.AddWithValue("@znanje", nivoZnanja);
             komanda.Parameters.AddWithValue("@komentar", rtbCOMMENT.Text);
             komanda.Parameters.AddWithValue("@maxlekcija", 0);
-            komanda.Parameters.AddWithValue("@slika", pbSLIKA.Image);
+
+            Image sl = pbSLIKA.Image;
+            sl.Save(tbNEWUSERNAME.Text + ".jpg");
 
             manipulacija(komanda);
 
-            this.tabControl1.SelectedTab = tpPROFILE;
+            profil();
         }
 
         private void tpPROFILE_Enter(object sender, EventArgs e)
@@ -297,14 +303,15 @@ namespace JapaneseLearningApp
                     nivoZnanja = "Expert";
 
                 MySqlCommand komanda = new MySqlCommand();
-                komanda.CommandText = "UPDATE draosbaza.users SET ime=@ime, prezime=@prezime, datumrodenja=@datum, nivoznanja=@znanje, komentar=@komentar, slika=@slika WHERE username=@username;";
+                komanda.CommandText = "UPDATE draosbaza.users SET ime=@ime, prezime=@prezime, datumrodenja=@datum, nivoznanja=@znanje, komentar=@komentar WHERE username=@username;";
                 komanda.Parameters.AddWithValue("@ime", tbPROFILEFN.Text);
                 komanda.Parameters.AddWithValue("@prezime", tbPROFILELN.Text);
                 komanda.Parameters.AddWithValue("@datum", dtpBIRTHDATE.Value);
                 komanda.Parameters.AddWithValue("@znanje", nivoZnanja);
                 komanda.Parameters.AddWithValue("@komentar", rtbPROFILEC.Text);
-                komanda.Parameters.AddWithValue("@slika", pbPROFILESL.Image);
                 komanda.Parameters.AddWithValue("@username", aktivniKorisnik.Username);
+
+                //saveImage(aktivniKorisnik.ProfilnaSlika, aktivniKorisnik.Username + ".jpg");
 
                 manipulacija(komanda);
 
@@ -447,6 +454,22 @@ namespace JapaneseLearningApp
 
             // Return the hexadecimal string.
             return sBuilder.ToString();
+        }
+
+        private void saveImage(Image sl, String path)
+        {
+            /*
+            if (File.Exists(path))
+            {
+                pbSLIKA.Image = Resources.ProfilePicPlaceHolder;
+                pbPROFILESL.Image = Resources.ProfilePicPlaceHolder;
+                File.WriteAllBytes();
+                File.Delete(path);
+            }
+
+            sl.Save(path);
+            sl.Dispose();
+            */
         }
 
         void zakljucajNivoe(Int32 nivo)
@@ -645,7 +668,7 @@ namespace JapaneseLearningApp
             if (aktivniTest.ZavrsenTest())
             {
                 this.tabControl1.SelectedTab = tpTESTRESULT;
-                labelSCOREINDICATOR.Text = lblQUESTIONINDICATOR.Text;
+                labelSCOREINDICATOR.Text = Convert.ToString(aktivniTest.Skor) + "/10";
             }
 
             else

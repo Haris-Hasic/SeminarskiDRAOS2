@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 06, 2016 at 01:10 PM
+-- Generation Time: Feb 07, 2016 at 05:10 PM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.3.13
 
@@ -75,19 +75,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   `DatumRodenja` date NOT NULL,
   `NivoZnanja` varchar(20) COLLATE utf8_slovenian_ci NOT NULL,
   `Komentar` varchar(1000) COLLATE utf8_slovenian_ci NOT NULL,
-  `Slika` blob NOT NULL,
+  `MaxLekcija` int(11) NOT NULL,
   `Kreiran` date NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=21 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=41 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`ID`, `Ime`, `Prezime`, `Username`, `Password`, `DatumRodenja`, `NivoZnanja`, `Komentar`, `Slika`, `Kreiran`) VALUES
-(17, 'Haris', 'Hasic', 'haris', 'ca8dbd404e5dec1b3a7afce308176e51', '1992-04-15', 'Intermediate', 'Jer Jer Jer Jer Jer Jer Jer Jer Jer Jer Jer Jer Jer Jer Jer Jer Jer Jer Jer Jer Jer Jer Jer Jer.', 0x53797374656d2e44726177696e672e4269746d6170, '2016-01-12'),
-(19, 'Began', 'Azinovic', 'bego', '98f58894a67190addfe3c02808f43213', '2016-01-13', 'Begginer', 'asdasdasasdasdassssssssssssssssssssssssssssssssssssssscc acaacsa\ncacsasc\nasca\nscasc\ns\nc\nasc\nacs\nasc\nc\nsa', 0x53797374656d2e44726177696e672e4269746d6170, '2016-01-13'),
-(20, 'Haris56', 'Hasic123', 'hare', '199a8b33a8aaa3313dc43709f433124a', '2016-01-13', 'Intermediate', 'sdgdsgdsfgdfg', 0x53797374656d2e44726177696e672e4269746d6170, '2016-01-13');
+INSERT INTO `users` (`ID`, `Ime`, `Prezime`, `Username`, `Password`, `DatumRodenja`, `NivoZnanja`, `Komentar`, `MaxLekcija`, `Kreiran`) VALUES
+(40, 'Haris', 'Hasic', 'hare', 'a288e6779da68f768431f9975e780da3', '2016-02-07', 'Intermediate', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 0, '2016-02-07');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -51,21 +51,21 @@ namespace JapaneseLearningApp
             }
         }
 
-        private void bNext_Click(object sender, EventArgs e)
-        {
-            if (currentSection < sections.Length)
-            {
-                currentSection++;
-                lProgress.Text = currentSection + "/" + sections.Length;
-                lGrammarText.Text = sections[currentSection - 1];
-            }
-        }
-
         private void bPrevious_Click(object sender, EventArgs e)
         {
             if (currentSection > 1)
             {
                 currentSection--;
+                lProgress.Text = currentSection + "/" + sections.Length;
+                lGrammarText.Text = sections[currentSection - 1];
+            }
+        }
+
+        private void bNext_Click(object sender, EventArgs e)
+        {
+            if (currentSection < sections.Length)
+            {
+                currentSection++;
                 lProgress.Text = currentSection + "/" + sections.Length;
                 lGrammarText.Text = sections[currentSection - 1];
             }

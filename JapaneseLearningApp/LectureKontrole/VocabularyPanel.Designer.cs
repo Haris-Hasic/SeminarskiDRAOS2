@@ -112,6 +112,7 @@
             this.bNext.Text = ">";
             this.bNext.UseCompatibleTextRendering = true;
             this.bNext.UseVisualStyleBackColor = false;
+            this.bNext.Click += new System.EventHandler(this.bNext_Click);
             // 
             // bPrevious
             // 
@@ -127,6 +128,7 @@
             this.bPrevious.Text = "<";
             this.bPrevious.UseCompatibleTextRendering = true;
             this.bPrevious.UseVisualStyleBackColor = false;
+            this.bPrevious.Click += new System.EventHandler(this.bPrevious_Click);
             // 
             // lProgress
             // 

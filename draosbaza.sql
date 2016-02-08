@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Feb 07, 2016 at 05:10 PM
--- Server version: 5.5.24-log
--- PHP Version: 5.3.13
+-- Host: 127.0.0.1
+-- Generation Time: Feb 08, 2016 at 06:40 PM
+-- Server version: 5.6.17
+-- PHP Version: 5.5.12
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,6 +19,31 @@ SET time_zone = "+00:00";
 --
 -- Database: `draosbaza`
 --
+CREATE DATABASE IF NOT EXISTS `draosbaza` DEFAULT CHARACTER SET utf8 COLLATE utf8_slovenian_ci;
+USE `draosbaza`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lectureprogress`
+--
+
+CREATE TABLE IF NOT EXISTS `lectureprogress` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user` int(11) NOT NULL,
+  `story` int(11) NOT NULL DEFAULT '-1',
+  `vocabulary` int(11) NOT NULL DEFAULT '-1',
+  `grammar` int(11) NOT NULL DEFAULT '-1',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user` (`user`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `lectureprogress`
+--
+
+INSERT INTO `lectureprogress` (`id`, `user`, `story`, `vocabulary`, `grammar`) VALUES
+(1, 40, -1, -1, -1);
 
 -- --------------------------------------------------------
 
@@ -86,6 +111,16 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`ID`, `Ime`, `Prezime`, `Username`, `Password`, `DatumRodenja`, `NivoZnanja`, `Komentar`, `MaxLekcija`, `Kreiran`) VALUES
 (40, 'Haris', 'Hasic', 'hare', 'a288e6779da68f768431f9975e780da3', '2016-02-07', 'Intermediate', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 0, '2016-02-07');
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `lectureprogress`
+--
+ALTER TABLE `lectureprogress`
+  ADD CONSTRAINT `lp_user_fk` FOREIGN KEY (`user`) REFERENCES `users` (`ID`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

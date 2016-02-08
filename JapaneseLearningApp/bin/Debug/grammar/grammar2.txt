@@ -20,9 +20,8 @@ Note that none of these sentences has a "subject," like "it," "I," and "my major
 
 What are we to do, then, when it is not clear what is being talked about? To make explicit what we are talking about we can say:
 
-_______は　にほんごです。
-         wa nihongo desu.
-_______ is the Japanese language.
+_______は　にほんごです。　_______ is the Japanese language.
+     wa nihongo desu.
 
 Where _______ stands for the thing that is talked about, or the "topic," which is later in the sentence identified as nihongo. For example,
 

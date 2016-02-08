@@ -1,63 +1,66 @@
-%---General
-um...
-now
-English (language)
-yes
-student
-langauge
-high school
-P.M.
-A.M.
-... years old
-Mr./Ms. ...
-o'clock
-people (nationality)
-teacher; Professor ...
-major
-That's right.
-college; university
-telephone
-friend
-name
-what
-Japan
-... year student
-yes
-half
-number
-international student
-I
+%---Words That Point
+this one
+that one
+that one (over there)
+which one
+this ...
+that ...
+that ... (over there)
+which ...
+over there
+where
+who
+%---Food
+delicious
+fish
+pork cutlet
+meat
+menu
+vegetable
+%---Things
+pencil
+umbrella
+bag
+shoes
+wallet
+jeans
+dictionary
+bicycle
+newspaper
+tape
+watch; clock
+sweat shirt
+notebook
+pen
+hat; cap
+book
+%---Places
+restroom
+cafe
+bank
+library
+post office
 %---Countries
 U.S.A.
 Britain
-Australia
 Korea
-Sweden
 China
 %---Majors
-science
-Asian studies
 economics
-international relations
 computer
-anthropology
-politics
 business
-literature
 history
-%---Occupations
-job; work; occupation
-doctor
-office worker
-high school student
-housewife
-graduate student
-college student
-lawyer
 %---Family
 mother
 father
-older sister
-older brother
-younger sister
-younger brother
+%---Money Matters
+how much
+... yen
+expensive
+%---Expressions
+Welcome (to our store)
+..., please.
+Please give me...
+then...; if that is the case, ...
+Here it is.
+Thank you.

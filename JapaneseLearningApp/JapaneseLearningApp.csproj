@@ -58,7 +58,9 @@
     <Compile Include="GlavnaForma.Designer.cs">
       <DependentUpon>GlavnaForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Klase\KorisnickeFunkcije.cs" />
     <Compile Include="Klase\PitanjeOdaberi.cs" />
+    <Compile Include="Klase\PristupBazi.cs" />
     <Compile Include="Klase\Test.cs" />
     <Compile Include="LectureKontrole\GrammarPanel.cs">
       <SubType>UserControl</SubType>

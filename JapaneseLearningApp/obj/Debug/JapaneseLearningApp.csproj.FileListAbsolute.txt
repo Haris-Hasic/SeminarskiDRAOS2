@@ -21,9 +21,6 @@ C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLe
 C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.csproj.GenerateResource.Cache
 C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\bin\Debug\JapaneseLearningApp.exe
 C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\bin\Debug\JapaneseLearningApp.pdb
-C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.TestKontrole.GrammarQuestionSimple.resources
-C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.TestKontrole.VocabularyQuestionPictures.resources
-C:\Users\Haris\Desktop\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.TestKontrole.WritingQuestionSimple.resources
 D:\GitHub\SeminarskiDRAOS2\JapaneseLearningApp\bin\Debug\JapaneseLearningApp.exe.config
 D:\GitHub\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.exe
 D:\GitHub\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.pdb

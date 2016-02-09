@@ -12,7 +12,7 @@ namespace JapaneseLearningApp.Klase
         String odgovor1, odgovor2, odgovor3;
 
         public PitanjeDopuniTekst(Int32 id, String tekst, String o1, String o2, String o3, String tOdg)
-            : base(id, tekst)
+            : base(id, tekst, 1)
         {
             TacanOdgovor = tOdg;
             Odgovor1 = o1;

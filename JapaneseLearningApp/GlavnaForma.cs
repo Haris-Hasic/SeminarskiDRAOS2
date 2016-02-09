@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Data;
 using System.Drawing;
 using System.Text;
@@ -10,10 +11,8 @@ using System.IO;
 
 using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
-using System.Linq;
 
 using JapaneseLearningApp.Klase;
-using JapaneseLearningApp.TestKontrole;
 using JapaneseLearningApp.Properties;
 
 namespace JapaneseLearningApp
@@ -85,11 +84,10 @@ namespace JapaneseLearningApp
                 komanda.Connection = konekcija;
                 konekcija.Open();
 
-                MySqlDataReader dr = komanda.ExecuteReader();
+                MySqlDataReader dr = komanda.ExecuteReader(CommandBehavior.SequentialAccess);
 
                 if (dr.HasRows)
                 {
-
                     while (dr.Read())
                     {
                         Int32 id = Convert.ToInt32(dr["ID"]);
@@ -100,10 +98,8 @@ namespace JapaneseLearningApp
                         DateTime dat = Convert.ToDateTime(dr["DatumRodenja"]);
                         String nz = Convert.ToString(dr["NivoZnanja"]);
                         String kom = Convert.ToString(dr["Komentar"]);
+                        Image sl = KorisnickeFunkcije.ByteArrayToImage(dr["slika"] as byte[]);
                         DateTime kre = Convert.ToDateTime(dr["Kreiran"]);
-
-                        Image sl = Image.FromFile(un + ".jpg");
-                        pbSLIKA.Image = sl;
 
                         aktivniKorisnik = new User(i, p, un, pass, dat, nz, kom, sl);
                     }
@@ -174,7 +170,7 @@ namespace JapaneseLearningApp
                 aktivniKorisnik = u;
 
                 MySqlCommand komanda = new MySqlCommand();
-                komanda.CommandText = "INSERT INTO draosbaza.users(ime,prezime,username,password,datumrodenja,nivoznanja,komentar,maxlekcija,kreiran) VALUES (@ime,@prezime,@username,@password,@datum,@znanje,@komentar,@maxlekcija,CURDATE());";
+                komanda.CommandText = "INSERT INTO draosbaza.users(ime,prezime,username,password,datumrodenja,nivoznanja,komentar,maxlekcija,slika,kreiran) VALUES (@ime,@prezime,@username,@password,@datum,@znanje,@komentar,@maxlekcija,@slika,CURDATE());";
                 komanda.Parameters.AddWithValue("@ime", tbFIRSTNAME.Text);
                 komanda.Parameters.AddWithValue("@prezime", tbLASTNAME.Text);
                 komanda.Parameters.AddWithValue("@username", tbNEWUSERNAME.Text);
@@ -183,15 +179,13 @@ namespace JapaneseLearningApp
                 komanda.Parameters.AddWithValue("@znanje", nivoZnanja);
                 komanda.Parameters.AddWithValue("@komentar", rtbCOMMENT.Text);
                 komanda.Parameters.AddWithValue("@maxlekcija", 0);
-
-                Image sl = pbSLIKA.Image;
-                sl.Save(tbNEWUSERNAME.Text + ".jpg");
+                komanda.Parameters.AddWithValue("@slika", KorisnickeFunkcije.ImageToByteArray(pbSLIKA.Image));
 
                 MessageBox.Show("Changes were succesfully made. " + PristupBazi.Manipulacija(komanda) + " rows were affected.");
 
                 GoToProfile();
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show("Changes failed. Reason: " + ex.Message);
             }
@@ -344,15 +338,14 @@ namespace JapaneseLearningApp
                         nivoZnanja = "Expert";
 
                     MySqlCommand komanda = new MySqlCommand();
-                    komanda.CommandText = "UPDATE draosbaza.users SET ime=@ime, prezime=@prezime, datumrodenja=@datum, nivoznanja=@znanje, komentar=@komentar WHERE username=@username;";
+                    komanda.CommandText = "UPDATE draosbaza.users SET ime=@ime, prezime=@prezime, datumrodenja=@datum, nivoznanja=@znanje, komentar=@komentar, slika=@slika WHERE username=@username;";
                     komanda.Parameters.AddWithValue("@ime", tbPROFILEFN.Text);
                     komanda.Parameters.AddWithValue("@prezime", tbPROFILELN.Text);
                     komanda.Parameters.AddWithValue("@datum", dtpBIRTHDATE.Value);
                     komanda.Parameters.AddWithValue("@znanje", nivoZnanja);
                     komanda.Parameters.AddWithValue("@komentar", rtbPROFILEC.Text);
+                    komanda.Parameters.AddWithValue("@slika", KorisnickeFunkcije.ImageToByteArray(pbPROFILESL.Image));
                     komanda.Parameters.AddWithValue("@username", aktivniKorisnik.Username);
-
-                    //saveImage(aktivniKorisnik.ProfilnaSlika, aktivniKorisnik.Username + ".jpg");
 
                     MessageBox.Show("Changes were succesfully made. " + PristupBazi.Manipulacija(komanda) + " rows were affected.");
 
@@ -399,12 +392,72 @@ namespace JapaneseLearningApp
         void zapocniTest()
         {
             aktivniTest = new Test();
-            aktivniTest.TacanOdgovor = ucitajRandomPitanje(0);
+            aktivniTest.TacanOdgovor = ucitajRandomPitanje(1);
+        }
+
+        Int32 ucitajRandomPitanje(Int32 nivo) // Učita pitanje i vrati broj dugmeta sa tačnim odgovorom
+        {
+            MySqlConnection konekcija = new MySqlConnection("server=localhost;User Id=root;database=draosbaza");
+            MySqlCommand komanda = new MySqlCommand();
+
+            PitanjeOdaberi p = new PitanjeOdaberi();
+            Int32 tacanOdgovor = 0;
+
+            try
+            {
+                komanda.CommandText = "SELECT * FROM draosbaza.obicnopitanje WHERE nivo=@nivo ANd id=@id;";
+                komanda.Parameters.AddWithValue("@nivo", nivo);
+                komanda.Parameters.AddWithValue("@id", new Random().Next(17, 26));
+                komanda.Connection = konekcija;
+                konekcija.Open();
+
+                MySqlDataReader dr = komanda.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        Int32 id = Convert.ToInt32(dr["id"]);
+                        Int32 niv = Convert.ToInt32(dr["nivo"]);
+                        String tekst = Convert.ToString(dr["tekst"]);
+                        String todg = Convert.ToString(dr["tacanodgovor"]);
+                        String odg1 = Convert.ToString(dr["odgovor1"]);
+                        String odg2 = Convert.ToString(dr["odgovor2"]);
+                        String odg3 = Convert.ToString(dr["odgovor3"]);
+                        DateTime kre = Convert.ToDateTime(dr["Kreiran"]);
+
+                        p = new PitanjeOdaberi(id, tekst, niv, odg1, odg2, odg3, todg);
+                    }
+
+                    dr.Close();
+                    ((IDisposable)dr).Dispose();
+
+                    lblQUESTIONTXT.Text = p.TekstPitanja;
+                    tacanOdgovor = postaviRandomOdgovore(new Random().Next(1, 100), p);
+                }
+
+                else
+                {
+                    MessageBox.Show("Ooops! Somethig went wrong while reading the text questions.");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                konekcija.Close();
+            }
+
+            return tacanOdgovor;
         }
 
         Int32 postaviRandomOdgovore(Int32 br, PitanjeOdaberi p)
         {
-            if (br%4 == 0)
+            if (br % 4 == 0)
             {
                 buttANSWER1.Text = p.TacanOdgovor;
                 buttANSWER2.Text = p.Odgovor1;
@@ -413,7 +466,7 @@ namespace JapaneseLearningApp
 
                 return 1;
             }
-            else if (br%4 == 1)
+            else if (br % 4 == 1)
             {
                 buttANSWER1.Text = p.Odgovor1;
                 buttANSWER2.Text = p.TacanOdgovor;
@@ -422,7 +475,7 @@ namespace JapaneseLearningApp
 
                 return 2;
             }
-            else if (br%4 == 2)
+            else if (br % 4 == 2)
             {
                 buttANSWER1.Text = p.Odgovor2;
                 buttANSWER2.Text = p.Odgovor3;
@@ -442,19 +495,19 @@ namespace JapaneseLearningApp
             }
         }
 
-        Int32 ucitajRandomPitanje(Int32 nivo) // Učita pitanje i vrati broj dugmeta sa tačnim odgovorom
+        Int32 ucitajRandomSlikaPitanje(Int32 nivo) // Učita slika pitanje i vrati broj dugmeta sa tačnim odgovorom
         {
             MySqlConnection konekcija = new MySqlConnection("server=localhost;User Id=root;database=draosbaza");
             MySqlCommand komanda = new MySqlCommand();
 
-            PitanjeOdaberi p = new PitanjeOdaberi();
+            PitanjeOdaberiSliku p = new PitanjeOdaberiSliku();
             Int32 tacanOdgovor = 0;
 
             try
             {
-                komanda.CommandText = "SELECT * FROM draosbaza.obicnopitanje WHERE nivo=@nivo ANd id=@id;";
-                komanda.Parameters.AddWithValue("@nivo", odabraniNivo);
-                komanda.Parameters.AddWithValue("@id", new Random().Next(1, 16));
+                komanda.CommandText = "SELECT * FROM draosbaza.slikapitanje WHERE nivo=@nivo ANd id=@id;";
+                komanda.Parameters.AddWithValue("@nivo", nivo);
+                komanda.Parameters.AddWithValue("@id", new Random().Next(1, 10));
                 komanda.Connection = konekcija;
                 konekcija.Open();
 
@@ -467,25 +520,30 @@ namespace JapaneseLearningApp
                         Int32 id = Convert.ToInt32(dr["id"]);
                         Int32 niv = Convert.ToInt32(dr["nivo"]);
                         String tekst = Convert.ToString(dr["tekst"]);
-                        String todg = Convert.ToString(dr["tacanodgovor"]);
-                        String odg1 = Convert.ToString(dr["odgovor1"]);
-                        String odg2 = Convert.ToString(dr["odgovor2"]);
-                        String odg3 = Convert.ToString(dr["odgovor3"]);
+                        Image todg = KorisnickeFunkcije.ByteArrayToImage(dr["tacanodgovor"] as byte[]);
+                        String totxt = Convert.ToString(dr["totekst"]);
+                        Image odg1 = KorisnickeFunkcije.ByteArrayToImage(dr["odgovor1"] as byte[]);
+                        String o1txt = Convert.ToString(dr["o1tekst"]);
+                        Image odg2 = KorisnickeFunkcije.ByteArrayToImage(dr["odgovor2"] as byte[]);
+                        String o2txt = Convert.ToString(dr["o2tekst"]);
+                        Image odg3 = KorisnickeFunkcije.ByteArrayToImage(dr["odgovor3"] as byte[]);
+                        String o3txt = Convert.ToString(dr["o3tekst"]);
                         DateTime kre = Convert.ToDateTime(dr["Kreiran"]);
 
-                        p = new PitanjeOdaberi(id, tekst, odg1, odg2, odg3, todg, niv);
+                        p = new PitanjeOdaberiSliku(id, tekst, niv, todg, totxt, odg1, o1txt, odg2, o2txt, odg3, o3txt);
                     }
 
                     dr.Close();
                     ((IDisposable)dr).Dispose();
 
-                    lblQUESTIONTXT.Text = p.TekstPitanja;
-                    tacanOdgovor = postaviRandomOdgovore(new Random().Next(1, 100), p);
+                    lblQUESTIONTXTPIC.Text = p.TekstPitanja;
+
+                    tacanOdgovor = postaviRandomSlikaOdgovore(new Random().Next(1, 100), p);
                 }
 
                 else
                 {
-                    MessageBox.Show("Invalid username or password!");
+                    MessageBox.Show("Ooops! Somethig went wrong while reading the picture questions.");
                 }
             }
 
@@ -500,6 +558,87 @@ namespace JapaneseLearningApp
             }
 
             return tacanOdgovor;
+        }
+
+        Int32 postaviRandomSlikaOdgovore(Int32 br, PitanjeOdaberiSliku p)
+        {
+
+            if (br % 4 == 0)
+            {
+                buttPICANSWER1.BackgroundImage = p.TacanOdgovor;
+                buttPICANSWER2.BackgroundImage = p.Odgovor1;
+                buttPICANSWER3.BackgroundImage = p.Odgovor2;
+                buttPICANSWER4.BackgroundImage = p.Odgovor3;
+
+                return 1;
+            }
+            else if (br % 4 == 1)
+            {
+                buttPICANSWER1.BackgroundImage = p.Odgovor1;
+                buttPICANSWER2.BackgroundImage = p.TacanOdgovor;
+                buttPICANSWER3.BackgroundImage = p.Odgovor3;
+                buttPICANSWER4.BackgroundImage = p.Odgovor2;
+
+                return 2;
+            }
+            else if (br % 4 == 2)
+            {
+                buttPICANSWER1.BackgroundImage = p.Odgovor2;
+                buttPICANSWER2.BackgroundImage = p.Odgovor3;
+                buttPICANSWER3.BackgroundImage = p.TacanOdgovor;
+                buttPICANSWER4.BackgroundImage = p.Odgovor1;
+
+                return 3;
+            }
+            else
+            {
+                buttPICANSWER1.BackgroundImage = p.Odgovor3;
+                buttPICANSWER2.BackgroundImage = p.Odgovor1;
+                buttPICANSWER3.BackgroundImage = p.Odgovor2;
+                buttPICANSWER4.BackgroundImage = p.TacanOdgovor;
+
+                return 4;
+            }
+        }
+
+        void refreshPitanja(Boolean b)
+        {
+            label40.Text = "Vocabulary - Question #" + Convert.ToString(aktivniTest.TrenutnoPitanje + 1);
+            label46.Text = "Vocabulary - Question #" + Convert.ToString(aktivniTest.TrenutnoPitanje + 1);
+
+            if (aktivniTest.ZavrsenTest())
+            {
+                this.tabControl1.SelectedTab = tpTESTRESULT;
+                labelSCOREINDICATOR.Text = Convert.ToString(aktivniTest.Skor) + "/10";
+            }
+
+            else
+            {
+                if (new Random().Next(1, 100) % 2 == 0)
+                {
+                    TextQuestion();
+                    aktivniTest.TacanOdgovor = ucitajRandomPitanje(1);
+                }
+                else
+                {
+                    PictureQuestion();
+                    aktivniTest.TacanOdgovor = ucitajRandomSlikaPitanje(1);
+                }
+            }
+
+            lblQUESTIONINDICATOR.Text = aktivniTest.Skor + "/10";
+            lblQUESTIONINDICATOR2.Text = aktivniTest.Skor + "/10";
+
+            if (b)
+            {
+                ((ProgressBar)tpVOCABQUESTSIMPLE.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje), true)[0]).Value = 100;
+                ((ProgressBar)tpVOCABQUESTPIC.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 10), true)[0]).Value = 100;
+            }
+            else
+            {
+                ((ProgressBar)tpVOCABQUESTSIMPLE.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje), true)[0]).Value = 0;
+                ((ProgressBar)tpVOCABQUESTPIC.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 10), true)[0]).Value = 0;
+            }
         }
 
         private void buttANSWER1_Click(object sender, EventArgs e)
@@ -522,25 +661,24 @@ namespace JapaneseLearningApp
             refreshPitanja(aktivniTest.Odgovori(4));
         }
 
-        void refreshPitanja(Boolean b)
+        private void buttPICANSWER1_Click(object sender, EventArgs e)
         {
-            label40.Text = "Vocabulary - Question #" + Convert.ToString(aktivniTest.TrenutnoPitanje + 1);
+            refreshPitanja(aktivniTest.Odgovori(1));
+        }
 
-            if (aktivniTest.ZavrsenTest())
-            {
-                this.tabControl1.SelectedTab = tpTESTRESULT;
-                labelSCOREINDICATOR.Text = Convert.ToString(aktivniTest.Skor) + "/10";
-            }
+        private void buttPICANSWER2_Click(object sender, EventArgs e)
+        {
+            refreshPitanja(aktivniTest.Odgovori(2));
+        }
 
-            else
-                aktivniTest.TacanOdgovor = ucitajRandomPitanje(0);
+        private void buttPICANSWER3_Click(object sender, EventArgs e)
+        {
+            refreshPitanja(aktivniTest.Odgovori(3));
+        }
 
-            lblQUESTIONINDICATOR.Text = aktivniTest.Skor + "/10";
-
-            if (b)
-                ((ProgressBar)tpVOCABQUESTSIMPLE.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje), true)[0]).Value = 100;
-            else
-                ((ProgressBar)tpVOCABQUESTSIMPLE.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje), true)[0]).Value = 0;
+        private void buttPICANSWER4_Click(object sender, EventArgs e)
+        {
+            refreshPitanja(aktivniTest.Odgovori(4));
         }
 
         #endregion
@@ -610,7 +748,75 @@ namespace JapaneseLearningApp
 
         private void button25_Click(object sender, EventArgs e)
         {
-            Questions();
+            odabraniNivo = 0;
+            TextQuestion();
+            zapocniTest();
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            odabraniNivo = 1;
+            TextQuestion();
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            odabraniNivo = 2;
+            TextQuestion();
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            odabraniNivo = 3;
+            TextQuestion();
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            odabraniNivo = 4;
+            TextQuestion();
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            odabraniNivo = 5;
+            TextQuestion();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            odabraniNivo = 6;
+            TextQuestion();
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            odabraniNivo = 7;
+            TextQuestion();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            odabraniNivo = 8;
+            TextQuestion();
+        }
+
+        private void button15_Click_1(object sender, EventArgs e)
+        {
+            odabraniNivo = 9;
+            TextQuestion();
+        }
+
+        private void button14_Click_1(object sender, EventArgs e)
+        {
+            odabraniNivo = 10;
+            TextQuestion();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            odabraniNivo = 11;
+            TextQuestion();
         }
 
         public void GoToMainMenu()
@@ -647,11 +853,14 @@ namespace JapaneseLearningApp
             zakljucajNivoe(aktivniKorisnik.MaxLekcija);
         }
 
-        public void Questions()
+        public void TextQuestion()
         {
-            odabraniNivo = 0;
             this.tabControl1.SelectedTab = tpVOCABQUESTSIMPLE;
-            zapocniTest();
+        }
+
+        public void PictureQuestion()
+        {
+            this.tabControl1.SelectedTab = tpVOCABQUESTPIC;
         }
 
         #endregion

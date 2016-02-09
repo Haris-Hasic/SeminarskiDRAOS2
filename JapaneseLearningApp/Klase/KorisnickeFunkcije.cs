@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -10,20 +11,19 @@ namespace JapaneseLearningApp.Klase
 {
     public class KorisnickeFunkcije
     {
-        private void saveImage(Image sl, String path)
+        public static Image ByteArrayToImage(byte[] byteArrayIn)
         {
-            /*
-            if (File.Exists(path))
-            {
-                pbSLIKA.Image = Resources.ProfilePicPlaceHolder;
-                pbPROFILESL.Image = Resources.ProfilePicPlaceHolder;
-                File.WriteAllBytes();
-                File.Delete(path);
-            }
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            ms.Position = 0;
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
+        }
 
-            sl.Save(path);
-            sl.Dispose();
-            */
+        public static byte[] ImageToByteArray(Image x)
+        {
+            ImageConverter _imageConverter = new ImageConverter();
+            byte[] xByte = (byte[])_imageConverter.ConvertTo(x, typeof(byte[]));
+            return xByte;
         }
 
         public static string GetMd5Hash(string input)

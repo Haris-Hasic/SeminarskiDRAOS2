@@ -95,29 +95,11 @@
     <Compile Include="LectureKontrole\StoryPanel.Designer.cs">
       <DependentUpon>StoryPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestKontrole\GrammarQuestionSimple.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TestKontrole\GrammarQuestionSimple.Designer.cs">
-      <DependentUpon>GrammarQuestionSimple.cs</DependentUpon>
-    </Compile>
     <Compile Include="LectureKontrole\VocabularyPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="LectureKontrole\VocabularyPanel.Designer.cs">
       <DependentUpon>VocabularyPanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TestKontrole\VocabularyQuestionPictures.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TestKontrole\VocabularyQuestionPictures.Designer.cs">
-      <DependentUpon>VocabularyQuestionPictures.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TestKontrole\WritingQuestionSimple.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TestKontrole\WritingQuestionSimple.Designer.cs">
-      <DependentUpon>WritingQuestionSimple.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="GlavnaForma.resx">
       <DependentUpon>GlavnaForma.cs</DependentUpon>
@@ -146,15 +128,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LectureKontrole\VocabularyPanel.resx">
       <DependentUpon>VocabularyPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestKontrole\GrammarQuestionSimple.resx">
-      <DependentUpon>GrammarQuestionSimple.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestKontrole\VocabularyQuestionPictures.resx">
-      <DependentUpon>VocabularyQuestionPictures.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestKontrole\WritingQuestionSimple.resx">
-      <DependentUpon>WritingQuestionSimple.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="draosbazaDataSet.xsc">
       <DependentUpon>draosbazaDataSet.xsd</DependentUpon>

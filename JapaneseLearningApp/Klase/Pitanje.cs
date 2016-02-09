@@ -10,13 +10,15 @@ namespace JapaneseLearningApp.Klase
     {
         Int32 idPitanja;
         String tekstPitanja;
+        Int32 nivo;
 
         public Pitanje() { }
 
-        public Pitanje(Int32 id, String tekst) 
+        public Pitanje(Int32 id, String tekst, Int32 n) 
         {
             IdPitanja = id;
             TekstPitanja = tekst;
+            Nivo = n;
         }
 
         public Int32 IdPitanja
@@ -29,6 +31,12 @@ namespace JapaneseLearningApp.Klase
         {
             get { return tekstPitanja; }
             set { tekstPitanja = value; }
+        }
+
+        public Int32 Nivo
+        {
+            get { return nivo; }
+            set { nivo = value; }
         }
     }
 }

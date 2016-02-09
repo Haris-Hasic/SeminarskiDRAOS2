@@ -10,12 +10,11 @@ namespace JapaneseLearningApp.Klase
     {
         String tacanOdgovor;
         String odgovor1, odgovor2, odgovor3;
-        Int32 nivo;
 
         public PitanjeOdaberi() {}
 
-        public PitanjeOdaberi(Int32 id, String tekst, String o1, String o2, String o3, String tOdg, Int32 n)
-            : base(id, tekst)
+        public PitanjeOdaberi(Int32 id, String tekst, Int32 n, String o1, String o2, String o3, String tOdg)
+            : base(id, tekst, n)
         {
             TacanOdgovor = tOdg;
             Odgovor1 = o1;
@@ -46,12 +45,6 @@ namespace JapaneseLearningApp.Klase
         {
             get { return odgovor3; }
             set { odgovor3 = value; }
-        }
-
-        public Int32 Nivo
-        {
-            get { return nivo; }
-            set { nivo = value; }
         }
     }
 }

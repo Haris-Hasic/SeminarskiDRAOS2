@@ -370,8 +370,8 @@ namespace JapaneseLearningApp
 
         #endregion
         
-        // Funkcije i eventi za izradu testa
-        #region IZRADA_TESTA
+        // Funkcije i eventi za izradu vokabular testa
+        #region IZRADA_VOKABULAR_TESTA
 
         void zakljucajNivoe(Int32 nivo)
         {

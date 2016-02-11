@@ -433,7 +433,7 @@ namespace JapaneseLearningApp
                     dr.Close();
                     ((IDisposable)dr).Dispose();
 
-                    lblQUESTIONTXT.Text = p.TekstPitanja;
+                    tbQUESTIONTXT.Text = p.TekstPitanja;
                     tacanOdgovor = postaviRandomOdgovore(new Random().Next(1, 100), p);
                 }
 
@@ -537,7 +537,7 @@ namespace JapaneseLearningApp
                     dr.Close();
                     ((IDisposable)dr).Dispose();
 
-                    lblQUESTIONTXTPIC.Text = p.TekstPitanja;
+                    tbPICQUESTIONTXT.Text = p.TekstPitanja;
 
                     tacanOdgovor = postaviRandomSlikaOdgovore(new Random().Next(1, 100), p);
                 }
@@ -610,6 +610,10 @@ namespace JapaneseLearningApp
             if (aktivniTest.ZavrsenTest())
             {
                 tpTESTRESULT.BackColor = Color.FromArgb(120, 200, 180);
+
+                foreach (Control cont in tpTESTRESULT.Controls)
+                    cont.BackColor = Color.FromArgb(120, 200, 180);
+
                 labelSCOREINDICATOR.Text = Convert.ToString(aktivniTest.Skor) + "/10";
                 this.tabControl1.SelectedTab = tpTESTRESULT;
 
@@ -692,7 +696,7 @@ namespace JapaneseLearningApp
 
         // Funkcije i eventi za izradu grammar testa
         #region IZRADA_GRAMMAR_TESTA
-
+        
         Int32 ucitajRandomGrammarPitanje(Int32 nivo, Int32 vrsta) // Učita pitanje i vrati broj dugmeta sa tačnim odgovorom
         {
             MySqlConnection konekcija = new MySqlConnection("server=localhost;User Id=root;database=draosbaza");
@@ -740,7 +744,7 @@ namespace JapaneseLearningApp
                     dr.Close();
                     ((IDisposable)dr).Dispose();
 
-                    lblQUESTIONTXT.Text = p.TekstPitanja;
+                    tbQUESTIONTXT.Text = p.TekstPitanja;
                     tacanOdgovor = postaviRandomKanjiOdgovore(new Random().Next(1, 100), p, vrsta);
                 }
 
@@ -826,7 +830,7 @@ namespace JapaneseLearningApp
                     dr.Close();
                     ((IDisposable)dr).Dispose();
 
-                    lblQUESTIONTXT.Text = p.TekstPitanja;
+                    tbQUESTIONTXT.Text = p.TekstPitanja;
                     tacanOdgovor = postaviRandomKanjiOdgovore(new Random().Next(1, 100), p, vrsta);
                 }
 
@@ -938,6 +942,10 @@ namespace JapaneseLearningApp
             if (aktivniTest.ZavrsenTest())
             {
                 tpTESTRESULT.BackColor = Color.FromArgb(255, 192, 128);
+
+                foreach (Control cont in tpTESTRESULT.Controls)
+                    cont.BackColor = Color.FromArgb(255, 192, 128);
+
                 this.tabControl1.SelectedTab = tpTESTRESULT;
                 labelSCOREINDICATOR.Text = Convert.ToString(aktivniTest.Skor) + "/10";
 
@@ -1046,6 +1054,31 @@ namespace JapaneseLearningApp
         private void button27_Click(object sender, EventArgs e)
         {
             GoToProfile();
+        }
+
+        private void button32_Click(object sender, EventArgs e)
+        {
+            GoToTestMenu();
+        }
+
+        private void button31_Click(object sender, EventArgs e)
+        {
+            GoToTestMenu();
+        }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+            GoToTestMenu();
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            GoToTestMenu();
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            GoToMainMenu();
         }
 
         private void buttVOCABULARYTEST_Click(object sender, EventArgs e)
@@ -1247,9 +1280,7 @@ namespace JapaneseLearningApp
         public void postaviBojeButtona(Color c)
         {
             foreach (Control b in tpTESTLIST.Controls)
-            {
                 b.BackColor = c;
-            }
         }
 
         #endregion

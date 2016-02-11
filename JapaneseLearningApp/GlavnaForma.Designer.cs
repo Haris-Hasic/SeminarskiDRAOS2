@@ -167,11 +167,9 @@
             this.label38 = new System.Windows.Forms.Label();
             this.lblQUESTIONINDICATOR = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.lblQUESTIONTXT = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.tpVOCABQUESTPIC = new System.Windows.Forms.TabPage();
-            this.lblQUESTIONTXTPIC = new System.Windows.Forms.Label();
             this.buttPICANSWER2 = new System.Windows.Forms.Button();
             this.buttPICANSWER4 = new System.Windows.Forms.Button();
             this.buttPICANSWER3 = new System.Windows.Forms.Button();
@@ -190,31 +188,6 @@
             this.progressBar11 = new System.Windows.Forms.ProgressBar();
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
-            this.tpTESTRESULT = new System.Windows.Forms.TabPage();
-            this.button28 = new System.Windows.Forms.Button();
-            this.labelSCOREINDICATOR = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.tpKANJIQUESTION = new System.Windows.Forms.TabPage();
-            this.progressBar27 = new System.Windows.Forms.ProgressBar();
-            this.progressBar28 = new System.Windows.Forms.ProgressBar();
-            this.progressBar29 = new System.Windows.Forms.ProgressBar();
-            this.progressBar30 = new System.Windows.Forms.ProgressBar();
-            this.progressBar26 = new System.Windows.Forms.ProgressBar();
-            this.progressBar25 = new System.Windows.Forms.ProgressBar();
-            this.progressBar24 = new System.Windows.Forms.ProgressBar();
-            this.progressBar23 = new System.Windows.Forms.ProgressBar();
-            this.progressBar22 = new System.Windows.Forms.ProgressBar();
-            this.labelKQINDICATOR = new System.Windows.Forms.Label();
-            this.progressBar21 = new System.Windows.Forms.ProgressBar();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.pbKANJIPIC = new System.Windows.Forms.PictureBox();
-            this.buttKANJIANSWER4 = new System.Windows.Forms.Button();
-            this.buttKANJIANSWER3 = new System.Windows.Forms.Button();
-            this.buttKANJIANSWER2 = new System.Windows.Forms.Button();
-            this.buttKANJIANSWER1 = new System.Windows.Forms.Button();
-            this.label44 = new System.Windows.Forms.Label();
             this.tpGRAMMARQUESTION = new System.Windows.Forms.TabPage();
             this.label49 = new System.Windows.Forms.Label();
             this.progressBar31 = new System.Windows.Forms.ProgressBar();
@@ -230,6 +203,37 @@
             this.progressBar40 = new System.Windows.Forms.ProgressBar();
             this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
+            this.tpKANJIQUESTION = new System.Windows.Forms.TabPage();
+            this.label44 = new System.Windows.Forms.Label();
+            this.buttKANJIANSWER1 = new System.Windows.Forms.Button();
+            this.buttKANJIANSWER2 = new System.Windows.Forms.Button();
+            this.buttKANJIANSWER3 = new System.Windows.Forms.Button();
+            this.buttKANJIANSWER4 = new System.Windows.Forms.Button();
+            this.pbKANJIPIC = new System.Windows.Forms.PictureBox();
+            this.progressBar27 = new System.Windows.Forms.ProgressBar();
+            this.progressBar28 = new System.Windows.Forms.ProgressBar();
+            this.progressBar29 = new System.Windows.Forms.ProgressBar();
+            this.progressBar30 = new System.Windows.Forms.ProgressBar();
+            this.progressBar26 = new System.Windows.Forms.ProgressBar();
+            this.progressBar25 = new System.Windows.Forms.ProgressBar();
+            this.progressBar24 = new System.Windows.Forms.ProgressBar();
+            this.progressBar23 = new System.Windows.Forms.ProgressBar();
+            this.progressBar22 = new System.Windows.Forms.ProgressBar();
+            this.labelKQINDICATOR = new System.Windows.Forms.Label();
+            this.progressBar21 = new System.Windows.Forms.ProgressBar();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.tpTESTRESULT = new System.Windows.Forms.TabPage();
+            this.button28 = new System.Windows.Forms.Button();
+            this.labelSCOREINDICATOR = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.tbPICQUESTIONTXT = new System.Windows.Forms.TextBox();
+            this.button29 = new System.Windows.Forms.Button();
+            this.button30 = new System.Windows.Forms.Button();
+            this.button31 = new System.Windows.Forms.Button();
+            this.button32 = new System.Windows.Forms.Button();
+            this.tbQUESTIONTXT = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tpLOGIN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -248,10 +252,10 @@
             this.tpTESTLIST.SuspendLayout();
             this.tpVOCABQUESTSIMPLE.SuspendLayout();
             this.tpVOCABQUESTPIC.SuspendLayout();
-            this.tpTESTRESULT.SuspendLayout();
+            this.tpGRAMMARQUESTION.SuspendLayout();
             this.tpKANJIQUESTION.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbKANJIPIC)).BeginInit();
-            this.tpGRAMMARQUESTION.SuspendLayout();
+            this.tpTESTRESULT.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1857,6 +1861,8 @@
             // tpVOCABQUESTSIMPLE
             // 
             this.tpVOCABQUESTSIMPLE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.tpVOCABQUESTSIMPLE.Controls.Add(this.tbQUESTIONTXT);
+            this.tpVOCABQUESTSIMPLE.Controls.Add(this.button32);
             this.tpVOCABQUESTSIMPLE.Controls.Add(this.progressBar7);
             this.tpVOCABQUESTSIMPLE.Controls.Add(this.progressBar8);
             this.tpVOCABQUESTSIMPLE.Controls.Add(this.progressBar9);
@@ -1873,7 +1879,6 @@
             this.tpVOCABQUESTSIMPLE.Controls.Add(this.label38);
             this.tpVOCABQUESTSIMPLE.Controls.Add(this.lblQUESTIONINDICATOR);
             this.tpVOCABQUESTSIMPLE.Controls.Add(this.progressBar1);
-            this.tpVOCABQUESTSIMPLE.Controls.Add(this.lblQUESTIONTXT);
             this.tpVOCABQUESTSIMPLE.Controls.Add(this.label39);
             this.tpVOCABQUESTSIMPLE.Controls.Add(this.label40);
             this.tpVOCABQUESTSIMPLE.Location = new System.Drawing.Point(4, 22);
@@ -1886,7 +1891,7 @@
             // progressBar7
             // 
             this.progressBar7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar7.Location = new System.Drawing.Point(239, 479);
+            this.progressBar7.Location = new System.Drawing.Point(239, 489);
             this.progressBar7.Name = "progressBar7";
             this.progressBar7.Size = new System.Drawing.Size(29, 45);
             this.progressBar7.TabIndex = 73;
@@ -1894,7 +1899,7 @@
             // progressBar8
             // 
             this.progressBar8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar8.Location = new System.Drawing.Point(275, 479);
+            this.progressBar8.Location = new System.Drawing.Point(275, 489);
             this.progressBar8.Name = "progressBar8";
             this.progressBar8.Size = new System.Drawing.Size(29, 45);
             this.progressBar8.TabIndex = 72;
@@ -1902,7 +1907,7 @@
             // progressBar9
             // 
             this.progressBar9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar9.Location = new System.Drawing.Point(311, 479);
+            this.progressBar9.Location = new System.Drawing.Point(310, 489);
             this.progressBar9.Name = "progressBar9";
             this.progressBar9.Size = new System.Drawing.Size(29, 45);
             this.progressBar9.TabIndex = 71;
@@ -1910,7 +1915,7 @@
             // progressBar10
             // 
             this.progressBar10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar10.Location = new System.Drawing.Point(346, 479);
+            this.progressBar10.Location = new System.Drawing.Point(346, 489);
             this.progressBar10.Name = "progressBar10";
             this.progressBar10.Size = new System.Drawing.Size(29, 45);
             this.progressBar10.TabIndex = 70;
@@ -1918,7 +1923,7 @@
             // progressBar6
             // 
             this.progressBar6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar6.Location = new System.Drawing.Point(203, 479);
+            this.progressBar6.Location = new System.Drawing.Point(203, 489);
             this.progressBar6.Name = "progressBar6";
             this.progressBar6.Size = new System.Drawing.Size(29, 45);
             this.progressBar6.TabIndex = 69;
@@ -1926,7 +1931,7 @@
             // progressBar5
             // 
             this.progressBar5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar5.Location = new System.Drawing.Point(168, 479);
+            this.progressBar5.Location = new System.Drawing.Point(168, 489);
             this.progressBar5.Name = "progressBar5";
             this.progressBar5.Size = new System.Drawing.Size(29, 45);
             this.progressBar5.TabIndex = 68;
@@ -1934,7 +1939,7 @@
             // progressBar4
             // 
             this.progressBar4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar4.Location = new System.Drawing.Point(132, 479);
+            this.progressBar4.Location = new System.Drawing.Point(132, 489);
             this.progressBar4.Name = "progressBar4";
             this.progressBar4.Size = new System.Drawing.Size(29, 45);
             this.progressBar4.TabIndex = 67;
@@ -1942,7 +1947,7 @@
             // progressBar3
             // 
             this.progressBar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar3.Location = new System.Drawing.Point(96, 479);
+            this.progressBar3.Location = new System.Drawing.Point(96, 489);
             this.progressBar3.Name = "progressBar3";
             this.progressBar3.Size = new System.Drawing.Size(29, 45);
             this.progressBar3.TabIndex = 66;
@@ -1950,7 +1955,7 @@
             // progressBar2
             // 
             this.progressBar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar2.Location = new System.Drawing.Point(60, 479);
+            this.progressBar2.Location = new System.Drawing.Point(60, 489);
             this.progressBar2.Name = "progressBar2";
             this.progressBar2.Size = new System.Drawing.Size(29, 45);
             this.progressBar2.TabIndex = 65;
@@ -1961,9 +1966,9 @@
             this.buttANSWER4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttANSWER4.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttANSWER4.ForeColor = System.Drawing.Color.White;
-            this.buttANSWER4.Location = new System.Drawing.Point(25, 405);
+            this.buttANSWER4.Location = new System.Drawing.Point(25, 349);
             this.buttANSWER4.Name = "buttANSWER4";
-            this.buttANSWER4.Size = new System.Drawing.Size(350, 68);
+            this.buttANSWER4.Size = new System.Drawing.Size(350, 50);
             this.buttANSWER4.TabIndex = 64;
             this.buttANSWER4.Text = "Answer 4";
             this.buttANSWER4.UseVisualStyleBackColor = false;
@@ -1975,9 +1980,9 @@
             this.buttANSWER3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttANSWER3.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttANSWER3.ForeColor = System.Drawing.Color.White;
-            this.buttANSWER3.Location = new System.Drawing.Point(25, 331);
+            this.buttANSWER3.Location = new System.Drawing.Point(25, 293);
             this.buttANSWER3.Name = "buttANSWER3";
-            this.buttANSWER3.Size = new System.Drawing.Size(350, 68);
+            this.buttANSWER3.Size = new System.Drawing.Size(350, 50);
             this.buttANSWER3.TabIndex = 63;
             this.buttANSWER3.Text = "Answer 3";
             this.buttANSWER3.UseVisualStyleBackColor = false;
@@ -1989,9 +1994,9 @@
             this.buttANSWER2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttANSWER2.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttANSWER2.ForeColor = System.Drawing.Color.White;
-            this.buttANSWER2.Location = new System.Drawing.Point(25, 257);
+            this.buttANSWER2.Location = new System.Drawing.Point(25, 237);
             this.buttANSWER2.Name = "buttANSWER2";
-            this.buttANSWER2.Size = new System.Drawing.Size(350, 68);
+            this.buttANSWER2.Size = new System.Drawing.Size(350, 50);
             this.buttANSWER2.TabIndex = 62;
             this.buttANSWER2.Text = "Answer 2";
             this.buttANSWER2.UseVisualStyleBackColor = false;
@@ -2003,9 +2008,9 @@
             this.buttANSWER1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttANSWER1.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttANSWER1.ForeColor = System.Drawing.Color.White;
-            this.buttANSWER1.Location = new System.Drawing.Point(25, 183);
+            this.buttANSWER1.Location = new System.Drawing.Point(25, 181);
             this.buttANSWER1.Name = "buttANSWER1";
-            this.buttANSWER1.Size = new System.Drawing.Size(350, 68);
+            this.buttANSWER1.Size = new System.Drawing.Size(350, 50);
             this.buttANSWER1.TabIndex = 61;
             this.buttANSWER1.Text = "Answer 1";
             this.buttANSWER1.UseVisualStyleBackColor = false;
@@ -2017,7 +2022,7 @@
             this.label38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.label38.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.White;
-            this.label38.Location = new System.Drawing.Point(47, 99);
+            this.label38.Location = new System.Drawing.Point(51, 83);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(294, 23);
             this.label38.TabIndex = 60;
@@ -2028,7 +2033,7 @@
             this.lblQUESTIONINDICATOR.AutoSize = true;
             this.lblQUESTIONINDICATOR.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQUESTIONINDICATOR.ForeColor = System.Drawing.Color.White;
-            this.lblQUESTIONINDICATOR.Location = new System.Drawing.Point(178, 527);
+            this.lblQUESTIONINDICATOR.Location = new System.Drawing.Point(178, 539);
             this.lblQUESTIONINDICATOR.Name = "lblQUESTIONINDICATOR";
             this.lblQUESTIONINDICATOR.Size = new System.Drawing.Size(65, 32);
             this.lblQUESTIONINDICATOR.TabIndex = 59;
@@ -2038,21 +2043,10 @@
             // 
             this.progressBar1.BackColor = System.Drawing.Color.Red;
             this.progressBar1.ForeColor = System.Drawing.Color.Red;
-            this.progressBar1.Location = new System.Drawing.Point(25, 479);
+            this.progressBar1.Location = new System.Drawing.Point(25, 489);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(29, 45);
             this.progressBar1.TabIndex = 58;
-            // 
-            // lblQUESTIONTXT
-            // 
-            this.lblQUESTIONTXT.AutoSize = true;
-            this.lblQUESTIONTXT.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQUESTIONTXT.ForeColor = System.Drawing.Color.White;
-            this.lblQUESTIONTXT.Location = new System.Drawing.Point(97, 133);
-            this.lblQUESTIONTXT.Name = "lblQUESTIONTXT";
-            this.lblQUESTIONTXT.Size = new System.Drawing.Size(81, 32);
-            this.lblQUESTIONTXT.TabIndex = 57;
-            this.lblQUESTIONTXT.Text = "Word";
             // 
             // label39
             // 
@@ -2070,7 +2064,7 @@
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.Color.White;
-            this.label40.Location = new System.Drawing.Point(41, 59);
+            this.label40.Location = new System.Drawing.Point(38, 49);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(319, 32);
             this.label40.TabIndex = 55;
@@ -2079,7 +2073,8 @@
             // tpVOCABQUESTPIC
             // 
             this.tpVOCABQUESTPIC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.tpVOCABQUESTPIC.Controls.Add(this.lblQUESTIONTXTPIC);
+            this.tpVOCABQUESTPIC.Controls.Add(this.button31);
+            this.tpVOCABQUESTPIC.Controls.Add(this.tbPICQUESTIONTXT);
             this.tpVOCABQUESTPIC.Controls.Add(this.buttPICANSWER2);
             this.tpVOCABQUESTPIC.Controls.Add(this.buttPICANSWER4);
             this.tpVOCABQUESTPIC.Controls.Add(this.buttPICANSWER3);
@@ -2105,26 +2100,15 @@
             this.tpVOCABQUESTPIC.TabIndex = 10;
             this.tpVOCABQUESTPIC.Text = "Picture VQ";
             // 
-            // lblQUESTIONTXTPIC
-            // 
-            this.lblQUESTIONTXTPIC.AutoSize = true;
-            this.lblQUESTIONTXTPIC.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQUESTIONTXTPIC.ForeColor = System.Drawing.Color.White;
-            this.lblQUESTIONTXTPIC.Location = new System.Drawing.Point(97, 131);
-            this.lblQUESTIONTXTPIC.Name = "lblQUESTIONTXTPIC";
-            this.lblQUESTIONTXTPIC.Size = new System.Drawing.Size(81, 32);
-            this.lblQUESTIONTXTPIC.TabIndex = 96;
-            this.lblQUESTIONTXTPIC.Text = "Word";
-            // 
             // buttPICANSWER2
             // 
             this.buttPICANSWER2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.buttPICANSWER2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttPICANSWER2.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttPICANSWER2.ForeColor = System.Drawing.Color.White;
-            this.buttPICANSWER2.Location = new System.Drawing.Point(205, 176);
+            this.buttPICANSWER2.Location = new System.Drawing.Point(200, 167);
             this.buttPICANSWER2.Name = "buttPICANSWER2";
-            this.buttPICANSWER2.Size = new System.Drawing.Size(169, 141);
+            this.buttPICANSWER2.Size = new System.Drawing.Size(172, 150);
             this.buttPICANSWER2.TabIndex = 95;
             this.buttPICANSWER2.UseVisualStyleBackColor = false;
             this.buttPICANSWER2.Click += new System.EventHandler(this.buttPICANSWER2_Click);
@@ -2135,9 +2119,9 @@
             this.buttPICANSWER4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttPICANSWER4.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttPICANSWER4.ForeColor = System.Drawing.Color.White;
-            this.buttPICANSWER4.Location = new System.Drawing.Point(206, 322);
+            this.buttPICANSWER4.Location = new System.Drawing.Point(200, 320);
             this.buttPICANSWER4.Name = "buttPICANSWER4";
-            this.buttPICANSWER4.Size = new System.Drawing.Size(169, 143);
+            this.buttPICANSWER4.Size = new System.Drawing.Size(172, 150);
             this.buttPICANSWER4.TabIndex = 94;
             this.buttPICANSWER4.UseVisualStyleBackColor = false;
             this.buttPICANSWER4.Click += new System.EventHandler(this.buttPICANSWER4_Click);
@@ -2148,9 +2132,9 @@
             this.buttPICANSWER3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttPICANSWER3.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttPICANSWER3.ForeColor = System.Drawing.Color.White;
-            this.buttPICANSWER3.Location = new System.Drawing.Point(30, 322);
+            this.buttPICANSWER3.Location = new System.Drawing.Point(24, 320);
             this.buttPICANSWER3.Name = "buttPICANSWER3";
-            this.buttPICANSWER3.Size = new System.Drawing.Size(169, 141);
+            this.buttPICANSWER3.Size = new System.Drawing.Size(172, 150);
             this.buttPICANSWER3.TabIndex = 93;
             this.buttPICANSWER3.UseVisualStyleBackColor = false;
             this.buttPICANSWER3.Click += new System.EventHandler(this.buttPICANSWER3_Click);
@@ -2161,9 +2145,9 @@
             this.buttPICANSWER1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttPICANSWER1.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttPICANSWER1.ForeColor = System.Drawing.Color.White;
-            this.buttPICANSWER1.Location = new System.Drawing.Point(30, 176);
+            this.buttPICANSWER1.Location = new System.Drawing.Point(24, 167);
             this.buttPICANSWER1.Name = "buttPICANSWER1";
-            this.buttPICANSWER1.Size = new System.Drawing.Size(169, 141);
+            this.buttPICANSWER1.Size = new System.Drawing.Size(172, 150);
             this.buttPICANSWER1.TabIndex = 92;
             this.buttPICANSWER1.UseVisualStyleBackColor = false;
             this.buttPICANSWER1.Click += new System.EventHandler(this.buttPICANSWER1_Click);
@@ -2171,7 +2155,7 @@
             // progressBar17
             // 
             this.progressBar17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar17.Location = new System.Drawing.Point(241, 479);
+            this.progressBar17.Location = new System.Drawing.Point(241, 489);
             this.progressBar17.Name = "progressBar17";
             this.progressBar17.Size = new System.Drawing.Size(29, 45);
             this.progressBar17.TabIndex = 87;
@@ -2179,7 +2163,7 @@
             // progressBar18
             // 
             this.progressBar18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar18.Location = new System.Drawing.Point(277, 479);
+            this.progressBar18.Location = new System.Drawing.Point(277, 489);
             this.progressBar18.Name = "progressBar18";
             this.progressBar18.Size = new System.Drawing.Size(29, 45);
             this.progressBar18.TabIndex = 86;
@@ -2187,7 +2171,7 @@
             // progressBar19
             // 
             this.progressBar19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar19.Location = new System.Drawing.Point(313, 479);
+            this.progressBar19.Location = new System.Drawing.Point(313, 489);
             this.progressBar19.Name = "progressBar19";
             this.progressBar19.Size = new System.Drawing.Size(29, 45);
             this.progressBar19.TabIndex = 85;
@@ -2195,7 +2179,7 @@
             // progressBar20
             // 
             this.progressBar20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar20.Location = new System.Drawing.Point(348, 479);
+            this.progressBar20.Location = new System.Drawing.Point(348, 489);
             this.progressBar20.Name = "progressBar20";
             this.progressBar20.Size = new System.Drawing.Size(29, 45);
             this.progressBar20.TabIndex = 84;
@@ -2203,7 +2187,7 @@
             // progressBar16
             // 
             this.progressBar16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar16.Location = new System.Drawing.Point(205, 479);
+            this.progressBar16.Location = new System.Drawing.Point(205, 489);
             this.progressBar16.Name = "progressBar16";
             this.progressBar16.Size = new System.Drawing.Size(29, 45);
             this.progressBar16.TabIndex = 83;
@@ -2211,7 +2195,7 @@
             // progressBar15
             // 
             this.progressBar15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar15.Location = new System.Drawing.Point(170, 479);
+            this.progressBar15.Location = new System.Drawing.Point(170, 489);
             this.progressBar15.Name = "progressBar15";
             this.progressBar15.Size = new System.Drawing.Size(29, 45);
             this.progressBar15.TabIndex = 82;
@@ -2219,7 +2203,7 @@
             // progressBar14
             // 
             this.progressBar14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar14.Location = new System.Drawing.Point(134, 479);
+            this.progressBar14.Location = new System.Drawing.Point(134, 489);
             this.progressBar14.Name = "progressBar14";
             this.progressBar14.Size = new System.Drawing.Size(29, 45);
             this.progressBar14.TabIndex = 81;
@@ -2227,7 +2211,7 @@
             // progressBar13
             // 
             this.progressBar13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar13.Location = new System.Drawing.Point(98, 479);
+            this.progressBar13.Location = new System.Drawing.Point(98, 489);
             this.progressBar13.Name = "progressBar13";
             this.progressBar13.Size = new System.Drawing.Size(29, 45);
             this.progressBar13.TabIndex = 80;
@@ -2235,7 +2219,7 @@
             // progressBar12
             // 
             this.progressBar12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar12.Location = new System.Drawing.Point(62, 479);
+            this.progressBar12.Location = new System.Drawing.Point(62, 489);
             this.progressBar12.Name = "progressBar12";
             this.progressBar12.Size = new System.Drawing.Size(29, 45);
             this.progressBar12.TabIndex = 79;
@@ -2246,7 +2230,7 @@
             this.label43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.label43.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.ForeColor = System.Drawing.Color.White;
-            this.label43.Location = new System.Drawing.Point(9, 99);
+            this.label43.Location = new System.Drawing.Point(9, 83);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(386, 23);
             this.label43.TabIndex = 78;
@@ -2257,7 +2241,7 @@
             this.lblQUESTIONINDICATOR2.AutoSize = true;
             this.lblQUESTIONINDICATOR2.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQUESTIONINDICATOR2.ForeColor = System.Drawing.Color.White;
-            this.lblQUESTIONINDICATOR2.Location = new System.Drawing.Point(178, 527);
+            this.lblQUESTIONINDICATOR2.Location = new System.Drawing.Point(178, 539);
             this.lblQUESTIONINDICATOR2.Name = "lblQUESTIONINDICATOR2";
             this.lblQUESTIONINDICATOR2.Size = new System.Drawing.Size(65, 32);
             this.lblQUESTIONINDICATOR2.TabIndex = 77;
@@ -2267,7 +2251,7 @@
             // 
             this.progressBar11.BackColor = System.Drawing.Color.Red;
             this.progressBar11.ForeColor = System.Drawing.Color.Red;
-            this.progressBar11.Location = new System.Drawing.Point(25, 479);
+            this.progressBar11.Location = new System.Drawing.Point(25, 489);
             this.progressBar11.Name = "progressBar11";
             this.progressBar11.Size = new System.Drawing.Size(29, 45);
             this.progressBar11.TabIndex = 76;
@@ -2288,296 +2272,16 @@
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.Color.White;
-            this.label46.Location = new System.Drawing.Point(41, 59);
+            this.label46.Location = new System.Drawing.Point(38, 49);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(319, 32);
             this.label46.TabIndex = 74;
             this.label46.Text = "Vocabulary - Question #1";
             // 
-            // tpTESTRESULT
-            // 
-            this.tpTESTRESULT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.tpTESTRESULT.Controls.Add(this.button28);
-            this.tpTESTRESULT.Controls.Add(this.labelSCOREINDICATOR);
-            this.tpTESTRESULT.Controls.Add(this.label42);
-            this.tpTESTRESULT.Controls.Add(this.label41);
-            this.tpTESTRESULT.Location = new System.Drawing.Point(4, 22);
-            this.tpTESTRESULT.Name = "tpTESTRESULT";
-            this.tpTESTRESULT.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTESTRESULT.Size = new System.Drawing.Size(404, 604);
-            this.tpTESTRESULT.TabIndex = 9;
-            this.tpTESTRESULT.Text = "Test Result";
-            // 
-            // button28
-            // 
-            this.button28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button28.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button28.ForeColor = System.Drawing.Color.White;
-            this.button28.Location = new System.Drawing.Point(320, 6);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(76, 29);
-            this.button28.TabIndex = 61;
-            this.button28.Text = "Menu";
-            this.button28.UseVisualStyleBackColor = false;
-            // 
-            // labelSCOREINDICATOR
-            // 
-            this.labelSCOREINDICATOR.AutoSize = true;
-            this.labelSCOREINDICATOR.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSCOREINDICATOR.ForeColor = System.Drawing.Color.White;
-            this.labelSCOREINDICATOR.Location = new System.Drawing.Point(173, 244);
-            this.labelSCOREINDICATOR.Name = "labelSCOREINDICATOR";
-            this.labelSCOREINDICATOR.Size = new System.Drawing.Size(65, 32);
-            this.labelSCOREINDICATOR.TabIndex = 60;
-            this.labelSCOREINDICATOR.Text = "0/10";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label42.ForeColor = System.Drawing.Color.White;
-            this.label42.Location = new System.Drawing.Point(100, 577);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(206, 13);
-            this.label42.TabIndex = 57;
-            this.label42.Text = "Copyright 2015. All rights reserved.";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.White;
-            this.label41.Location = new System.Drawing.Point(110, 198);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(196, 32);
-            this.label41.TabIndex = 56;
-            this.label41.Text = "Gratzz faggot !";
-            // 
-            // tpKANJIQUESTION
-            // 
-            this.tpKANJIQUESTION.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.tpKANJIQUESTION.Controls.Add(this.label44);
-            this.tpKANJIQUESTION.Controls.Add(this.buttKANJIANSWER1);
-            this.tpKANJIQUESTION.Controls.Add(this.buttKANJIANSWER2);
-            this.tpKANJIQUESTION.Controls.Add(this.buttKANJIANSWER3);
-            this.tpKANJIQUESTION.Controls.Add(this.buttKANJIANSWER4);
-            this.tpKANJIQUESTION.Controls.Add(this.pbKANJIPIC);
-            this.tpKANJIQUESTION.Controls.Add(this.progressBar27);
-            this.tpKANJIQUESTION.Controls.Add(this.progressBar28);
-            this.tpKANJIQUESTION.Controls.Add(this.progressBar29);
-            this.tpKANJIQUESTION.Controls.Add(this.progressBar30);
-            this.tpKANJIQUESTION.Controls.Add(this.progressBar26);
-            this.tpKANJIQUESTION.Controls.Add(this.progressBar25);
-            this.tpKANJIQUESTION.Controls.Add(this.progressBar24);
-            this.tpKANJIQUESTION.Controls.Add(this.progressBar23);
-            this.tpKANJIQUESTION.Controls.Add(this.progressBar22);
-            this.tpKANJIQUESTION.Controls.Add(this.labelKQINDICATOR);
-            this.tpKANJIQUESTION.Controls.Add(this.progressBar21);
-            this.tpKANJIQUESTION.Controls.Add(this.label47);
-            this.tpKANJIQUESTION.Controls.Add(this.label48);
-            this.tpKANJIQUESTION.Location = new System.Drawing.Point(4, 22);
-            this.tpKANJIQUESTION.Name = "tpKANJIQUESTION";
-            this.tpKANJIQUESTION.Padding = new System.Windows.Forms.Padding(3);
-            this.tpKANJIQUESTION.Size = new System.Drawing.Size(404, 604);
-            this.tpKANJIQUESTION.TabIndex = 11;
-            this.tpKANJIQUESTION.Text = "Simple KQ";
-            // 
-            // progressBar27
-            // 
-            this.progressBar27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar27.Location = new System.Drawing.Point(241, 489);
-            this.progressBar27.Name = "progressBar27";
-            this.progressBar27.Size = new System.Drawing.Size(29, 45);
-            this.progressBar27.TabIndex = 86;
-            // 
-            // progressBar28
-            // 
-            this.progressBar28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar28.Location = new System.Drawing.Point(277, 489);
-            this.progressBar28.Name = "progressBar28";
-            this.progressBar28.Size = new System.Drawing.Size(29, 45);
-            this.progressBar28.TabIndex = 85;
-            // 
-            // progressBar29
-            // 
-            this.progressBar29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar29.Location = new System.Drawing.Point(313, 489);
-            this.progressBar29.Name = "progressBar29";
-            this.progressBar29.Size = new System.Drawing.Size(29, 45);
-            this.progressBar29.TabIndex = 84;
-            // 
-            // progressBar30
-            // 
-            this.progressBar30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar30.Location = new System.Drawing.Point(348, 489);
-            this.progressBar30.Name = "progressBar30";
-            this.progressBar30.Size = new System.Drawing.Size(29, 45);
-            this.progressBar30.TabIndex = 83;
-            // 
-            // progressBar26
-            // 
-            this.progressBar26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar26.Location = new System.Drawing.Point(205, 489);
-            this.progressBar26.Name = "progressBar26";
-            this.progressBar26.Size = new System.Drawing.Size(29, 45);
-            this.progressBar26.TabIndex = 82;
-            // 
-            // progressBar25
-            // 
-            this.progressBar25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar25.Location = new System.Drawing.Point(170, 489);
-            this.progressBar25.Name = "progressBar25";
-            this.progressBar25.Size = new System.Drawing.Size(29, 45);
-            this.progressBar25.TabIndex = 81;
-            // 
-            // progressBar24
-            // 
-            this.progressBar24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar24.Location = new System.Drawing.Point(134, 489);
-            this.progressBar24.Name = "progressBar24";
-            this.progressBar24.Size = new System.Drawing.Size(29, 45);
-            this.progressBar24.TabIndex = 80;
-            // 
-            // progressBar23
-            // 
-            this.progressBar23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar23.Location = new System.Drawing.Point(98, 489);
-            this.progressBar23.Name = "progressBar23";
-            this.progressBar23.Size = new System.Drawing.Size(29, 45);
-            this.progressBar23.TabIndex = 79;
-            // 
-            // progressBar22
-            // 
-            this.progressBar22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar22.Location = new System.Drawing.Point(62, 489);
-            this.progressBar22.Name = "progressBar22";
-            this.progressBar22.Size = new System.Drawing.Size(29, 45);
-            this.progressBar22.TabIndex = 78;
-            // 
-            // labelKQINDICATOR
-            // 
-            this.labelKQINDICATOR.AutoSize = true;
-            this.labelKQINDICATOR.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelKQINDICATOR.ForeColor = System.Drawing.Color.White;
-            this.labelKQINDICATOR.Location = new System.Drawing.Point(178, 537);
-            this.labelKQINDICATOR.Name = "labelKQINDICATOR";
-            this.labelKQINDICATOR.Size = new System.Drawing.Size(65, 32);
-            this.labelKQINDICATOR.TabIndex = 77;
-            this.labelKQINDICATOR.Text = "0/10";
-            // 
-            // progressBar21
-            // 
-            this.progressBar21.BackColor = System.Drawing.Color.Red;
-            this.progressBar21.ForeColor = System.Drawing.Color.Red;
-            this.progressBar21.Location = new System.Drawing.Point(27, 489);
-            this.progressBar21.Name = "progressBar21";
-            this.progressBar21.Size = new System.Drawing.Size(29, 45);
-            this.progressBar21.TabIndex = 76;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label47.ForeColor = System.Drawing.Color.White;
-            this.label47.Location = new System.Drawing.Point(100, 577);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(206, 13);
-            this.label47.TabIndex = 75;
-            this.label47.Text = "Copyright 2015. All rights reserved.";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.ForeColor = System.Drawing.Color.White;
-            this.label48.Location = new System.Drawing.Point(75, 20);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(267, 32);
-            this.label48.TabIndex = 74;
-            this.label48.Text = "Writing - Question #1";
-            // 
-            // pbKANJIPIC
-            // 
-            this.pbKANJIPIC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbKANJIPIC.Location = new System.Drawing.Point(126, 81);
-            this.pbKANJIPIC.Name = "pbKANJIPIC";
-            this.pbKANJIPIC.Size = new System.Drawing.Size(145, 105);
-            this.pbKANJIPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbKANJIPIC.TabIndex = 87;
-            this.pbKANJIPIC.TabStop = false;
-            // 
-            // buttKANJIANSWER4
-            // 
-            this.buttKANJIANSWER4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.buttKANJIANSWER4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttKANJIANSWER4.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttKANJIANSWER4.ForeColor = System.Drawing.Color.White;
-            this.buttKANJIANSWER4.Location = new System.Drawing.Point(27, 415);
-            this.buttKANJIANSWER4.Name = "buttKANJIANSWER4";
-            this.buttKANJIANSWER4.Size = new System.Drawing.Size(350, 68);
-            this.buttKANJIANSWER4.TabIndex = 91;
-            this.buttKANJIANSWER4.Text = "Answer 4";
-            this.buttKANJIANSWER4.UseVisualStyleBackColor = false;
-            this.buttKANJIANSWER4.Click += new System.EventHandler(this.buttKANJIANSWER4_Click);
-            // 
-            // buttKANJIANSWER3
-            // 
-            this.buttKANJIANSWER3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.buttKANJIANSWER3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttKANJIANSWER3.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttKANJIANSWER3.ForeColor = System.Drawing.Color.White;
-            this.buttKANJIANSWER3.Location = new System.Drawing.Point(25, 341);
-            this.buttKANJIANSWER3.Name = "buttKANJIANSWER3";
-            this.buttKANJIANSWER3.Size = new System.Drawing.Size(350, 68);
-            this.buttKANJIANSWER3.TabIndex = 92;
-            this.buttKANJIANSWER3.Text = "Answer 3";
-            this.buttKANJIANSWER3.UseVisualStyleBackColor = false;
-            this.buttKANJIANSWER3.Click += new System.EventHandler(this.buttKANJIANSWER3_Click);
-            // 
-            // buttKANJIANSWER2
-            // 
-            this.buttKANJIANSWER2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.buttKANJIANSWER2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttKANJIANSWER2.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttKANJIANSWER2.ForeColor = System.Drawing.Color.White;
-            this.buttKANJIANSWER2.Location = new System.Drawing.Point(25, 267);
-            this.buttKANJIANSWER2.Name = "buttKANJIANSWER2";
-            this.buttKANJIANSWER2.Size = new System.Drawing.Size(350, 68);
-            this.buttKANJIANSWER2.TabIndex = 93;
-            this.buttKANJIANSWER2.Text = "Answer 2";
-            this.buttKANJIANSWER2.UseVisualStyleBackColor = false;
-            this.buttKANJIANSWER2.Click += new System.EventHandler(this.buttKANJIANSWER2_Click);
-            // 
-            // buttKANJIANSWER1
-            // 
-            this.buttKANJIANSWER1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.buttKANJIANSWER1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttKANJIANSWER1.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttKANJIANSWER1.ForeColor = System.Drawing.Color.White;
-            this.buttKANJIANSWER1.Location = new System.Drawing.Point(25, 193);
-            this.buttKANJIANSWER1.Name = "buttKANJIANSWER1";
-            this.buttKANJIANSWER1.Size = new System.Drawing.Size(350, 68);
-            this.buttKANJIANSWER1.TabIndex = 94;
-            this.buttKANJIANSWER1.Text = "Answer 1";
-            this.buttKANJIANSWER1.UseVisualStyleBackColor = false;
-            this.buttKANJIANSWER1.Click += new System.EventHandler(this.buttKANJIANSWER1_Click);
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label44.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.White;
-            this.label44.Location = new System.Drawing.Point(49, 52);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(305, 23);
-            this.label44.TabIndex = 95;
-            this.label44.Text = "Which kanji is show on the picture?";
-            // 
             // tpGRAMMARQUESTION
             // 
             this.tpGRAMMARQUESTION.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
+            this.tpGRAMMARQUESTION.Controls.Add(this.button30);
             this.tpGRAMMARQUESTION.Controls.Add(this.label49);
             this.tpGRAMMARQUESTION.Controls.Add(this.progressBar31);
             this.tpGRAMMARQUESTION.Controls.Add(this.progressBar32);
@@ -2605,7 +2309,7 @@
             this.label49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.label49.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label49.ForeColor = System.Drawing.Color.White;
-            this.label49.Location = new System.Drawing.Point(49, 52);
+            this.label49.Location = new System.Drawing.Point(45, 90);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(305, 23);
             this.label49.TabIndex = 109;
@@ -2688,7 +2392,7 @@
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label50.ForeColor = System.Drawing.Color.White;
-            this.label50.Location = new System.Drawing.Point(178, 537);
+            this.label50.Location = new System.Drawing.Point(178, 539);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(65, 32);
             this.label50.TabIndex = 99;
@@ -2719,11 +2423,372 @@
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label52.ForeColor = System.Drawing.Color.White;
-            this.label52.Location = new System.Drawing.Point(50, 20);
+            this.label52.Location = new System.Drawing.Point(43, 58);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(300, 32);
             this.label52.TabIndex = 96;
             this.label52.Text = "Grammar - Question #1";
+            // 
+            // tpKANJIQUESTION
+            // 
+            this.tpKANJIQUESTION.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.tpKANJIQUESTION.Controls.Add(this.button29);
+            this.tpKANJIQUESTION.Controls.Add(this.label44);
+            this.tpKANJIQUESTION.Controls.Add(this.buttKANJIANSWER1);
+            this.tpKANJIQUESTION.Controls.Add(this.buttKANJIANSWER2);
+            this.tpKANJIQUESTION.Controls.Add(this.buttKANJIANSWER3);
+            this.tpKANJIQUESTION.Controls.Add(this.buttKANJIANSWER4);
+            this.tpKANJIQUESTION.Controls.Add(this.pbKANJIPIC);
+            this.tpKANJIQUESTION.Controls.Add(this.progressBar27);
+            this.tpKANJIQUESTION.Controls.Add(this.progressBar28);
+            this.tpKANJIQUESTION.Controls.Add(this.progressBar29);
+            this.tpKANJIQUESTION.Controls.Add(this.progressBar30);
+            this.tpKANJIQUESTION.Controls.Add(this.progressBar26);
+            this.tpKANJIQUESTION.Controls.Add(this.progressBar25);
+            this.tpKANJIQUESTION.Controls.Add(this.progressBar24);
+            this.tpKANJIQUESTION.Controls.Add(this.progressBar23);
+            this.tpKANJIQUESTION.Controls.Add(this.progressBar22);
+            this.tpKANJIQUESTION.Controls.Add(this.labelKQINDICATOR);
+            this.tpKANJIQUESTION.Controls.Add(this.progressBar21);
+            this.tpKANJIQUESTION.Controls.Add(this.label47);
+            this.tpKANJIQUESTION.Controls.Add(this.label48);
+            this.tpKANJIQUESTION.Location = new System.Drawing.Point(4, 22);
+            this.tpKANJIQUESTION.Name = "tpKANJIQUESTION";
+            this.tpKANJIQUESTION.Padding = new System.Windows.Forms.Padding(3);
+            this.tpKANJIQUESTION.Size = new System.Drawing.Size(404, 604);
+            this.tpKANJIQUESTION.TabIndex = 11;
+            this.tpKANJIQUESTION.Text = "Simple KQ";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label44.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.White;
+            this.label44.Location = new System.Drawing.Point(45, 83);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(316, 23);
+            this.label44.TabIndex = 95;
+            this.label44.Text = "Which kanji is shown on the picture?";
+            // 
+            // buttKANJIANSWER1
+            // 
+            this.buttKANJIANSWER1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.buttKANJIANSWER1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttKANJIANSWER1.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttKANJIANSWER1.ForeColor = System.Drawing.Color.White;
+            this.buttKANJIANSWER1.Location = new System.Drawing.Point(25, 256);
+            this.buttKANJIANSWER1.Name = "buttKANJIANSWER1";
+            this.buttKANJIANSWER1.Size = new System.Drawing.Size(350, 50);
+            this.buttKANJIANSWER1.TabIndex = 94;
+            this.buttKANJIANSWER1.Text = "Answer 1";
+            this.buttKANJIANSWER1.UseVisualStyleBackColor = false;
+            this.buttKANJIANSWER1.Click += new System.EventHandler(this.buttKANJIANSWER1_Click);
+            // 
+            // buttKANJIANSWER2
+            // 
+            this.buttKANJIANSWER2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.buttKANJIANSWER2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttKANJIANSWER2.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttKANJIANSWER2.ForeColor = System.Drawing.Color.White;
+            this.buttKANJIANSWER2.Location = new System.Drawing.Point(25, 312);
+            this.buttKANJIANSWER2.Name = "buttKANJIANSWER2";
+            this.buttKANJIANSWER2.Size = new System.Drawing.Size(350, 50);
+            this.buttKANJIANSWER2.TabIndex = 93;
+            this.buttKANJIANSWER2.Text = "Answer 2";
+            this.buttKANJIANSWER2.UseVisualStyleBackColor = false;
+            this.buttKANJIANSWER2.Click += new System.EventHandler(this.buttKANJIANSWER2_Click);
+            // 
+            // buttKANJIANSWER3
+            // 
+            this.buttKANJIANSWER3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.buttKANJIANSWER3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttKANJIANSWER3.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttKANJIANSWER3.ForeColor = System.Drawing.Color.White;
+            this.buttKANJIANSWER3.Location = new System.Drawing.Point(27, 368);
+            this.buttKANJIANSWER3.Name = "buttKANJIANSWER3";
+            this.buttKANJIANSWER3.Size = new System.Drawing.Size(350, 50);
+            this.buttKANJIANSWER3.TabIndex = 92;
+            this.buttKANJIANSWER3.Text = "Answer 3";
+            this.buttKANJIANSWER3.UseVisualStyleBackColor = false;
+            this.buttKANJIANSWER3.Click += new System.EventHandler(this.buttKANJIANSWER3_Click);
+            // 
+            // buttKANJIANSWER4
+            // 
+            this.buttKANJIANSWER4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.buttKANJIANSWER4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttKANJIANSWER4.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttKANJIANSWER4.ForeColor = System.Drawing.Color.White;
+            this.buttKANJIANSWER4.Location = new System.Drawing.Point(27, 424);
+            this.buttKANJIANSWER4.Name = "buttKANJIANSWER4";
+            this.buttKANJIANSWER4.Size = new System.Drawing.Size(350, 50);
+            this.buttKANJIANSWER4.TabIndex = 91;
+            this.buttKANJIANSWER4.Text = "Answer 4";
+            this.buttKANJIANSWER4.UseVisualStyleBackColor = false;
+            this.buttKANJIANSWER4.Click += new System.EventHandler(this.buttKANJIANSWER4_Click);
+            // 
+            // pbKANJIPIC
+            // 
+            this.pbKANJIPIC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbKANJIPIC.Location = new System.Drawing.Point(130, 119);
+            this.pbKANJIPIC.Name = "pbKANJIPIC";
+            this.pbKANJIPIC.Size = new System.Drawing.Size(140, 120);
+            this.pbKANJIPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbKANJIPIC.TabIndex = 87;
+            this.pbKANJIPIC.TabStop = false;
+            // 
+            // progressBar27
+            // 
+            this.progressBar27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.progressBar27.Location = new System.Drawing.Point(241, 489);
+            this.progressBar27.Name = "progressBar27";
+            this.progressBar27.Size = new System.Drawing.Size(29, 45);
+            this.progressBar27.TabIndex = 86;
+            // 
+            // progressBar28
+            // 
+            this.progressBar28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.progressBar28.Location = new System.Drawing.Point(277, 489);
+            this.progressBar28.Name = "progressBar28";
+            this.progressBar28.Size = new System.Drawing.Size(29, 45);
+            this.progressBar28.TabIndex = 85;
+            // 
+            // progressBar29
+            // 
+            this.progressBar29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.progressBar29.Location = new System.Drawing.Point(313, 489);
+            this.progressBar29.Name = "progressBar29";
+            this.progressBar29.Size = new System.Drawing.Size(29, 45);
+            this.progressBar29.TabIndex = 84;
+            // 
+            // progressBar30
+            // 
+            this.progressBar30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.progressBar30.Location = new System.Drawing.Point(348, 489);
+            this.progressBar30.Name = "progressBar30";
+            this.progressBar30.Size = new System.Drawing.Size(29, 45);
+            this.progressBar30.TabIndex = 83;
+            // 
+            // progressBar26
+            // 
+            this.progressBar26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.progressBar26.Location = new System.Drawing.Point(205, 489);
+            this.progressBar26.Name = "progressBar26";
+            this.progressBar26.Size = new System.Drawing.Size(29, 45);
+            this.progressBar26.TabIndex = 82;
+            // 
+            // progressBar25
+            // 
+            this.progressBar25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.progressBar25.Location = new System.Drawing.Point(169, 489);
+            this.progressBar25.Name = "progressBar25";
+            this.progressBar25.Size = new System.Drawing.Size(29, 45);
+            this.progressBar25.TabIndex = 81;
+            // 
+            // progressBar24
+            // 
+            this.progressBar24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.progressBar24.Location = new System.Drawing.Point(133, 489);
+            this.progressBar24.Name = "progressBar24";
+            this.progressBar24.Size = new System.Drawing.Size(29, 45);
+            this.progressBar24.TabIndex = 80;
+            // 
+            // progressBar23
+            // 
+            this.progressBar23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.progressBar23.Location = new System.Drawing.Point(97, 489);
+            this.progressBar23.Name = "progressBar23";
+            this.progressBar23.Size = new System.Drawing.Size(29, 45);
+            this.progressBar23.TabIndex = 79;
+            // 
+            // progressBar22
+            // 
+            this.progressBar22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.progressBar22.Location = new System.Drawing.Point(61, 489);
+            this.progressBar22.Name = "progressBar22";
+            this.progressBar22.Size = new System.Drawing.Size(29, 45);
+            this.progressBar22.TabIndex = 78;
+            // 
+            // labelKQINDICATOR
+            // 
+            this.labelKQINDICATOR.AutoSize = true;
+            this.labelKQINDICATOR.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelKQINDICATOR.ForeColor = System.Drawing.Color.White;
+            this.labelKQINDICATOR.Location = new System.Drawing.Point(178, 539);
+            this.labelKQINDICATOR.Name = "labelKQINDICATOR";
+            this.labelKQINDICATOR.Size = new System.Drawing.Size(65, 32);
+            this.labelKQINDICATOR.TabIndex = 77;
+            this.labelKQINDICATOR.Text = "0/10";
+            // 
+            // progressBar21
+            // 
+            this.progressBar21.BackColor = System.Drawing.Color.Red;
+            this.progressBar21.ForeColor = System.Drawing.Color.Red;
+            this.progressBar21.Location = new System.Drawing.Point(25, 489);
+            this.progressBar21.Name = "progressBar21";
+            this.progressBar21.Size = new System.Drawing.Size(29, 45);
+            this.progressBar21.TabIndex = 76;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label47.ForeColor = System.Drawing.Color.White;
+            this.label47.Location = new System.Drawing.Point(100, 577);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(206, 13);
+            this.label47.TabIndex = 75;
+            this.label47.Text = "Copyright 2015. All rights reserved.";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.Color.White;
+            this.label48.Location = new System.Drawing.Point(67, 49);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(267, 32);
+            this.label48.TabIndex = 74;
+            this.label48.Text = "Writing - Question #1";
+            // 
+            // tpTESTRESULT
+            // 
+            this.tpTESTRESULT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.tpTESTRESULT.Controls.Add(this.button28);
+            this.tpTESTRESULT.Controls.Add(this.labelSCOREINDICATOR);
+            this.tpTESTRESULT.Controls.Add(this.label42);
+            this.tpTESTRESULT.Controls.Add(this.label41);
+            this.tpTESTRESULT.Location = new System.Drawing.Point(4, 22);
+            this.tpTESTRESULT.Name = "tpTESTRESULT";
+            this.tpTESTRESULT.Padding = new System.Windows.Forms.Padding(3);
+            this.tpTESTRESULT.Size = new System.Drawing.Size(404, 604);
+            this.tpTESTRESULT.TabIndex = 9;
+            this.tpTESTRESULT.Text = "Test Result";
+            // 
+            // button28
+            // 
+            this.button28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button28.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button28.ForeColor = System.Drawing.Color.White;
+            this.button28.Location = new System.Drawing.Point(320, 6);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(76, 29);
+            this.button28.TabIndex = 61;
+            this.button28.Text = "Menu";
+            this.button28.UseVisualStyleBackColor = false;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
+            // 
+            // labelSCOREINDICATOR
+            // 
+            this.labelSCOREINDICATOR.AutoSize = true;
+            this.labelSCOREINDICATOR.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSCOREINDICATOR.ForeColor = System.Drawing.Color.White;
+            this.labelSCOREINDICATOR.Location = new System.Drawing.Point(173, 244);
+            this.labelSCOREINDICATOR.Name = "labelSCOREINDICATOR";
+            this.labelSCOREINDICATOR.Size = new System.Drawing.Size(65, 32);
+            this.labelSCOREINDICATOR.TabIndex = 60;
+            this.labelSCOREINDICATOR.Text = "0/10";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label42.ForeColor = System.Drawing.Color.White;
+            this.label42.Location = new System.Drawing.Point(100, 577);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(206, 13);
+            this.label42.TabIndex = 57;
+            this.label42.Text = "Copyright 2015. All rights reserved.";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.White;
+            this.label41.Location = new System.Drawing.Point(110, 198);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(196, 32);
+            this.label41.TabIndex = 56;
+            this.label41.Text = "Gratzz faggot !";
+            // 
+            // tbPICQUESTIONTXT
+            // 
+            this.tbPICQUESTIONTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.tbPICQUESTIONTXT.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPICQUESTIONTXT.ForeColor = System.Drawing.Color.White;
+            this.tbPICQUESTIONTXT.Location = new System.Drawing.Point(25, 115);
+            this.tbPICQUESTIONTXT.Name = "tbPICQUESTIONTXT";
+            this.tbPICQUESTIONTXT.Size = new System.Drawing.Size(347, 39);
+            this.tbPICQUESTIONTXT.TabIndex = 97;
+            this.tbPICQUESTIONTXT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button29
+            // 
+            this.button29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button29.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button29.ForeColor = System.Drawing.Color.White;
+            this.button29.Location = new System.Drawing.Point(320, 6);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(76, 29);
+            this.button29.TabIndex = 96;
+            this.button29.Text = "Menu";
+            this.button29.UseVisualStyleBackColor = false;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
+            // 
+            // button30
+            // 
+            this.button30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
+            this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button30.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button30.ForeColor = System.Drawing.Color.White;
+            this.button30.Location = new System.Drawing.Point(320, 6);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(76, 29);
+            this.button30.TabIndex = 110;
+            this.button30.Text = "Menu";
+            this.button30.UseVisualStyleBackColor = false;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
+            // 
+            // button31
+            // 
+            this.button31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button31.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button31.ForeColor = System.Drawing.Color.White;
+            this.button31.Location = new System.Drawing.Point(320, 6);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(76, 29);
+            this.button31.TabIndex = 111;
+            this.button31.Text = "Menu";
+            this.button31.UseVisualStyleBackColor = false;
+            this.button31.Click += new System.EventHandler(this.button31_Click);
+            // 
+            // button32
+            // 
+            this.button32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.button32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button32.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button32.ForeColor = System.Drawing.Color.White;
+            this.button32.Location = new System.Drawing.Point(320, 6);
+            this.button32.Name = "button32";
+            this.button32.Size = new System.Drawing.Size(76, 29);
+            this.button32.TabIndex = 112;
+            this.button32.Text = "Menu";
+            this.button32.UseVisualStyleBackColor = false;
+            this.button32.Click += new System.EventHandler(this.button32_Click);
+            // 
+            // tbQUESTIONTXT
+            // 
+            this.tbQUESTIONTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.tbQUESTIONTXT.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbQUESTIONTXT.ForeColor = System.Drawing.Color.White;
+            this.tbQUESTIONTXT.Location = new System.Drawing.Point(25, 115);
+            this.tbQUESTIONTXT.Name = "tbQUESTIONTXT";
+            this.tbQUESTIONTXT.Size = new System.Drawing.Size(350, 39);
+            this.tbQUESTIONTXT.TabIndex = 113;
+            this.tbQUESTIONTXT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // GlavnaForma
             // 
@@ -2767,13 +2832,13 @@
             this.tpVOCABQUESTSIMPLE.PerformLayout();
             this.tpVOCABQUESTPIC.ResumeLayout(false);
             this.tpVOCABQUESTPIC.PerformLayout();
-            this.tpTESTRESULT.ResumeLayout(false);
-            this.tpTESTRESULT.PerformLayout();
+            this.tpGRAMMARQUESTION.ResumeLayout(false);
+            this.tpGRAMMARQUESTION.PerformLayout();
             this.tpKANJIQUESTION.ResumeLayout(false);
             this.tpKANJIQUESTION.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbKANJIPIC)).EndInit();
-            this.tpGRAMMARQUESTION.ResumeLayout(false);
-            this.tpGRAMMARQUESTION.PerformLayout();
+            this.tpTESTRESULT.ResumeLayout(false);
+            this.tpTESTRESULT.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2909,7 +2974,6 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label lblQUESTIONINDICATOR;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Label lblQUESTIONTXT;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.TabPage tpTESTRESULT;
@@ -2944,7 +3008,6 @@
         private System.Windows.Forms.Button buttPICANSWER4;
         private System.Windows.Forms.Button buttPICANSWER3;
         private System.Windows.Forms.Button buttPICANSWER1;
-        private System.Windows.Forms.Label lblQUESTIONTXTPIC;
         private System.Windows.Forms.Button button28;
         private System.Windows.Forms.TabPage tpKANJIQUESTION;
         private System.Windows.Forms.ProgressBar progressBar27;
@@ -2981,5 +3044,11 @@
         private System.Windows.Forms.ProgressBar progressBar40;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.TextBox tbPICQUESTIONTXT;
+        private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.TextBox tbQUESTIONTXT;
+        private System.Windows.Forms.Button button32;
+        private System.Windows.Forms.Button button31;
+        private System.Windows.Forms.Button button30;
     }
 }

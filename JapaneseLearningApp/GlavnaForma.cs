@@ -508,7 +508,14 @@ namespace JapaneseLearningApp
             {
                 komanda.CommandText = "SELECT * FROM draosbaza.slikapitanje WHERE nivo=@nivo ANd id=@id;";
                 komanda.Parameters.AddWithValue("@nivo", nivo);
-                komanda.Parameters.AddWithValue("@id", new Random().Next(1, 10));
+                Int32 rnd;
+
+                if (nivo == 0)
+                    rnd = new Random().Next(1, 10);
+                else
+                    rnd = new Random().Next(11, 20);
+
+                komanda.Parameters.AddWithValue("@id", rnd);
                 komanda.Connection = konekcija;
                 konekcija.Open();
 
@@ -628,12 +635,12 @@ namespace JapaneseLearningApp
                 if (new Random().Next(1, 100) % 2 == 0)
                 {
                     TextQuestion();
-                    aktivniTest.TacanOdgovor = ucitajRandomPitanje(1);
+                    aktivniTest.TacanOdgovor = ucitajRandomPitanje(odabraniNivo);
                 }
                 else
                 {
                     PictureQuestion();
-                    aktivniTest.TacanOdgovor = ucitajRandomSlikaPitanje(1);
+                    aktivniTest.TacanOdgovor = ucitajRandomSlikaPitanje(odabraniNivo);
                 }
             }
 
@@ -697,20 +704,28 @@ namespace JapaneseLearningApp
         // Funkcije i eventi za izradu grammar testa
         #region IZRADA_GRAMMAR_TESTA
         
-        Int32 ucitajRandomGrammarPitanje(Int32 nivo, Int32 vrsta) // Učita pitanje i vrati broj dugmeta sa tačnim odgovorom
+        Int32 ucitajRandomGrammarPitanje(Int32 nivo) // Učita pitanje i vrati broj dugmeta sa tačnim odgovorom
         {
             MySqlConnection konekcija = new MySqlConnection("server=localhost;User Id=root;database=draosbaza");
             MySqlCommand komanda = new MySqlCommand();
 
-            PitanjeKanji p = new PitanjeKanji();
+            PitanjeOdaberi p = new PitanjeOdaberi();
             Int32 tacanOdgovor = 0;
 
             try
             {
-                komanda.CommandText = "SELECT * FROM draosbaza.kanjipitanje WHERE nivo=@nivo AND id=@id;";
-                komanda.Parameters.AddWithValue("@nivo", 3);
-                //komanda.Parameters.AddWithValue("@nivo", nivo);
-                komanda.Parameters.AddWithValue("@id", new Random().Next(1, 15));
+                komanda.CommandText = "SELECT * FROM draosbaza.grammarpitanje WHERE id=@id AND nivo=@nivo;";
+
+                Int32 rnd;
+
+                if (nivo == 0)
+                    rnd = new Random().Next(1, 10);
+                else
+                    rnd = new Random().Next(11, 20);
+
+                komanda.Parameters.AddWithValue("@id", rnd);
+                komanda.Parameters.AddWithValue("@nivo", nivo);
+
                 komanda.Connection = konekcija;
                 konekcija.Open();
 
@@ -722,30 +737,21 @@ namespace JapaneseLearningApp
                     {
                         Int32 id = Convert.ToInt32(dr["id"]);
                         Int32 niv = Convert.ToInt32(dr["nivo"]);
-                        String znak = Convert.ToString(dr["znak"]);
-                        Image slika = KorisnickeFunkcije.ByteArrayToImage(dr["slika"] as byte[]);
-                        String znacenje = Convert.ToString(dr["znacenje"]);
-                        String onyomi = Convert.ToString(dr["onyomi"]);
-                        String onyomijap = Convert.ToString(dr["onyomijap"]);
-                        String kunyomi = Convert.ToString(dr["kunyomi"]);
-                        String kunyomijap = Convert.ToString(dr["kunyomijap"]);
-                        String o1z = Convert.ToString(dr["o1znacenje"]);
-                        String o2z = Convert.ToString(dr["o2znacenje"]);
-                        String o3z = Convert.ToString(dr["o3znacenje"]);
-                        String o1c = Convert.ToString(dr["o1citanje"]);
-                        String o2c = Convert.ToString(dr["o2citanje"]);
-                        String o3c = Convert.ToString(dr["o3citanje"]);
+                        String tekst = Convert.ToString(dr["tekst"]);
+                        String todg = Convert.ToString(dr["tacanodgovor"]);
+                        String odg1 = Convert.ToString(dr["odgovor1"]);
+                        String odg2 = Convert.ToString(dr["odgovor2"]);
+                        String odg3 = Convert.ToString(dr["odgovor3"]);
                         DateTime kre = Convert.ToDateTime(dr["kreiran"]);
 
-                        pbKANJIPIC.Image = slika;
-                        p = new PitanjeKanji(id, znak, niv, znacenje, onyomi, kunyomi, o1z, o2z, o3z, o1c, o2c, o3c);
+                        p = new PitanjeOdaberi(id, tekst, niv, odg1, odg2, odg3, todg);
                     }
 
                     dr.Close();
                     ((IDisposable)dr).Dispose();
 
-                    tbQUESTIONTXT.Text = p.TekstPitanja;
-                    tacanOdgovor = postaviRandomKanjiOdgovore(new Random().Next(1, 100), p, vrsta);
+                    tbGRAMMARQUESTIONTXT.Text = p.TekstPitanja;
+                    tacanOdgovor = postaviRandomGrammarOdgovore(new Random().Next(1, 100), p);
                 }
 
                 else
@@ -765,6 +771,99 @@ namespace JapaneseLearningApp
             }
 
             return tacanOdgovor;
+        }
+
+        Int32 postaviRandomGrammarOdgovore(Int32 br, PitanjeOdaberi p)
+        {
+            if (br % 4 == 0)
+            {
+                buttGRAMMARANSWER1.Text = p.TacanOdgovor;
+                buttGRAMMARANSWER2.Text = p.Odgovor1;
+                buttGRAMMARANSWER3.Text = p.Odgovor2;
+                buttGRAMMARANSWER4.Text = p.Odgovor3;
+
+                return 1;
+            }
+            else if (br % 4 == 1)
+            {
+                buttGRAMMARANSWER1.Text = p.Odgovor1;
+                buttGRAMMARANSWER2.Text = p.TacanOdgovor;
+                buttGRAMMARANSWER3.Text = p.Odgovor3;
+                buttGRAMMARANSWER4.Text = p.Odgovor2;
+
+                return 2;
+            }
+            else if (br % 4 == 2)
+            {
+                buttGRAMMARANSWER1.Text = p.Odgovor2;
+                buttGRAMMARANSWER2.Text = p.Odgovor3;
+                buttGRAMMARANSWER3.Text = p.TacanOdgovor;
+                buttGRAMMARANSWER4.Text = p.Odgovor1;
+
+                return 3;
+            }
+            else
+            {
+                buttGRAMMARANSWER1.Text = p.Odgovor3;
+                buttGRAMMARANSWER2.Text = p.Odgovor1;
+                buttGRAMMARANSWER3.Text = p.Odgovor2;
+                buttGRAMMARANSWER4.Text = p.TacanOdgovor;
+
+                return 4;
+            }
+        }
+
+        void refreshGrammarPitanja(Boolean b)
+        {
+            label52.Text = "Grammar - Question #" + Convert.ToString(aktivniTest.TrenutnoPitanje + 1);
+
+            if (aktivniTest.ZavrsenTest())
+            {
+                tpTESTRESULT.BackColor = Color.FromArgb(80, 120, 100);
+
+                foreach (Control cont in tpTESTRESULT.Controls)
+                    cont.BackColor = Color.FromArgb(80, 120, 100);
+
+                labelSCOREINDICATOR.Text = Convert.ToString(aktivniTest.Skor) + "/10";
+                this.tabControl1.SelectedTab = tpTESTRESULT;
+
+                for (int i = 31; i < 41; i++)
+                    ((ProgressBar)tpGRAMMARQUESTION.Controls.Find("progressBar" + Convert.ToString(i), true)[0]).Value = 0;
+            }
+
+            else
+            {
+                GrammarQuestion();
+                aktivniTest.TacanOdgovor = ucitajRandomGrammarPitanje(odabraniNivo);
+            }
+
+            labelGRAMMARSCORE.Text = aktivniTest.Skor + "/10";
+
+            if (b)
+                ((ProgressBar)tpGRAMMARQUESTION.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 30), true)[0]).Value = 100;
+
+            else
+                ((ProgressBar)tpGRAMMARQUESTION.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 30), true)[0]).Value = 0;
+        }
+
+        private void buttGRAMMARANSWER1_Click(object sender, EventArgs e)
+        {
+            refreshGrammarPitanja(aktivniTest.Odgovori(1));
+        }
+
+        private void buttGRAMMARANSWER2_Click(object sender, EventArgs e)
+        {
+            refreshGrammarPitanja(aktivniTest.Odgovori(2));
+        }
+
+        private void buttGRAMMARANSWER3_Click(object sender, EventArgs e)
+        {
+            refreshGrammarPitanja(aktivniTest.Odgovori(3));
+        }
+
+        private void buttGRAMMARANSWER4_Click(object sender, EventArgs e)
+        {
+            refreshGrammarPitanja(aktivniTest.Odgovori(4));
         }
 
         #endregion
@@ -1202,7 +1301,7 @@ namespace JapaneseLearningApp
             else if (aktivniTest.Tip.Equals("KANJI"))
                 aktivniTest.TacanOdgovor = ucitajRandomKanjiPitanje(n, 1);
             else
-                aktivniTest.TacanOdgovor = ucitajRandomGrammarPitanje(n, 1);
+                aktivniTest.TacanOdgovor = ucitajRandomGrammarPitanje(n);
         }
 
         public void GoToMainMenu()

@@ -8,12 +8,19 @@ namespace JapaneseLearningApp.Klase
 {
     class Test
     {
+        String tip;
         Int32 skor, tacanOdgovor, trenutnoPitanje;
 
         public Test() 
         {
             Skor = 0;
             TrenutnoPitanje = 0;
+        }
+
+        public String Tip
+        {
+            get { return tip; }
+            set { tip = value; }
         }
 
         public Int32 Skor
@@ -53,6 +60,12 @@ namespace JapaneseLearningApp.Klase
                 return true;
 
             return false;
+        }
+
+        public void Resetuj()
+        {
+            Skor = 0;
+            TrenutnoPitanje = 0;
         }
     }
 }

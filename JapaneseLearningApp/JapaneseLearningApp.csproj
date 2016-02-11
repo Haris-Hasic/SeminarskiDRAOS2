@@ -59,6 +59,7 @@
       <DependentUpon>GlavnaForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Klase\KorisnickeFunkcije.cs" />
+    <Compile Include="Klase\PitanjeKanji.cs" />
     <Compile Include="Klase\PitanjeOdaberi.cs" />
     <Compile Include="Klase\PristupBazi.cs" />
     <Compile Include="Klase\Test.cs" />
@@ -70,7 +71,6 @@
     </Compile>
     <Compile Include="Klase\Grammar.cs" />
     <Compile Include="Klase\Pitanje.cs" />
-    <Compile Include="Klase\PitanjeDopuniTekst.cs" />
     <Compile Include="Klase\PitanjeOdaberiSliku.cs" />
     <Compile Include="Klase\Story.cs" />
     <Compile Include="Klase\User.cs" />

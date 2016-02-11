@@ -765,7 +765,7 @@ namespace JapaneseLearningApp
 
         #endregion
 
-        // Funkcije i eventi za izradu kanji testa
+        // Funkcije i eventi za izradu writing testa
         #region IZRADA_WRITING_TESTA
 
         Int32 ucitajRandomKanjiPitanje(Int32 nivo, Int32 vrsta) // Učita pitanje i vrati broj dugmeta sa tačnim odgovorom
@@ -786,13 +786,12 @@ namespace JapaneseLearningApp
                 if(nivo == 0)
                     rnd = new Random().Next(1, 46);
                 else if(nivo == 1)
-                    rnd = new Random().Next(47, 93);
+                    rnd = new Random().Next(47, 92);
                 else if(nivo == 2)
-                    rnd = new Random().Next(94, 114);
+                    rnd = new Random().Next(93, 105);
                 else
-                    rnd = new Random().Next(115, 130);
+                    rnd = new Random().Next(106, 120);
 
-                komanda.Parameters.AddWithValue("@nivo", nivo);
                 komanda.Parameters.AddWithValue("@id", rnd);
                 komanda.Connection = konekcija;
                 konekcija.Open();

@@ -14,6 +14,8 @@ namespace JapaneseLearningApp.Klase
         Int32 maxLekcija;
         Image profilnaSlika;
 
+        Boolean vocab, grammar, writing;
+
         public User() { }
 
         public User(String i, String p, String un, String pass, DateTime dr, String nz, String k, Image sl)
@@ -27,6 +29,24 @@ namespace JapaneseLearningApp.Klase
             Komentar = k;
             MaxLekcija = 0;
             ProfilnaSlika = sl;
+            Vocab = false;
+            Grammar = false;
+            Writing = false;
+        }
+
+        public string provjeriPrelazNaSljedeciNivo()
+        {
+            if (Vocab && Writing && Grammar)
+            {
+                if (MaxLekcija < 12)
+                    MaxLekcija = MaxLekcija + 1;
+
+                Vocab = false;
+                Grammar = false;
+                Writing = false;
+            }
+
+            return Convert.ToString(MaxLekcija);
         }
 
         public String Ime
@@ -81,6 +101,24 @@ namespace JapaneseLearningApp.Klase
         {
             get { return profilnaSlika; }
             set { profilnaSlika = value; }
+        }
+
+        public Boolean Vocab
+        {
+            get { return vocab; }
+            set { vocab = value; }
+        }
+
+        public Boolean Grammar
+        {
+            get { return grammar; }
+            set { grammar = value; }
+        }
+
+        public Boolean Writing
+        {
+            get { return writing; }
+            set { writing = value; }
         }
     }
 }

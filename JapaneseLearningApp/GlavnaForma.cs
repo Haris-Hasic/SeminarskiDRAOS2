@@ -377,22 +377,6 @@ namespace JapaneseLearningApp
         // Funkcije i eventi za izradu vokabular testa
         #region IZRADA_VOKABULAR_TESTA
 
-        void zakljucajNivoe(Int32 nivo)
-        {
-            foreach (var b in tpTESTLIST.Controls.OfType<Button>())
-            {
-                try
-                {
-                    if (Convert.ToInt32(b.Text) > nivo)
-                        b.Enabled = false;
-                }
-                catch (Exception)
-                {
-
-                }
-            }
-        }
-
         Int32 ucitajRandomPitanje(Int32 nivo) // Učita pitanje i vrati broj dugmeta sa tačnim odgovorom
         {
             MySqlConnection konekcija = new MySqlConnection("server=localhost;User Id=root;database=draosbaza");
@@ -620,13 +604,7 @@ namespace JapaneseLearningApp
 
             if (aktivniTest.ZavrsenTest())
             {
-                tpTESTRESULT.BackColor = Color.FromArgb(120, 200, 180);
-
-                foreach (Control cont in tpTESTRESULT.Controls)
-                    cont.BackColor = Color.FromArgb(120, 200, 180);
-
-                labelSCOREINDICATOR.Text = Convert.ToString(aktivniTest.Skor) + "/10";
-                this.tabControl1.SelectedTab = tpTESTRESULT;
+                TestResultsPage(Color.FromArgb(120, 200, 180), aktivniTest.Skor, "VOCAB");
 
                 for (int i = 1; i < 11; i++)
                     ((ProgressBar)tpVOCABQUESTSIMPLE.Controls.Find("progressBar" + Convert.ToString(i), true)[0]).Value = 0;
@@ -823,13 +801,7 @@ namespace JapaneseLearningApp
 
             if (aktivniTest.ZavrsenTest())
             {
-                tpTESTRESULT.BackColor = Color.FromArgb(80, 120, 100);
-
-                foreach (Control cont in tpTESTRESULT.Controls)
-                    cont.BackColor = Color.FromArgb(80, 120, 100);
-
-                labelSCOREINDICATOR.Text = Convert.ToString(aktivniTest.Skor) + "/10";
-                this.tabControl1.SelectedTab = tpTESTRESULT;
+                TestResultsPage(Color.FromArgb(80, 120, 100), aktivniTest.Skor, "GRAMMAR");
 
                 for (int i = 31; i < 41; i++)
                     ((ProgressBar)tpGRAMMARQUESTION.Controls.Find("progressBar" + Convert.ToString(i), true)[0]).Value = 0;
@@ -1044,13 +1016,7 @@ namespace JapaneseLearningApp
 
             if (aktivniTest.ZavrsenTest())
             {
-                tpTESTRESULT.BackColor = Color.FromArgb(255, 192, 128);
-
-                foreach (Control cont in tpTESTRESULT.Controls)
-                    cont.BackColor = Color.FromArgb(255, 192, 128);
-
-                this.tabControl1.SelectedTab = tpTESTRESULT;
-                labelSCOREINDICATOR.Text = Convert.ToString(aktivniTest.Skor) + "/10";
+                TestResultsPage(Color.FromArgb(255, 192, 128), aktivniTest.Skor, "WRITING");
 
                 for(int i=21; i<31; i++)
                     ((ProgressBar)tpKANJIQUESTION.Controls.Find("progressBar" + Convert.ToString(i), true)[0]).Value = 0;
@@ -1184,6 +1150,11 @@ namespace JapaneseLearningApp
             GoToMainMenu();
         }
 
+        private void button34_Click(object sender, EventArgs e)
+        {
+            GoToMainMenu();
+        }
+
         private void buttVOCABULARYTEST_Click(object sender, EventArgs e)
         {
             aktivniTest.Tip = "VOCAB";
@@ -1286,6 +1257,13 @@ namespace JapaneseLearningApp
             zapocniTest(odabraniNivo);
         }
 
+        private void button33_Click(object sender, EventArgs e)
+        {
+            odabraniNivo = 12;
+            odaberiVrstuPitanja(aktivniTest.Tip);
+            zapocniTest(odabraniNivo);
+        }
+
         public void odaberiVrstuPitanja(String tip)
         {
             if (tip.Equals("VOCAB"))
@@ -1356,8 +1334,27 @@ namespace JapaneseLearningApp
                 postaviBojeButtona(Color.FromArgb(80, 120, 100));
                 this.tabControl1.SelectedTab = tpTESTLIST;
             }
+        }
 
+        private void tpTESTLIST_Enter(object sender, EventArgs e)
+        {
             zakljucajNivoe(aktivniKorisnik.MaxLekcija);
+        }
+
+        void zakljucajNivoe(Int32 nivo)
+        {
+            try
+            {
+                for (int i = 1; i < 13; i++)
+                {
+                    if(i <= aktivniKorisnik.MaxLekcija)
+                        ((Button)tpTESTLIST.Controls.Find("buttonCH" + Convert.ToString(i), true)[0]).Enabled = true;
+                    else
+                        ((Button)tpTESTLIST.Controls.Find("buttonCH" + Convert.ToString(i), true)[0]).Enabled = false;
+                }
+            }
+
+            catch (Exception) { }
         }
 
         public void TextQuestion()
@@ -1384,6 +1381,32 @@ namespace JapaneseLearningApp
         {
             foreach (Control b in tpTESTLIST.Controls)
                 b.BackColor = c;
+        }
+
+        void TestResultsPage(Color c, Int32 sk, String tipTesta)
+        {
+            tpTESTRESULT.BackColor = c;
+
+            foreach (Control cont in tpTESTRESULT.Controls)
+                cont.BackColor = c;
+
+            this.tabControl1.SelectedTab = tpTESTRESULT;
+
+            if (sk < 5)
+                tbRESULTMESSAGE.Text = "You failed the test. Try again!";
+            else
+            {
+                tbRESULTMESSAGE.Text = "Congratulations, you passed the test!";
+
+                if (tipTesta.Equals("VOCAB"))
+                    aktivniKorisnik.Vocab = true;
+                else if (tipTesta.Equals("GRAMMAR"))
+                    aktivniKorisnik.Grammar = true;
+                else
+                    aktivniKorisnik.Writing = true;
+            }
+
+            labelSCOREINDICATOR.Text = Convert.ToString(sk) + "/10";
         }
 
         #endregion

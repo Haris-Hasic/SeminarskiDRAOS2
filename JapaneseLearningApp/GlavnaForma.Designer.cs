@@ -136,19 +136,19 @@
             this.lTitle = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.tpTESTLIST = new System.Windows.Forms.TabPage();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
+            this.buttonCH2 = new System.Windows.Forms.Button();
+            this.buttonCH1 = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
             this.label37 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
+            this.buttonCH11 = new System.Windows.Forms.Button();
+            this.buttonCH10 = new System.Windows.Forms.Button();
+            this.buttonCH9 = new System.Windows.Forms.Button();
+            this.buttonCH8 = new System.Windows.Forms.Button();
+            this.buttonCH7 = new System.Windows.Forms.Button();
+            this.buttonCH6 = new System.Windows.Forms.Button();
+            this.buttonCH5 = new System.Windows.Forms.Button();
+            this.buttonCH4 = new System.Windows.Forms.Button();
+            this.buttonCH3 = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
             this.tpVOCABQUESTSIMPLE = new System.Windows.Forms.TabPage();
             this.tbQUESTIONTXT = new System.Windows.Forms.TextBox();
@@ -238,7 +238,9 @@
             this.button28 = new System.Windows.Forms.Button();
             this.labelSCOREINDICATOR = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
+            this.buttonCH12 = new System.Windows.Forms.Button();
+            this.button34 = new System.Windows.Forms.Button();
+            this.tbRESULTMESSAGE = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tpLOGIN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -1652,19 +1654,21 @@
             // tpTESTLIST
             // 
             this.tpTESTLIST.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.tpTESTLIST.Controls.Add(this.button23);
-            this.tpTESTLIST.Controls.Add(this.button24);
+            this.tpTESTLIST.Controls.Add(this.button34);
+            this.tpTESTLIST.Controls.Add(this.buttonCH12);
+            this.tpTESTLIST.Controls.Add(this.buttonCH2);
+            this.tpTESTLIST.Controls.Add(this.buttonCH1);
             this.tpTESTLIST.Controls.Add(this.button25);
             this.tpTESTLIST.Controls.Add(this.label37);
-            this.tpTESTLIST.Controls.Add(this.button1);
-            this.tpTESTLIST.Controls.Add(this.button14);
-            this.tpTESTLIST.Controls.Add(this.button15);
-            this.tpTESTLIST.Controls.Add(this.button17);
-            this.tpTESTLIST.Controls.Add(this.button18);
-            this.tpTESTLIST.Controls.Add(this.button19);
-            this.tpTESTLIST.Controls.Add(this.button20);
-            this.tpTESTLIST.Controls.Add(this.button21);
-            this.tpTESTLIST.Controls.Add(this.button22);
+            this.tpTESTLIST.Controls.Add(this.buttonCH11);
+            this.tpTESTLIST.Controls.Add(this.buttonCH10);
+            this.tpTESTLIST.Controls.Add(this.buttonCH9);
+            this.tpTESTLIST.Controls.Add(this.buttonCH8);
+            this.tpTESTLIST.Controls.Add(this.buttonCH7);
+            this.tpTESTLIST.Controls.Add(this.buttonCH6);
+            this.tpTESTLIST.Controls.Add(this.buttonCH5);
+            this.tpTESTLIST.Controls.Add(this.buttonCH4);
+            this.tpTESTLIST.Controls.Add(this.buttonCH3);
             this.tpTESTLIST.Controls.Add(this.label36);
             this.tpTESTLIST.Location = new System.Drawing.Point(4, 22);
             this.tpTESTLIST.Name = "tpTESTLIST";
@@ -1672,34 +1676,35 @@
             this.tpTESTLIST.Size = new System.Drawing.Size(404, 604);
             this.tpTESTLIST.TabIndex = 7;
             this.tpTESTLIST.Text = "Test List";
+            this.tpTESTLIST.Enter += new System.EventHandler(this.tpTESTLIST_Enter);
             // 
-            // button23
+            // buttonCH2
             // 
-            this.button23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button23.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button23.ForeColor = System.Drawing.Color.White;
-            this.button23.Location = new System.Drawing.Point(263, 117);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(110, 100);
-            this.button23.TabIndex = 53;
-            this.button23.Text = "2";
-            this.button23.UseVisualStyleBackColor = false;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
+            this.buttonCH2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.buttonCH2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCH2.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCH2.ForeColor = System.Drawing.Color.White;
+            this.buttonCH2.Location = new System.Drawing.Point(147, 144);
+            this.buttonCH2.Name = "buttonCH2";
+            this.buttonCH2.Size = new System.Drawing.Size(110, 100);
+            this.buttonCH2.TabIndex = 53;
+            this.buttonCH2.Text = "2";
+            this.buttonCH2.UseVisualStyleBackColor = false;
+            this.buttonCH2.Click += new System.EventHandler(this.button23_Click);
             // 
-            // button24
+            // buttonCH1
             // 
-            this.button24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button24.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button24.ForeColor = System.Drawing.Color.White;
-            this.button24.Location = new System.Drawing.Point(147, 117);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(110, 100);
-            this.button24.TabIndex = 52;
-            this.button24.Text = "1";
-            this.button24.UseVisualStyleBackColor = false;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
+            this.buttonCH1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.buttonCH1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCH1.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCH1.ForeColor = System.Drawing.Color.White;
+            this.buttonCH1.Location = new System.Drawing.Point(31, 144);
+            this.buttonCH1.Name = "buttonCH1";
+            this.buttonCH1.Size = new System.Drawing.Size(110, 100);
+            this.buttonCH1.TabIndex = 52;
+            this.buttonCH1.Text = "1";
+            this.buttonCH1.UseVisualStyleBackColor = false;
+            this.buttonCH1.Click += new System.EventHandler(this.button24_Click);
             // 
             // button25
             // 
@@ -1707,9 +1712,9 @@
             this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button25.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button25.ForeColor = System.Drawing.Color.White;
-            this.button25.Location = new System.Drawing.Point(31, 117);
+            this.button25.Location = new System.Drawing.Point(31, 96);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(110, 100);
+            this.button25.Size = new System.Drawing.Size(342, 42);
             this.button25.TabIndex = 51;
             this.button25.Text = "Intro";
             this.button25.UseVisualStyleBackColor = false;
@@ -1720,137 +1725,137 @@
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.White;
-            this.label37.Location = new System.Drawing.Point(84, 59);
+            this.label37.Location = new System.Drawing.Point(82, 49);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(245, 32);
             this.label37.TabIndex = 50;
             this.label37.Text = "Select the chapter !";
             // 
-            // button1
+            // buttonCH11
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(263, 435);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 100);
-            this.button1.TabIndex = 49;
-            this.button1.Text = "11";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonCH11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.buttonCH11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCH11.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCH11.ForeColor = System.Drawing.Color.White;
+            this.buttonCH11.Location = new System.Drawing.Point(147, 462);
+            this.buttonCH11.Name = "buttonCH11";
+            this.buttonCH11.Size = new System.Drawing.Size(110, 100);
+            this.buttonCH11.TabIndex = 49;
+            this.buttonCH11.Text = "11";
+            this.buttonCH11.UseVisualStyleBackColor = false;
+            this.buttonCH11.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button14
+            // buttonCH10
             // 
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(147, 435);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(110, 100);
-            this.button14.TabIndex = 48;
-            this.button14.Text = "10";
-            this.button14.UseVisualStyleBackColor = false;
-            this.button14.Click += new System.EventHandler(this.button14_Click_1);
+            this.buttonCH10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.buttonCH10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCH10.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCH10.ForeColor = System.Drawing.Color.White;
+            this.buttonCH10.Location = new System.Drawing.Point(31, 462);
+            this.buttonCH10.Name = "buttonCH10";
+            this.buttonCH10.Size = new System.Drawing.Size(110, 100);
+            this.buttonCH10.TabIndex = 48;
+            this.buttonCH10.Text = "10";
+            this.buttonCH10.UseVisualStyleBackColor = false;
+            this.buttonCH10.Click += new System.EventHandler(this.button14_Click_1);
             // 
-            // button15
+            // buttonCH9
             // 
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(31, 435);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(110, 100);
-            this.button15.TabIndex = 47;
-            this.button15.Text = "9";
-            this.button15.UseVisualStyleBackColor = false;
-            this.button15.Click += new System.EventHandler(this.button15_Click_1);
+            this.buttonCH9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.buttonCH9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCH9.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCH9.ForeColor = System.Drawing.Color.White;
+            this.buttonCH9.Location = new System.Drawing.Point(263, 356);
+            this.buttonCH9.Name = "buttonCH9";
+            this.buttonCH9.Size = new System.Drawing.Size(110, 100);
+            this.buttonCH9.TabIndex = 47;
+            this.buttonCH9.Text = "9";
+            this.buttonCH9.UseVisualStyleBackColor = false;
+            this.buttonCH9.Click += new System.EventHandler(this.button15_Click_1);
             // 
-            // button17
+            // buttonCH8
             // 
-            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(263, 329);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(110, 100);
-            this.button17.TabIndex = 46;
-            this.button17.Text = "8";
-            this.button17.UseVisualStyleBackColor = false;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.buttonCH8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.buttonCH8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCH8.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCH8.ForeColor = System.Drawing.Color.White;
+            this.buttonCH8.Location = new System.Drawing.Point(147, 356);
+            this.buttonCH8.Name = "buttonCH8";
+            this.buttonCH8.Size = new System.Drawing.Size(110, 100);
+            this.buttonCH8.TabIndex = 46;
+            this.buttonCH8.Text = "8";
+            this.buttonCH8.UseVisualStyleBackColor = false;
+            this.buttonCH8.Click += new System.EventHandler(this.button17_Click);
             // 
-            // button18
+            // buttonCH7
             // 
-            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.ForeColor = System.Drawing.Color.White;
-            this.button18.Location = new System.Drawing.Point(147, 329);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(110, 100);
-            this.button18.TabIndex = 45;
-            this.button18.Text = "7";
-            this.button18.UseVisualStyleBackColor = false;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.buttonCH7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.buttonCH7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCH7.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCH7.ForeColor = System.Drawing.Color.White;
+            this.buttonCH7.Location = new System.Drawing.Point(31, 356);
+            this.buttonCH7.Name = "buttonCH7";
+            this.buttonCH7.Size = new System.Drawing.Size(110, 100);
+            this.buttonCH7.TabIndex = 45;
+            this.buttonCH7.Text = "7";
+            this.buttonCH7.UseVisualStyleBackColor = false;
+            this.buttonCH7.Click += new System.EventHandler(this.button18_Click);
             // 
-            // button19
+            // buttonCH6
             // 
-            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.ForeColor = System.Drawing.Color.White;
-            this.button19.Location = new System.Drawing.Point(31, 329);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(110, 100);
-            this.button19.TabIndex = 44;
-            this.button19.Text = "6";
-            this.button19.UseVisualStyleBackColor = false;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
+            this.buttonCH6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.buttonCH6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCH6.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCH6.ForeColor = System.Drawing.Color.White;
+            this.buttonCH6.Location = new System.Drawing.Point(263, 250);
+            this.buttonCH6.Name = "buttonCH6";
+            this.buttonCH6.Size = new System.Drawing.Size(110, 100);
+            this.buttonCH6.TabIndex = 44;
+            this.buttonCH6.Text = "6";
+            this.buttonCH6.UseVisualStyleBackColor = false;
+            this.buttonCH6.Click += new System.EventHandler(this.button19_Click);
             // 
-            // button20
+            // buttonCH5
             // 
-            this.button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.ForeColor = System.Drawing.Color.White;
-            this.button20.Location = new System.Drawing.Point(263, 223);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(110, 100);
-            this.button20.TabIndex = 43;
-            this.button20.Text = "5";
-            this.button20.UseVisualStyleBackColor = false;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
+            this.buttonCH5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.buttonCH5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCH5.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCH5.ForeColor = System.Drawing.Color.White;
+            this.buttonCH5.Location = new System.Drawing.Point(147, 250);
+            this.buttonCH5.Name = "buttonCH5";
+            this.buttonCH5.Size = new System.Drawing.Size(110, 100);
+            this.buttonCH5.TabIndex = 43;
+            this.buttonCH5.Text = "5";
+            this.buttonCH5.UseVisualStyleBackColor = false;
+            this.buttonCH5.Click += new System.EventHandler(this.button20_Click);
             // 
-            // button21
+            // buttonCH4
             // 
-            this.button21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button21.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.ForeColor = System.Drawing.Color.White;
-            this.button21.Location = new System.Drawing.Point(147, 223);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(110, 100);
-            this.button21.TabIndex = 42;
-            this.button21.Text = "4";
-            this.button21.UseVisualStyleBackColor = false;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
+            this.buttonCH4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.buttonCH4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCH4.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCH4.ForeColor = System.Drawing.Color.White;
+            this.buttonCH4.Location = new System.Drawing.Point(31, 250);
+            this.buttonCH4.Name = "buttonCH4";
+            this.buttonCH4.Size = new System.Drawing.Size(110, 100);
+            this.buttonCH4.TabIndex = 42;
+            this.buttonCH4.Text = "4";
+            this.buttonCH4.UseVisualStyleBackColor = false;
+            this.buttonCH4.Click += new System.EventHandler(this.button21_Click);
             // 
-            // button22
+            // buttonCH3
             // 
-            this.button22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button22.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button22.ForeColor = System.Drawing.Color.White;
-            this.button22.Location = new System.Drawing.Point(31, 223);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(110, 100);
-            this.button22.TabIndex = 41;
-            this.button22.Text = "3";
-            this.button22.UseVisualStyleBackColor = false;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
+            this.buttonCH3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.buttonCH3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCH3.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCH3.ForeColor = System.Drawing.Color.White;
+            this.buttonCH3.Location = new System.Drawing.Point(263, 144);
+            this.buttonCH3.Name = "buttonCH3";
+            this.buttonCH3.Size = new System.Drawing.Size(110, 100);
+            this.buttonCH3.TabIndex = 41;
+            this.buttonCH3.Text = "3";
+            this.buttonCH3.UseVisualStyleBackColor = false;
+            this.buttonCH3.Click += new System.EventHandler(this.button22_Click);
             // 
             // label36
             // 
@@ -1994,7 +1999,7 @@
             // 
             this.buttANSWER4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.buttANSWER4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttANSWER4.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttANSWER4.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttANSWER4.ForeColor = System.Drawing.Color.White;
             this.buttANSWER4.Location = new System.Drawing.Point(25, 349);
             this.buttANSWER4.Name = "buttANSWER4";
@@ -2008,7 +2013,7 @@
             // 
             this.buttANSWER3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.buttANSWER3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttANSWER3.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttANSWER3.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttANSWER3.ForeColor = System.Drawing.Color.White;
             this.buttANSWER3.Location = new System.Drawing.Point(25, 293);
             this.buttANSWER3.Name = "buttANSWER3";
@@ -2022,7 +2027,7 @@
             // 
             this.buttANSWER2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.buttANSWER2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttANSWER2.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttANSWER2.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttANSWER2.ForeColor = System.Drawing.Color.White;
             this.buttANSWER2.Location = new System.Drawing.Point(25, 237);
             this.buttANSWER2.Name = "buttANSWER2";
@@ -2036,7 +2041,7 @@
             // 
             this.buttANSWER1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.buttANSWER1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttANSWER1.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttANSWER1.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttANSWER1.ForeColor = System.Drawing.Color.White;
             this.buttANSWER1.Location = new System.Drawing.Point(25, 181);
             this.buttANSWER1.Name = "buttANSWER1";
@@ -2367,7 +2372,7 @@
             // 
             this.buttGRAMMARANSWER4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.buttGRAMMARANSWER4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttGRAMMARANSWER4.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttGRAMMARANSWER4.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttGRAMMARANSWER4.ForeColor = System.Drawing.Color.White;
             this.buttGRAMMARANSWER4.Location = new System.Drawing.Point(27, 424);
             this.buttGRAMMARANSWER4.Name = "buttGRAMMARANSWER4";
@@ -2381,7 +2386,7 @@
             // 
             this.buttGRAMMARANSWER3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.buttGRAMMARANSWER3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttGRAMMARANSWER3.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttGRAMMARANSWER3.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttGRAMMARANSWER3.ForeColor = System.Drawing.Color.White;
             this.buttGRAMMARANSWER3.Location = new System.Drawing.Point(27, 368);
             this.buttGRAMMARANSWER3.Name = "buttGRAMMARANSWER3";
@@ -2395,7 +2400,7 @@
             // 
             this.buttGRAMMARANSWER2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.buttGRAMMARANSWER2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttGRAMMARANSWER2.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttGRAMMARANSWER2.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttGRAMMARANSWER2.ForeColor = System.Drawing.Color.White;
             this.buttGRAMMARANSWER2.Location = new System.Drawing.Point(27, 312);
             this.buttGRAMMARANSWER2.Name = "buttGRAMMARANSWER2";
@@ -2409,7 +2414,7 @@
             // 
             this.buttGRAMMARANSWER1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.buttGRAMMARANSWER1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttGRAMMARANSWER1.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttGRAMMARANSWER1.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttGRAMMARANSWER1.ForeColor = System.Drawing.Color.White;
             this.buttGRAMMARANSWER1.Location = new System.Drawing.Point(27, 256);
             this.buttGRAMMARANSWER1.Name = "buttGRAMMARANSWER1";
@@ -2630,7 +2635,7 @@
             // 
             this.buttKANJIANSWER1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.buttKANJIANSWER1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttKANJIANSWER1.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttKANJIANSWER1.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttKANJIANSWER1.ForeColor = System.Drawing.Color.White;
             this.buttKANJIANSWER1.Location = new System.Drawing.Point(25, 256);
             this.buttKANJIANSWER1.Name = "buttKANJIANSWER1";
@@ -2644,7 +2649,7 @@
             // 
             this.buttKANJIANSWER2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.buttKANJIANSWER2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttKANJIANSWER2.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttKANJIANSWER2.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttKANJIANSWER2.ForeColor = System.Drawing.Color.White;
             this.buttKANJIANSWER2.Location = new System.Drawing.Point(25, 312);
             this.buttKANJIANSWER2.Name = "buttKANJIANSWER2";
@@ -2658,9 +2663,9 @@
             // 
             this.buttKANJIANSWER3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.buttKANJIANSWER3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttKANJIANSWER3.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttKANJIANSWER3.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttKANJIANSWER3.ForeColor = System.Drawing.Color.White;
-            this.buttKANJIANSWER3.Location = new System.Drawing.Point(27, 368);
+            this.buttKANJIANSWER3.Location = new System.Drawing.Point(25, 368);
             this.buttKANJIANSWER3.Name = "buttKANJIANSWER3";
             this.buttKANJIANSWER3.Size = new System.Drawing.Size(350, 50);
             this.buttKANJIANSWER3.TabIndex = 92;
@@ -2672,9 +2677,9 @@
             // 
             this.buttKANJIANSWER4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.buttKANJIANSWER4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttKANJIANSWER4.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttKANJIANSWER4.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttKANJIANSWER4.ForeColor = System.Drawing.Color.White;
-            this.buttKANJIANSWER4.Location = new System.Drawing.Point(27, 424);
+            this.buttKANJIANSWER4.Location = new System.Drawing.Point(25, 424);
             this.buttKANJIANSWER4.Name = "buttKANJIANSWER4";
             this.buttKANJIANSWER4.Size = new System.Drawing.Size(350, 50);
             this.buttKANJIANSWER4.TabIndex = 91;
@@ -2809,10 +2814,10 @@
             // tpTESTRESULT
             // 
             this.tpTESTRESULT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.tpTESTRESULT.Controls.Add(this.tbRESULTMESSAGE);
             this.tpTESTRESULT.Controls.Add(this.button28);
             this.tpTESTRESULT.Controls.Add(this.labelSCOREINDICATOR);
             this.tpTESTRESULT.Controls.Add(this.label42);
-            this.tpTESTRESULT.Controls.Add(this.label41);
             this.tpTESTRESULT.Location = new System.Drawing.Point(4, 22);
             this.tpTESTRESULT.Name = "tpTESTRESULT";
             this.tpTESTRESULT.Padding = new System.Windows.Forms.Padding(3);
@@ -2839,7 +2844,7 @@
             this.labelSCOREINDICATOR.AutoSize = true;
             this.labelSCOREINDICATOR.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSCOREINDICATOR.ForeColor = System.Drawing.Color.White;
-            this.labelSCOREINDICATOR.Location = new System.Drawing.Point(173, 244);
+            this.labelSCOREINDICATOR.Location = new System.Drawing.Point(178, 96);
             this.labelSCOREINDICATOR.Name = "labelSCOREINDICATOR";
             this.labelSCOREINDICATOR.Size = new System.Drawing.Size(65, 32);
             this.labelSCOREINDICATOR.TabIndex = 60;
@@ -2856,16 +2861,44 @@
             this.label42.TabIndex = 57;
             this.label42.Text = "Copyright 2015. All rights reserved.";
             // 
-            // label41
+            // buttonCH12
             // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.White;
-            this.label41.Location = new System.Drawing.Point(110, 198);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(196, 32);
-            this.label41.TabIndex = 56;
-            this.label41.Text = "Gratzz faggot !";
+            this.buttonCH12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.buttonCH12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCH12.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCH12.ForeColor = System.Drawing.Color.White;
+            this.buttonCH12.Location = new System.Drawing.Point(263, 462);
+            this.buttonCH12.Name = "buttonCH12";
+            this.buttonCH12.Size = new System.Drawing.Size(110, 100);
+            this.buttonCH12.TabIndex = 54;
+            this.buttonCH12.Text = "12";
+            this.buttonCH12.UseVisualStyleBackColor = false;
+            this.buttonCH12.Click += new System.EventHandler(this.button33_Click);
+            // 
+            // button34
+            // 
+            this.button34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.button34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button34.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button34.ForeColor = System.Drawing.Color.White;
+            this.button34.Location = new System.Drawing.Point(320, 6);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(76, 29);
+            this.button34.TabIndex = 62;
+            this.button34.Text = "Menu";
+            this.button34.UseVisualStyleBackColor = false;
+            this.button34.Click += new System.EventHandler(this.button34_Click);
+            // 
+            // tbRESULTMESSAGE
+            // 
+            this.tbRESULTMESSAGE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.tbRESULTMESSAGE.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRESULTMESSAGE.ForeColor = System.Drawing.Color.White;
+            this.tbRESULTMESSAGE.Location = new System.Drawing.Point(27, 56);
+            this.tbRESULTMESSAGE.Name = "tbRESULTMESSAGE";
+            this.tbRESULTMESSAGE.Size = new System.Drawing.Size(350, 31);
+            this.tbRESULTMESSAGE.TabIndex = 115;
+            this.tbRESULTMESSAGE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // GlavnaForma
             // 
@@ -3027,19 +3060,19 @@
         private System.Windows.Forms.Label lTitle;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TabPage tpTESTLIST;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button buttonCH11;
+        private System.Windows.Forms.Button buttonCH10;
+        private System.Windows.Forms.Button buttonCH9;
+        private System.Windows.Forms.Button buttonCH8;
+        private System.Windows.Forms.Button buttonCH7;
+        private System.Windows.Forms.Button buttonCH6;
+        private System.Windows.Forms.Button buttonCH5;
+        private System.Windows.Forms.Button buttonCH4;
+        private System.Windows.Forms.Button buttonCH3;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button buttonCH2;
+        private System.Windows.Forms.Button buttonCH1;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.Button button27;
@@ -3054,7 +3087,6 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.TabPage tpTESTRESULT;
-        private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label labelSCOREINDICATOR;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.ProgressBar progressBar7;
@@ -3132,5 +3164,8 @@
         private System.Windows.Forms.Button buttGRAMMARANSWER3;
         private System.Windows.Forms.Button buttGRAMMARANSWER2;
         private System.Windows.Forms.Button buttGRAMMARANSWER1;
+        private System.Windows.Forms.Button buttonCH12;
+        private System.Windows.Forms.Button button34;
+        private System.Windows.Forms.TextBox tbRESULTMESSAGE;
     }
 }

@@ -183,6 +183,10 @@ namespace JapaneseLearningApp
 
                 MessageBox.Show("Changes were succesfully made. " + PristupBazi.Manipulacija(komanda) + " rows were affected.");
 
+                // Add lecture progress entry into the database
+                DBManipulation dbmanipulation = DBManipulation.getInstance();
+                dbmanipulation.addLectureProgress(dbmanipulation.getUserId(u.Username));
+
                 GoToProfile();
             }
             catch (Exception ex)
@@ -1401,7 +1405,7 @@ namespace JapaneseLearningApp
         {
             if (tabControl1.SelectedIndex == tabControl1.TabPages.IndexOf(tpLecturesList))
             {
-                this.mainPanel.Controls.Add(new LecturesList(mainPanel));
+                this.mainPanel.Controls.Add(new LecturesList(mainPanel, aktivniKorisnik));
             }
         }
 

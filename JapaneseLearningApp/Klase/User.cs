@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace JapaneseLearningApp.Klase
 {
-    class User
+    public class User
     {
         String ime, prezime, username, password, nivoZnanja, komentar;
         DateTime datumRodenja;

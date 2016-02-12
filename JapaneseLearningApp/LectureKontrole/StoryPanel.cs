@@ -16,13 +16,15 @@ namespace JapaneseLearningApp
     {
         private int lectureNumber;
         private Panel mainPanel;
+        private User currentUser;
 
-        public StoryPanel(Panel mainPanel, int lectureNumber)
+        public StoryPanel(Panel mainPanel, int lectureNumber, User currentUser)
         {
             InitializeComponent();
 
             this.mainPanel = mainPanel;
             this.lectureNumber = lectureNumber;
+            this.currentUser = currentUser;
             loadStory();
         }
 
@@ -67,13 +69,13 @@ namespace JapaneseLearningApp
 
         private void bLectures_Click(object sender, EventArgs e)
         {
-            this.mainPanel.Controls.Add(new LecturesList(this.mainPanel));
+            this.mainPanel.Controls.Add(new LecturesList(this.mainPanel, this.currentUser));
             this.mainPanel.Controls.Remove(this);
         }
 
         private void bVocabulary_Click(object sender, EventArgs e)
         {
-            this.mainPanel.Controls.Add(new VocabularyPanel(this.mainPanel, this.lectureNumber));
+            this.mainPanel.Controls.Add(new VocabularyPanel(this.mainPanel, this.lectureNumber, this.currentUser));
             this.mainPanel.Controls.Remove(this);
         }
 

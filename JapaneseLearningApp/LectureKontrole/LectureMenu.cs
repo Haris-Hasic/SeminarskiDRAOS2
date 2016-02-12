@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using JapaneseLearningApp.Klase;
+
 namespace JapaneseLearningApp
 {
     public partial class LectureMenu : UserControl
@@ -16,13 +18,14 @@ namespace JapaneseLearningApp
 
         private int lectureNumber;
         private Panel mainPanel;
+        private User currentUser;
 
-
-        public LectureMenu(Panel mainPanel, int lectureNumber)
+        public LectureMenu(Panel mainPanel, int lectureNumber, User currentUser)
         {
             InitializeComponent();
 
             this.mainPanel = mainPanel;
+            this.currentUser = currentUser;
             loadLecture(lectureNumber);
         }
 
@@ -54,26 +57,26 @@ namespace JapaneseLearningApp
         }
 
         private void bStory_Click(object sender, EventArgs e)
-        {            
-            this.mainPanel.Controls.Add(new StoryPanel(this.mainPanel, this.lectureNumber));
+        {
+            this.mainPanel.Controls.Add(new StoryPanel(this.mainPanel, this.lectureNumber, this.currentUser));
             this.mainPanel.Controls.Remove(this);
         }
 
         private void bVocabulary_Click(object sender, EventArgs e)
-        {            
-            this.mainPanel.Controls.Add(new VocabularyPanel(this.mainPanel, this.lectureNumber));
+        {
+            this.mainPanel.Controls.Add(new VocabularyPanel(this.mainPanel, this.lectureNumber, this.currentUser));
             this.mainPanel.Controls.Remove(this);
         }
 
         private void bGrammar_Click(object sender, EventArgs e)
-        {            
-            this.mainPanel.Controls.Add(new GrammarPanel(this.mainPanel, this.lectureNumber));
+        {
+            this.mainPanel.Controls.Add(new GrammarPanel(this.mainPanel, this.lectureNumber, this.currentUser));
             this.mainPanel.Controls.Remove(this);
         }
 
         private void bLectures_Click(object sender, EventArgs e)
-        {            
-            this.mainPanel.Controls.Add(new LecturesList(this.mainPanel));
+        {
+            this.mainPanel.Controls.Add(new LecturesList(this.mainPanel, this.currentUser));
             this.mainPanel.Controls.Remove(this);
         }
     }

@@ -16,15 +16,17 @@ namespace JapaneseLearningApp
     {
         private int lectureNumber;
         private Panel mainPanel;
+        private User currentUser;
         private String[] sections;
         private int currentSection;
 
-        public GrammarPanel(Panel mainPanel, int lectureNumber)
+        public GrammarPanel(Panel mainPanel, int lectureNumber, User currentUser)
         {
             InitializeComponent();
 
             this.mainPanel = mainPanel;
             this.lectureNumber = lectureNumber;
+            this.currentUser = currentUser;
             loadGrammar();
         }
 
@@ -73,13 +75,13 @@ namespace JapaneseLearningApp
 
         private void bVocabulary_Click(object sender, EventArgs e)
         {
-            this.mainPanel.Controls.Add(new VocabularyPanel(this.mainPanel, this.lectureNumber));
+            this.mainPanel.Controls.Add(new VocabularyPanel(this.mainPanel, this.lectureNumber, this.currentUser));
             this.mainPanel.Controls.Remove(this);
         }
 
         private void bNextLecture_Click(object sender, EventArgs e)
         {
-            this.mainPanel.Controls.Add(new LectureMenu(this.mainPanel, this.lectureNumber + 1));
+            this.mainPanel.Controls.Add(new LectureMenu(this.mainPanel, this.lectureNumber + 1, this.currentUser));
             this.mainPanel.Controls.Remove(this);
         }
     }

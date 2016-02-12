@@ -20,7 +20,4 @@ D:\GitHub\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.Lec
 D:\GitHub\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.Properties.Resources.resources
 D:\GitHub\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.StoryPanel.resources
 D:\GitHub\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.VocabularyPanel.resources
-D:\GitHub\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.TestKontrole.GrammarQuestionSimple.resources
-D:\GitHub\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.TestKontrole.VocabularyQuestionPictures.resources
-D:\GitHub\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.TestKontrole.WritingQuestionSimple.resources
 D:\GitHub\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.csproj.GenerateResource.Cache

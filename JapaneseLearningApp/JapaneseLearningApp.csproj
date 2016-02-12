@@ -58,6 +58,7 @@
     <Compile Include="GlavnaForma.Designer.cs">
       <DependentUpon>GlavnaForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Klase\DBManipulation.cs" />
     <Compile Include="Klase\KorisnickeFunkcije.cs" />
     <Compile Include="Klase\PitanjeKanji.cs" />
     <Compile Include="Klase\PitanjeOdaberi.cs" />

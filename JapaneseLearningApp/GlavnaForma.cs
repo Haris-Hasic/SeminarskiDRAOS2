@@ -14,6 +14,8 @@ using System.Data.SqlClient;
 
 using JapaneseLearningApp.Klase;
 using JapaneseLearningApp.Properties;
+using System.Threading;
+using System.Diagnostics;
 
 namespace JapaneseLearningApp
 {
@@ -599,6 +601,11 @@ namespace JapaneseLearningApp
 
         void refreshVocabPitanja(Boolean b)
         {
+            for (int i = 0; i < 1000000; i++)
+            {
+
+            }
+
             label40.Text = "Vocabulary - Question #" + Convert.ToString(aktivniTest.TrenutnoPitanje + 1);
             label46.Text = "Vocabulary - Question #" + Convert.ToString(aktivniTest.TrenutnoPitanje + 1);
 
@@ -639,45 +646,159 @@ namespace JapaneseLearningApp
                 ((ProgressBar)tpVOCABQUESTSIMPLE.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje), true)[0]).Value = 0;
                 ((ProgressBar)tpVOCABQUESTPIC.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 10), true)[0]).Value = 0;
             }
+
+            obojiIzvjestaj(aktivniTest.TrenutnoPitanje, b);
+            resetujBojeButtona();
+        }
+
+        void resetujBojeButtona()
+        {
+            buttANSWER1.ForeColor = Color.White;
+            buttANSWER2.ForeColor = Color.White;
+            buttANSWER3.ForeColor = Color.White;
+            buttANSWER4.ForeColor = Color.White;
+
+            buttPICANSWER1.ForeColor = Color.White;
+            buttPICANSWER2.ForeColor = Color.White;
+            buttPICANSWER3.ForeColor = Color.White;
+            buttPICANSWER4.ForeColor = Color.White;
+
+            buttGRAMMARANSWER1.ForeColor = Color.White;
+            buttGRAMMARANSWER2.ForeColor = Color.White;
+            buttGRAMMARANSWER3.ForeColor = Color.White;
+            buttGRAMMARANSWER4.ForeColor = Color.White;
+
+            buttKANJIANSWER1.ForeColor = Color.White;
+            buttKANJIANSWER2.ForeColor = Color.White;
+            buttKANJIANSWER3.ForeColor = Color.White;
+            buttKANJIANSWER4.ForeColor = Color.White;
         }
 
         private void buttANSWER1_Click(object sender, EventArgs e)
         {
+            buttANSWER1.ForeColor = Color.Red;
+            ((Button)tpVOCABQUESTSIMPLE.Controls.Find("buttANSWER" + Convert.ToString(aktivniTest.TacanOdgovor), true)[0]).ForeColor = Color.Green;
+            
+            // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
+            this.Refresh();
+            for (int i = 0; i < 300000000; i++)
+            {
+                Int32 br = 1; 
+                br = br + 1;
+            }
+
             refreshVocabPitanja(aktivniTest.Odgovori(1));
         }
 
         private void buttANSWER2_Click(object sender, EventArgs e)
         {
+            buttANSWER2.ForeColor = Color.Red;
+            ((Button)tpVOCABQUESTSIMPLE.Controls.Find("buttANSWER" + Convert.ToString(aktivniTest.TacanOdgovor), true)[0]).ForeColor = Color.Green;
+            
+            // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
+            this.Refresh();
+            for (int i = 0; i < 300000000; i++)
+            {
+                Int32 br = 1;
+                br = br + 1;
+            }
+
             refreshVocabPitanja(aktivniTest.Odgovori(2));
         }
 
         private void buttANSWER3_Click(object sender, EventArgs e)
         {
+            buttANSWER3.ForeColor = Color.Red;
+            ((Button)tpVOCABQUESTSIMPLE.Controls.Find("buttANSWER" + Convert.ToString(aktivniTest.TacanOdgovor), true)[0]).ForeColor = Color.Green;
+
+            // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
+            this.Refresh();
+            for (int i = 0; i < 300000000; i++)
+            {
+                Int32 br = 1;
+                br = br + 1;
+            }
+
             refreshVocabPitanja(aktivniTest.Odgovori(3));
         }
 
         private void buttANSWER4_Click(object sender, EventArgs e)
         {
+            buttANSWER4.ForeColor = Color.Red;
+            ((Button)tpVOCABQUESTSIMPLE.Controls.Find("buttANSWER" + Convert.ToString(aktivniTest.TacanOdgovor), true)[0]).ForeColor = Color.Green;
+
+            // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
+            this.Refresh();
+            for (int i = 0; i < 300000000; i++)
+            {
+                Int32 br = 1;
+                br = br + 1;
+            }
+
             refreshVocabPitanja(aktivniTest.Odgovori(4));
         }
 
         private void buttPICANSWER1_Click(object sender, EventArgs e)
         {
+            buttPICANSWER1.ForeColor = Color.Red;
+            ((Button)tpVOCABQUESTPIC.Controls.Find("buttPICANSWER" + Convert.ToString(aktivniTest.TacanOdgovor), true)[0]).ForeColor = Color.Green;
+
+            // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
+            this.Refresh();
+            for (int i = 0; i < 300000000; i++)
+            {
+                Int32 br = 1;
+                br = br + 1;
+            }
+
             refreshVocabPitanja(aktivniTest.Odgovori(1));
         }
 
         private void buttPICANSWER2_Click(object sender, EventArgs e)
         {
+            buttPICANSWER2.ForeColor = Color.Red;
+            ((Button)tpVOCABQUESTPIC.Controls.Find("buttPICANSWER" + Convert.ToString(aktivniTest.TacanOdgovor), true)[0]).ForeColor = Color.Green;
+
+            // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
+            this.Refresh();
+            for (int i = 0; i < 300000000; i++)
+            {
+                Int32 br = 1;
+                br = br + 1;
+            }
+
             refreshVocabPitanja(aktivniTest.Odgovori(2));
         }
 
         private void buttPICANSWER3_Click(object sender, EventArgs e)
         {
+            buttPICANSWER3.ForeColor = Color.Red;
+            ((Button)tpVOCABQUESTPIC.Controls.Find("buttPICANSWER" + Convert.ToString(aktivniTest.TacanOdgovor), true)[0]).ForeColor = Color.Green;
+
+            // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
+            this.Refresh();
+            for (int i = 0; i < 300000000; i++)
+            {
+                Int32 br = 1;
+                br = br + 1;
+            }
+
             refreshVocabPitanja(aktivniTest.Odgovori(3));
         }
 
         private void buttPICANSWER4_Click(object sender, EventArgs e)
         {
+            buttPICANSWER4.ForeColor = Color.Red;
+            ((Button)tpVOCABQUESTPIC.Controls.Find("buttPICANSWER" + Convert.ToString(aktivniTest.TacanOdgovor), true)[0]).ForeColor = Color.Green;
+
+            // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
+            this.Refresh();
+            for (int i = 0; i < 300000000; i++)
+            {
+                Int32 br = 1;
+                br = br + 1;
+            }
+
             refreshVocabPitanja(aktivniTest.Odgovori(4));
         }
 
@@ -820,25 +941,72 @@ namespace JapaneseLearningApp
 
             else
                 ((ProgressBar)tpGRAMMARQUESTION.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 30), true)[0]).Value = 0;
+
+            obojiIzvjestaj(aktivniTest.TrenutnoPitanje, b);
+            resetujBojeButtona();
         }
 
         private void buttGRAMMARANSWER1_Click(object sender, EventArgs e)
         {
+            buttGRAMMARANSWER1.ForeColor = Color.Red;
+            ((Button)tpGRAMMARQUESTION.Controls.Find("buttGRAMMARANSWER" + Convert.ToString(aktivniTest.TacanOdgovor), true)[0]).ForeColor = Color.Green;
+
+            // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
+            this.Refresh();
+            for (int i = 0; i < 300000000; i++)
+            {
+                Int32 br = 1;
+                br = br + 1;
+            }
+
             refreshGrammarPitanja(aktivniTest.Odgovori(1));
         }
 
         private void buttGRAMMARANSWER2_Click(object sender, EventArgs e)
         {
+            buttGRAMMARANSWER2.ForeColor = Color.Red;
+            ((Button)tpGRAMMARQUESTION.Controls.Find("buttGRAMMARANSWER" + Convert.ToString(aktivniTest.TacanOdgovor), true)[0]).ForeColor = Color.Green;
+
+            // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
+            this.Refresh();
+            for (int i = 0; i < 300000000; i++)
+            {
+                Int32 br = 1;
+                br = br + 1;
+            }
+
             refreshGrammarPitanja(aktivniTest.Odgovori(2));
         }
 
         private void buttGRAMMARANSWER3_Click(object sender, EventArgs e)
         {
+            buttGRAMMARANSWER3.ForeColor = Color.Red;
+            ((Button)tpGRAMMARQUESTION.Controls.Find("buttGRAMMARANSWER" + Convert.ToString(aktivniTest.TacanOdgovor), true)[0]).ForeColor = Color.Green;
+
+            // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
+            this.Refresh();
+            for (int i = 0; i < 300000000; i++)
+            {
+                Int32 br = 1;
+                br = br + 1;
+            }
+
             refreshGrammarPitanja(aktivniTest.Odgovori(3));
         }
 
         private void buttGRAMMARANSWER4_Click(object sender, EventArgs e)
         {
+            buttGRAMMARANSWER4.ForeColor = Color.Red;
+            ((Button)tpGRAMMARQUESTION.Controls.Find("buttGRAMMARANSWER" + Convert.ToString(aktivniTest.TacanOdgovor), true)[0]).ForeColor = Color.Green;
+
+            // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
+            this.Refresh();
+            for (int i = 0; i < 300000000; i++)
+            {
+                Int32 br = 1;
+                br = br + 1;
+            }
+
             refreshGrammarPitanja(aktivniTest.Odgovori(4));
         }
 
@@ -1042,25 +1210,72 @@ namespace JapaneseLearningApp
                 ((ProgressBar)tpKANJIQUESTION.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 20), true)[0]).Value = 100;
             else
                 ((ProgressBar)tpKANJIQUESTION.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 20), true)[0]).Value = 0;
+
+            obojiIzvjestaj(aktivniTest.TrenutnoPitanje, b);
+            resetujBojeButtona();
         }
 
         private void buttKANJIANSWER1_Click(object sender, EventArgs e)
         {
+            buttKANJIANSWER1.ForeColor = Color.Red;
+            ((Button)tpKANJIQUESTION.Controls.Find("buttKANJIANSWER" + Convert.ToString(aktivniTest.TacanOdgovor), true)[0]).ForeColor = Color.Green;
+
+            // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
+            this.Refresh();
+            for (int i = 0; i < 300000000; i++)
+            {
+                Int32 br = 1;
+                br = br + 1;
+            }
+
             refreshKanjiPitanja(aktivniTest.Odgovori(1));
         }
 
         private void buttKANJIANSWER2_Click(object sender, EventArgs e)
         {
+            buttKANJIANSWER2.ForeColor = Color.Red;
+            ((Button)tpKANJIQUESTION.Controls.Find("buttKANJIANSWER" + Convert.ToString(aktivniTest.TacanOdgovor), true)[0]).ForeColor = Color.Green;
+
+            // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
+            this.Refresh();
+            for (int i = 0; i < 300000000; i++)
+            {
+                Int32 br = 1;
+                br = br + 1;
+            }
+
             refreshKanjiPitanja(aktivniTest.Odgovori(2));
         }
 
         private void buttKANJIANSWER3_Click(object sender, EventArgs e)
         {
+            buttKANJIANSWER3.ForeColor = Color.Red;
+            ((Button)tpKANJIQUESTION.Controls.Find("buttKANJIANSWER" + Convert.ToString(aktivniTest.TacanOdgovor), true)[0]).ForeColor = Color.Green;
+
+            // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
+            this.Refresh();
+            for (int i = 0; i < 300000000; i++)
+            {
+                Int32 br = 1;
+                br = br + 1;
+            }
+
             refreshKanjiPitanja(aktivniTest.Odgovori(3));
         }
 
         private void buttKANJIANSWER4_Click(object sender, EventArgs e)
         {
+            buttKANJIANSWER3.ForeColor = Color.Red;
+            ((Button)tpKANJIQUESTION.Controls.Find("buttKANJIANSWER" + Convert.ToString(aktivniTest.TacanOdgovor), true)[0]).ForeColor = Color.Green;
+
+            // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
+            this.Refresh();
+            for (int i = 0; i < 300000000; i++)
+            {
+                Int32 br = 1;
+                br = br + 1;
+            }
+
             refreshKanjiPitanja(aktivniTest.Odgovori(4));
         }        
 
@@ -1153,6 +1368,11 @@ namespace JapaneseLearningApp
         private void button34_Click(object sender, EventArgs e)
         {
             GoToMainMenu();
+        }
+
+        private void buttDALJETESTREZ_Click(object sender, EventArgs e)
+        {
+            GoToTestMenu();
         }
 
         private void buttVOCABULARYTEST_Click(object sender, EventArgs e)
@@ -1393,10 +1613,19 @@ namespace JapaneseLearningApp
             this.tabControl1.SelectedTab = tpTESTRESULT;
 
             if (sk < 5)
+            {
                 tbRESULTMESSAGE.Text = "You failed the test. Try again!";
+                tbRESULTMESSAGE.ForeColor = Color.Red;
+                labelSCOREINDICATOR.Text = Convert.ToString(sk) + "/10";
+                labelSCOREINDICATOR.ForeColor = Color.Red;
+            }
+
             else
             {
                 tbRESULTMESSAGE.Text = "Congratulations, you passed the test!";
+                tbRESULTMESSAGE.ForeColor = Color.Green;
+                labelSCOREINDICATOR.Text = Convert.ToString(sk) + "/10";
+                labelSCOREINDICATOR.ForeColor = Color.Green;
 
                 if (tipTesta.Equals("VOCAB"))
                     aktivniKorisnik.Vocab = true;
@@ -1405,8 +1634,20 @@ namespace JapaneseLearningApp
                 else
                     aktivniKorisnik.Writing = true;
             }
+        }
 
-            labelSCOREINDICATOR.Text = Convert.ToString(sk) + "/10";
+        void obojiIzvjestaj(Int32 i, Boolean b)
+        {
+            if (b)
+            {
+                ((TextBox)tpTESTRESULT.Controls.Find("tbRESULTSTATUSQ" + Convert.ToString(i), true)[0]).ForeColor = Color.Green;
+                ((TextBox)tpTESTRESULT.Controls.Find("tbRESULTSTATUSQ" + Convert.ToString(i), true)[0]).Text = "Q" + Convert.ToString(i) + ": Correct";
+            }
+            else
+            {
+                ((TextBox)tpTESTRESULT.Controls.Find("tbRESULTSTATUSQ" + Convert.ToString(i), true)[0]).ForeColor = Color.Red;
+                ((TextBox)tpTESTRESULT.Controls.Find("tbRESULTSTATUSQ" + Convert.ToString(i), true)[0]).Text = "Q" + Convert.ToString(i) + ": Incorrect";
+            }
         }
 
         #endregion

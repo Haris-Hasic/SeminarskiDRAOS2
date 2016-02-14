@@ -45,6 +45,8 @@ namespace JapaneseLearningApp
                     introductionSetup();
                 else
                     standardSetup();
+
+                updateStoryProgress();
             }
             catch (Exception e)
             {
@@ -65,6 +67,21 @@ namespace JapaneseLearningApp
             pJapanese.Visible = true;
             pEnglish.Top = 319; // Magic numbers, YAY!
             pEnglish.Height = pJapanese.Height;
+        }
+
+        private void updateStoryProgress()
+        {
+            try
+            {
+                DBManipulation dbmanipulation = DBManipulation.getInstance();
+                int currentProgress = dbmanipulation.getStoryProgress(dbmanipulation.getUserId(currentUser.Username));
+                if (lectureNumber > currentProgress)
+                    dbmanipulation.setStoryProgress(dbmanipulation.getUserId(currentUser.Username), lectureNumber);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         private void bLectures_Click(object sender, EventArgs e)

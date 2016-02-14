@@ -30,10 +30,43 @@ namespace JapaneseLearningApp
         {
             if (currentUser != null)
             {
-                DBManipulation dbmanipulation = DBManipulation.getInstance();
-                int progress = dbmanipulation.getLectureProgress(dbmanipulation.getUserId(currentUser.Username));
+                try
+                {
+                    DBManipulation dbmanipulation = DBManipulation.getInstance();
+                    int progress = dbmanipulation.getLectureProgress(dbmanipulation.getUserId(currentUser.Username));
 
-                MessageBox.Show(progress.ToString());
+                    switch (progress)
+                    {
+                        case 7:
+                            bLecture7.BackColor = Color.FromArgb(140, 225, 245);
+                            goto case 6;
+                        case 6:
+                            bLecture6.BackColor = Color.FromArgb(140, 225, 245);
+                            goto case 5;
+                        case 5:
+                            bLecture5.BackColor = Color.FromArgb(140, 225, 245);
+                            goto case 4;
+                        case 4:
+                            bLecture4.BackColor = Color.FromArgb(140, 225, 245);
+                            goto case 3;
+                        case 3:
+                            bLecture3.BackColor = Color.FromArgb(140, 225, 245);
+                            goto case 2;
+                        case 2:
+                            bLecture2.BackColor = Color.FromArgb(140, 225, 245);
+                            goto case 1;
+                        case 1:
+                            bLecture1.BackColor = Color.FromArgb(140, 225, 245);
+                            goto case 0;
+                        case 0:
+                            bLectureIntro.BackColor = Color.FromArgb(140, 225, 245);
+                            break;
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
             }
         }
 

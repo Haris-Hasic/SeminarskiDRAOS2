@@ -44,12 +44,31 @@ namespace JapaneseLearningApp
                 if (sections.Length > 0)
                     lGrammarText.Text = sections[0];
 
+                if (currentSection == sections.Length)
+                {
+                    updateGrammarProgress();
+                }
             }
             catch (Exception e)
             {
                 lGrammarText.Text = e.Message;
                 sections = new String[0];
                 lProgress.Text = currentSection + "/" + sections.Length;
+            }
+        }
+
+        private void updateGrammarProgress()
+        {
+            try
+            {
+                DBManipulation dbmanipulation = DBManipulation.getInstance();
+                int currentProgress = dbmanipulation.getGrammarProgress(dbmanipulation.getUserId(currentUser.Username));
+                if (lectureNumber > currentProgress)
+                    dbmanipulation.setGrammarProgress(dbmanipulation.getUserId(currentUser.Username), lectureNumber);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
             }
         }
 
@@ -70,6 +89,11 @@ namespace JapaneseLearningApp
                 currentSection++;
                 lProgress.Text = currentSection + "/" + sections.Length;
                 lGrammarText.Text = sections[currentSection - 1];
+            }
+
+            if (currentSection == sections.Length)
+            {
+                updateGrammarProgress();
             }
         }
 

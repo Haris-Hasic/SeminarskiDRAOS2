@@ -42,6 +42,8 @@ namespace JapaneseLearningApp
                 lTitle.Text = "Introduction";
             else
                 lTitle.Text = "Lecture " + lectureNumber;
+
+            lTitle.Left = (this.mainPanel.Width - lTitle.Width) / 2;
         }
 
         private void bNext_Click(object sender, EventArgs e)

@@ -46,6 +46,11 @@ namespace JapaneseLearningApp
                 lProgress.Text = currentSection + "/" + titles.Length;
 
                 displayVocabularySection();
+
+                if (currentSection == titles.Length)
+                {
+                    updateVocabularyProgress();
+                }
             }
             catch (Exception e)
             {
@@ -87,6 +92,21 @@ namespace JapaneseLearningApp
             }
         }
 
+        private void updateVocabularyProgress()
+        {
+            try
+            {
+                DBManipulation dbmanipulation = DBManipulation.getInstance();
+                int currentProgress = dbmanipulation.getVocabularyProgress(dbmanipulation.getUserId(currentUser.Username));
+                if (lectureNumber > currentProgress)
+                    dbmanipulation.setVocabularyProgress(dbmanipulation.getUserId(currentUser.Username), lectureNumber);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
         private void bPrevious_Click(object sender, EventArgs e)
         {
             if (currentSection > 1)
@@ -104,6 +124,11 @@ namespace JapaneseLearningApp
                 currentSection++;
                 lProgress.Text = currentSection + "/" + titles.Length;
                 displayVocabularySection();
+            }
+
+            if (currentSection == titles.Length)
+            {
+                updateVocabularyProgress();
             }
         }
 

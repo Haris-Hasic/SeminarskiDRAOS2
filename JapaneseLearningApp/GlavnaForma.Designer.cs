@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GlavnaForma));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpLOGIN = new System.Windows.Forms.TabPage();
@@ -237,6 +242,10 @@
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.tpTESTRESULT = new System.Windows.Forms.TabPage();
+            this.buttDALJETESTREZ = new System.Windows.Forms.Button();
+            this.tbRESULTSTATUSQ10 = new System.Windows.Forms.TextBox();
+            this.tbRESULTSTATUSQ9 = new System.Windows.Forms.TextBox();
+            this.tbRESULTSTATUSQ8 = new System.Windows.Forms.TextBox();
             this.tbRESULTSTATUSQ7 = new System.Windows.Forms.TextBox();
             this.tbRESULTSTATUSQ6 = new System.Windows.Forms.TextBox();
             this.tbRESULTSTATUSQ5 = new System.Windows.Forms.TextBox();
@@ -245,13 +254,18 @@
             this.tbRESULTSTATUSQ2 = new System.Windows.Forms.TextBox();
             this.tbRESULTSTATUSQ1 = new System.Windows.Forms.TextBox();
             this.tbRESULTMESSAGE = new System.Windows.Forms.TextBox();
-            this.button28 = new System.Windows.Forms.Button();
             this.labelSCOREINDICATOR = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
-            this.tbRESULTSTATUSQ8 = new System.Windows.Forms.TextBox();
-            this.tbRESULTSTATUSQ9 = new System.Windows.Forms.TextBox();
-            this.tbRESULTSTATUSQ10 = new System.Windows.Forms.TextBox();
-            this.buttDALJETESTREZ = new System.Windows.Forms.Button();
+            this.tpTESTVIZ = new System.Windows.Forms.TabPage();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tbRESULTMESSAGE2 = new System.Windows.Forms.TextBox();
+            this.labelSCOREINDICATOR2 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabControl1.SuspendLayout();
             this.tpLOGIN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -274,6 +288,8 @@
             this.tpKANJIQUESTION.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbKANJIPIC)).BeginInit();
             this.tpTESTRESULT.SuspendLayout();
+            this.tpTESTVIZ.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -291,6 +307,7 @@
             this.tabControl1.Controls.Add(this.tpGRAMMARQUESTION);
             this.tabControl1.Controls.Add(this.tpKANJIQUESTION);
             this.tabControl1.Controls.Add(this.tpTESTRESULT);
+            this.tabControl1.Controls.Add(this.tpTESTVIZ);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -2857,6 +2874,8 @@
             // tpTESTRESULT
             // 
             this.tpTESTRESULT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.tpTESTRESULT.Controls.Add(this.label55);
+            this.tpTESTRESULT.Controls.Add(this.label56);
             this.tpTESTRESULT.Controls.Add(this.buttDALJETESTREZ);
             this.tpTESTRESULT.Controls.Add(this.tbRESULTSTATUSQ10);
             this.tpTESTRESULT.Controls.Add(this.tbRESULTSTATUSQ9);
@@ -2869,7 +2888,6 @@
             this.tpTESTRESULT.Controls.Add(this.tbRESULTSTATUSQ2);
             this.tpTESTRESULT.Controls.Add(this.tbRESULTSTATUSQ1);
             this.tpTESTRESULT.Controls.Add(this.tbRESULTMESSAGE);
-            this.tpTESTRESULT.Controls.Add(this.button28);
             this.tpTESTRESULT.Controls.Add(this.labelSCOREINDICATOR);
             this.tpTESTRESULT.Controls.Add(this.label42);
             this.tpTESTRESULT.Location = new System.Drawing.Point(4, 22);
@@ -2879,15 +2897,68 @@
             this.tpTESTRESULT.TabIndex = 9;
             this.tpTESTRESULT.Text = "Test Result";
             // 
+            // buttDALJETESTREZ
+            // 
+            this.buttDALJETESTREZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.buttDALJETESTREZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttDALJETESTREZ.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttDALJETESTREZ.ForeColor = System.Drawing.Color.White;
+            this.buttDALJETESTREZ.Location = new System.Drawing.Point(27, 509);
+            this.buttDALJETESTREZ.Name = "buttDALJETESTREZ";
+            this.buttDALJETESTREZ.Size = new System.Drawing.Size(350, 50);
+            this.buttDALJETESTREZ.TabIndex = 126;
+            this.buttDALJETESTREZ.Text = "Next";
+            this.buttDALJETESTREZ.UseVisualStyleBackColor = false;
+            this.buttDALJETESTREZ.Click += new System.EventHandler(this.buttDALJETESTREZ_Click);
+            // 
+            // tbRESULTSTATUSQ10
+            // 
+            this.tbRESULTSTATUSQ10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.tbRESULTSTATUSQ10.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRESULTSTATUSQ10.ForeColor = System.Drawing.Color.White;
+            this.tbRESULTSTATUSQ10.Location = new System.Drawing.Point(204, 356);
+            this.tbRESULTSTATUSQ10.Name = "tbRESULTSTATUSQ10";
+            this.tbRESULTSTATUSQ10.ReadOnly = true;
+            this.tbRESULTSTATUSQ10.Size = new System.Drawing.Size(171, 31);
+            this.tbRESULTSTATUSQ10.TabIndex = 125;
+            this.tbRESULTSTATUSQ10.Text = "Q10:";
+            this.tbRESULTSTATUSQ10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbRESULTSTATUSQ9
+            // 
+            this.tbRESULTSTATUSQ9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.tbRESULTSTATUSQ9.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRESULTSTATUSQ9.ForeColor = System.Drawing.Color.White;
+            this.tbRESULTSTATUSQ9.Location = new System.Drawing.Point(204, 319);
+            this.tbRESULTSTATUSQ9.Name = "tbRESULTSTATUSQ9";
+            this.tbRESULTSTATUSQ9.ReadOnly = true;
+            this.tbRESULTSTATUSQ9.Size = new System.Drawing.Size(171, 31);
+            this.tbRESULTSTATUSQ9.TabIndex = 124;
+            this.tbRESULTSTATUSQ9.Text = "Q9:";
+            this.tbRESULTSTATUSQ9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbRESULTSTATUSQ8
+            // 
+            this.tbRESULTSTATUSQ8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.tbRESULTSTATUSQ8.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRESULTSTATUSQ8.ForeColor = System.Drawing.Color.White;
+            this.tbRESULTSTATUSQ8.Location = new System.Drawing.Point(204, 282);
+            this.tbRESULTSTATUSQ8.Name = "tbRESULTSTATUSQ8";
+            this.tbRESULTSTATUSQ8.ReadOnly = true;
+            this.tbRESULTSTATUSQ8.Size = new System.Drawing.Size(171, 31);
+            this.tbRESULTSTATUSQ8.TabIndex = 123;
+            this.tbRESULTSTATUSQ8.Text = "Q8:";
+            this.tbRESULTSTATUSQ8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // tbRESULTSTATUSQ7
             // 
             this.tbRESULTSTATUSQ7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.tbRESULTSTATUSQ7.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRESULTSTATUSQ7.ForeColor = System.Drawing.Color.White;
-            this.tbRESULTSTATUSQ7.Location = new System.Drawing.Point(27, 361);
+            this.tbRESULTSTATUSQ7.Location = new System.Drawing.Point(204, 245);
             this.tbRESULTSTATUSQ7.Name = "tbRESULTSTATUSQ7";
             this.tbRESULTSTATUSQ7.ReadOnly = true;
-            this.tbRESULTSTATUSQ7.Size = new System.Drawing.Size(350, 31);
+            this.tbRESULTSTATUSQ7.Size = new System.Drawing.Size(171, 31);
             this.tbRESULTSTATUSQ7.TabIndex = 122;
             this.tbRESULTSTATUSQ7.Text = "Q7:";
             this.tbRESULTSTATUSQ7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2897,10 +2968,10 @@
             this.tbRESULTSTATUSQ6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.tbRESULTSTATUSQ6.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRESULTSTATUSQ6.ForeColor = System.Drawing.Color.White;
-            this.tbRESULTSTATUSQ6.Location = new System.Drawing.Point(27, 324);
+            this.tbRESULTSTATUSQ6.Location = new System.Drawing.Point(204, 208);
             this.tbRESULTSTATUSQ6.Name = "tbRESULTSTATUSQ6";
             this.tbRESULTSTATUSQ6.ReadOnly = true;
-            this.tbRESULTSTATUSQ6.Size = new System.Drawing.Size(350, 31);
+            this.tbRESULTSTATUSQ6.Size = new System.Drawing.Size(171, 31);
             this.tbRESULTSTATUSQ6.TabIndex = 121;
             this.tbRESULTSTATUSQ6.Text = "Q6:";
             this.tbRESULTSTATUSQ6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2910,10 +2981,10 @@
             this.tbRESULTSTATUSQ5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.tbRESULTSTATUSQ5.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRESULTSTATUSQ5.ForeColor = System.Drawing.Color.White;
-            this.tbRESULTSTATUSQ5.Location = new System.Drawing.Point(27, 287);
+            this.tbRESULTSTATUSQ5.Location = new System.Drawing.Point(27, 356);
             this.tbRESULTSTATUSQ5.Name = "tbRESULTSTATUSQ5";
             this.tbRESULTSTATUSQ5.ReadOnly = true;
-            this.tbRESULTSTATUSQ5.Size = new System.Drawing.Size(350, 31);
+            this.tbRESULTSTATUSQ5.Size = new System.Drawing.Size(171, 31);
             this.tbRESULTSTATUSQ5.TabIndex = 120;
             this.tbRESULTSTATUSQ5.Text = "Q5:";
             this.tbRESULTSTATUSQ5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2923,10 +2994,10 @@
             this.tbRESULTSTATUSQ4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.tbRESULTSTATUSQ4.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRESULTSTATUSQ4.ForeColor = System.Drawing.Color.White;
-            this.tbRESULTSTATUSQ4.Location = new System.Drawing.Point(27, 251);
+            this.tbRESULTSTATUSQ4.Location = new System.Drawing.Point(27, 319);
             this.tbRESULTSTATUSQ4.Name = "tbRESULTSTATUSQ4";
             this.tbRESULTSTATUSQ4.ReadOnly = true;
-            this.tbRESULTSTATUSQ4.Size = new System.Drawing.Size(350, 31);
+            this.tbRESULTSTATUSQ4.Size = new System.Drawing.Size(171, 31);
             this.tbRESULTSTATUSQ4.TabIndex = 119;
             this.tbRESULTSTATUSQ4.Text = "Q4:";
             this.tbRESULTSTATUSQ4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2936,10 +3007,10 @@
             this.tbRESULTSTATUSQ3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.tbRESULTSTATUSQ3.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRESULTSTATUSQ3.ForeColor = System.Drawing.Color.White;
-            this.tbRESULTSTATUSQ3.Location = new System.Drawing.Point(27, 214);
+            this.tbRESULTSTATUSQ3.Location = new System.Drawing.Point(27, 282);
             this.tbRESULTSTATUSQ3.Name = "tbRESULTSTATUSQ3";
             this.tbRESULTSTATUSQ3.ReadOnly = true;
-            this.tbRESULTSTATUSQ3.Size = new System.Drawing.Size(350, 31);
+            this.tbRESULTSTATUSQ3.Size = new System.Drawing.Size(171, 31);
             this.tbRESULTSTATUSQ3.TabIndex = 118;
             this.tbRESULTSTATUSQ3.Text = "Q3:";
             this.tbRESULTSTATUSQ3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2949,10 +3020,10 @@
             this.tbRESULTSTATUSQ2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.tbRESULTSTATUSQ2.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRESULTSTATUSQ2.ForeColor = System.Drawing.Color.White;
-            this.tbRESULTSTATUSQ2.Location = new System.Drawing.Point(27, 177);
+            this.tbRESULTSTATUSQ2.Location = new System.Drawing.Point(27, 245);
             this.tbRESULTSTATUSQ2.Name = "tbRESULTSTATUSQ2";
             this.tbRESULTSTATUSQ2.ReadOnly = true;
-            this.tbRESULTSTATUSQ2.Size = new System.Drawing.Size(350, 31);
+            this.tbRESULTSTATUSQ2.Size = new System.Drawing.Size(171, 31);
             this.tbRESULTSTATUSQ2.TabIndex = 117;
             this.tbRESULTSTATUSQ2.Text = "Q2:";
             this.tbRESULTSTATUSQ2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2962,10 +3033,10 @@
             this.tbRESULTSTATUSQ1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.tbRESULTSTATUSQ1.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRESULTSTATUSQ1.ForeColor = System.Drawing.Color.White;
-            this.tbRESULTSTATUSQ1.Location = new System.Drawing.Point(27, 140);
+            this.tbRESULTSTATUSQ1.Location = new System.Drawing.Point(27, 208);
             this.tbRESULTSTATUSQ1.Name = "tbRESULTSTATUSQ1";
             this.tbRESULTSTATUSQ1.ReadOnly = true;
-            this.tbRESULTSTATUSQ1.Size = new System.Drawing.Size(350, 31);
+            this.tbRESULTSTATUSQ1.Size = new System.Drawing.Size(171, 31);
             this.tbRESULTSTATUSQ1.TabIndex = 116;
             this.tbRESULTSTATUSQ1.Text = "Q1:";
             this.tbRESULTSTATUSQ1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2975,33 +3046,19 @@
             this.tbRESULTMESSAGE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.tbRESULTMESSAGE.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRESULTMESSAGE.ForeColor = System.Drawing.Color.White;
-            this.tbRESULTMESSAGE.Location = new System.Drawing.Point(27, 56);
+            this.tbRESULTMESSAGE.Location = new System.Drawing.Point(27, 117);
             this.tbRESULTMESSAGE.Name = "tbRESULTMESSAGE";
             this.tbRESULTMESSAGE.ReadOnly = true;
             this.tbRESULTMESSAGE.Size = new System.Drawing.Size(350, 31);
             this.tbRESULTMESSAGE.TabIndex = 115;
             this.tbRESULTMESSAGE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button28
-            // 
-            this.button28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button28.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button28.ForeColor = System.Drawing.Color.White;
-            this.button28.Location = new System.Drawing.Point(320, 6);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(76, 29);
-            this.button28.TabIndex = 61;
-            this.button28.Text = "Menu";
-            this.button28.UseVisualStyleBackColor = false;
-            this.button28.Click += new System.EventHandler(this.button28_Click);
-            // 
             // labelSCOREINDICATOR
             // 
             this.labelSCOREINDICATOR.AutoSize = true;
             this.labelSCOREINDICATOR.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSCOREINDICATOR.ForeColor = System.Drawing.Color.White;
-            this.labelSCOREINDICATOR.Location = new System.Drawing.Point(178, 96);
+            this.labelSCOREINDICATOR.Location = new System.Drawing.Point(173, 161);
             this.labelSCOREINDICATOR.Name = "labelSCOREINDICATOR";
             this.labelSCOREINDICATOR.Size = new System.Drawing.Size(65, 32);
             this.labelSCOREINDICATOR.TabIndex = 60;
@@ -3018,58 +3075,147 @@
             this.label42.TabIndex = 57;
             this.label42.Text = "Copyright 2015. All rights reserved.";
             // 
-            // tbRESULTSTATUSQ8
+            // tpTESTVIZ
             // 
-            this.tbRESULTSTATUSQ8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.tbRESULTSTATUSQ8.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRESULTSTATUSQ8.ForeColor = System.Drawing.Color.White;
-            this.tbRESULTSTATUSQ8.Location = new System.Drawing.Point(27, 398);
-            this.tbRESULTSTATUSQ8.Name = "tbRESULTSTATUSQ8";
-            this.tbRESULTSTATUSQ8.ReadOnly = true;
-            this.tbRESULTSTATUSQ8.Size = new System.Drawing.Size(350, 31);
-            this.tbRESULTSTATUSQ8.TabIndex = 123;
-            this.tbRESULTSTATUSQ8.Text = "Q8:";
-            this.tbRESULTSTATUSQ8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tpTESTVIZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.tpTESTVIZ.Controls.Add(this.chart1);
+            this.tpTESTVIZ.Controls.Add(this.tbRESULTMESSAGE2);
+            this.tpTESTVIZ.Controls.Add(this.labelSCOREINDICATOR2);
+            this.tpTESTVIZ.Controls.Add(this.button1);
+            this.tpTESTVIZ.Controls.Add(this.label41);
+            this.tpTESTVIZ.Controls.Add(this.label50);
+            this.tpTESTVIZ.Controls.Add(this.label53);
+            this.tpTESTVIZ.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tpTESTVIZ.ForeColor = System.Drawing.Color.White;
+            this.tpTESTVIZ.Location = new System.Drawing.Point(4, 22);
+            this.tpTESTVIZ.Name = "tpTESTVIZ";
+            this.tpTESTVIZ.Padding = new System.Windows.Forms.Padding(3);
+            this.tpTESTVIZ.Size = new System.Drawing.Size(404, 604);
+            this.tpTESTVIZ.TabIndex = 13;
+            this.tpTESTVIZ.Text = "Test Visualization";
             // 
-            // tbRESULTSTATUSQ9
+            // label41
             // 
-            this.tbRESULTSTATUSQ9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.tbRESULTSTATUSQ9.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRESULTSTATUSQ9.ForeColor = System.Drawing.Color.White;
-            this.tbRESULTSTATUSQ9.Location = new System.Drawing.Point(27, 435);
-            this.tbRESULTSTATUSQ9.Name = "tbRESULTSTATUSQ9";
-            this.tbRESULTSTATUSQ9.ReadOnly = true;
-            this.tbRESULTSTATUSQ9.Size = new System.Drawing.Size(350, 31);
-            this.tbRESULTSTATUSQ9.TabIndex = 124;
-            this.tbRESULTSTATUSQ9.Text = "Q9:";
-            this.tbRESULTSTATUSQ9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.label41.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.White;
+            this.label41.Location = new System.Drawing.Point(102, 83);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(204, 23);
+            this.label41.TabIndex = 98;
+            this.label41.Text = "Your results as a chart.";
             // 
-            // tbRESULTSTATUSQ10
+            // label50
             // 
-            this.tbRESULTSTATUSQ10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.tbRESULTSTATUSQ10.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRESULTSTATUSQ10.ForeColor = System.Drawing.Color.White;
-            this.tbRESULTSTATUSQ10.Location = new System.Drawing.Point(27, 472);
-            this.tbRESULTSTATUSQ10.Name = "tbRESULTSTATUSQ10";
-            this.tbRESULTSTATUSQ10.ReadOnly = true;
-            this.tbRESULTSTATUSQ10.Size = new System.Drawing.Size(350, 31);
-            this.tbRESULTSTATUSQ10.TabIndex = 125;
-            this.tbRESULTSTATUSQ10.Text = "Q10:";
-            this.tbRESULTSTATUSQ10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label50.ForeColor = System.Drawing.Color.White;
+            this.label50.Location = new System.Drawing.Point(100, 577);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(206, 13);
+            this.label50.TabIndex = 97;
+            this.label50.Text = "Copyright 2015. All rights reserved.";
             // 
-            // buttDALJETESTREZ
+            // label53
             // 
-            this.buttDALJETESTREZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.buttDALJETESTREZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttDALJETESTREZ.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttDALJETESTREZ.ForeColor = System.Drawing.Color.White;
-            this.buttDALJETESTREZ.Location = new System.Drawing.Point(27, 509);
-            this.buttDALJETESTREZ.Name = "buttDALJETESTREZ";
-            this.buttDALJETESTREZ.Size = new System.Drawing.Size(350, 50);
-            this.buttDALJETESTREZ.TabIndex = 126;
-            this.buttDALJETESTREZ.Text = "Next";
-            this.buttDALJETESTREZ.UseVisualStyleBackColor = false;
-            this.buttDALJETESTREZ.Click += new System.EventHandler(this.buttDALJETESTREZ_Click);
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.ForeColor = System.Drawing.Color.White;
+            this.label53.Location = new System.Drawing.Point(129, 49);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(151, 32);
+            this.label53.TabIndex = 96;
+            this.label53.Text = "Test Results";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(27, 509);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(350, 50);
+            this.button1.TabIndex = 127;
+            this.button1.Text = "Finish";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // tbRESULTMESSAGE2
+            // 
+            this.tbRESULTMESSAGE2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.tbRESULTMESSAGE2.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRESULTMESSAGE2.ForeColor = System.Drawing.Color.White;
+            this.tbRESULTMESSAGE2.Location = new System.Drawing.Point(27, 117);
+            this.tbRESULTMESSAGE2.Name = "tbRESULTMESSAGE2";
+            this.tbRESULTMESSAGE2.ReadOnly = true;
+            this.tbRESULTMESSAGE2.Size = new System.Drawing.Size(350, 31);
+            this.tbRESULTMESSAGE2.TabIndex = 129;
+            this.tbRESULTMESSAGE2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelSCOREINDICATOR2
+            // 
+            this.labelSCOREINDICATOR2.AutoSize = true;
+            this.labelSCOREINDICATOR2.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSCOREINDICATOR2.ForeColor = System.Drawing.Color.White;
+            this.labelSCOREINDICATOR2.Location = new System.Drawing.Point(173, 161);
+            this.labelSCOREINDICATOR2.Name = "labelSCOREINDICATOR2";
+            this.labelSCOREINDICATOR2.Size = new System.Drawing.Size(65, 32);
+            this.labelSCOREINDICATOR2.TabIndex = 128;
+            this.labelSCOREINDICATOR2.Text = "0/10";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.label55.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.ForeColor = System.Drawing.Color.White;
+            this.label55.Location = new System.Drawing.Point(102, 83);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(204, 23);
+            this.label55.TabIndex = 128;
+            this.label55.Text = "Your results as a chart.";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.ForeColor = System.Drawing.Color.White;
+            this.label56.Location = new System.Drawing.Point(129, 49);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(151, 32);
+            this.label56.TabIndex = 127;
+            this.label56.Text = "Test Results";
+            // 
+            // chart1
+            // 
+            this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.chart1.BorderSkin.BackColor = System.Drawing.Color.White;
+            this.chart1.BorderSkin.BorderColor = System.Drawing.Color.Transparent;
+            this.chart1.BorderSkin.PageColor = System.Drawing.Color.Transparent;
+            this.chart1.BorderSkin.SkinStyle = System.Windows.Forms.DataVisualization.Charting.BorderSkinStyle.FrameTitle6;
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.Transparent;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(27, 208);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.LabelBackColor = System.Drawing.Color.Transparent;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            dataPoint1.Color = System.Drawing.Color.ForestGreen;
+            dataPoint2.Color = System.Drawing.Color.Firebrick;
+            series1.Points.Add(dataPoint1);
+            series1.Points.Add(dataPoint2);
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(357, 276);
+            this.chart1.TabIndex = 130;
+            this.chart1.Text = "chart1";
             // 
             // GlavnaForma
             // 
@@ -3120,6 +3266,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbKANJIPIC)).EndInit();
             this.tpTESTRESULT.ResumeLayout(false);
             this.tpTESTRESULT.PerformLayout();
+            this.tpTESTVIZ.ResumeLayout(false);
+            this.tpTESTVIZ.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3288,7 +3437,6 @@
         private System.Windows.Forms.Button buttPICANSWER4;
         private System.Windows.Forms.Button buttPICANSWER3;
         private System.Windows.Forms.Button buttPICANSWER1;
-        private System.Windows.Forms.Button button28;
         private System.Windows.Forms.TabPage tpKANJIQUESTION;
         private System.Windows.Forms.ProgressBar progressBar27;
         private System.Windows.Forms.ProgressBar progressBar28;
@@ -3349,5 +3497,15 @@
         private System.Windows.Forms.TextBox tbRESULTSTATUSQ9;
         private System.Windows.Forms.TextBox tbRESULTSTATUSQ8;
         private System.Windows.Forms.Button buttDALJETESTREZ;
+        private System.Windows.Forms.TabPage tpTESTVIZ;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbRESULTMESSAGE2;
+        private System.Windows.Forms.Label labelSCOREINDICATOR2;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

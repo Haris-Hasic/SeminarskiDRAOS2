@@ -16,6 +16,7 @@ using JapaneseLearningApp.Klase;
 using JapaneseLearningApp.Properties;
 using System.Threading;
 using System.Diagnostics;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace JapaneseLearningApp
 {
@@ -611,12 +612,15 @@ namespace JapaneseLearningApp
 
             if (aktivniTest.ZavrsenTest())
             {
-                TestResultsPage(Color.FromArgb(120, 200, 180), aktivniTest.Skor, "VOCAB");
+                lblQUESTIONINDICATOR.Text = "0/10";
+                lblQUESTIONINDICATOR2.Text = "0/10";
 
                 for (int i = 1; i < 11; i++)
                     ((ProgressBar)tpVOCABQUESTSIMPLE.Controls.Find("progressBar" + Convert.ToString(i), true)[0]).Value = 0;
                 for (int i = 11; i < 21; i++)
                     ((ProgressBar)tpVOCABQUESTPIC.Controls.Find("progressBar" + Convert.ToString(i), true)[0]).Value = 0;
+
+                TestResultsPage(Color.FromArgb(120, 200, 180), aktivniTest.Skor, "VOCAB");
             }
 
             else
@@ -922,10 +926,12 @@ namespace JapaneseLearningApp
 
             if (aktivniTest.ZavrsenTest())
             {
-                TestResultsPage(Color.FromArgb(80, 120, 100), aktivniTest.Skor, "GRAMMAR");
+                labelGRAMMARSCORE.Text = "0/10";
 
                 for (int i = 31; i < 41; i++)
                     ((ProgressBar)tpGRAMMARQUESTION.Controls.Find("progressBar" + Convert.ToString(i), true)[0]).Value = 0;
+
+                TestResultsPage(Color.FromArgb(80, 120, 100), aktivniTest.Skor, "GRAMMAR");
             }
 
             else
@@ -1184,10 +1190,12 @@ namespace JapaneseLearningApp
 
             if (aktivniTest.ZavrsenTest())
             {
-                TestResultsPage(Color.FromArgb(255, 192, 128), aktivniTest.Skor, "WRITING");
+                labelKQINDICATOR.Text = "0/10";
 
                 for(int i=21; i<31; i++)
                     ((ProgressBar)tpKANJIQUESTION.Controls.Find("progressBar" + Convert.ToString(i), true)[0]).Value = 0;
+
+                TestResultsPage(Color.FromArgb(255, 192, 128), aktivniTest.Skor, "WRITING");
             }
 
             else
@@ -1372,6 +1380,11 @@ namespace JapaneseLearningApp
 
         private void buttDALJETESTREZ_Click(object sender, EventArgs e)
         {
+            GoToVisualization();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             GoToTestMenu();
         }
 
@@ -1526,6 +1539,34 @@ namespace JapaneseLearningApp
             this.tabControl1.SelectedTab = tpSIGNUP;
         }
 
+        public void GoToVisualization()
+        {            
+            chart1.Series.Clear();
+
+            Series series1 = new Series
+            {
+                Name = "Sumarni Rezultat Testa",
+                IsVisibleInLegend = true,
+                ChartType = SeriesChartType.Doughnut
+            };
+
+            chart1.Series.Add(series1);
+            series1.Points.Add(aktivniTest.Skor);
+            series1.Points.Add(10 - aktivniTest.Skor);
+
+            var p1 = series1.Points[0];
+            p1.AxisLabel = Convert.ToString(aktivniTest.Skor);
+            p1.LegendText = "Tačan odgovor";
+            p1.Color = Color.ForestGreen;
+
+            var p2 = series1.Points[1];
+            p2.AxisLabel = Convert.ToString(10 - aktivniTest.Skor);
+            p2.LegendText = "Netačan odgovor";
+            p2.Color = Color.Firebrick;
+
+            this.tabControl1.SelectedTab = tpTESTVIZ;
+        }
+
         public void Logout()
         {
             this.tabControl1.SelectedTab = tpLOGIN;
@@ -1616,16 +1657,29 @@ namespace JapaneseLearningApp
             {
                 tbRESULTMESSAGE.Text = "You failed the test. Try again!";
                 tbRESULTMESSAGE.ForeColor = Color.Red;
+                tbRESULTMESSAGE2.Text = "You failed the test. Try again!";
+                tbRESULTMESSAGE2.ForeColor = Color.Red;
+
                 labelSCOREINDICATOR.Text = Convert.ToString(sk) + "/10";
                 labelSCOREINDICATOR.ForeColor = Color.Red;
+                
+                labelSCOREINDICATOR2.Text = Convert.ToString(sk) + "/10";
+                labelSCOREINDICATOR2.ForeColor = Color.Red;
+
             }
 
             else
             {
                 tbRESULTMESSAGE.Text = "Congratulations, you passed the test!";
                 tbRESULTMESSAGE.ForeColor = Color.Green;
+                tbRESULTMESSAGE2.Text = "Congratulations, you passed the test!";
+                tbRESULTMESSAGE2.ForeColor = Color.Green;
+
                 labelSCOREINDICATOR.Text = Convert.ToString(sk) + "/10";
                 labelSCOREINDICATOR.ForeColor = Color.Green;
+
+                labelSCOREINDICATOR2.Text = Convert.ToString(sk) + "/10";
+                labelSCOREINDICATOR2.ForeColor = Color.Green;
 
                 if (tipTesta.Equals("VOCAB"))
                     aktivniKorisnik.Vocab = true;

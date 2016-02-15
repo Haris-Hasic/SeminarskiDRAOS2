@@ -76,18 +76,22 @@ namespace JapaneseLearningApp
             {
                 Label japaneseWord = new Label();
                 japaneseWord.Text = japaneseWordsInSection[i];
-                japaneseWord.Font = new Font(lTitle.Font.FontFamily, 16);
+                japaneseWord.Font = new Font(lTitle.Font.FontFamily, 14);
                 japaneseWord.ForeColor = Color.White;
-                japaneseWord.Width = (int)(0.4 * flpVocabulary.Width);
-                japaneseWord.Height = 30;
+                japaneseWord.AutoSize = true;
+                japaneseWord.MaximumSize = new System.Drawing.Size((int)(0.4 * flpVocabulary.Width), 0);                
                 flpVocabulary.Controls.Add(japaneseWord);
+                int rightMargin = flpVocabulary.Width / 2 - japaneseWord.Size.Width;
+                japaneseWord.Margin = new System.Windows.Forms.Padding(3, 3, rightMargin, 3);
+                
 
                 Label englishWord = new Label();
                 englishWord.Text = englishWordsInSection[i];
-                englishWord.Font = new Font(lTitle.Font.FontFamily, 16);
+                englishWord.Font = new Font(lTitle.Font.FontFamily, 14);
                 englishWord.ForeColor = Color.White;
-                englishWord.Width = (int)(0.4 * flpVocabulary.Width);
-                englishWord.Height = 30;
+                englishWord.AutoSize = true;
+                englishWord.MaximumSize = new System.Drawing.Size((int)(0.4 * flpVocabulary.Width), 0);
+                englishWord.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
                 flpVocabulary.Controls.Add(englishWord);
             }
         }

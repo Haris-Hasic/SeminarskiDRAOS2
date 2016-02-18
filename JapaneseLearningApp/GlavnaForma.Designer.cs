@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
@@ -82,10 +84,12 @@
             this.btnSIGNUP = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.tpPROFILE = new System.Windows.Forms.TabPage();
+            this.labelLVL = new System.Windows.Forms.Label();
+            this.tbUSER = new System.Windows.Forms.TextBox();
+            this.button14 = new System.Windows.Forms.Button();
             this.btnPROFILEAPPLYCHANGES = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.lblUSER = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button11 = new System.Windows.Forms.Button();
@@ -107,6 +111,16 @@
             this.dtpPROFILEBD = new System.Windows.Forms.DateTimePicker();
             this.btnEDITPROFILEPIC = new System.Windows.Forms.Button();
             this.pbPROFILESL = new System.Windows.Forms.PictureBox();
+            this.tpSTATS = new System.Windows.Forms.TabPage();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.tbGRAPHDESC = new System.Windows.Forms.TextBox();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
             this.tpFORGOTPASS = new System.Windows.Forms.TabPage();
             this.button13 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
@@ -277,6 +291,8 @@
             this.tpPROFILE.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPROFILESL)).BeginInit();
+            this.tpSTATS.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.tpFORGOTPASS.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tpLecturesList.SuspendLayout();
@@ -298,6 +314,7 @@
             this.tabControl1.Controls.Add(this.tpPRVIMENU);
             this.tabControl1.Controls.Add(this.tpSIGNUP);
             this.tabControl1.Controls.Add(this.tpPROFILE);
+            this.tabControl1.Controls.Add(this.tpSTATS);
             this.tabControl1.Controls.Add(this.tpFORGOTPASS);
             this.tabControl1.Controls.Add(this.tpLecturesList);
             this.tabControl1.Controls.Add(this.tpTESTMENU);
@@ -912,10 +929,12 @@
             // tpPROFILE
             // 
             this.tpPROFILE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.tpPROFILE.Controls.Add(this.labelLVL);
+            this.tpPROFILE.Controls.Add(this.tbUSER);
+            this.tpPROFILE.Controls.Add(this.button14);
             this.tpPROFILE.Controls.Add(this.btnPROFILEAPPLYCHANGES);
             this.tpPROFILE.Controls.Add(this.button12);
             this.tpPROFILE.Controls.Add(this.button7);
-            this.tpPROFILE.Controls.Add(this.lblUSER);
             this.tpPROFILE.Controls.Add(this.label20);
             this.tpPROFILE.Controls.Add(this.groupBox3);
             this.tpPROFILE.Controls.Add(this.btnEDITPROFILEPIC);
@@ -927,6 +946,45 @@
             this.tpPROFILE.TabIndex = 4;
             this.tpPROFILE.Text = "Profile";
             this.tpPROFILE.Enter += new System.EventHandler(this.tpPROFILE_Enter);
+            // 
+            // labelLVL
+            // 
+            this.labelLVL.AutoSize = true;
+            this.labelLVL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.labelLVL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelLVL.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLVL.ForeColor = System.Drawing.Color.White;
+            this.labelLVL.Location = new System.Drawing.Point(138, 189);
+            this.labelLVL.Name = "labelLVL";
+            this.labelLVL.Size = new System.Drawing.Size(30, 18);
+            this.labelLVL.TabIndex = 139;
+            this.labelLVL.Text = "Lvl:";
+            // 
+            // tbUSER
+            // 
+            this.tbUSER.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.tbUSER.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUSER.ForeColor = System.Drawing.Color.White;
+            this.tbUSER.Location = new System.Drawing.Point(27, 57);
+            this.tbUSER.Name = "tbUSER";
+            this.tbUSER.ReadOnly = true;
+            this.tbUSER.Size = new System.Drawing.Size(350, 28);
+            this.tbUSER.TabIndex = 138;
+            this.tbUSER.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.ForeColor = System.Drawing.Color.White;
+            this.button14.Location = new System.Drawing.Point(238, 6);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(76, 29);
+            this.button14.TabIndex = 55;
+            this.button14.Text = "Stats";
+            this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click_2);
             // 
             // btnPROFILEAPPLYCHANGES
             // 
@@ -948,7 +1006,7 @@
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(238, 6);
+            this.button12.Location = new System.Drawing.Point(156, 6);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(76, 29);
             this.button12.TabIndex = 53;
@@ -969,18 +1027,6 @@
             this.button7.Text = "Log out";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // lblUSER
-            // 
-            this.lblUSER.AutoSize = true;
-            this.lblUSER.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
-            this.lblUSER.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUSER.ForeColor = System.Drawing.Color.White;
-            this.lblUSER.Location = new System.Drawing.Point(129, 56);
-            this.lblUSER.Name = "lblUSER";
-            this.lblUSER.Size = new System.Drawing.Size(0, 21);
-            this.lblUSER.TabIndex = 51;
-            this.lblUSER.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label20
             // 
@@ -1243,7 +1289,7 @@
             this.btnEDITPROFILEPIC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEDITPROFILEPIC.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEDITPROFILEPIC.ForeColor = System.Drawing.Color.White;
-            this.btnEDITPROFILEPIC.Location = new System.Drawing.Point(258, 182);
+            this.btnEDITPROFILEPIC.Location = new System.Drawing.Point(245, 182);
             this.btnEDITPROFILEPIC.Name = "btnEDITPROFILEPIC";
             this.btnEDITPROFILEPIC.Size = new System.Drawing.Size(25, 25);
             this.btnEDITPROFILEPIC.TabIndex = 42;
@@ -1256,12 +1302,156 @@
             this.pbPROFILESL.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbPROFILESL.Enabled = false;
             this.pbPROFILESL.Image = global::JapaneseLearningApp.Properties.Resources.ProfilePicPlaceHolder;
-            this.pbPROFILESL.Location = new System.Drawing.Point(126, 80);
+            this.pbPROFILESL.Location = new System.Drawing.Point(133, 91);
             this.pbPROFILESL.Name = "pbPROFILESL";
-            this.pbPROFILESL.Size = new System.Drawing.Size(160, 130);
+            this.pbPROFILESL.Size = new System.Drawing.Size(140, 119);
             this.pbPROFILESL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPROFILESL.TabIndex = 48;
             this.pbPROFILESL.TabStop = false;
+            // 
+            // tpSTATS
+            // 
+            this.tpSTATS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.tpSTATS.Controls.Add(this.button19);
+            this.tpSTATS.Controls.Add(this.button20);
+            this.tpSTATS.Controls.Add(this.tbGRAPHDESC);
+            this.tpSTATS.Controls.Add(this.chart2);
+            this.tpSTATS.Controls.Add(this.button18);
+            this.tpSTATS.Controls.Add(this.button17);
+            this.tpSTATS.Controls.Add(this.button15);
+            this.tpSTATS.Controls.Add(this.label57);
+            this.tpSTATS.Controls.Add(this.label58);
+            this.tpSTATS.Location = new System.Drawing.Point(4, 22);
+            this.tpSTATS.Name = "tpSTATS";
+            this.tpSTATS.Padding = new System.Windows.Forms.Padding(3);
+            this.tpSTATS.Size = new System.Drawing.Size(404, 604);
+            this.tpSTATS.TabIndex = 14;
+            this.tpSTATS.Text = "Stats";
+            // 
+            // button19
+            // 
+            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button19.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button19.ForeColor = System.Drawing.Color.White;
+            this.button19.Location = new System.Drawing.Point(320, 6);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(76, 29);
+            this.button19.TabIndex = 139;
+            this.button19.Text = "Profile";
+            this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click_1);
+            // 
+            // button20
+            // 
+            this.button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button20.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.ForeColor = System.Drawing.Color.White;
+            this.button20.Location = new System.Drawing.Point(238, 6);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(76, 29);
+            this.button20.TabIndex = 138;
+            this.button20.Text = "Menu";
+            this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click_1);
+            // 
+            // tbGRAPHDESC
+            // 
+            this.tbGRAPHDESC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.tbGRAPHDESC.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbGRAPHDESC.ForeColor = System.Drawing.Color.White;
+            this.tbGRAPHDESC.Location = new System.Drawing.Point(25, 89);
+            this.tbGRAPHDESC.Multiline = true;
+            this.tbGRAPHDESC.Name = "tbGRAPHDESC";
+            this.tbGRAPHDESC.ReadOnly = true;
+            this.tbGRAPHDESC.Size = new System.Drawing.Size(355, 63);
+            this.tbGRAPHDESC.TabIndex = 137;
+            // 
+            // chart2
+            // 
+            this.chart2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.chart2.BorderSkin.BackColor = System.Drawing.Color.White;
+            this.chart2.BorderSkin.BorderColor = System.Drawing.Color.Transparent;
+            this.chart2.BorderSkin.PageColor = System.Drawing.Color.Transparent;
+            this.chart2.BorderSkin.SkinStyle = System.Windows.Forms.DataVisualization.Charting.BorderSkinStyle.FrameTitle6;
+            chartArea1.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+            chartArea1.AxisY.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+            chartArea1.AxisY2.Title = "asdasd";
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea1);
+            this.chart2.Location = new System.Drawing.Point(25, 161);
+            this.chart2.Name = "chart2";
+            this.chart2.Size = new System.Drawing.Size(355, 348);
+            this.chart2.TabIndex = 136;
+            this.chart2.Text = "cyxcycx";
+            title1.Name = "Bego";
+            this.chart2.Titles.Add(title1);
+            // 
+            // button18
+            // 
+            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button18.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.ForeColor = System.Drawing.Color.White;
+            this.button18.Location = new System.Drawing.Point(25, 514);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(54, 50);
+            this.button18.TabIndex = 135;
+            this.button18.Text = "<";
+            this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.button18_Click_1);
+            // 
+            // button17
+            // 
+            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button17.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.ForeColor = System.Drawing.Color.White;
+            this.button17.Location = new System.Drawing.Point(326, 514);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(54, 50);
+            this.button17.TabIndex = 134;
+            this.button17.Text = ">";
+            this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click_1);
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.button15.Enabled = false;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.Color.White;
+            this.button15.Location = new System.Drawing.Point(85, 514);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(235, 50);
+            this.button15.TabIndex = 133;
+            this.button15.Text = "1/3";
+            this.button15.UseVisualStyleBackColor = false;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.ForeColor = System.Drawing.Color.White;
+            this.label57.Location = new System.Drawing.Point(118, 49);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(171, 32);
+            this.label57.TabIndex = 130;
+            this.label57.Text = "User statistics";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label58.ForeColor = System.Drawing.Color.White;
+            this.label58.Location = new System.Drawing.Point(100, 577);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(206, 13);
+            this.label58.TabIndex = 129;
+            this.label58.Text = "Copyright 2015. All rights reserved.";
             // 
             // tpFORGOTPASS
             // 
@@ -3164,9 +3354,9 @@
             this.chart1.BorderSkin.BorderColor = System.Drawing.Color.Transparent;
             this.chart1.BorderSkin.PageColor = System.Drawing.Color.Transparent;
             this.chart1.BorderSkin.SkinStyle = System.Windows.Forms.DataVisualization.Charting.BorderSkinStyle.FrameTitle6;
-            chartArea1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea2.BackColor = System.Drawing.Color.Transparent;
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
             legend1.BackColor = System.Drawing.Color.Transparent;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
@@ -3287,6 +3477,9 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPROFILESL)).EndInit();
+            this.tpSTATS.ResumeLayout(false);
+            this.tpSTATS.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.tpFORGOTPASS.ResumeLayout(false);
             this.tpFORGOTPASS.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -3367,7 +3560,6 @@
         private System.Windows.Forms.TabPage tpPROFILE;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnEDITPROFILEPIC;
-        private System.Windows.Forms.Label lblUSER;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.PictureBox pbPROFILESL;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -3548,5 +3740,18 @@
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.TabPage tpSTATS;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.TextBox tbGRAPHDESC;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.TextBox tbUSER;
+        private System.Windows.Forms.Label labelLVL;
     }
 }

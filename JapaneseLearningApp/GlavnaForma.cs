@@ -266,13 +266,14 @@ namespace JapaneseLearningApp
         {
             try
             {
-                lblUSER.Text = "Welcome, " + aktivniKorisnik.Ime + " !";
+                tbUSER.Text = "Welcome, " + aktivniKorisnik.Ime + " !";
 
                 pbPROFILESL.Image = aktivniKorisnik.ProfilnaSlika;
                 tbPROFILEFN.Text = aktivniKorisnik.Ime;
                 tbPROFILELN.Text = aktivniKorisnik.Prezime;
                 dtpPROFILEBD.Value = aktivniKorisnik.DatumRodenja;
                 rtbPROFILEC.Text = aktivniKorisnik.Komentar;
+                labelLVL.Text = "Lvl: " + Convert.ToString(aktivniKorisnik.MaxLekcija);
 
                 if (aktivniKorisnik.NivoZnanja.Equals("Begginer"))
                     rbPROFILEB.Checked = true;
@@ -284,7 +285,7 @@ namespace JapaneseLearningApp
 
             catch (Exception)
             {
-                lblUSER.Text = "You must login first !";
+                tbUSER.Text = "You must login first !";
             }
         }
 
@@ -360,7 +361,7 @@ namespace JapaneseLearningApp
                     MessageBox.Show("Changes were succesfully made. " + PristupBazi.Manipulacija(komanda) + " rows were affected.");
 
                     aktivniKorisnik = new User(tbPROFILEFN.Text, tbPROFILELN.Text, aktivniKorisnik.Username, aktivniKorisnik.Password, dtpBIRTHDATE.Value, nivoZnanja, rtbPROFILEC.Text, pbPROFILESL.Image);
-                    lblUSER.Text = "Welcome, " + aktivniKorisnik.Ime + " !";
+                    tbUSER.Text = "Welcome, " + aktivniKorisnik.Ime + " !";
 
                     tbPROFILEFN.Enabled = false;
                     tbPROFILELN.Enabled = false;
@@ -1326,6 +1327,11 @@ namespace JapaneseLearningApp
             GoToProfile();
         }
 
+        private void button14_Click_2(object sender, EventArgs e)
+        {
+            GoToStats();
+        }
+
         private void button32_Click(object sender, EventArgs e)
         {
             GoToTestMenu();
@@ -1352,6 +1358,16 @@ namespace JapaneseLearningApp
         }
 
         private void button34_Click(object sender, EventArgs e)
+        {
+            GoToMainMenu();
+        }
+
+        private void button19_Click_1(object sender, EventArgs e)
+        {
+            GoToProfile();
+        }
+
+        private void button20_Click_1(object sender, EventArgs e)
         {
             GoToMainMenu();
         }
@@ -1487,7 +1503,7 @@ namespace JapaneseLearningApp
 
         void zapocniTest(Int32 n)
         {
-            aktivniTest.Resetuj();
+            aktivniTest.Resetuj(n);
             pocistiTestStranice();
 
             if (aktivniTest.Tip.Equals("VOCAB"))
@@ -1516,6 +1532,12 @@ namespace JapaneseLearningApp
         public void GoToSignup()
         {
             this.tabControl1.SelectedTab = tpSIGNUP;
+        }
+
+        public void GoToStats()
+        {
+            this.tabControl1.SelectedTab = tpSTATS;
+            pointGrafTestBodovi();
         }
 
         public void GoToVisualization(Color c)
@@ -1648,7 +1670,6 @@ namespace JapaneseLearningApp
                 
                 labelSCOREINDICATOR2.Text = Convert.ToString(sk) + "/10";
                 labelSCOREINDICATOR2.ForeColor = Color.Red;
-
             }
 
             else
@@ -1673,6 +1694,8 @@ namespace JapaneseLearningApp
 
                 aktivniKorisnik.provjeriPrelazNaSljedeciNivo();
             }
+
+            spremiTest();
         }
 
         void obojiIzvjestaj(Int32 i, Boolean b)
@@ -1714,7 +1737,7 @@ namespace JapaneseLearningApp
         #endregion
 
         // Event zatvaranja forme, gdje se snimaju izmjenjeni podaci o korisniku
-        #region SNIMANJE_PROGRESA_KORISNIKA
+        #region SNIMANJE_PROGRESA_KORISNIKA_I_PODATAKA_ZA_STATISTIKU
 
         private void GlavnaForma_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -1729,11 +1752,314 @@ namespace JapaneseLearningApp
                     komanda.CommandText = "UPDATE draosbaza.users SET maxlekcija=@max WHERE username=@username;";
                     komanda.Parameters.AddWithValue("@max", aktivniKorisnik.MaxLekcija);
                     komanda.Parameters.AddWithValue("@username", aktivniKorisnik.Username);
+
+                    PristupBazi.Manipulacija(komanda);
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Changes failed. Reason: " + ex.Message);
                 }
+            }
+        }
+
+        public void spremiTest()
+        {
+            try
+            {
+                MySqlCommand komanda = new MySqlCommand();
+                komanda.CommandText = "INSERT INTO draosbaza.uradenitestovi (user,tip,nivo,skor,datumizrade) VALUES (@user,@tip,@nivo,@skor,CURDATE());";
+
+                komanda.Parameters.AddWithValue("@user", aktivniKorisnik.Username);
+                komanda.Parameters.AddWithValue("@tip", aktivniTest.Tip);
+                komanda.Parameters.AddWithValue("@nivo", aktivniTest.Nivo);
+                komanda.Parameters.AddWithValue("@skor", aktivniTest.Skor);
+
+                PristupBazi.Manipulacija(komanda);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Changes failed. Reason: " + ex.Message);
+            }
+        }
+
+        public void pointGrafTestBodovi()
+        {
+            tbGRAPHDESC.Text = "This graph represents results from your earlier taken tests. The X axis represents the score, and Y axis represents the level of the test taken.";
+
+            MySqlConnection konekcija = new MySqlConnection(konekcioniString);
+            MySqlCommand komanda = new MySqlCommand();
+
+            Series series1 = new Series
+            {
+                IsVisibleInLegend = true,
+                ChartType = SeriesChartType.Bubble,
+                MarkerStyle = MarkerStyle.Circle
+            };
+
+            chart2.ChartAreas["ChartArea1"].AxisX.Title = "Number of points";
+            chart2.ChartAreas["ChartArea1"].AxisY.Title = "Level";
+            chart2.Series.Add(series1);
+
+            try
+            {
+                komanda.CommandText = "SELECT * FROM draosbaza.uradenitestovi WHERE user=@user;";
+                komanda.Parameters.AddWithValue("@user", aktivniKorisnik.Username);
+                komanda.Connection = konekcija;
+                konekcija.Open();
+
+                MySqlDataReader dr = komanda.ExecuteReader(CommandBehavior.SequentialAccess);
+
+                if (dr.HasRows)
+                {
+                    Int32 i = 0;
+
+                    while (dr.Read())
+                    {
+                        String tip = Convert.ToString(dr["tip"]);
+                        Int32 niv = Convert.ToInt32(dr["nivo"]);
+                        Int32 skor = Convert.ToInt32(dr["skor"]);
+
+                        if (tip.Equals("VOCAB"))
+                        {
+                            series1.Points.Add(niv, 2).XValue = skor;
+                            var p1 = series1.Points[i];
+                            p1.Color = Color.FromArgb(120, 200, 180);
+                        }
+                        else if (tip.Equals("GRAMMAR"))
+                        {
+                            series1.Points.Add(niv, 2).XValue = skor;
+                            var p2 = series1.Points[i];
+                            p2.Color = Color.FromArgb(80, 120, 100);
+                        }
+                        else
+                        {
+                            series1.Points.Add(niv, 2).XValue = skor;
+                            var p3 = series1.Points[i];
+                            p3.Color = Color.FromArgb(255, 192, 128);
+                        }
+
+                        i++;
+                    }
+
+                    dr.Close();
+                    ((IDisposable)dr).Dispose();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid username or password!");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                konekcija.Close();
+            }
+        }
+
+        public void lineGrafTestMjeseci()
+        {
+            tbGRAPHDESC.Text = "This graph represents results from your activity in the last month. The X axis represents the dates, and Y axis represents the number of test taken.";
+
+            MySqlConnection konekcija = new MySqlConnection(konekcioniString);
+            MySqlCommand komanda = new MySqlCommand();
+
+            Series series1 = new Series
+            {
+                IsVisibleInLegend = true,
+                ChartType = SeriesChartType.Line,
+                Color = Color.Black,
+                BorderWidth = 2,
+                MarkerSize = 5,
+                MarkerStyle = MarkerStyle.Circle,
+                MarkerColor = Color.Red
+            };
+
+            chart2.ChartAreas["ChartArea1"].AxisX.Title = "Day of the month";
+            chart2.ChartAreas["ChartArea1"].AxisY.Title = "Number of tests taken";
+            chart2.Series.Add(series1);
+
+            try
+            {
+                komanda.CommandText = "SELECT * FROM draosbaza.uradenitestovi WHERE user=@user;";
+                komanda.Parameters.AddWithValue("@user", aktivniKorisnik.Username);
+                komanda.Connection = konekcija;
+                konekcija.Open();
+
+                MySqlDataReader dr = komanda.ExecuteReader(CommandBehavior.SequentialAccess);
+
+                if (dr.HasRows)
+                {
+                    Int32 i = 0;
+
+                    int[] dani = Enumerable.Repeat(0, 32).ToArray();
+
+                    while (dr.Read())
+                    {
+                        String tip = Convert.ToString(dr["tip"]);
+                        Int32 niv = Convert.ToInt32(dr["nivo"]);
+                        Int32 skor = Convert.ToInt32(dr["skor"]);
+                        DateTime dat = Convert.ToDateTime(dr["datumizrade"]);
+
+                        if (dat.Month == DateTime.Now.Month)
+                            dani[dat.Day] = dani[dat.Day] + 1;
+                    }
+
+                    for (int j = 1; j < 32; j++)
+                    {
+                        series1.Points.Add(dani[j]).XValue = j;
+                        var p1 = series1.Points[i];
+                        p1.Color = Color.Red;
+                    }
+                    
+                    dr.Close();
+                    ((IDisposable)dr).Dispose();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid username or password!");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                konekcija.Close();
+            }
+        }
+
+        public void radarGrafProgresa()
+        {
+            tbGRAPHDESC.Text = "This graph represents your overall level in the three existing fields. Vocabulary, Grammar and Writing.";
+
+            MySqlConnection konekcija = new MySqlConnection(konekcioniString);
+            MySqlCommand komanda = new MySqlCommand();
+
+            Series series1 = new Series
+            {
+                IsVisibleInLegend = true,
+                ChartType = SeriesChartType.Radar,
+                Color = Color.Black,
+                BorderWidth = 2,
+                MarkerColor = Color.Red
+            };
+
+            chart2.ChartAreas["ChartArea1"].AxisX.Title = "Progress";
+            chart2.ChartAreas["ChartArea1"].AxisY.Title = "";
+            chart2.Series.Add(series1);
+
+            try
+            {
+                komanda.CommandText = "SELECT * FROM draosbaza.uradenitestovi WHERE user=@user;";
+                komanda.Parameters.AddWithValue("@user", aktivniKorisnik.Username);
+                komanda.Connection = konekcija;
+                konekcija.Open();
+
+                Int32 maxV = 0, maxG = 0, maxW = 0;
+
+                MySqlDataReader dr = komanda.ExecuteReader(CommandBehavior.SequentialAccess);
+
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        String tip = Convert.ToString(dr["tip"]);
+                        Int32 niv = Convert.ToInt32(dr["nivo"]);
+                        Int32 skor = Convert.ToInt32(dr["skor"]);
+                        DateTime dat = Convert.ToDateTime(dr["datumizrade"]);
+
+                        if (tip.Equals("VOCAB") && niv > maxV)
+                            maxV = niv;
+                        if (tip.Equals("GRAMMAR") && niv > maxG)
+                            maxG = niv;
+                        if (tip.Equals("WRITING") && niv > maxW)
+                            maxW = niv;
+                    }
+
+                    series1.Points.Add(maxV);
+                    var p1 = series1.Points[0];
+                    p1.Color = Color.FromArgb(120, 200, 180);
+
+                    series1.Points.Add(maxG);
+                    var p2 = series1.Points[1];
+                    p2.Color = Color.FromArgb(80, 120, 100);
+
+                    series1.Points.Add(maxW);
+                    var p3 = series1.Points[2];
+                    p3.Color = Color.FromArgb(255, 192, 128);
+
+                    dr.Close();
+                    ((IDisposable)dr).Dispose();
+                }
+
+                else
+                {
+                    MessageBox.Show("Invalid username or password!");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                konekcija.Close();
+            }
+        }
+
+        private void button17_Click_1(object sender, EventArgs e)
+        {
+            if(button15.Text == "1/3") 
+            {
+                button15.Text = "2/3";
+                chart2.Series.Clear();
+                lineGrafTestMjeseci();
+            }
+            else if (button15.Text == "2/3")
+            {
+                button15.Text = "3/3";
+                chart2.Series.Clear();
+                radarGrafProgresa();
+            }
+            else
+            {
+                button15.Text = "1/3";
+                chart2.Series.Clear();
+                pointGrafTestBodovi();
+            }
+        }
+
+        private void button18_Click_1(object sender, EventArgs e)
+        {
+            if (button15.Text == "1/3")
+            {
+                button15.Text = "3/3";
+                chart2.Series.Clear();
+                radarGrafProgresa();
+            }
+            else if (button15.Text == "2/3")
+            {
+                button15.Text = "1/3";
+                chart2.Series.Clear();
+                pointGrafTestBodovi();
+            }
+            else
+            {
+                button15.Text = "2/3";
+                chart2.Series.Clear();
+                lineGrafTestMjeseci();
             }
         }
 

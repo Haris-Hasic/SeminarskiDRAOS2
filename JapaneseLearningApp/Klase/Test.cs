@@ -9,7 +9,7 @@ namespace JapaneseLearningApp.Klase
     class Test
     {
         String tip;
-        Int32 skor, tacanOdgovor, trenutnoPitanje;
+        Int32 skor, tacanOdgovor, trenutnoPitanje, nivo;
 
         public Test() 
         {
@@ -41,6 +41,12 @@ namespace JapaneseLearningApp.Klase
             set { trenutnoPitanje = value; }
         }
 
+        public Int32 Nivo
+        {
+            get { return nivo; }
+            set { nivo = value; }
+        }
+
         public Boolean Odgovori(Int32 odg) 
         {
             TrenutnoPitanje = TrenutnoPitanje + 1;
@@ -62,8 +68,9 @@ namespace JapaneseLearningApp.Klase
             return false;
         }
 
-        public void Resetuj()
+        public void Resetuj(Int32 n)
         {
+            Nivo = n;
             Skor = 0;
             TrenutnoPitanje = 0;
         }

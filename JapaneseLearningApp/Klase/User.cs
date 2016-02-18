@@ -29,6 +29,7 @@ namespace JapaneseLearningApp.Klase
             Komentar = k;
             MaxLekcija = 0;
             ProfilnaSlika = sl;
+
             Vocab = false;
             Grammar = false;
             Writing = false;

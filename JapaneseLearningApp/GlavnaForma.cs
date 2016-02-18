@@ -8,15 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Runtime.InteropServices;
+using System.Windows.Forms.DataVisualization.Charting;
 
 using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 
 using JapaneseLearningApp.Klase;
 using JapaneseLearningApp.Properties;
-using System.Threading;
-using System.Diagnostics;
-using System.Windows.Forms.DataVisualization.Charting;
 
 namespace JapaneseLearningApp
 {
@@ -25,6 +24,8 @@ namespace JapaneseLearningApp
         User aktivniKorisnik; //Korisnik koji je trenutno aktivan na aplikaciji, da se ne pristupa stalno bazi kada trebaju neke informacije
         Test aktivniTest; //Test koji je odabrao da radi korisnik, isti razlog kao i u prethodnom slučaju
         Int32 odabraniNivo; //Nivo iz kojeg je odabran test da se radi zbog mogućnosti ponavljanja testova nižeg nivoa
+
+        static String konekcioniString = "server=localhost;User Id=root;database=draosbaza";
 
         public GlavnaForma()
         {
@@ -76,7 +77,7 @@ namespace JapaneseLearningApp
 
         private void btnLOGIN_Click(object sender, EventArgs e)
         {
-            MySqlConnection konekcija = new MySqlConnection("server=localhost;User Id=root;database=draosbaza");
+            MySqlConnection konekcija = new MySqlConnection(konekcioniString);
             MySqlCommand komanda = new MySqlCommand();
 
             try
@@ -101,10 +102,12 @@ namespace JapaneseLearningApp
                         DateTime dat = Convert.ToDateTime(dr["DatumRodenja"]);
                         String nz = Convert.ToString(dr["NivoZnanja"]);
                         String kom = Convert.ToString(dr["Komentar"]);
+                        Int32 maxL = Convert.ToInt32(dr["maxlekcija"]);
                         Image sl = KorisnickeFunkcije.ByteArrayToImage(dr["slika"] as byte[]);
                         DateTime kre = Convert.ToDateTime(dr["Kreiran"]);
 
                         aktivniKorisnik = new User(i, p, un, pass, dat, nz, kom, sl);
+                        aktivniKorisnik.MaxLekcija = maxL;
                     }
 
                     dr.Close();
@@ -382,7 +385,7 @@ namespace JapaneseLearningApp
 
         Int32 ucitajRandomPitanje(Int32 nivo) // Učita pitanje i vrati broj dugmeta sa tačnim odgovorom
         {
-            MySqlConnection konekcija = new MySqlConnection("server=localhost;User Id=root;database=draosbaza");
+            MySqlConnection konekcija = new MySqlConnection(konekcioniString);
             MySqlCommand komanda = new MySqlCommand();
 
             PitanjeOdaberi p = new PitanjeOdaberi();
@@ -489,7 +492,7 @@ namespace JapaneseLearningApp
 
         Int32 ucitajRandomSlikaPitanje(Int32 nivo) // Učita slika pitanje i vrati broj dugmeta sa tačnim odgovorom
         {
-            MySqlConnection konekcija = new MySqlConnection("server=localhost;User Id=root;database=draosbaza");
+            MySqlConnection konekcija = new MySqlConnection(konekcioniString);
             MySqlCommand komanda = new MySqlCommand();
 
             PitanjeOdaberiSliku p = new PitanjeOdaberiSliku();
@@ -611,17 +614,7 @@ namespace JapaneseLearningApp
             label46.Text = "Vocabulary - Question #" + Convert.ToString(aktivniTest.TrenutnoPitanje + 1);
 
             if (aktivniTest.ZavrsenTest())
-            {
-                lblQUESTIONINDICATOR.Text = "0/10";
-                lblQUESTIONINDICATOR2.Text = "0/10";
-
-                for (int i = 1; i < 11; i++)
-                    ((ProgressBar)tpVOCABQUESTSIMPLE.Controls.Find("progressBar" + Convert.ToString(i), true)[0]).Value = 0;
-                for (int i = 11; i < 21; i++)
-                    ((ProgressBar)tpVOCABQUESTPIC.Controls.Find("progressBar" + Convert.ToString(i), true)[0]).Value = 0;
-
                 TestResultsPage(Color.FromArgb(120, 200, 180), aktivniTest.Skor, "VOCAB");
-            }
 
             else
             {
@@ -642,13 +635,13 @@ namespace JapaneseLearningApp
 
             if (b)
             {
-                ((ProgressBar)tpVOCABQUESTSIMPLE.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje), true)[0]).Value = 100;
-                ((ProgressBar)tpVOCABQUESTPIC.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 10), true)[0]).Value = 100;
+                ModifyProgressBarColor.SetState(((ProgressBar)tpVOCABQUESTSIMPLE.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje), true)[0]), 1);
+                ModifyProgressBarColor.SetState(((ProgressBar)tpVOCABQUESTPIC.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 10), true)[0]), 1);
             }
             else
             {
-                ((ProgressBar)tpVOCABQUESTSIMPLE.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje), true)[0]).Value = 0;
-                ((ProgressBar)tpVOCABQUESTPIC.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 10), true)[0]).Value = 0;
+                ModifyProgressBarColor.SetState(((ProgressBar)tpVOCABQUESTSIMPLE.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje), true)[0]), 2);
+                ModifyProgressBarColor.SetState(((ProgressBar)tpVOCABQUESTPIC.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 10), true)[0]), 2);
             }
 
             obojiIzvjestaj(aktivniTest.TrenutnoPitanje, b);
@@ -813,7 +806,7 @@ namespace JapaneseLearningApp
         
         Int32 ucitajRandomGrammarPitanje(Int32 nivo) // Učita pitanje i vrati broj dugmeta sa tačnim odgovorom
         {
-            MySqlConnection konekcija = new MySqlConnection("server=localhost;User Id=root;database=draosbaza");
+            MySqlConnection konekcija = new MySqlConnection(konekcioniString);
             MySqlCommand komanda = new MySqlCommand();
 
             PitanjeOdaberi p = new PitanjeOdaberi();
@@ -925,14 +918,7 @@ namespace JapaneseLearningApp
             label52.Text = "Grammar - Question #" + Convert.ToString(aktivniTest.TrenutnoPitanje + 1);
 
             if (aktivniTest.ZavrsenTest())
-            {
-                labelGRAMMARSCORE.Text = "0/10";
-
-                for (int i = 31; i < 41; i++)
-                    ((ProgressBar)tpGRAMMARQUESTION.Controls.Find("progressBar" + Convert.ToString(i), true)[0]).Value = 0;
-
                 TestResultsPage(Color.FromArgb(80, 120, 100), aktivniTest.Skor, "GRAMMAR");
-            }
 
             else
             {
@@ -943,10 +929,9 @@ namespace JapaneseLearningApp
             labelGRAMMARSCORE.Text = aktivniTest.Skor + "/10";
 
             if (b)
-                ((ProgressBar)tpGRAMMARQUESTION.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 30), true)[0]).Value = 100;
-
+                ModifyProgressBarColor.SetState(((ProgressBar)tpGRAMMARQUESTION.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 30), true)[0]), 1);
             else
-                ((ProgressBar)tpGRAMMARQUESTION.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 30), true)[0]).Value = 0;
+                ModifyProgressBarColor.SetState(((ProgressBar)tpGRAMMARQUESTION.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 30), true)[0]), 2);
 
             obojiIzvjestaj(aktivniTest.TrenutnoPitanje, b);
             resetujBojeButtona();
@@ -1023,7 +1008,7 @@ namespace JapaneseLearningApp
 
         Int32 ucitajRandomKanjiPitanje(Int32 nivo, Int32 vrsta) // Učita pitanje i vrati broj dugmeta sa tačnim odgovorom
         {
-            MySqlConnection konekcija = new MySqlConnection("server=localhost;User Id=root;database=draosbaza");
+            MySqlConnection konekcija = new MySqlConnection(konekcioniString);
             MySqlCommand komanda = new MySqlCommand();
 
             PitanjeKanji p = new PitanjeKanji();
@@ -1189,14 +1174,7 @@ namespace JapaneseLearningApp
             label48.Text = "Writing - Question #" + Convert.ToString(aktivniTest.TrenutnoPitanje + 1);
 
             if (aktivniTest.ZavrsenTest())
-            {
-                labelKQINDICATOR.Text = "0/10";
-
-                for(int i=21; i<31; i++)
-                    ((ProgressBar)tpKANJIQUESTION.Controls.Find("progressBar" + Convert.ToString(i), true)[0]).Value = 0;
-
                 TestResultsPage(Color.FromArgb(255, 192, 128), aktivniTest.Skor, "WRITING");
-            }
 
             else
             {
@@ -1215,9 +1193,9 @@ namespace JapaneseLearningApp
             labelKQINDICATOR.Text = aktivniTest.Skor + "/10";
 
             if (b)
-                ((ProgressBar)tpKANJIQUESTION.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 20), true)[0]).Value = 100;
+                ModifyProgressBarColor.SetState(((ProgressBar)tpKANJIQUESTION.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 20), true)[0]), 1);
             else
-                ((ProgressBar)tpKANJIQUESTION.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 20), true)[0]).Value = 0;
+                ModifyProgressBarColor.SetState(((ProgressBar)tpKANJIQUESTION.Controls.Find("progressBar" + Convert.ToString(aktivniTest.TrenutnoPitanje + 20), true)[0]), 2);
 
             obojiIzvjestaj(aktivniTest.TrenutnoPitanje, b);
             resetujBojeButtona();
@@ -1273,7 +1251,7 @@ namespace JapaneseLearningApp
 
         private void buttKANJIANSWER4_Click(object sender, EventArgs e)
         {
-            buttKANJIANSWER3.ForeColor = Color.Red;
+            buttKANJIANSWER4.ForeColor = Color.Red;
             ((Button)tpKANJIQUESTION.Controls.Find("buttKANJIANSWER" + Convert.ToString(aktivniTest.TacanOdgovor), true)[0]).ForeColor = Color.Green;
 
             // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
@@ -1380,7 +1358,7 @@ namespace JapaneseLearningApp
 
         private void buttDALJETESTREZ_Click(object sender, EventArgs e)
         {
-            GoToVisualization();
+            GoToVisualization(tpTESTRESULT.BackColor);
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -1510,6 +1488,7 @@ namespace JapaneseLearningApp
         void zapocniTest(Int32 n)
         {
             aktivniTest.Resetuj();
+            pocistiTestStranice();
 
             if (aktivniTest.Tip.Equals("VOCAB"))
                 aktivniTest.TacanOdgovor = ucitajRandomPitanje(n);
@@ -1539,9 +1518,13 @@ namespace JapaneseLearningApp
             this.tabControl1.SelectedTab = tpSIGNUP;
         }
 
-        public void GoToVisualization()
-        {            
+        public void GoToVisualization(Color c)
+        {
             chart1.Series.Clear();
+
+            tpTESTVIZ.BackColor = c;
+            foreach (Control cont in tpTESTVIZ.Controls)
+                cont.BackColor = c;
 
             Series series1 = new Series
             {
@@ -1556,12 +1539,12 @@ namespace JapaneseLearningApp
 
             var p1 = series1.Points[0];
             p1.AxisLabel = Convert.ToString(aktivniTest.Skor);
-            p1.LegendText = "Tačan odgovor";
+            p1.LegendText = "Correct answer";
             p1.Color = Color.ForestGreen;
 
             var p2 = series1.Points[1];
             p2.AxisLabel = Convert.ToString(10 - aktivniTest.Skor);
-            p2.LegendText = "Netačan odgovor";
+            p2.LegendText = "Incorrect answer";
             p2.Color = Color.Firebrick;
 
             this.tabControl1.SelectedTab = tpTESTVIZ;
@@ -1687,6 +1670,8 @@ namespace JapaneseLearningApp
                     aktivniKorisnik.Grammar = true;
                 else
                     aktivniKorisnik.Writing = true;
+
+                aktivniKorisnik.provjeriPrelazNaSljedeciNivo();
             }
         }
 
@@ -1701,6 +1686,54 @@ namespace JapaneseLearningApp
             {
                 ((TextBox)tpTESTRESULT.Controls.Find("tbRESULTSTATUSQ" + Convert.ToString(i), true)[0]).ForeColor = Color.Red;
                 ((TextBox)tpTESTRESULT.Controls.Find("tbRESULTSTATUSQ" + Convert.ToString(i), true)[0]).Text = "Q" + Convert.ToString(i) + ": Incorrect";
+            }
+        }
+
+        void pocistiTestStranice()
+        {
+            label40.Text = "Vocabulary - Question #1";
+            label46.Text = "Vocabulary - Question #1";
+            label52.Text = "Grammar - Question #1";
+            label48.Text = "Writing - Question #1";
+
+            lblQUESTIONINDICATOR.Text = "0/10";
+            lblQUESTIONINDICATOR2.Text = "0/10";
+            labelGRAMMARSCORE.Text = "0/10";
+            labelKQINDICATOR.Text = "0/10";
+
+            for (int i = 1; i < 11; i++)
+            {
+                ModifyProgressBarColor.SetState(((ProgressBar)tpVOCABQUESTSIMPLE.Controls.Find("progressBar" + Convert.ToString(i), true)[0]), 3);
+                ModifyProgressBarColor.SetState(((ProgressBar)tpVOCABQUESTPIC.Controls.Find("progressBar" + Convert.ToString(i + 10), true)[0]), 3);
+                ModifyProgressBarColor.SetState(((ProgressBar)tpKANJIQUESTION.Controls.Find("progressBar" + Convert.ToString(i + 20), true)[0]), 3);
+                ModifyProgressBarColor.SetState(((ProgressBar)tpGRAMMARQUESTION.Controls.Find("progressBar" + Convert.ToString(i + 30), true)[0]), 3);
+            }
+
+        }
+
+        #endregion
+
+        // Event zatvaranja forme, gdje se snimaju izmjenjeni podaci o korisniku
+        #region SNIMANJE_PROGRESA_KORISNIKA
+
+        private void GlavnaForma_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (aktivniKorisnik == null)
+            {
+            }
+            else
+            {
+                try
+                {
+                    MySqlCommand komanda = new MySqlCommand();
+                    komanda.CommandText = "UPDATE draosbaza.users SET maxlekcija=@max WHERE username=@username;";
+                    komanda.Parameters.AddWithValue("@max", aktivniKorisnik.MaxLekcija);
+                    komanda.Parameters.AddWithValue("@username", aktivniKorisnik.Username);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Changes failed. Reason: " + ex.Message);
+                }
             }
         }
 

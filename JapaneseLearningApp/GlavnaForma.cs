@@ -26,9 +26,24 @@ namespace JapaneseLearningApp
         Int32 odabraniNivo; //Nivo iz kojeg je odabran test da se radi zbog mogućnosti ponavljanja testova nižeg nivoa
 
         static String konekcioniString = "server=localhost;User Id=root;database=draosbaza";
+        MySqlConnectionStringBuilder conn_string;
 
         public GlavnaForma()
         {
+            // Ovo je za konekciju na udaljenu bazu
+            /*
+            conn_string = new MySqlConnectionStringBuilder();
+
+            conn_string = new MySqlConnectionStringBuilder();
+            conn_string.Server = "db4free.net";
+            conn_string.Port = 3306;
+            conn_string.UserID = "draosroot";
+            conn_string.Password = "draosroot";
+            conn_string.Database = "draosbaza";
+
+            konekcioniString = conn_string.ToString();
+            */
+
             InitializeComponent();
         }
 
@@ -187,7 +202,7 @@ namespace JapaneseLearningApp
                 komanda.Parameters.AddWithValue("@maxlekcija", 0);
                 komanda.Parameters.AddWithValue("@slika", KorisnickeFunkcije.ImageToByteArray(pbSLIKA.Image));
 
-                MessageBox.Show("Changes were succesfully made. " + PristupBazi.Manipulacija(komanda) + " rows were affected.");
+                MessageBox.Show("Changes were succesfully made. " + PristupBazi.Manipulacija(konekcioniString, komanda) + " rows were affected.");
 
                 // Add lecture progress entry into the database
                 DBManipulation dbmanipulation = DBManipulation.getInstance();
@@ -248,7 +263,7 @@ namespace JapaneseLearningApp
                     komanda.CommandText = "UPDATE draosbaza.users SET password=@novipassword WHERE username=@username;";
                     komanda.Parameters.AddWithValue("@username", tbCPASSUSERNAME.Text);
                     komanda.Parameters.AddWithValue("@novipassword", KorisnickeFunkcije.GetMd5Hash(tbCPASSPASS.Text));
-                    MessageBox.Show("Changes were succesfully made. " + PristupBazi.Manipulacija(komanda) + " rows were affected.");
+                    MessageBox.Show("Changes were succesfully made. " + PristupBazi.Manipulacija(konekcioniString, komanda) + " rows were affected.");
                 }
             }
             catch(Exception ex) 
@@ -358,7 +373,7 @@ namespace JapaneseLearningApp
                     komanda.Parameters.AddWithValue("@slika", KorisnickeFunkcije.ImageToByteArray(pbPROFILESL.Image));
                     komanda.Parameters.AddWithValue("@username", aktivniKorisnik.Username);
 
-                    MessageBox.Show("Changes were succesfully made. " + PristupBazi.Manipulacija(komanda) + " rows were affected.");
+                    MessageBox.Show("Changes were succesfully made. " + PristupBazi.Manipulacija(konekcioniString, komanda) + " rows were affected.");
 
                     aktivniKorisnik = new User(tbPROFILEFN.Text, tbPROFILELN.Text, aktivniKorisnik.Username, aktivniKorisnik.Password, dtpBIRTHDATE.Value, nivoZnanja, rtbPROFILEC.Text, pbPROFILESL.Image);
                     tbUSER.Text = "Welcome, " + aktivniKorisnik.Ime + " !";
@@ -1753,7 +1768,7 @@ namespace JapaneseLearningApp
                     komanda.Parameters.AddWithValue("@max", aktivniKorisnik.MaxLekcija);
                     komanda.Parameters.AddWithValue("@username", aktivniKorisnik.Username);
 
-                    PristupBazi.Manipulacija(komanda);
+                    PristupBazi.Manipulacija(konekcioniString, komanda);
                 }
                 catch (Exception ex)
                 {
@@ -1774,7 +1789,7 @@ namespace JapaneseLearningApp
                 komanda.Parameters.AddWithValue("@nivo", aktivniTest.Nivo);
                 komanda.Parameters.AddWithValue("@skor", aktivniTest.Skor);
 
-                PristupBazi.Manipulacija(komanda);
+                PristupBazi.Manipulacija(konekcioniString, komanda);
             }
             catch (Exception ex)
             {

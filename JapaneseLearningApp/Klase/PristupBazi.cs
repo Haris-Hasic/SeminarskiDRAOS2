@@ -10,10 +10,10 @@ namespace JapaneseLearningApp.Klase
     public class PristupBazi
     {
         //Prima parametrizovanu komandu, vraća broj redova koji su izmjenjeni
-        public static Int32 Manipulacija(MySqlCommand msc)
+        public static Int32 Manipulacija(String konekcioniString, MySqlCommand msc)
         {
             Int32 affectedRows = 0;
-            MySqlConnection konekcija = new MySqlConnection("server=localhost;User Id=root;database=draosbaza");
+            MySqlConnection konekcija = new MySqlConnection(konekcioniString);
 
             try
             {

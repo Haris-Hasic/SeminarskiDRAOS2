@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lTitle = new System.Windows.Forms.Label();
-            this.bHome = new System.Windows.Forms.Button();
+            this.bLectures = new System.Windows.Forms.Button();
             this.bStory = new System.Windows.Forms.Button();
             this.bGrammar = new System.Windows.Forms.Button();
             this.flpVocabulary = new System.Windows.Forms.FlowLayoutPanel();
@@ -49,18 +49,19 @@
             this.lTitle.TabIndex = 2;
             this.lTitle.Text = "Vocabulary";
             // 
-            // bHome
+            // bLectures
             // 
-            this.bHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.bHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bHome.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bHome.ForeColor = System.Drawing.Color.White;
-            this.bHome.Location = new System.Drawing.Point(136, 522);
-            this.bHome.Name = "bHome";
-            this.bHome.Size = new System.Drawing.Size(128, 75);
-            this.bHome.TabIndex = 19;
-            this.bHome.Text = "Home";
-            this.bHome.UseVisualStyleBackColor = false;
+            this.bLectures.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.bLectures.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bLectures.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bLectures.ForeColor = System.Drawing.Color.White;
+            this.bLectures.Location = new System.Drawing.Point(136, 522);
+            this.bLectures.Name = "bLectures";
+            this.bLectures.Size = new System.Drawing.Size(128, 75);
+            this.bLectures.TabIndex = 19;
+            this.bLectures.Text = "Lectures";
+            this.bLectures.UseVisualStyleBackColor = false;
+            this.bLectures.Click += new System.EventHandler(this.bLectures_Click);
             // 
             // bStory
             // 
@@ -152,7 +153,7 @@
             this.Controls.Add(this.flpVocabulary);
             this.Controls.Add(this.bGrammar);
             this.Controls.Add(this.bStory);
-            this.Controls.Add(this.bHome);
+            this.Controls.Add(this.bLectures);
             this.Controls.Add(this.lTitle);
             this.Name = "VocabularyPanel";
             this.Size = new System.Drawing.Size(400, 600);
@@ -164,7 +165,7 @@
         #endregion
 
         private System.Windows.Forms.Label lTitle;
-        private System.Windows.Forms.Button bHome;
+        private System.Windows.Forms.Button bLectures;
         private System.Windows.Forms.Button bStory;
         private System.Windows.Forms.Button bGrammar;
         private System.Windows.Forms.FlowLayoutPanel flpVocabulary;

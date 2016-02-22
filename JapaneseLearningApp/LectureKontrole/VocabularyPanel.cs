@@ -47,6 +47,8 @@ namespace JapaneseLearningApp
 
                 displayVocabularySection();
 
+                setButtonVisibility();
+
                 if (currentSection == titles.Length)
                 {
                     updateVocabularyProgress();
@@ -111,6 +113,19 @@ namespace JapaneseLearningApp
             }
         }
 
+        private void setButtonVisibility()
+        {
+            if (currentSection == 1)
+                bPrevious.Visible = false;
+            else
+                bPrevious.Visible = true;
+
+            if (currentSection == titles.Length)
+                bNext.Visible = false;
+            else
+                bNext.Visible = true;
+        }
+
         private void bPrevious_Click(object sender, EventArgs e)
         {
             if (currentSection > 1)
@@ -119,6 +134,7 @@ namespace JapaneseLearningApp
                 lProgress.Text = currentSection + "/" + titles.Length;
                 displayVocabularySection();
             }
+            setButtonVisibility();
         }
 
         private void bNext_Click(object sender, EventArgs e)
@@ -129,6 +145,7 @@ namespace JapaneseLearningApp
                 lProgress.Text = currentSection + "/" + titles.Length;
                 displayVocabularySection();
             }
+            setButtonVisibility();
 
             if (currentSection == titles.Length)
             {
@@ -145,6 +162,12 @@ namespace JapaneseLearningApp
         private void bGrammar_Click(object sender, EventArgs e)
         {
             this.mainPanel.Controls.Add(new GrammarPanel(this.mainPanel, this.lectureNumber, this.currentUser));
+            this.mainPanel.Controls.Remove(this);
+        }
+
+        private void bLectures_Click(object sender, EventArgs e)
+        {
+            this.mainPanel.Controls.Add(new LecturesList(this.mainPanel, this.currentUser));
             this.mainPanel.Controls.Remove(this);
         }
 

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lJapaneseTitle = new System.Windows.Forms.Label();
-            this.bHome = new System.Windows.Forms.Button();
+            this.bPreviousLecture = new System.Windows.Forms.Button();
             this.bLectures = new System.Windows.Forms.Button();
             this.bVocabulary = new System.Windows.Forms.Button();
             this.pJapanese = new System.Windows.Forms.Panel();
@@ -52,18 +52,18 @@
             this.lJapaneseTitle.TabIndex = 2;
             this.lJapaneseTitle.Text = "Story Title - Japanese";
             // 
-            // bHome
+            // bPreviousLecture
             // 
-            this.bHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.bHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bHome.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bHome.ForeColor = System.Drawing.Color.White;
-            this.bHome.Location = new System.Drawing.Point(137, 522);
-            this.bHome.Name = "bHome";
-            this.bHome.Size = new System.Drawing.Size(128, 75);
-            this.bHome.TabIndex = 19;
-            this.bHome.Text = "Home";
-            this.bHome.UseVisualStyleBackColor = false;
+            this.bPreviousLecture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.bPreviousLecture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bPreviousLecture.Font = new System.Drawing.Font("Berlin Sans FB", 18.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPreviousLecture.ForeColor = System.Drawing.Color.White;
+            this.bPreviousLecture.Location = new System.Drawing.Point(4, 522);
+            this.bPreviousLecture.Name = "bPreviousLecture";
+            this.bPreviousLecture.Size = new System.Drawing.Size(128, 75);
+            this.bPreviousLecture.TabIndex = 19;
+            this.bPreviousLecture.Text = "Previous Lecture";
+            this.bPreviousLecture.UseVisualStyleBackColor = false;
             // 
             // bLectures
             // 
@@ -71,7 +71,7 @@
             this.bLectures.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLectures.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLectures.ForeColor = System.Drawing.Color.White;
-            this.bLectures.Location = new System.Drawing.Point(4, 522);
+            this.bLectures.Location = new System.Drawing.Point(136, 522);
             this.bLectures.Name = "bLectures";
             this.bLectures.Size = new System.Drawing.Size(129, 75);
             this.bLectures.TabIndex = 20;
@@ -159,7 +159,7 @@
             this.Controls.Add(this.pJapanese);
             this.Controls.Add(this.bVocabulary);
             this.Controls.Add(this.bLectures);
-            this.Controls.Add(this.bHome);
+            this.Controls.Add(this.bPreviousLecture);
             this.Controls.Add(this.lJapaneseTitle);
             this.Name = "StoryPanel";
             this.Size = new System.Drawing.Size(400, 600);
@@ -175,7 +175,7 @@
         #endregion
 
         private System.Windows.Forms.Label lJapaneseTitle;
-        private System.Windows.Forms.Button bHome;
+        private System.Windows.Forms.Button bPreviousLecture;
         private System.Windows.Forms.Button bLectures;
         private System.Windows.Forms.Button bVocabulary;
         private System.Windows.Forms.Panel pJapanese;

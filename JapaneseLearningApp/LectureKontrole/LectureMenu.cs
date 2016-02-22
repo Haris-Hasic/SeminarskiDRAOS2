@@ -32,7 +32,7 @@ namespace JapaneseLearningApp
         private void loadLecture(int lectureNumber)
         {
             this.lectureNumber = lectureNumber;
-
+            setButtonVisibilty();
             updateTitle();
         }
 
@@ -46,15 +46,34 @@ namespace JapaneseLearningApp
             lTitle.Left = (this.mainPanel.Width - lTitle.Width) / 2;
         }
 
+        private void setButtonVisibilty()
+        {
+            if (lectureNumber == 0)
+                bPrevious.Visible = false;
+            else
+                bPrevious.Visible = true;
+
+            if (lectureNumber == NUMBER_OF_LECTURES - 1)
+                bNext.Visible = false;
+            else
+                bNext.Visible = true;
+        }
+
         private void bNext_Click(object sender, EventArgs e)
         {
-            lectureNumber = (lectureNumber + 1) % NUMBER_OF_LECTURES;
+            if (lectureNumber < NUMBER_OF_LECTURES - 1) lectureNumber++;
+            setButtonVisibilty();
+
+            //lectureNumber = (lectureNumber + 1) % NUMBER_OF_LECTURES;
             updateTitle();
         }
 
         private void bPrevious_Click(object sender, EventArgs e)
         {
-            lectureNumber = (lectureNumber + NUMBER_OF_LECTURES - 1) % NUMBER_OF_LECTURES;
+            if (lectureNumber > 0) lectureNumber--;
+            setButtonVisibilty();
+
+            //lectureNumber = (lectureNumber + NUMBER_OF_LECTURES - 1) % NUMBER_OF_LECTURES;
             updateTitle();
         }
 

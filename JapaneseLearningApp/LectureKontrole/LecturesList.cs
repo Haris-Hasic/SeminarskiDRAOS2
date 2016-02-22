@@ -62,6 +62,40 @@ namespace JapaneseLearningApp
                             bLectureIntro.BackColor = Color.FromArgb(140, 225, 245);
                             break;
                     }
+
+                    //bLectureIntro.Enabled = true;
+                    //bLecture1.Enabled = true;
+                    //bLecture2.Enabled = true;
+                    //bLecture3.Enabled = true;
+                    //bLecture4.Enabled = true;
+                    //bLecture5.Enabled = true;
+                    //bLecture6.Enabled = true;
+                    //bLecture7.Enabled = true;
+
+                    //switch (progress)
+                    //{
+                    //    case -1:
+                    //        bLecture1.Enabled = false;
+                    //        goto case 0;
+                    //    case 0:
+                    //        bLecture2.Enabled = false;
+                    //        goto case 1;
+                    //    case 1:
+                    //        bLecture3.Enabled = false;
+                    //        goto case 2;
+                    //    case 2:
+                    //        bLecture4.Enabled = false;
+                    //        goto case 3;
+                    //    case 3:
+                    //        bLecture5.Enabled = false;
+                    //        goto case 4;
+                    //    case 4:
+                    //        bLecture6.Enabled = false;
+                    //        goto case 5;
+                    //    case 5:
+                    //        bLecture7.Enabled = false;
+                    //        break;
+                    //}
                 }
                 catch (Exception e)
                 {

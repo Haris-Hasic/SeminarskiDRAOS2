@@ -1,5 +1,4 @@
-﻿%---
-X は Y です
+﻿%---X は Y です
 "It is 12:30." "I am a student." "My major is the Japanese language." These sentences will all be translated into Japanese using an appropriate noun and the word desu.
 
     ～です。　　　　It is...
@@ -49,12 +48,10 @@ Wa is a member of the class of words called "particles." So is the word no, whic
 
 Note also that nouns like gakusee and sensee in the above examples stand alone, unlike their English translations "student" and "teacher," which are preceded by "a." In Japanese, there is no item that corresponds to "a," nor is there any item that corresponds to the plural "-s" at the end of a noun. Without background situations, a sentence like gakusee desu is therefore ambiguous between the singular and the plural interpretations; it may mean "We are/you are/they are students," as well as "I am/you are/she is a student."
 
-
-%---
-Questions Sentences
+%---Questions Sentences
 This is the explanation of Title 2.
-%---
-noun 1 の noun 2
+
+%---noun 1 の noun 2
 This is the explanation of Title 3.
-%---
-Expression Notes
+
+%---Expression Notes

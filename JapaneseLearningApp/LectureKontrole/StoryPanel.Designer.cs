@@ -37,6 +37,7 @@
             this.pEnglish = new System.Windows.Forms.Panel();
             this.lEnglishText = new System.Windows.Forms.Label();
             this.lEnglishTitle = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
             this.pJapanese.SuspendLayout();
             this.pEnglish.SuspendLayout();
             this.SuspendLayout();
@@ -44,11 +45,11 @@
             // lJapaneseTitle
             // 
             this.lJapaneseTitle.AutoSize = true;
-            this.lJapaneseTitle.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lJapaneseTitle.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lJapaneseTitle.ForeColor = System.Drawing.Color.White;
-            this.lJapaneseTitle.Location = new System.Drawing.Point(78, 39);
+            this.lJapaneseTitle.Location = new System.Drawing.Point(90, 60);
             this.lJapaneseTitle.Name = "lJapaneseTitle";
-            this.lJapaneseTitle.Size = new System.Drawing.Size(269, 32);
+            this.lJapaneseTitle.Size = new System.Drawing.Size(222, 26);
             this.lJapaneseTitle.TabIndex = 2;
             this.lJapaneseTitle.Text = "Story Title - Japanese";
             // 
@@ -58,9 +59,9 @@
             this.bPreviousLecture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bPreviousLecture.Font = new System.Drawing.Font("Berlin Sans FB", 18.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bPreviousLecture.ForeColor = System.Drawing.Color.White;
-            this.bPreviousLecture.Location = new System.Drawing.Point(4, 522);
+            this.bPreviousLecture.Location = new System.Drawing.Point(17, 494);
             this.bPreviousLecture.Name = "bPreviousLecture";
-            this.bPreviousLecture.Size = new System.Drawing.Size(128, 75);
+            this.bPreviousLecture.Size = new System.Drawing.Size(114, 73);
             this.bPreviousLecture.TabIndex = 19;
             this.bPreviousLecture.Text = "Previous Lecture";
             this.bPreviousLecture.UseVisualStyleBackColor = false;
@@ -71,9 +72,9 @@
             this.bLectures.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLectures.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLectures.ForeColor = System.Drawing.Color.White;
-            this.bLectures.Location = new System.Drawing.Point(136, 522);
+            this.bLectures.Location = new System.Drawing.Point(136, 494);
             this.bLectures.Name = "bLectures";
-            this.bLectures.Size = new System.Drawing.Size(129, 75);
+            this.bLectures.Size = new System.Drawing.Size(129, 73);
             this.bLectures.TabIndex = 20;
             this.bLectures.Text = "Lectures";
             this.bLectures.UseVisualStyleBackColor = false;
@@ -85,9 +86,9 @@
             this.bVocabulary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bVocabulary.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bVocabulary.ForeColor = System.Drawing.Color.White;
-            this.bVocabulary.Location = new System.Drawing.Point(269, 522);
+            this.bVocabulary.Location = new System.Drawing.Point(269, 494);
             this.bVocabulary.Name = "bVocabulary";
-            this.bVocabulary.Size = new System.Drawing.Size(128, 75);
+            this.bVocabulary.Size = new System.Drawing.Size(115, 73);
             this.bVocabulary.TabIndex = 21;
             this.bVocabulary.Text = "Vocab";
             this.bVocabulary.UseVisualStyleBackColor = false;
@@ -98,9 +99,9 @@
             this.pJapanese.AutoScroll = true;
             this.pJapanese.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pJapanese.Controls.Add(this.lJapaneseText);
-            this.pJapanese.Location = new System.Drawing.Point(4, 128);
+            this.pJapanese.Location = new System.Drawing.Point(17, 118);
             this.pJapanese.Name = "pJapanese";
-            this.pJapanese.Size = new System.Drawing.Size(393, 182);
+            this.pJapanese.Size = new System.Drawing.Size(367, 182);
             this.pJapanese.TabIndex = 22;
             // 
             // lJapaneseText
@@ -120,9 +121,9 @@
             this.pEnglish.AutoScroll = true;
             this.pEnglish.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pEnglish.Controls.Add(this.lEnglishText);
-            this.pEnglish.Location = new System.Drawing.Point(4, 319);
+            this.pEnglish.Location = new System.Drawing.Point(17, 306);
             this.pEnglish.Name = "pEnglish";
-            this.pEnglish.Size = new System.Drawing.Size(393, 182);
+            this.pEnglish.Size = new System.Drawing.Size(367, 182);
             this.pEnglish.TabIndex = 23;
             // 
             // lEnglishText
@@ -140,20 +141,32 @@
             // lEnglishTitle
             // 
             this.lEnglishTitle.AutoSize = true;
-            this.lEnglishTitle.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lEnglishTitle.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lEnglishTitle.ForeColor = System.Drawing.Color.White;
-            this.lEnglishTitle.Location = new System.Drawing.Point(89, 84);
+            this.lEnglishTitle.Location = new System.Drawing.Point(100, 86);
             this.lEnglishTitle.Name = "lEnglishTitle";
-            this.lEnglishTitle.Size = new System.Drawing.Size(243, 32);
+            this.lEnglishTitle.Size = new System.Drawing.Size(199, 26);
             this.lEnglishTitle.TabIndex = 24;
             this.lEnglishTitle.Text = "Story Title - English";
             this.lEnglishTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label58.ForeColor = System.Drawing.Color.White;
+            this.label58.Location = new System.Drawing.Point(100, 577);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(206, 13);
+            this.label58.TabIndex = 131;
+            this.label58.Text = "Copyright 2015. All rights reserved.";
             // 
             // StoryPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.Controls.Add(this.label58);
             this.Controls.Add(this.lEnglishTitle);
             this.Controls.Add(this.pEnglish);
             this.Controls.Add(this.pJapanese);
@@ -183,5 +196,6 @@
         private System.Windows.Forms.Label lJapaneseText;
         private System.Windows.Forms.Label lEnglishText;
         private System.Windows.Forms.Label lEnglishTitle;
+        private System.Windows.Forms.Label label58;
     }
 }

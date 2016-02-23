@@ -43,7 +43,7 @@
             this.lTitle.AutoSize = true;
             this.lTitle.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lTitle.ForeColor = System.Drawing.Color.White;
-            this.lTitle.Location = new System.Drawing.Point(78, 44);
+            this.lTitle.Location = new System.Drawing.Point(83, 60);
             this.lTitle.Name = "lTitle";
             this.lTitle.Size = new System.Drawing.Size(247, 32);
             this.lTitle.TabIndex = 1;

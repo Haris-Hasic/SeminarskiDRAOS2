@@ -26,25 +26,23 @@ namespace JapaneseLearningApp
         Int32 odabraniNivo; //Nivo iz kojeg je odabran test da se radi zbog mogućnosti ponavljanja testova nižeg nivoa
 
         static String konekcioniString = "server=localhost;User Id=root;database=draosbaza";
-        MySqlConnectionStringBuilder conn_string;
+        //MySqlConnectionStringBuilder conn_string;
 
         public GlavnaForma()
         {
             // Ovo je za konekciju na udaljenu bazu
             /*
             conn_string = new MySqlConnectionStringBuilder();
-
             conn_string = new MySqlConnectionStringBuilder();
             conn_string.Server = "db4free.net";
             conn_string.Port = 3306;
             conn_string.UserID = "draosroot";
             conn_string.Password = "draosroot";
             conn_string.Database = "draosbaza";
-
             konekcioniString = conn_string.ToString();
             */
-
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         // Funkcije Enter i Leave evenata u kojima se postavlja placeholder tekst Textboxova za Username i Password 
@@ -176,43 +174,72 @@ namespace JapaneseLearningApp
 
         private void btnSIGNUP_Click(object sender, EventArgs e)
         {
-            try
+            if (errorProvider1.GetError(tbNEWUSERNAME).Equals("") && errorProvider1.GetError(tbNEWPASSWORD).Equals("") && errorProvider1.GetError(tbFIRSTNAME).Equals("") && errorProvider1.GetError(tbLASTNAME).Equals("") && KorisnickeFunkcije.validirajSvePodatkeSignUp(tbFIRSTNAME.Text, tbLASTNAME.Text, tbNEWUSERNAME.Text, tbNEWPASSWORD.Text))
             {
-                String nivoZnanja;
+                try
+                {
+                    MySqlConnection konekcija = new MySqlConnection(konekcioniString);
+                    MySqlCommand kom1 = new MySqlCommand();
+                    kom1.CommandText = "SELECT * FROM draosbaza.users WHERE username=@un OR password=@pass;";
+                    kom1.Parameters.AddWithValue("@un", tbNEWUSERNAME.Text);
+                    kom1.Parameters.AddWithValue("@pass", KorisnickeFunkcije.GetMd5Hash(tbNEWPASSWORD.Text));
+                    kom1.Connection = konekcija;
+                    konekcija.Open();
 
-                if (radioBEG.Checked)
-                    nivoZnanja = "Begginer";
-                else if (radioINTER.Checked)
-                    nivoZnanja = "Intermediate";
-                else
-                    nivoZnanja = "Expert";
+                    MySqlDataReader dr1 = kom1.ExecuteReader();
 
-                User u = new User(tbFIRSTNAME.Text, tbLASTNAME.Text, tbNEWUSERNAME.Text, KorisnickeFunkcije.GetMd5Hash(tbPASSWORD.Text), dtpBIRTHDATE.Value, nivoZnanja, rtbCOMMENT.Text, pbSLIKA.Image);
-                aktivniKorisnik = u;
+                    if (dr1.HasRows)
+                    {
+                        dr1.Close();
+                        ((IDisposable)dr1).Dispose();
+                        konekcija.Close();
+                        MessageBox.Show("The username/password you entered is already taken. Enter new username/password.", "Existing user information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        String nivoZnanja;
 
-                MySqlCommand komanda = new MySqlCommand();
-                komanda.CommandText = "INSERT INTO draosbaza.users(ime,prezime,username,password,datumrodenja,nivoznanja,komentar,maxlekcija,slika,kreiran) VALUES (@ime,@prezime,@username,@password,@datum,@znanje,@komentar,@maxlekcija,@slika,CURDATE());";
-                komanda.Parameters.AddWithValue("@ime", tbFIRSTNAME.Text);
-                komanda.Parameters.AddWithValue("@prezime", tbLASTNAME.Text);
-                komanda.Parameters.AddWithValue("@username", tbNEWUSERNAME.Text);
-                komanda.Parameters.AddWithValue("@password", KorisnickeFunkcije.GetMd5Hash(tbNEWPASSWORD.Text));
-                komanda.Parameters.AddWithValue("@datum", dtpBIRTHDATE.Value);
-                komanda.Parameters.AddWithValue("@znanje", nivoZnanja);
-                komanda.Parameters.AddWithValue("@komentar", rtbCOMMENT.Text);
-                komanda.Parameters.AddWithValue("@maxlekcija", 0);
-                komanda.Parameters.AddWithValue("@slika", KorisnickeFunkcije.ImageToByteArray(pbSLIKA.Image));
+                        if (radioBEG.Checked)
+                            nivoZnanja = "Begginer";
+                        else if (radioINTER.Checked)
+                            nivoZnanja = "Intermediate";
+                        else
+                            nivoZnanja = "Expert";
 
-                MessageBox.Show("Changes were succesfully made. " + PristupBazi.Manipulacija(konekcioniString, komanda) + " rows were affected.");
+                        User u = new User(tbFIRSTNAME.Text, tbLASTNAME.Text, tbNEWUSERNAME.Text, KorisnickeFunkcije.GetMd5Hash(tbPASSWORD.Text), dtpBIRTHDATE.Value, nivoZnanja, rtbCOMMENT.Text, pbSLIKA.Image);
+                        aktivniKorisnik = u;
 
-                // Add lecture progress entry into the database
-                DBManipulation dbmanipulation = DBManipulation.getInstance();
-                dbmanipulation.addLectureProgress(dbmanipulation.getUserId(u.Username));
+                        MySqlCommand komanda = new MySqlCommand();
+                        komanda.CommandText = "INSERT INTO draosbaza.users(ime,prezime,username,password,datumrodenja,nivoznanja,komentar,maxlekcija,slika,kreiran) VALUES (@ime,@prezime,@username,@password,@datum,@znanje,@komentar,@maxlekcija,@slika,CURDATE());";
+                        komanda.Parameters.AddWithValue("@ime", tbFIRSTNAME.Text);
+                        komanda.Parameters.AddWithValue("@prezime", tbLASTNAME.Text);
+                        komanda.Parameters.AddWithValue("@username", tbNEWUSERNAME.Text);
+                        komanda.Parameters.AddWithValue("@password", KorisnickeFunkcije.GetMd5Hash(tbNEWPASSWORD.Text));
+                        komanda.Parameters.AddWithValue("@datum", dtpBIRTHDATE.Value);
+                        komanda.Parameters.AddWithValue("@znanje", nivoZnanja);
+                        komanda.Parameters.AddWithValue("@komentar", rtbCOMMENT.Text);
+                        komanda.Parameters.AddWithValue("@maxlekcija", 0);
+                        komanda.Parameters.AddWithValue("@slika", KorisnickeFunkcije.ImageToByteArray(pbSLIKA.Image));
 
-                GoToProfile();
+                        PristupBazi.Manipulacija(konekcioniString, komanda);
+                        MessageBox.Show("The registration is complete. Have fun learning japanese.", "Registration completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Add lecture progress entry into the database
+                        DBManipulation dbmanipulation = DBManipulation.getInstance();
+                        dbmanipulation.addLectureProgress(dbmanipulation.getUserId(u.Username));
+
+                        GoToProfile();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Registration failed. Reason: " + ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Changes failed. Reason: " + ex.Message);
+                aktivirajValidacijuSignUp();
+                MessageBox.Show("Please correct the indicated mistakes.", "Information mistakes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -228,7 +255,7 @@ namespace JapaneseLearningApp
 
         private void cbUNMASKPASS_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbUNMASKPASS.Checked)
+            if (!cbUNMASKPASS.Checked)
                 tbNEWPASSWORD.PasswordChar = '\0';
             else
                 tbNEWPASSWORD.PasswordChar = '*';
@@ -250,25 +277,73 @@ namespace JapaneseLearningApp
 
         private void button16_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (!tbCPASSPASS.Text.Equals(tbCPASSCONFIRM.Text))
-                {
-                    MessageBox.Show("Password and Confirm password fields must be the same!");
-                }
+            Boolean postojiUN = true;
+            Boolean nijeIstiPASS = true;
 
-                else
+            if (errorProvider1.GetError(tbCPASSUSERNAME).Equals("") && errorProvider1.GetError(tbCPASSEMAIL).Equals("") && errorProvider1.GetError(tbCPASSPASS).Equals("") && errorProvider1.GetError(tbCPASSCONFIRM).Equals("") && KorisnickeFunkcije.validirajSvePodatkeChangePassword(tbCPASSUSERNAME.Text, tbCPASSEMAIL.Text, tbCPASSPASS.Text, tbCPASSCONFIRM.Text))
+            {
+                try
                 {
-                    MySqlCommand komanda = new MySqlCommand();
-                    komanda.CommandText = "UPDATE draosbaza.users SET password=@novipassword WHERE username=@username;";
-                    komanda.Parameters.AddWithValue("@username", tbCPASSUSERNAME.Text);
-                    komanda.Parameters.AddWithValue("@novipassword", KorisnickeFunkcije.GetMd5Hash(tbCPASSPASS.Text));
-                    MessageBox.Show("Changes were succesfully made. " + PristupBazi.Manipulacija(konekcioniString, komanda) + " rows were affected.");
+                    MySqlConnection konekcija = new MySqlConnection(konekcioniString);
+
+                    MySqlCommand kom1 = new MySqlCommand();
+                    kom1.CommandText = "SELECT * FROM draosbaza.users WHERE password=@pass;";
+                    kom1.Parameters.AddWithValue("@pass", KorisnickeFunkcije.GetMd5Hash(tbCPASSPASS.Text));
+                    kom1.Connection = konekcija;
+
+                    konekcija.Open();
+
+                    MySqlDataReader dr1 = kom1.ExecuteReader();
+
+                    if (dr1.HasRows)
+                    {
+                        MessageBox.Show("The password provided is already in use. Please enter new password.", "Incorrect password", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        nijeIstiPASS = false;
+                    }
+
+                    dr1.Close();
+                    ((IDisposable)dr1).Dispose();
+
+                    MySqlCommand kom2 = new MySqlCommand();
+                    kom2.CommandText = "SELECT * FROM draosbaza.users WHERE username=@un";
+                    kom2.Parameters.AddWithValue("@un", tbCPASSUSERNAME.Text);
+                    kom2.Connection = konekcija;
+
+                    MySqlDataReader dr2 = kom2.ExecuteReader();
+
+                    if (!dr2.HasRows)
+                    {
+                        MessageBox.Show("The username you entered is not valid. Please enter new username.", "Incorrect user information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dr2.Close();
+                        ((IDisposable)dr2).Dispose();
+                        postojiUN = false;
+                    }
+
+                    if(postojiUN && nijeIstiPASS)
+                    {
+                        MySqlCommand komanda = new MySqlCommand();
+                        komanda.CommandText = "UPDATE draosbaza.users SET password=@novipassword WHERE username=@username;";
+                        komanda.Parameters.AddWithValue("@username", tbCPASSUSERNAME.Text);
+                        komanda.Parameters.AddWithValue("@novipassword", KorisnickeFunkcije.GetMd5Hash(tbCPASSPASS.Text));
+
+                        tbCPASSUSERNAME.Text = "";
+                        tbCPASSEMAIL.Text = "";
+                        tbCPASSPASS.Text = "";
+                        tbCPASSCONFIRM.Text = "";
+
+                        PristupBazi.Manipulacija(konekcioniString, komanda);
+                        MessageBox.Show("Your password has been changed succesfully.", "Password changed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Password change failed. Reason: " + ex.Message);
                 }
             }
-            catch(Exception ex) 
+            else
             {
-                MessageBox.Show("Changes failed. Reason: " + ex.Message);
+                aktivirajValidacijuChangePassword();
+                MessageBox.Show("Please correct the indicated mistakes.", "Information mistakes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -373,7 +448,9 @@ namespace JapaneseLearningApp
                     komanda.Parameters.AddWithValue("@slika", KorisnickeFunkcije.ImageToByteArray(pbPROFILESL.Image));
                     komanda.Parameters.AddWithValue("@username", aktivniKorisnik.Username);
 
-                    MessageBox.Show("Changes were succesfully made. " + PristupBazi.Manipulacija(konekcioniString, komanda) + " rows were affected.");
+                    PristupBazi.Manipulacija(konekcioniString, komanda);
+
+                    MessageBox.Show("Profile changes were succesfully made.", "Profile change succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     aktivniKorisnik = new User(tbPROFILEFN.Text, tbPROFILELN.Text, aktivniKorisnik.Username, aktivniKorisnik.Password, dtpBIRTHDATE.Value, nivoZnanja, rtbPROFILEC.Text, pbPROFILESL.Image);
                     tbUSER.Text = "Welcome, " + aktivniKorisnik.Ime + " !";
@@ -389,7 +466,7 @@ namespace JapaneseLearningApp
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Changes failed. Reason: " + ex.Message);
+                    MessageBox.Show("Profile changes failed. Reason: " + ex.Message);
                 }
             }
         }
@@ -1397,6 +1474,16 @@ namespace JapaneseLearningApp
             GoToTestMenu();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            GoToMainMenu();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            GoToHelp();
+        }
+
         private void buttVOCABULARYTEST_Click(object sender, EventArgs e)
         {
             aktivniTest.Tip = "VOCAB";
@@ -1539,6 +1626,11 @@ namespace JapaneseLearningApp
             this.tabControl1.SelectedTab = tpTESTMENU;
         }
 
+        public void GoToHelp()
+        {
+            this.tabControl1.SelectedTab = tpHELP;
+        }
+
         public void GoToProfile()
         {
             this.tabControl1.SelectedTab = tpPROFILE;
@@ -1553,6 +1645,11 @@ namespace JapaneseLearningApp
         {
             this.tabControl1.SelectedTab = tpSTATS;
             pointGrafTestBodovi();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
 
         public void GoToVisualization(Color c)
@@ -1772,7 +1869,7 @@ namespace JapaneseLearningApp
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Changes failed. Reason: " + ex.Message);
+                    MessageBox.Show("User progress save failed. Reason: " + ex.Message);
                 }
             }
         }
@@ -1793,7 +1890,7 @@ namespace JapaneseLearningApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Changes failed. Reason: " + ex.Message);
+                MessageBox.Show("Test progress saving failed. Reason: " + ex.Message);
             }
         }
 
@@ -2075,6 +2172,214 @@ namespace JapaneseLearningApp
                 button15.Text = "2/3";
                 chart2.Series.Clear();
                 lineGrafTestMjeseci();
+            }
+        }
+
+        #endregion
+
+        // Eventi za validaciju priliko signupa i promjene passworda
+        #region VALIDACIJA_PODATAKA
+
+        private void tbFIRSTNAME_Validating(object sender, CancelEventArgs e)
+        {
+            if (tbFIRSTNAME.Text.Length < 3)
+            {
+                errorProvider1.SetError(tbFIRSTNAME, "First name must contain at least 3 charcters!");
+                tbFIRSTNAME.BackColor = Color.Salmon;
+                tbFIRSTNAME.ForeColor = Color.White;
+            }
+            else
+            {
+                tbFIRSTNAME.BackColor = Color.White;
+                tbFIRSTNAME.ForeColor = Color.FromArgb(51, 51, 51);
+                errorProvider1.SetError(tbFIRSTNAME, "");
+            }
+        }
+
+        private void tbLASTNAME_Validating(object sender, CancelEventArgs e)
+        {
+            if (tbLASTNAME.Text.Length < 3)
+            {
+                errorProvider1.SetError(tbLASTNAME, "Last name must contain at least 3 charcters!");
+                tbLASTNAME.BackColor = Color.Salmon;
+                tbLASTNAME.ForeColor = Color.White;
+            }
+            else
+            {
+                tbLASTNAME.BackColor = Color.White;
+                tbLASTNAME.ForeColor = Color.FromArgb(51,51,51);
+                errorProvider1.SetError(tbLASTNAME, "");
+            }
+        }
+
+        private void tbNEWUSERNAME_Validating(object sender, CancelEventArgs e)
+        {
+            if (tbNEWUSERNAME.Text.Length < 5)
+            {
+                errorProvider1.SetError(tbNEWUSERNAME, "Username must contain at least 5 charcters!");
+                tbNEWUSERNAME.BackColor = Color.Salmon;
+                tbNEWUSERNAME.ForeColor = Color.White;
+            }
+            else
+            {
+                tbNEWUSERNAME.BackColor = Color.White;
+                tbNEWUSERNAME.ForeColor = Color.FromArgb(51, 51, 51);
+                errorProvider1.SetError(tbNEWUSERNAME, "");
+            }
+        }
+
+        private void tbNEWPASSWORD_Validating(object sender, CancelEventArgs e)
+        {
+            if (!KorisnickeFunkcije.validirajPassword(tbNEWPASSWORD.Text))
+            {
+                errorProvider1.SetError(tbNEWPASSWORD, "A valid password must contain 8-15 charcters, have at least one upper case letter and have at least one number.");
+                tbNEWPASSWORD.BackColor = Color.Salmon;
+                tbNEWPASSWORD.ForeColor = Color.White;
+            }
+            else
+            {
+                tbNEWPASSWORD.BackColor = Color.White;
+                tbNEWPASSWORD.ForeColor = Color.FromArgb(51, 51, 51);
+                errorProvider1.SetError(tbNEWPASSWORD, "");
+            }
+        }
+
+        public void aktivirajValidacijuSignUp()
+        {
+            if (tbFIRSTNAME.Text.Length < 3)
+            {
+                errorProvider1.SetError(tbFIRSTNAME, "First name must contain at least 3 charcters!");
+                tbFIRSTNAME.BackColor = Color.Salmon;
+                tbFIRSTNAME.ForeColor = Color.White;
+            }
+
+            if (tbLASTNAME.Text.Length < 3)
+            {
+                errorProvider1.SetError(tbLASTNAME, "Last name must contain at least 3 charcters!");
+                tbLASTNAME.BackColor = Color.Salmon;
+                tbLASTNAME.ForeColor = Color.White;
+            }
+
+            if (tbNEWUSERNAME.Text.Length < 5)
+            {
+                errorProvider1.SetError(tbNEWUSERNAME, "Username must contain at least 5 charcters!");
+                tbNEWUSERNAME.BackColor = Color.Salmon;
+                tbNEWUSERNAME.ForeColor = Color.White;
+            }
+
+            if (!KorisnickeFunkcije.validirajPassword(tbNEWPASSWORD.Text))
+            {
+                errorProvider1.SetError(tbNEWPASSWORD, "A valid password must contain 8-15 charcters, have at least one upper case letter and have at least one number.");
+                tbNEWPASSWORD.BackColor = Color.Salmon;
+                tbNEWPASSWORD.ForeColor = Color.White;
+            }
+        }
+
+        private void tbCPASSUSERNAME_Validating(object sender, CancelEventArgs e)
+        {
+            if (tbCPASSUSERNAME.Text.Length < 5)
+            {
+                errorProvider1.SetError(tbCPASSUSERNAME, "Username must contain at least 5 charcters.");
+                tbCPASSUSERNAME.BackColor = Color.Salmon;
+                tbCPASSUSERNAME.ForeColor = Color.White;
+            }
+            else
+            {
+                tbCPASSUSERNAME.BackColor = Color.White;
+                tbCPASSUSERNAME.ForeColor = Color.FromArgb(51, 51, 51);
+                errorProvider1.SetError(tbCPASSUSERNAME, "");
+            }
+        }
+
+        private void tbCPASSEMAIL_Validating(object sender, CancelEventArgs e)
+        {
+            if (!KorisnickeFunkcije.validirajEmail(tbCPASSEMAIL.Text))
+            {
+                errorProvider1.SetError(tbCPASSEMAIL, "Email must be in correct format.");
+                tbCPASSEMAIL.BackColor = Color.Salmon;
+                tbCPASSEMAIL.ForeColor = Color.White;
+            }
+            else
+            {
+                tbCPASSEMAIL.BackColor = Color.White;
+                tbCPASSEMAIL.ForeColor = Color.FromArgb(51, 51, 51);
+                errorProvider1.SetError(tbCPASSEMAIL, "");
+            }
+        }
+
+        private void tbCPASSPASS_Validating(object sender, CancelEventArgs e)
+        {
+            if (!KorisnickeFunkcije.validirajPassword(tbCPASSPASS.Text))
+            {
+                errorProvider1.SetError(tbCPASSPASS, "A valid password must contain 8-15 charcters, have at least one upper case letter and have at least one number.");
+                tbCPASSPASS.BackColor = Color.Salmon;
+                tbCPASSPASS.ForeColor = Color.White;
+            }
+            else
+            {
+                tbCPASSPASS.BackColor = Color.White;
+                tbCPASSPASS.ForeColor = Color.FromArgb(51, 51, 51);
+                errorProvider1.SetError(tbCPASSPASS, "");
+            }
+        }
+
+        private void tbCPASSCONFIRM_Validating(object sender, CancelEventArgs e)
+        {
+            if (!KorisnickeFunkcije.validirajPassword(tbCPASSCONFIRM.Text))
+            {
+                errorProvider1.SetError(tbCPASSCONFIRM, "A valid password must contain 8-15 charcters, have at least one upper case letter and have at least one number.");
+                tbCPASSCONFIRM.BackColor = Color.Salmon;
+                tbCPASSCONFIRM.ForeColor = Color.White;
+            }
+            else if (!tbCPASSPASS.Text.Equals(tbCPASSCONFIRM.Text))
+            {
+                errorProvider1.SetError(tbCPASSCONFIRM, "Passwords must be the same.");
+                tbCPASSCONFIRM.BackColor = Color.Salmon;
+                tbCPASSCONFIRM.ForeColor = Color.White;
+            }
+            else
+            {
+                tbCPASSCONFIRM.BackColor = Color.White;
+                tbCPASSCONFIRM.ForeColor = Color.FromArgb(51, 51, 51);
+                errorProvider1.SetError(tbCPASSCONFIRM, "");
+            }
+        }
+
+        public void aktivirajValidacijuChangePassword()
+        {
+            if (tbNEWUSERNAME.Text.Length < 5)
+            {
+                errorProvider1.SetError(tbNEWUSERNAME, "Username must contain at least 5 charcters.");
+                tbNEWUSERNAME.BackColor = Color.Salmon;
+                tbNEWUSERNAME.ForeColor = Color.White;
+            }
+
+            if (KorisnickeFunkcije.validirajEmail(tbCPASSEMAIL.Text))
+            {
+                errorProvider1.SetError(tbLASTNAME, "Email must be in correct format.");
+                tbLASTNAME.BackColor = Color.Salmon;
+                tbLASTNAME.ForeColor = Color.White;
+            }
+
+            if (!KorisnickeFunkcije.validirajPassword(tbCPASSPASS.Text))
+            {
+                errorProvider1.SetError(tbNEWUSERNAME, "A valid password must contain 8-15 charcters, have at least one upper case letter and have at least one number.");
+                tbNEWUSERNAME.BackColor = Color.Salmon;
+                tbNEWUSERNAME.ForeColor = Color.White;
+            }
+
+            if (!KorisnickeFunkcije.validirajPassword(tbCPASSCONFIRM.Text))
+            {
+                errorProvider1.SetError(tbCPASSCONFIRM, "A valid password must contain 8-15 charcters, have at least one upper case letter and have at least one number.");
+                tbCPASSCONFIRM.BackColor = Color.Salmon;
+                tbCPASSCONFIRM.ForeColor = Color.White;
+            }
+
+            if (!tbCPASSPASS.Text.Equals(tbCPASSCONFIRM.Text))
+            {
+                errorProvider1.SetError(tbCPASSCONFIRM, "Passwords must be the same.");
+                tbCPASSCONFIRM.BackColor = Color.Salmon;
+                tbCPASSCONFIRM.ForeColor = Color.White;
             }
         }
 

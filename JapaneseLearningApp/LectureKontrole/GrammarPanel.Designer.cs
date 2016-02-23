@@ -33,11 +33,12 @@
             this.bVocabulary = new System.Windows.Forms.Button();
             this.bLectures = new System.Windows.Forms.Button();
             this.pGrammar = new System.Windows.Forms.Panel();
+            this.lGrammarTitle = new System.Windows.Forms.Label();
             this.lGrammarText = new System.Windows.Forms.Label();
             this.lProgress = new System.Windows.Forms.Label();
             this.bPrevious = new System.Windows.Forms.Button();
             this.bNext = new System.Windows.Forms.Button();
-            this.lGrammarTitle = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
             this.pGrammar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             this.lTitle.AutoSize = true;
             this.lTitle.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lTitle.ForeColor = System.Drawing.Color.White;
-            this.lTitle.Location = new System.Drawing.Point(129, 41);
+            this.lTitle.Location = new System.Drawing.Point(136, 60);
             this.lTitle.Name = "lTitle";
             this.lTitle.Size = new System.Drawing.Size(135, 32);
             this.lTitle.TabIndex = 3;
@@ -58,9 +59,9 @@
             this.bNextLecture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bNextLecture.Font = new System.Drawing.Font("Berlin Sans FB", 18.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bNextLecture.ForeColor = System.Drawing.Color.White;
-            this.bNextLecture.Location = new System.Drawing.Point(269, 522);
+            this.bNextLecture.Location = new System.Drawing.Point(270, 491);
             this.bNextLecture.Name = "bNextLecture";
-            this.bNextLecture.Size = new System.Drawing.Size(128, 75);
+            this.bNextLecture.Size = new System.Drawing.Size(107, 75);
             this.bNextLecture.TabIndex = 25;
             this.bNextLecture.Text = "Next Lecture";
             this.bNextLecture.UseVisualStyleBackColor = false;
@@ -72,9 +73,9 @@
             this.bVocabulary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bVocabulary.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bVocabulary.ForeColor = System.Drawing.Color.White;
-            this.bVocabulary.Location = new System.Drawing.Point(3, 522);
+            this.bVocabulary.Location = new System.Drawing.Point(19, 492);
             this.bVocabulary.Name = "bVocabulary";
-            this.bVocabulary.Size = new System.Drawing.Size(128, 75);
+            this.bVocabulary.Size = new System.Drawing.Size(111, 74);
             this.bVocabulary.TabIndex = 24;
             this.bVocabulary.Text = "Vocab";
             this.bVocabulary.UseVisualStyleBackColor = false;
@@ -86,7 +87,7 @@
             this.bLectures.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLectures.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLectures.ForeColor = System.Drawing.Color.White;
-            this.bLectures.Location = new System.Drawing.Point(136, 522);
+            this.bLectures.Location = new System.Drawing.Point(136, 491);
             this.bLectures.Name = "bLectures";
             this.bLectures.Size = new System.Drawing.Size(128, 75);
             this.bLectures.TabIndex = 23;
@@ -101,10 +102,22 @@
             this.pGrammar.Controls.Add(this.lGrammarTitle);
             this.pGrammar.Controls.Add(this.lGrammarText);
             this.pGrammar.ForeColor = System.Drawing.SystemColors.Control;
-            this.pGrammar.Location = new System.Drawing.Point(19, 90);
+            this.pGrammar.Location = new System.Drawing.Point(19, 100);
             this.pGrammar.Name = "pGrammar";
-            this.pGrammar.Size = new System.Drawing.Size(358, 363);
+            this.pGrammar.Size = new System.Drawing.Size(358, 327);
             this.pGrammar.TabIndex = 26;
+            // 
+            // lGrammarTitle
+            // 
+            this.lGrammarTitle.AutoSize = true;
+            this.lGrammarTitle.Font = new System.Drawing.Font("Berlin Sans FB", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lGrammarTitle.ForeColor = System.Drawing.Color.White;
+            this.lGrammarTitle.Location = new System.Drawing.Point(111, 14);
+            this.lGrammarTitle.MaximumSize = new System.Drawing.Size(320, 0);
+            this.lGrammarTitle.Name = "lGrammarTitle";
+            this.lGrammarTitle.Size = new System.Drawing.Size(128, 21);
+            this.lGrammarTitle.TabIndex = 26;
+            this.lGrammarTitle.Text = "Grammar Title";
             // 
             // lGrammarText
             // 
@@ -123,7 +136,7 @@
             this.lProgress.AutoSize = true;
             this.lProgress.Font = new System.Drawing.Font("Berlin Sans FB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lProgress.ForeColor = System.Drawing.Color.White;
-            this.lProgress.Location = new System.Drawing.Point(180, 468);
+            this.lProgress.Location = new System.Drawing.Point(180, 444);
             this.lProgress.Name = "lProgress";
             this.lProgress.Size = new System.Drawing.Size(43, 30);
             this.lProgress.TabIndex = 27;
@@ -135,7 +148,7 @@
             this.bPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bPrevious.Font = new System.Drawing.Font("Berlin Sans FB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bPrevious.ForeColor = System.Drawing.Color.White;
-            this.bPrevious.Location = new System.Drawing.Point(136, 465);
+            this.bPrevious.Location = new System.Drawing.Point(136, 441);
             this.bPrevious.Margin = new System.Windows.Forms.Padding(0);
             this.bPrevious.Name = "bPrevious";
             this.bPrevious.Size = new System.Drawing.Size(33, 38);
@@ -151,7 +164,7 @@
             this.bNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bNext.Font = new System.Drawing.Font("Berlin Sans FB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bNext.ForeColor = System.Drawing.Color.White;
-            this.bNext.Location = new System.Drawing.Point(231, 465);
+            this.bNext.Location = new System.Drawing.Point(231, 441);
             this.bNext.Margin = new System.Windows.Forms.Padding(0);
             this.bNext.Name = "bNext";
             this.bNext.Size = new System.Drawing.Size(33, 38);
@@ -161,23 +174,23 @@
             this.bNext.UseVisualStyleBackColor = false;
             this.bNext.Click += new System.EventHandler(this.bNext_Click);
             // 
-            // lGrammarTitle
+            // label58
             // 
-            this.lGrammarTitle.AutoSize = true;
-            this.lGrammarTitle.Font = new System.Drawing.Font("Berlin Sans FB", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lGrammarTitle.ForeColor = System.Drawing.Color.White;
-            this.lGrammarTitle.Location = new System.Drawing.Point(111, 14);
-            this.lGrammarTitle.MaximumSize = new System.Drawing.Size(320, 0);
-            this.lGrammarTitle.Name = "lGrammarTitle";
-            this.lGrammarTitle.Size = new System.Drawing.Size(128, 21);
-            this.lGrammarTitle.TabIndex = 26;
-            this.lGrammarTitle.Text = "Grammar Title";
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label58.ForeColor = System.Drawing.Color.White;
+            this.label58.Location = new System.Drawing.Point(100, 577);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(206, 13);
+            this.label58.TabIndex = 130;
+            this.label58.Text = "Copyright 2015. All rights reserved.";
             // 
             // GrammarPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
+            this.Controls.Add(this.label58);
             this.Controls.Add(this.bNext);
             this.Controls.Add(this.bPrevious);
             this.Controls.Add(this.lProgress);
@@ -207,5 +220,6 @@
         private System.Windows.Forms.Button bNext;
         private System.Windows.Forms.Label lGrammarText;
         private System.Windows.Forms.Label lGrammarTitle;
+        private System.Windows.Forms.Label label58;
     }
 }

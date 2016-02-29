@@ -1,0 +1,63 @@
+%---General
+um...
+now
+English (language)
+yes
+student
+langauge
+high school
+P.M.
+A.M.
+... years old
+Mr./Ms. ...
+o'clock
+people (nationality)
+teacher; Professor ...
+major
+That's right.
+college; university
+telephone
+friend
+name
+what
+Japan
+... year student
+yes
+half
+number
+international student
+I
+%---Countries
+U.S.A.
+Britain
+Australia
+Korea
+Sweden
+China
+%---Majors
+science
+Asian studies
+economics
+international relations
+computer
+anthropology
+politics
+business
+literature
+history
+%---Occupations
+job; work; occupation
+doctor
+office worker
+high school student
+housewife
+graduate student
+college student
+lawyer
+%---Family
+mother
+father
+older sister
+older brother
+younger sister
+younger brother

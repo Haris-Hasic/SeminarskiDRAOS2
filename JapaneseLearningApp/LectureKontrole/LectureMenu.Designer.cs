@@ -45,9 +45,9 @@
             this.lTitle.ForeColor = System.Drawing.Color.White;
             this.lTitle.Location = new System.Drawing.Point(83, 60);
             this.lTitle.Name = "lTitle";
-            this.lTitle.Size = new System.Drawing.Size(247, 32);
+            this.lTitle.Size = new System.Drawing.Size(240, 32);
             this.lTitle.TabIndex = 1;
-            this.lTitle.Text = "Learn new matter !";
+            this.lTitle.Text = "Learn new matter!";
             // 
             // bLectures
             // 

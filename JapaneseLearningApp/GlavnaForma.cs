@@ -16,6 +16,7 @@ using System.Data.SqlClient;
 
 using JapaneseLearningApp.Klase;
 using JapaneseLearningApp.Properties;
+using JapaneseLearningApp.LectureKontrole;
 
 namespace JapaneseLearningApp
 {
@@ -2393,6 +2394,13 @@ namespace JapaneseLearningApp
             this.tabControl1.SelectedTab = tpLecturesList;
         }
 
+        private void bWriting_Click(object sender, EventArgs e)
+        {
+            this.tabControl1.SelectedTab = tpLecturesList;
+            this.mainPanel.Controls.Clear();
+            this.mainPanel.Controls.Add(new WritingMenu(mainPanel));
+        }
+
         private void tpLecturesList_Enter(object sender, EventArgs e)
         {
             //this.mainPanel.Controls.Add(new LecturesList(mainPanel));
@@ -2407,5 +2415,7 @@ namespace JapaneseLearningApp
         }
 
         #endregion
+
+
     }
 }

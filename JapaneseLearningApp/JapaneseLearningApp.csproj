@@ -78,6 +78,12 @@
     <Compile Include="Klase\Story.cs" />
     <Compile Include="Klase\User.cs" />
     <Compile Include="Klase\Vocabulary.cs" />
+    <Compile Include="LectureKontrole\HiraganaListPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LectureKontrole\HiraganaListPanel.Designer.cs">
+      <DependentUpon>HiraganaListPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="LectureKontrole\LectureMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,6 +95,18 @@
     </Compile>
     <Compile Include="LectureKontrole\LecturesList.Designer.cs">
       <DependentUpon>LecturesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LectureKontrole\HiraganaPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LectureKontrole\HiraganaPanel.Designer.cs">
+      <DependentUpon>HiraganaPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LectureKontrole\WritingMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LectureKontrole\WritingMenu.Designer.cs">
+      <DependentUpon>WritingMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,11 +128,20 @@
     <EmbeddedResource Include="LectureKontrole\GrammarPanel.resx">
       <DependentUpon>GrammarPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LectureKontrole\HiraganaListPanel.resx">
+      <DependentUpon>HiraganaListPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LectureKontrole\LectureMenu.resx">
       <DependentUpon>LectureMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LectureKontrole\LecturesList.resx">
       <DependentUpon>LecturesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LectureKontrole\HiraganaPanel.resx">
+      <DependentUpon>HiraganaPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LectureKontrole\WritingMenu.resx">
+      <DependentUpon>WritingMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

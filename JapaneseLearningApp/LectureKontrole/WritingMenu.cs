@@ -23,7 +23,13 @@ namespace JapaneseLearningApp.LectureKontrole
 
         private void bHiragana_Click(object sender, EventArgs e)
         {
-            this.mainPanel.Controls.Add(new HiraganaListPanel(mainPanel));
+            this.mainPanel.Controls.Add(new HiraganaKatakanaListPanel(mainPanel));
+            this.mainPanel.Controls.Remove(this);
+        }
+
+        private void bKatakana_Click(object sender, EventArgs e)
+        {
+            this.mainPanel.Controls.Add(new HiraganaKatakanaListPanel(mainPanel, true));
             this.mainPanel.Controls.Remove(this);
         }
     }

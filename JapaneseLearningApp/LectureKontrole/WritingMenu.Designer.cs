@@ -72,6 +72,7 @@
             this.bKatakana.TabIndex = 31;
             this.bKatakana.Text = "Katakana";
             this.bKatakana.UseVisualStyleBackColor = false;
+            this.bKatakana.Click += new System.EventHandler(this.bKatakana_Click);
             // 
             // bHiragana
             // 

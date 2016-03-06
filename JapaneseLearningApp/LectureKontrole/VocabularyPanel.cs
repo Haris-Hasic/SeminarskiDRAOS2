@@ -59,6 +59,10 @@ namespace JapaneseLearningApp
                 Label error = new Label();
                 error.Text = e.Message;
                 flpVocabulary.Controls.Add(error);
+
+                lProgress.Text = currentSection + "/0";
+                bPrevious.Visible = false;
+                bNext.Visible = false;
             }
         }
 
@@ -103,9 +107,9 @@ namespace JapaneseLearningApp
             try
             {
                 DBManipulation dbmanipulation = DBManipulation.getInstance();
-                int currentProgress = dbmanipulation.getVocabularyProgress(dbmanipulation.getUserId(currentUser.Username));
+                int currentProgress = dbmanipulation.getVocabularyProgress(currentUser.Id);
                 if (lectureNumber > currentProgress)
-                    dbmanipulation.setVocabularyProgress(dbmanipulation.getUserId(currentUser.Username), lectureNumber);
+                    dbmanipulation.setVocabularyProgress(currentUser.Id, lectureNumber);
             }
             catch (Exception e)
             {

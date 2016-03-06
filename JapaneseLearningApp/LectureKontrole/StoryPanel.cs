@@ -74,9 +74,9 @@ namespace JapaneseLearningApp
             try
             {
                 DBManipulation dbmanipulation = DBManipulation.getInstance();
-                int currentProgress = dbmanipulation.getStoryProgress(dbmanipulation.getUserId(currentUser.Username));
+                int currentProgress = dbmanipulation.getStoryProgress(currentUser.Id);
                 if (lectureNumber > currentProgress)
-                    dbmanipulation.setStoryProgress(dbmanipulation.getUserId(currentUser.Username), lectureNumber);
+                    dbmanipulation.setStoryProgress(currentUser.Id, lectureNumber);
             }
             catch (Exception e)
             {

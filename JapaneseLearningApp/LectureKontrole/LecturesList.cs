@@ -16,6 +16,7 @@ namespace JapaneseLearningApp
     {
         private Panel mainPanel;
         private User currentUser;
+        private List<Button> buttons = new List<Button>();
 
         public LecturesList(Panel mainPanel, User currentUser)
         {
@@ -23,77 +24,68 @@ namespace JapaneseLearningApp
 
             this.mainPanel = mainPanel;
             this.currentUser = currentUser;
+            fillButtonList();
             adjustButtonColors();
         }
 
-        public void adjustButtonColors()
+        private void fillButtonList()
+        {
+            buttons.Add(bLectureIntro);
+            buttons.Add(bLecture1);
+            buttons.Add(bLecture2);
+            buttons.Add(bLecture3);
+            buttons.Add(bLecture4);
+            buttons.Add(bLecture5);
+            buttons.Add(bLecture6);
+            buttons.Add(bLecture7);
+            buttons.Add(bLecture8);
+            buttons.Add(bLecture9);
+            buttons.Add(bLecture10);
+            buttons.Add(bLecture11);
+            buttons.Add(bLecture12);
+        }
+
+        private void adjustButtonColors()
         {
             if (currentUser != null)
             {
                 try
                 {
-                    DBManipulation dbmanipulation = DBManipulation.getInstance();
-                    int progress = dbmanipulation.getLectureProgress(dbmanipulation.getUserId(currentUser.Username));
+                    int progress = currentUser.Progress;
 
-                    switch (progress)
+                    for (int i = 0; i < buttons.Count; i++)
                     {
-                        case 7:
-                            bLecture7.BackColor = Color.FromArgb(140, 225, 245);
-                            goto case 6;
-                        case 6:
-                            bLecture6.BackColor = Color.FromArgb(140, 225, 245);
-                            goto case 5;
-                        case 5:
-                            bLecture5.BackColor = Color.FromArgb(140, 225, 245);
-                            goto case 4;
-                        case 4:
-                            bLecture4.BackColor = Color.FromArgb(140, 225, 245);
-                            goto case 3;
-                        case 3:
-                            bLecture3.BackColor = Color.FromArgb(140, 225, 245);
-                            goto case 2;
-                        case 2:
-                            bLecture2.BackColor = Color.FromArgb(140, 225, 245);
-                            goto case 1;
-                        case 1:
-                            bLecture1.BackColor = Color.FromArgb(140, 225, 245);
-                            goto case 0;
-                        case 0:
-                            bLectureIntro.BackColor = Color.FromArgb(140, 225, 245);
-                            break;
+                        if (i <= progress + 1)
+                            buttons[i].Enabled = true;
+                        else
+                            buttons[i].Enabled = false;
                     }
-
-                    //bLectureIntro.Enabled = true;
-                    //bLecture1.Enabled = true;
-                    //bLecture2.Enabled = true;
-                    //bLecture3.Enabled = true;
-                    //bLecture4.Enabled = true;
-                    //bLecture5.Enabled = true;
-                    //bLecture6.Enabled = true;
-                    //bLecture7.Enabled = true;
 
                     //switch (progress)
                     //{
-                    //    case -1:
-                    //        bLecture1.Enabled = false;
-                    //        goto case 0;
-                    //    case 0:
-                    //        bLecture2.Enabled = false;
-                    //        goto case 1;
-                    //    case 1:
-                    //        bLecture3.Enabled = false;
-                    //        goto case 2;
-                    //    case 2:
-                    //        bLecture4.Enabled = false;
-                    //        goto case 3;
-                    //    case 3:
-                    //        bLecture5.Enabled = false;
-                    //        goto case 4;
-                    //    case 4:
-                    //        bLecture6.Enabled = false;
+                    //    case 7:
+                    //        bLecture7.BackColor = Color.FromArgb(140, 225, 245);
+                    //        goto case 6;
+                    //    case 6:
+                    //        bLecture6.BackColor = Color.FromArgb(140, 225, 245);
                     //        goto case 5;
                     //    case 5:
-                    //        bLecture7.Enabled = false;
+                    //        bLecture5.BackColor = Color.FromArgb(140, 225, 245);
+                    //        goto case 4;
+                    //    case 4:
+                    //        bLecture4.BackColor = Color.FromArgb(140, 225, 245);
+                    //        goto case 3;
+                    //    case 3:
+                    //        bLecture3.BackColor = Color.FromArgb(140, 225, 245);
+                    //        goto case 2;
+                    //    case 2:
+                    //        bLecture2.BackColor = Color.FromArgb(140, 225, 245);
+                    //        goto case 1;
+                    //    case 1:
+                    //        bLecture1.BackColor = Color.FromArgb(140, 225, 245);
+                    //        goto case 0;
+                    //    case 0:
+                    //        bLectureIntro.BackColor = Color.FromArgb(140, 225, 245);
                     //        break;
                     //}
                 }
@@ -151,6 +143,38 @@ namespace JapaneseLearningApp
             this.mainPanel.Controls.Add(new LectureMenu(this.mainPanel, 7, this.currentUser));
             this.mainPanel.Controls.Remove(this);
         }
+
+        private void bLecture8_Click(object sender, EventArgs e)
+        {
+            this.mainPanel.Controls.Add(new LectureMenu(this.mainPanel, 8, this.currentUser));
+            this.mainPanel.Controls.Remove(this);
+        }
+
+        private void bLecture9_Click(object sender, EventArgs e)
+        {
+            this.mainPanel.Controls.Add(new LectureMenu(this.mainPanel, 9, this.currentUser));
+            this.mainPanel.Controls.Remove(this);
+        }
+
+        private void bLecture10_Click(object sender, EventArgs e)
+        {
+            this.mainPanel.Controls.Add(new LectureMenu(this.mainPanel, 10, this.currentUser));
+            this.mainPanel.Controls.Remove(this);
+        }
+
+        private void bLecture11_Click(object sender, EventArgs e)
+        {
+            this.mainPanel.Controls.Add(new LectureMenu(this.mainPanel, 11, this.currentUser));
+            this.mainPanel.Controls.Remove(this);
+        }
+
+        private void bLecture12_Click(object sender, EventArgs e)
+        {
+            this.mainPanel.Controls.Add(new LectureMenu(this.mainPanel, 12, this.currentUser));
+            this.mainPanel.Controls.Remove(this);
+        }
+
+
         
     }
 }

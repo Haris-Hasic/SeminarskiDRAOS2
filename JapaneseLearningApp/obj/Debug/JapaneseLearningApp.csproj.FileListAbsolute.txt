@@ -22,5 +22,5 @@ D:\GitHub\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.Sto
 D:\GitHub\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.VocabularyPanel.resources
 D:\GitHub\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.csproj.GenerateResource.Cache
 D:\GitHub\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.LectureKontrole.WritingMenu.resources
-D:\GitHub\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.LectureKontrole.HiraganaListPanel.resources
-D:\GitHub\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.LectureKontrole.HiraganaPanel.resources
+D:\GitHub\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.LectureKontrole.HiraganaKatakanaListPanel.resources
+D:\GitHub\SeminarskiDRAOS2\JapaneseLearningApp\obj\Debug\JapaneseLearningApp.LectureKontrole.HiraganaKatakanaPanel.resources

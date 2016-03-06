@@ -14,7 +14,7 @@ namespace JapaneseLearningApp
 {
     public partial class LectureMenu : UserControl
     {
-        private const int NUMBER_OF_LECTURES = 8;
+        private int numberOfLectures = 12;
 
         private int lectureNumber;
         private Panel mainPanel;
@@ -26,6 +26,7 @@ namespace JapaneseLearningApp
 
             this.mainPanel = mainPanel;
             this.currentUser = currentUser;
+            this.numberOfLectures = currentUser.Progress + 2;
             loadLecture(lectureNumber);
         }
 
@@ -53,7 +54,7 @@ namespace JapaneseLearningApp
             else
                 bPrevious.Visible = true;
 
-            if (lectureNumber == NUMBER_OF_LECTURES - 1)
+            if (lectureNumber == numberOfLectures - 1)
                 bNext.Visible = false;
             else
                 bNext.Visible = true;
@@ -61,10 +62,9 @@ namespace JapaneseLearningApp
 
         private void bNext_Click(object sender, EventArgs e)
         {
-            if (lectureNumber < NUMBER_OF_LECTURES - 1) lectureNumber++;
+            if (lectureNumber < numberOfLectures - 1) lectureNumber++;
             setButtonVisibilty();
 
-            //lectureNumber = (lectureNumber + 1) % NUMBER_OF_LECTURES;
             updateTitle();
         }
 
@@ -73,7 +73,6 @@ namespace JapaneseLearningApp
             if (lectureNumber > 0) lectureNumber--;
             setButtonVisibilty();
 
-            //lectureNumber = (lectureNumber + NUMBER_OF_LECTURES - 1) % NUMBER_OF_LECTURES;
             updateTitle();
         }
 

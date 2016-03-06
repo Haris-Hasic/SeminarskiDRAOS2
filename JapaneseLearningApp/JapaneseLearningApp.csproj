@@ -78,11 +78,11 @@
     <Compile Include="Klase\Story.cs" />
     <Compile Include="Klase\User.cs" />
     <Compile Include="Klase\Vocabulary.cs" />
-    <Compile Include="LectureKontrole\HiraganaListPanel.cs">
+    <Compile Include="LectureKontrole\HiraganaKatakanaListPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LectureKontrole\HiraganaListPanel.Designer.cs">
-      <DependentUpon>HiraganaListPanel.cs</DependentUpon>
+    <Compile Include="LectureKontrole\HiraganaKatakanaListPanel.Designer.cs">
+      <DependentUpon>HiraganaKatakanaListPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="LectureKontrole\LectureMenu.cs">
       <SubType>UserControl</SubType>
@@ -96,11 +96,11 @@
     <Compile Include="LectureKontrole\LecturesList.Designer.cs">
       <DependentUpon>LecturesList.cs</DependentUpon>
     </Compile>
-    <Compile Include="LectureKontrole\HiraganaPanel.cs">
+    <Compile Include="LectureKontrole\HiraganaKatakanaPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LectureKontrole\HiraganaPanel.Designer.cs">
-      <DependentUpon>HiraganaPanel.cs</DependentUpon>
+    <Compile Include="LectureKontrole\HiraganaKatakanaPanel.Designer.cs">
+      <DependentUpon>HiraganaKatakanaPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="LectureKontrole\WritingMenu.cs">
       <SubType>UserControl</SubType>
@@ -128,8 +128,8 @@
     <EmbeddedResource Include="LectureKontrole\GrammarPanel.resx">
       <DependentUpon>GrammarPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LectureKontrole\HiraganaListPanel.resx">
-      <DependentUpon>HiraganaListPanel.cs</DependentUpon>
+    <EmbeddedResource Include="LectureKontrole\HiraganaKatakanaListPanel.resx">
+      <DependentUpon>HiraganaKatakanaListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LectureKontrole\LectureMenu.resx">
       <DependentUpon>LectureMenu.cs</DependentUpon>
@@ -137,8 +137,8 @@
     <EmbeddedResource Include="LectureKontrole\LecturesList.resx">
       <DependentUpon>LecturesList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LectureKontrole\HiraganaPanel.resx">
-      <DependentUpon>HiraganaPanel.cs</DependentUpon>
+    <EmbeddedResource Include="LectureKontrole\HiraganaKatakanaPanel.resx">
+      <DependentUpon>HiraganaKatakanaPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LectureKontrole\WritingMenu.resx">
       <DependentUpon>WritingMenu.cs</DependentUpon>

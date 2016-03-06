@@ -121,5 +121,23 @@ namespace JapaneseLearningApp.Klase
             get { return writing; }
             set { writing = value; }
         }
+
+        public int Id
+        {
+            get
+            {
+                DBManipulation dbmanipulation = DBManipulation.getInstance();
+                return dbmanipulation.getUserId(Username);
+            }
+        }
+
+        public int Progress
+        {
+            get
+            {
+                DBManipulation dbmanipulation = DBManipulation.getInstance();
+                return dbmanipulation.getLectureProgress(Id);
+            }
+        }
     }
 }

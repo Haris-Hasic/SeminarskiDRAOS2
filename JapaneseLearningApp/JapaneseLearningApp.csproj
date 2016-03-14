@@ -60,6 +60,7 @@
       <DependentUpon>GlavnaForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Klase\DBManipulation.cs" />
+    <Compile Include="Klase\Kanji.cs" />
     <Compile Include="Klase\KorisnickeFunkcije.cs" />
     <Compile Include="Klase\ModifyProgressBarColor.cs" />
     <Compile Include="Klase\PitanjeKanji.cs" />
@@ -83,6 +84,24 @@
     </Compile>
     <Compile Include="LectureKontrole\HiraganaKatakanaListPanel.Designer.cs">
       <DependentUpon>HiraganaKatakanaListPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LectureKontrole\KanjiListPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LectureKontrole\KanjiListPanel.Designer.cs">
+      <DependentUpon>KanjiListPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LectureKontrole\KanjiMenuPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LectureKontrole\KanjiMenuPanel.Designer.cs">
+      <DependentUpon>KanjiMenuPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LectureKontrole\KanjiPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LectureKontrole\KanjiPanel.Designer.cs">
+      <DependentUpon>KanjiPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="LectureKontrole\LectureMenu.cs">
       <SubType>UserControl</SubType>
@@ -130,6 +149,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LectureKontrole\HiraganaKatakanaListPanel.resx">
       <DependentUpon>HiraganaKatakanaListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LectureKontrole\KanjiListPanel.resx">
+      <DependentUpon>KanjiListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LectureKontrole\KanjiMenuPanel.resx">
+      <DependentUpon>KanjiMenuPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LectureKontrole\KanjiPanel.resx">
+      <DependentUpon>KanjiPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LectureKontrole\LectureMenu.resx">
       <DependentUpon>LectureMenu.cs</DependentUpon>

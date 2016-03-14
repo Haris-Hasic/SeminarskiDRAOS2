@@ -2414,7 +2414,14 @@ namespace JapaneseLearningApp
             }
         }
 
+        private void bProfile_Click(object sender, EventArgs e)
+        {
+            GoToProfile();
+        }
+
         #endregion
+
+
 
 
     }

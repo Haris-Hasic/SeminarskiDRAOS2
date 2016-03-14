@@ -59,6 +59,7 @@
             this.bKanji.TabIndex = 32;
             this.bKanji.Text = "Kanji";
             this.bKanji.UseVisualStyleBackColor = false;
+            this.bKanji.Click += new System.EventHandler(this.bKanji_Click);
             // 
             // bKatakana
             // 

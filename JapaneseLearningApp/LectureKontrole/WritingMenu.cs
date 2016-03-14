@@ -32,5 +32,11 @@ namespace JapaneseLearningApp.LectureKontrole
             this.mainPanel.Controls.Add(new HiraganaKatakanaListPanel(mainPanel, true));
             this.mainPanel.Controls.Remove(this);
         }
+
+        private void bKanji_Click(object sender, EventArgs e)
+        {
+            this.mainPanel.Controls.Add(new KanjiMenuPanel(mainPanel));
+            this.mainPanel.Controls.Remove(this);
+        }
     }
 }

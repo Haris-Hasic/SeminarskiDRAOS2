@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using JapaneseLearningApp.Klase;
+
 namespace JapaneseLearningApp.LectureKontrole
 {
     public partial class HiraganaKatakanaPanel : UserControl
@@ -27,6 +29,8 @@ namespace JapaneseLearningApp.LectureKontrole
 
             setTitle();
             loadImage();
+            setReading();
+            setButtons();
         }
 
         private void setTitle()
@@ -61,10 +65,43 @@ namespace JapaneseLearningApp.LectureKontrole
             }
         }
 
+        private void setReading()
+        {
+            lReading.Text = reading;
+            lReading.Left = (mainPanel.Width - lReading.Width) / 2;
+        }
+
+        private void setButtons()
+        {
+            bPrevious.Text = "< " + HiraganaKatakana.Previous(reading);
+            bNext.Text = HiraganaKatakana.Next(reading) + " >";
+        }
+
         private void bSymbolList_Click(object sender, EventArgs e)
         {
             this.mainPanel.Controls.Add(new HiraganaKatakanaListPanel(mainPanel, displayKatakana));
             this.mainPanel.Controls.Remove(this);
+        }
+
+        private void bPrevious_Click(object sender, EventArgs e)
+        {
+            reading = HiraganaKatakana.Previous(reading);
+            loadImage();
+            setReading();
+            setButtons();
+        }
+
+        private void bNext_Click(object sender, EventArgs e)
+        {
+            reading = HiraganaKatakana.Next(reading);
+            loadImage();
+            setReading();
+            setButtons();
+        }
+
+        private void lReading_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

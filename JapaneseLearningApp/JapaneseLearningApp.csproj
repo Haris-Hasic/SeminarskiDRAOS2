@@ -60,6 +60,7 @@
       <DependentUpon>GlavnaForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Klase\DBManipulation.cs" />
+    <Compile Include="Klase\HiraganaKatakana.cs" />
     <Compile Include="Klase\Kanji.cs" />
     <Compile Include="Klase\KorisnickeFunkcije.cs" />
     <Compile Include="Klase\ModifyProgressBarColor.cs" />

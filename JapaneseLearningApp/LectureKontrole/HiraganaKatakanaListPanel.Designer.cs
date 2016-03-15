@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label5 = new System.Windows.Forms.Label();
-            this.bHome = new System.Windows.Forms.Button();
+            this.bWriting = new System.Windows.Forms.Button();
             this.lTitle = new System.Windows.Forms.Label();
             this.pHiragana = new System.Windows.Forms.Panel();
             this.SuspendLayout();
@@ -45,18 +45,19 @@
             this.label5.TabIndex = 39;
             this.label5.Text = "Copyright 2015. All rights reserved.";
             // 
-            // bHome
+            // bWriting
             // 
-            this.bHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
-            this.bHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bHome.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bHome.ForeColor = System.Drawing.Color.White;
-            this.bHome.Location = new System.Drawing.Point(113, 502);
-            this.bHome.Name = "bHome";
-            this.bHome.Size = new System.Drawing.Size(174, 68);
-            this.bHome.TabIndex = 35;
-            this.bHome.Text = "Home";
-            this.bHome.UseVisualStyleBackColor = false;
+            this.bWriting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bWriting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bWriting.Font = new System.Drawing.Font("Berlin Sans FB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bWriting.ForeColor = System.Drawing.Color.White;
+            this.bWriting.Location = new System.Drawing.Point(113, 502);
+            this.bWriting.Name = "bWriting";
+            this.bWriting.Size = new System.Drawing.Size(174, 68);
+            this.bWriting.TabIndex = 35;
+            this.bWriting.Text = "Writing Menu";
+            this.bWriting.UseVisualStyleBackColor = false;
+            this.bWriting.Click += new System.EventHandler(this.bWriting_Click);
             // 
             // lTitle
             // 
@@ -77,16 +78,16 @@
             this.pHiragana.Size = new System.Drawing.Size(364, 387);
             this.pHiragana.TabIndex = 40;
             // 
-            // HiraganaListPanel
+            // HiraganaKatakanaListPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
             this.Controls.Add(this.pHiragana);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.bHome);
+            this.Controls.Add(this.bWriting);
             this.Controls.Add(this.lTitle);
-            this.Name = "HiraganaListPanel";
+            this.Name = "HiraganaKatakanaListPanel";
             this.Size = new System.Drawing.Size(400, 600);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -96,7 +97,7 @@
         #endregion
 
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button bHome;
+        private System.Windows.Forms.Button bWriting;
         private System.Windows.Forms.Label lTitle;
         private System.Windows.Forms.Panel pHiragana;
     }

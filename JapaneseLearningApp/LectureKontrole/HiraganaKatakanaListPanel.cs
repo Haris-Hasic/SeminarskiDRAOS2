@@ -92,5 +92,11 @@ namespace JapaneseLearningApp.LectureKontrole
             this.mainPanel.Controls.Add(new HiraganaKatakanaPanel(this.mainPanel, clickedButton.Text, displayKatakana));
             this.mainPanel.Controls.Remove(this);
         }
+
+        private void bWriting_Click(object sender, EventArgs e)
+        {
+            this.mainPanel.Controls.Add(new WritingMenu(this.mainPanel));
+            this.mainPanel.Controls.Remove(this);
+        }
     }
 }

@@ -174,7 +174,9 @@ namespace JapaneseLearningApp
             this.mainPanel.Controls.Remove(this);
         }
 
-
-        
+        private void bHome_Click(object sender, EventArgs e)
+        {
+            (this.Parent.Parent.Parent as TabControl).SelectedIndex = 1;
+        }
     }
 }

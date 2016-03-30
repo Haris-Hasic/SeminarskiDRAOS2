@@ -1364,6 +1364,71 @@ namespace JapaneseLearningApp
         // Eventi i funkcije za promjenu tabova i time promjenu stranice koja se prikazuje
         #region NAVIGACIJA_KROZ_APLIKACIJU
 
+        private void bSymbolList_Click(object sender, EventArgs e)
+        {
+            GoToProfile();
+        }
+
+        private void button22_Click_1(object sender, EventArgs e)
+        {
+            GoToMainMenu();
+        }
+
+        private void button24_Click_1(object sender, EventArgs e)
+        {
+            GoToMainMenu();
+        }
+
+        private void button23_Click_1(object sender, EventArgs e)
+        {
+            GoToMainMenu();
+        }
+
+        private void button8_Click_2(object sender, EventArgs e)
+        {
+            GoToMainMenu();
+        }
+
+        private void button9_Click_2(object sender, EventArgs e)
+        {
+            GoToStats();
+        }
+
+        private void button12_Click_1(object sender, EventArgs e)
+        {
+            Logout();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            GoToMainMenu();
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            Logout();
+        }
+
+        private void button14_Click_3(object sender, EventArgs e)
+        {
+            GoToMainMenu();
+        }
+
+        private void button13_Click_2(object sender, EventArgs e)
+        {
+            GoToMainMenu();
+        }
+
+        private void button26_Click_1(object sender, EventArgs e)
+        {
+            GoToTestMenu();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            GoToMainMenu();
+        }
+
         private void button12_Click(object sender, EventArgs e)
         {
             GoToMainMenu();
@@ -1415,9 +1480,14 @@ namespace JapaneseLearningApp
             GoToMainMenu();
         }
 
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            Logout();
+        }
+
         private void button27_Click(object sender, EventArgs e)
         {
-            GoToProfile();
+            GoToMainMenu();
         }
 
         private void button14_Click_2(object sender, EventArgs e)
@@ -1452,7 +1522,7 @@ namespace JapaneseLearningApp
 
         private void button34_Click(object sender, EventArgs e)
         {
-            GoToMainMenu();
+            GoToTestMenu();
         }
 
         private void button19_Click_1(object sender, EventArgs e)
@@ -1461,6 +1531,16 @@ namespace JapaneseLearningApp
         }
 
         private void button20_Click_1(object sender, EventArgs e)
+        {
+            GoToMainMenu();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            GoToMainMenu();
+        }
+
+        private void button9_Click_1(object sender, EventArgs e)
         {
             GoToMainMenu();
         }
@@ -1650,7 +1730,7 @@ namespace JapaneseLearningApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Logout();
         }
 
         public void GoToVisualization(Color c)
@@ -1909,8 +1989,8 @@ namespace JapaneseLearningApp
                 MarkerStyle = MarkerStyle.Circle
             };
 
-            chart2.ChartAreas["ChartArea1"].AxisX.Title = "Number of points";
-            chart2.ChartAreas["ChartArea1"].AxisY.Title = "Level";
+            chart2.ChartAreas["ChartArea1"].AxisX.Title = "Field: 1-Vocab, 2-Grammar, 3-Writting";
+            chart2.ChartAreas["ChartArea1"].AxisY.Title = "Number of points";
             chart2.Series.Add(series1);
 
             try
@@ -1934,19 +2014,20 @@ namespace JapaneseLearningApp
 
                         if (tip.Equals("VOCAB"))
                         {
-                            series1.Points.Add(niv, 2).XValue = skor;
+                            series1.Points.Add(skor, skor).XValue = 1;
                             var p1 = series1.Points[i];
-                            p1.Color = Color.FromArgb(120, 200, 180);
+
+                            p1.Color = Color.FromArgb(120, 200, 180 + skor*2);
                         }
                         else if (tip.Equals("GRAMMAR"))
                         {
-                            series1.Points.Add(niv, 2).XValue = skor;
+                            series1.Points.Add(skor, skor).XValue = 2;
                             var p2 = series1.Points[i];
-                            p2.Color = Color.FromArgb(80, 120, 100);
+                            p2.Color = Color.FromArgb(80, 120, 100 + skor*2);
                         }
                         else
                         {
-                            series1.Points.Add(niv, 2).XValue = skor;
+                            series1.Points.Add(skor, skor).XValue = 3;
                             var p3 = series1.Points[i];
                             p3.Color = Color.FromArgb(255, 192, 128);
                         }
@@ -1993,7 +2074,7 @@ namespace JapaneseLearningApp
                 MarkerColor = Color.Red
             };
 
-            chart2.ChartAreas["ChartArea1"].AxisX.Title = "Day of the month";
+            chart2.ChartAreas["ChartArea1"].AxisX.Title = "Day of the month #" + DateTime.Now.Month.ToString();
             chart2.ChartAreas["ChartArea1"].AxisY.Title = "Number of tests taken";
             chart2.Series.Add(series1);
 
@@ -2051,104 +2132,17 @@ namespace JapaneseLearningApp
             }
         }
 
-        public void radarGrafProgresa()
-        {
-            tbGRAPHDESC.Text = "This graph represents your overall level in the three existing fields. Vocabulary, Grammar and Writing.";
-
-            MySqlConnection konekcija = new MySqlConnection(konekcioniString);
-            MySqlCommand komanda = new MySqlCommand();
-
-            Series series1 = new Series
-            {
-                IsVisibleInLegend = true,
-                ChartType = SeriesChartType.Radar,
-                Color = Color.Black,
-                BorderWidth = 2,
-                MarkerColor = Color.Red
-            };
-
-            chart2.ChartAreas["ChartArea1"].AxisX.Title = "Progress";
-            chart2.ChartAreas["ChartArea1"].AxisY.Title = "";
-            chart2.Series.Add(series1);
-
-            try
-            {
-                komanda.CommandText = "SELECT * FROM draosbaza.uradenitestovi WHERE user=@user;";
-                komanda.Parameters.AddWithValue("@user", aktivniKorisnik.Username);
-                komanda.Connection = konekcija;
-                konekcija.Open();
-
-                Int32 maxV = 0, maxG = 0, maxW = 0;
-
-                MySqlDataReader dr = komanda.ExecuteReader(CommandBehavior.SequentialAccess);
-
-                if (dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        String tip = Convert.ToString(dr["tip"]);
-                        Int32 niv = Convert.ToInt32(dr["nivo"]);
-                        Int32 skor = Convert.ToInt32(dr["skor"]);
-                        DateTime dat = Convert.ToDateTime(dr["datumizrade"]);
-
-                        if (tip.Equals("VOCAB") && niv > maxV)
-                            maxV = niv;
-                        if (tip.Equals("GRAMMAR") && niv > maxG)
-                            maxG = niv;
-                        if (tip.Equals("WRITING") && niv > maxW)
-                            maxW = niv;
-                    }
-
-                    series1.Points.Add(maxV);
-                    var p1 = series1.Points[0];
-                    p1.Color = Color.FromArgb(120, 200, 180);
-
-                    series1.Points.Add(maxG);
-                    var p2 = series1.Points[1];
-                    p2.Color = Color.FromArgb(80, 120, 100);
-
-                    series1.Points.Add(maxW);
-                    var p3 = series1.Points[2];
-                    p3.Color = Color.FromArgb(255, 192, 128);
-
-                    dr.Close();
-                    ((IDisposable)dr).Dispose();
-                }
-
-                else
-                {
-                    MessageBox.Show("Invalid username or password!");
-                }
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            finally
-            {
-                konekcija.Close();
-            }
-        }
-
         private void button17_Click_1(object sender, EventArgs e)
         {
-            if(button15.Text == "1/3") 
+            if(button15.Text == "1/2") 
             {
-                button15.Text = "2/3";
+                button15.Text = "2/2";
                 chart2.Series.Clear();
                 lineGrafTestMjeseci();
             }
-            else if (button15.Text == "2/3")
-            {
-                button15.Text = "3/3";
-                chart2.Series.Clear();
-                radarGrafProgresa();
-            }
             else
             {
-                button15.Text = "1/3";
+                button15.Text = "1/2";
                 chart2.Series.Clear();
                 pointGrafTestBodovi();
             }
@@ -2156,21 +2150,15 @@ namespace JapaneseLearningApp
 
         private void button18_Click_1(object sender, EventArgs e)
         {
-            if (button15.Text == "1/3")
+            if (button15.Text == "2/2")
             {
-                button15.Text = "3/3";
-                chart2.Series.Clear();
-                radarGrafProgresa();
-            }
-            else if (button15.Text == "2/3")
-            {
-                button15.Text = "1/3";
+                button15.Text = "1/2";
                 chart2.Series.Clear();
                 pointGrafTestBodovi();
             }
             else
             {
-                button15.Text = "2/3";
+                button15.Text = "2/2";
                 chart2.Series.Clear();
                 lineGrafTestMjeseci();
             }
@@ -2384,6 +2372,30 @@ namespace JapaneseLearningApp
             }
         }
 
+        private void tbFIRSTNAME_Enter(object sender, EventArgs e)
+        {
+            if (!errorProvider1.GetError(tbFIRSTNAME).Equals(""))
+                MessageBox.Show(errorProvider1.GetError(tbFIRSTNAME), "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void tbLASTNAME_Enter(object sender, EventArgs e)
+        {
+            if (!errorProvider1.GetError(tbLASTNAME).Equals(""))
+                MessageBox.Show(errorProvider1.GetError(tbLASTNAME), "Information", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
+        }
+
+        private void tbNEWUSERNAME_Enter(object sender, EventArgs e)
+        {
+            if (!errorProvider1.GetError(tbNEWUSERNAME).Equals(""))
+                MessageBox.Show(errorProvider1.GetError(tbNEWUSERNAME), "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void tbNEWPASSWORD_Enter(object sender, EventArgs e)
+        {
+            if (!errorProvider1.GetError(tbNEWPASSWORD).Equals(""))
+                MessageBox.Show(errorProvider1.GetError(tbNEWPASSWORD), "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
         #endregion
 
         //Dejo i ti sebi ovako razvrstaj, da se zna šta je čije i da plaho ne brkamo jedan drugom
@@ -2392,6 +2404,8 @@ namespace JapaneseLearningApp
         private void bLectures_Click(object sender, EventArgs e)
         {
             this.tabControl1.SelectedTab = tpLecturesList;
+            this.mainPanel.Controls.Clear();
+            this.mainPanel.Controls.Add(new LecturesList(mainPanel, aktivniKorisnik));
         }
 
         private void bWriting_Click(object sender, EventArgs e)
@@ -2420,9 +2434,5 @@ namespace JapaneseLearningApp
         }
 
         #endregion
-
-
-
-
     }
 }

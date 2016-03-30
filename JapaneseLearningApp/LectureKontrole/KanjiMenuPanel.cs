@@ -26,5 +26,11 @@ namespace JapaneseLearningApp.LectureKontrole
             this.mainPanel.Controls.Add(new KanjiListPanel(this.mainPanel, 3));
             this.mainPanel.Controls.Remove(this);
         }
+
+        private void bHome_Click(object sender, EventArgs e)
+        {
+            this.mainPanel.Controls.Add(new WritingMenu(this.mainPanel));
+            this.mainPanel.Controls.Remove(this);
+        }
     }
 }

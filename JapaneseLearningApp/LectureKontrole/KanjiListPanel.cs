@@ -48,7 +48,7 @@ namespace JapaneseLearningApp.LectureKontrole
                     button.Height = BUTTON_HEIGHT;
                     button.Left = i * (BUTTON_WIDTH + BUTTON_SPACING);
                     button.Top = j * (BUTTON_HEIGHT + BUTTON_SPACING);
-                    button.BackColor = Color.FromArgb(161, 202, 241);
+                    button.BackColor = Color.FromArgb(255, 192, 128);
                     button.ForeColor = Color.White;
                     button.FlatStyle = FlatStyle.Flat;
                     button.Font = new System.Drawing.Font(lTitle.Font.FontFamily, 24);
@@ -72,6 +72,12 @@ namespace JapaneseLearningApp.LectureKontrole
             int kanjiNumber = Convert.ToInt32(clickedButton.Name.Substring(6));
 
             this.mainPanel.Controls.Add(new KanjiPanel(this.mainPanel, lectureNumber, kanjiNumber));
+            this.mainPanel.Controls.Remove(this);
+        }
+
+        private void bWriting_Click(object sender, EventArgs e)
+        {
+            this.mainPanel.Controls.Add(new WritingMenu(this.mainPanel));
             this.mainPanel.Controls.Remove(this);
         }
     }

@@ -47,7 +47,7 @@
             this.lJapaneseTitle.AutoSize = true;
             this.lJapaneseTitle.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lJapaneseTitle.ForeColor = System.Drawing.Color.White;
-            this.lJapaneseTitle.Location = new System.Drawing.Point(90, 60);
+            this.lJapaneseTitle.Location = new System.Drawing.Point(90, 43);
             this.lJapaneseTitle.Name = "lJapaneseTitle";
             this.lJapaneseTitle.Size = new System.Drawing.Size(222, 26);
             this.lJapaneseTitle.TabIndex = 2;
@@ -99,9 +99,9 @@
             this.pJapanese.AutoScroll = true;
             this.pJapanese.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pJapanese.Controls.Add(this.lJapaneseText);
-            this.pJapanese.Location = new System.Drawing.Point(17, 118);
+            this.pJapanese.Location = new System.Drawing.Point(17, 106);
             this.pJapanese.Name = "pJapanese";
-            this.pJapanese.Size = new System.Drawing.Size(367, 182);
+            this.pJapanese.Size = new System.Drawing.Size(367, 176);
             this.pJapanese.TabIndex = 22;
             // 
             // lJapaneseText
@@ -121,7 +121,7 @@
             this.pEnglish.AutoScroll = true;
             this.pEnglish.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pEnglish.Controls.Add(this.lEnglishText);
-            this.pEnglish.Location = new System.Drawing.Point(17, 306);
+            this.pEnglish.Location = new System.Drawing.Point(17, 288);
             this.pEnglish.Name = "pEnglish";
             this.pEnglish.Size = new System.Drawing.Size(367, 182);
             this.pEnglish.TabIndex = 23;
@@ -143,7 +143,7 @@
             this.lEnglishTitle.AutoSize = true;
             this.lEnglishTitle.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lEnglishTitle.ForeColor = System.Drawing.Color.White;
-            this.lEnglishTitle.Location = new System.Drawing.Point(100, 86);
+            this.lEnglishTitle.Location = new System.Drawing.Point(100, 69);
             this.lEnglishTitle.Name = "lEnglishTitle";
             this.lEnglishTitle.Size = new System.Drawing.Size(199, 26);
             this.lEnglishTitle.TabIndex = 24;

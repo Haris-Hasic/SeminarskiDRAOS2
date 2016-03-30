@@ -34,7 +34,6 @@
             this.bLecture9 = new System.Windows.Forms.Button();
             this.bLecture8 = new System.Windows.Forms.Button();
             this.label58 = new System.Windows.Forms.Label();
-            this.bHome = new System.Windows.Forms.Button();
             this.bLecture7 = new System.Windows.Forms.Button();
             this.bLecture6 = new System.Windows.Forms.Button();
             this.bLecture5 = new System.Windows.Forms.Button();
@@ -44,11 +43,14 @@
             this.bLecture1 = new System.Windows.Forms.Button();
             this.bLectureIntro = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.bHome = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bLecture12
             // 
-            this.bLecture12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.bLecture12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture12.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture12.ForeColor = System.Drawing.Color.White;
@@ -61,7 +63,7 @@
             // 
             // bLecture11
             // 
-            this.bLecture11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.bLecture11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture11.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture11.ForeColor = System.Drawing.Color.White;
@@ -74,7 +76,7 @@
             // 
             // bLecture10
             // 
-            this.bLecture10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.bLecture10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture10.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture10.ForeColor = System.Drawing.Color.White;
@@ -87,7 +89,7 @@
             // 
             // bLecture9
             // 
-            this.bLecture9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.bLecture9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture9.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture9.ForeColor = System.Drawing.Color.White;
@@ -100,7 +102,7 @@
             // 
             // bLecture8
             // 
-            this.bLecture8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.bLecture8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture8.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture8.ForeColor = System.Drawing.Color.White;
@@ -122,22 +124,9 @@
             this.label58.TabIndex = 147;
             this.label58.Text = "Copyright 2015. All rights reserved.";
             // 
-            // bHome
-            // 
-            this.bHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
-            this.bHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bHome.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bHome.ForeColor = System.Drawing.Color.White;
-            this.bHome.Location = new System.Drawing.Point(319, 5);
-            this.bHome.Name = "bHome";
-            this.bHome.Size = new System.Drawing.Size(76, 29);
-            this.bHome.TabIndex = 146;
-            this.bHome.Text = "Home";
-            this.bHome.UseVisualStyleBackColor = false;
-            // 
             // bLecture7
             // 
-            this.bLecture7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.bLecture7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture7.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture7.ForeColor = System.Drawing.Color.White;
@@ -150,7 +139,7 @@
             // 
             // bLecture6
             // 
-            this.bLecture6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.bLecture6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture6.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture6.ForeColor = System.Drawing.Color.White;
@@ -163,7 +152,7 @@
             // 
             // bLecture5
             // 
-            this.bLecture5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.bLecture5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture5.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture5.ForeColor = System.Drawing.Color.White;
@@ -176,7 +165,7 @@
             // 
             // bLecture4
             // 
-            this.bLecture4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.bLecture4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture4.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture4.ForeColor = System.Drawing.Color.White;
@@ -189,7 +178,7 @@
             // 
             // bLecture3
             // 
-            this.bLecture3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.bLecture3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture3.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture3.ForeColor = System.Drawing.Color.White;
@@ -203,7 +192,7 @@
             // 
             // bLecture2
             // 
-            this.bLecture2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.bLecture2.Enabled = false;
             this.bLecture2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture2.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -217,7 +206,7 @@
             // 
             // bLecture1
             // 
-            this.bLecture1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.bLecture1.Enabled = false;
             this.bLecture1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture1.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -231,7 +220,7 @@
             // 
             // bLectureIntro
             // 
-            this.bLectureIntro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLectureIntro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.bLectureIntro.Enabled = false;
             this.bLectureIntro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLectureIntro.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -248,24 +237,49 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(82, 49);
+            this.label1.Location = new System.Drawing.Point(82, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(245, 32);
             this.label1.TabIndex = 137;
             this.label1.Text = "Select the chapter !";
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.bHome);
+            this.panel1.ForeColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(31, 6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(342, 46);
+            this.panel1.TabIndex = 153;
+            // 
+            // bHome
+            // 
+            this.bHome.BackColor = System.Drawing.Color.Transparent;
+            this.bHome.BackgroundImage = global::JapaneseLearningApp.Properties.Resources._1459356039_013_myhouse;
+            this.bHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bHome.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bHome.ForeColor = System.Drawing.Color.White;
+            this.bHome.Location = new System.Drawing.Point(157, 3);
+            this.bHome.Name = "bHome";
+            this.bHome.Size = new System.Drawing.Size(38, 34);
+            this.bHome.TabIndex = 43;
+            this.bHome.UseVisualStyleBackColor = false;
+            this.bHome.Click += new System.EventHandler(this.bHome_Click);
+            // 
             // KanjiMenuPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.bLecture12);
             this.Controls.Add(this.bLecture11);
             this.Controls.Add(this.bLecture10);
             this.Controls.Add(this.bLecture9);
             this.Controls.Add(this.bLecture8);
             this.Controls.Add(this.label58);
-            this.Controls.Add(this.bHome);
             this.Controls.Add(this.bLecture7);
             this.Controls.Add(this.bLecture6);
             this.Controls.Add(this.bLecture5);
@@ -277,6 +291,7 @@
             this.Controls.Add(this.label1);
             this.Name = "KanjiMenuPanel";
             this.Size = new System.Drawing.Size(400, 600);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,7 +305,6 @@
         private System.Windows.Forms.Button bLecture9;
         private System.Windows.Forms.Button bLecture8;
         private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Button bHome;
         private System.Windows.Forms.Button bLecture7;
         private System.Windows.Forms.Button bLecture6;
         private System.Windows.Forms.Button bLecture5;
@@ -300,5 +314,7 @@
         private System.Windows.Forms.Button bLecture1;
         private System.Windows.Forms.Button bLectureIntro;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button bHome;
     }
 }

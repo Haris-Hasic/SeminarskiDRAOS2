@@ -38,12 +38,10 @@ namespace JapaneseLearningApp.LectureKontrole
             if (displayKatakana)
             {
                 lTitle.Text = "Katakana";
-                bSymbolList.Text = "Katakana List";
             }
             else
             {
                 lTitle.Text = "Hiragana";
-                bSymbolList.Text = "Hiragana List";
             }
 
             lTitle.Left = (mainPanel.Width - lTitle.Width) / 2;
@@ -99,9 +97,10 @@ namespace JapaneseLearningApp.LectureKontrole
             setButtons();
         }
 
-        private void lReading_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-
+            this.mainPanel.Controls.Add(new HiraganaKatakanaListPanel(mainPanel, displayKatakana));
+            this.mainPanel.Controls.Remove(this);
         }
     }
 }

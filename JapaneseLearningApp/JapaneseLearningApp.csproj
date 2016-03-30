@@ -227,6 +227,24 @@
   <ItemGroup>
     <None Include="Resources\NekoBee.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MB__back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1459355941_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1459356039_013-myhouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1459355941_back2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1459357021_Statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1459357085_logout.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

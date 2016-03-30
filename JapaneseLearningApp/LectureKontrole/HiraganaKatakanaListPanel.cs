@@ -70,7 +70,7 @@ namespace JapaneseLearningApp.LectureKontrole
                         button.Height = BUTTON_HEIGHT;
                         button.Left = i * (BUTTON_WIDTH + BUTTON_SPACING);
                         button.Top = j * (BUTTON_HEIGHT + BUTTON_SPACING);
-                        button.BackColor = Color.FromArgb(161, 202, 241);
+                        button.BackColor = Color.FromArgb(255, 192, 128);
                         button.ForeColor = Color.White;
                         button.FlatStyle = FlatStyle.Flat;
                         button.Font = new System.Drawing.Font(lTitle.Font.FontFamily, 20);

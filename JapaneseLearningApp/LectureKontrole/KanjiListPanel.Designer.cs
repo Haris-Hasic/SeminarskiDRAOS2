@@ -84,7 +84,7 @@
             this.bWriting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bWriting.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bWriting.ForeColor = System.Drawing.Color.White;
-            this.bWriting.Location = new System.Drawing.Point(3, 4);
+            this.bWriting.Location = new System.Drawing.Point(3, 3);
             this.bWriting.Name = "bWriting";
             this.bWriting.Size = new System.Drawing.Size(38, 34);
             this.bWriting.TabIndex = 42;

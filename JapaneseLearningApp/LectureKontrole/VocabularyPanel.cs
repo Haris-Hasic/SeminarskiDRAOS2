@@ -14,6 +14,8 @@ namespace JapaneseLearningApp
 {
     public partial class VocabularyPanel : UserControl
     {
+        private int numberOfLectures = 12;
+
         private int lectureNumber;
         private Panel mainPanel;
         private User currentUser;
@@ -31,6 +33,9 @@ namespace JapaneseLearningApp
             this.mainPanel = mainPanel;
             this.lectureNumber = lectureNumber;
             this.currentUser = currentUser;
+            this.numberOfLectures = currentUser.Progress + 2;
+            updateLectureLabel();
+            setLectureButtonVisibility();
             loadVocabulary();
         }
 
@@ -66,6 +71,16 @@ namespace JapaneseLearningApp
             }
         }
 
+        private void updateLectureLabel()
+        {
+            if (lectureNumber == 0)
+                lLecture.Text = "Introduction";
+            else
+                lLecture.Text = "Lecture " + lectureNumber;
+
+            lLecture.Left = (this.mainPanel.Width - lLecture.Width) / 2;
+        }
+
         private void displayVocabularySection()
         {
             // Get array of words for the current section
@@ -82,7 +97,7 @@ namespace JapaneseLearningApp
             {
                 Label japaneseWord = new Label();
                 japaneseWord.Text = japaneseWordsInSection[i];
-                japaneseWord.Font = new Font(lTitle.Font.FontFamily, 14);
+                japaneseWord.Font = new Font(bVocabulary.Font.FontFamily, 14);
                 japaneseWord.ForeColor = Color.White;
                 japaneseWord.AutoSize = true;
                 japaneseWord.MaximumSize = new System.Drawing.Size((int)(0.4 * flpVocabulary.Width), 0);                
@@ -93,7 +108,7 @@ namespace JapaneseLearningApp
 
                 Label englishWord = new Label();
                 englishWord.Text = englishWordsInSection[i];
-                englishWord.Font = new Font(lTitle.Font.FontFamily, 14);
+                englishWord.Font = new Font(bVocabulary.Font.FontFamily, 14);
                 englishWord.ForeColor = Color.White;
                 englishWord.AutoSize = true;
                 englishWord.MaximumSize = new System.Drawing.Size((int)(0.4 * flpVocabulary.Width), 0);
@@ -154,7 +169,29 @@ namespace JapaneseLearningApp
             if (currentSection == titles.Length)
             {
                 updateVocabularyProgress();
+                this.numberOfLectures = currentUser.Progress + 2;
+                setLectureButtonVisibility();
             }
+        }
+
+        private void setLectureButtonVisibility()
+        {
+            if (lectureNumber == 0)
+                bPreviousLecture.Visible = false;
+            else
+                bPreviousLecture.Visible = true;
+
+            if (lectureNumber == numberOfLectures - 1)
+                bNextLecture.Visible = false;
+            else
+                bNextLecture.Visible = true;
+        }
+
+
+        private void bBack_Click(object sender, EventArgs e)
+        {
+            this.mainPanel.Controls.Add(new LecturesList(this.mainPanel, this.currentUser));
+            this.mainPanel.Controls.Remove(this);
         }
 
         private void bStory_Click(object sender, EventArgs e)
@@ -169,12 +206,29 @@ namespace JapaneseLearningApp
             this.mainPanel.Controls.Remove(this);
         }
 
-        private void bLectures_Click(object sender, EventArgs e)
+        private void bHome_Click(object sender, EventArgs e)
         {
-            this.mainPanel.Controls.Add(new LecturesList(this.mainPanel, this.currentUser));
-            this.mainPanel.Controls.Remove(this);
+            (this.Parent.Parent.Parent as TabControl).SelectedIndex = 1;
+            this.mainPanel.Controls.Clear();
         }
 
+        private void bPreviousLecture_Click(object sender, EventArgs e)
+        {
+            if (lectureNumber > 0)
+            {
+                this.mainPanel.Controls.Add(new StoryPanel(this.mainPanel, this.lectureNumber - 1, this.currentUser));
+                this.mainPanel.Controls.Remove(this);
+            }
+        }
+
+        private void bNextLecture_Click(object sender, EventArgs e)
+        {
+            if (lectureNumber < numberOfLectures)
+            {
+                this.mainPanel.Controls.Add(new StoryPanel(this.mainPanel, this.lectureNumber + 1, this.currentUser));
+                this.mainPanel.Controls.Remove(this);
+            }
+        }
 
     }
 }

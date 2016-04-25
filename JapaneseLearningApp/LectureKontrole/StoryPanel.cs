@@ -14,6 +14,8 @@ namespace JapaneseLearningApp
 {
     public partial class StoryPanel : UserControl
     {
+        private int numberOfLectures = 12;
+
         private int lectureNumber;
         private Panel mainPanel;
         private User currentUser;
@@ -25,6 +27,9 @@ namespace JapaneseLearningApp
             this.mainPanel = mainPanel;
             this.lectureNumber = lectureNumber;
             this.currentUser = currentUser;
+            this.numberOfLectures = currentUser.Progress + 2;
+            updateLectureLabel();
+            setLectureButtonVisibility();
             loadStory();
         }
 
@@ -65,8 +70,18 @@ namespace JapaneseLearningApp
         private void standardSetup()
         {
             pJapanese.Visible = true;
-            pEnglish.Top = 319; // Magic numbers, YAY!
+            pEnglish.Top = 359; // Magic numbers, YAY!
             pEnglish.Height = pJapanese.Height;
+        }
+
+        private void updateLectureLabel()
+        {
+            if (lectureNumber == 0)
+                lLecture.Text = "Introduction";
+            else
+                lLecture.Text = "Lecture " + lectureNumber;
+
+            lLecture.Left = (this.mainPanel.Width - lLecture.Width) / 2;
         }
 
         private void updateStoryProgress()
@@ -84,11 +99,19 @@ namespace JapaneseLearningApp
             }
         }
 
-        private void bLectures_Click(object sender, EventArgs e)
+        private void setLectureButtonVisibility()
         {
-            this.mainPanel.Controls.Add(new LecturesList(this.mainPanel, this.currentUser));
-            this.mainPanel.Controls.Remove(this);
+            if (lectureNumber == 0)
+                bPreviousLecture.Visible = false;
+            else
+                bPreviousLecture.Visible = true;
+
+            if (lectureNumber == numberOfLectures - 1)
+                bNextLecture.Visible = false;
+            else
+                bNextLecture.Visible = true;
         }
+
 
         private void bVocabulary_Click(object sender, EventArgs e)
         {
@@ -96,6 +119,41 @@ namespace JapaneseLearningApp
             this.mainPanel.Controls.Remove(this);
         }
 
+        private void bGrammar_Click(object sender, EventArgs e)
+        {
+            this.mainPanel.Controls.Add(new GrammarPanel(this.mainPanel, this.lectureNumber, this.currentUser));
+            this.mainPanel.Controls.Remove(this);
+        }
+
+        private void bBack_Click(object sender, EventArgs e)
+        {
+            this.mainPanel.Controls.Add(new LecturesList(this.mainPanel,this.currentUser));
+            this.mainPanel.Controls.Remove(this);
+        }
+
+        private void bHome_Click(object sender, EventArgs e)
+        {
+            (this.Parent.Parent.Parent as TabControl).SelectedIndex = 1;
+            this.mainPanel.Controls.Clear();
+        }
+
+        private void bPreviousLecture_Click(object sender, EventArgs e)
+        {
+            if (lectureNumber > 0)
+            {
+                this.mainPanel.Controls.Add(new StoryPanel(this.mainPanel, this.lectureNumber - 1, this.currentUser));
+                this.mainPanel.Controls.Remove(this);
+            }
+        }
+
+        private void bNextLecture_Click(object sender, EventArgs e)
+        {
+            if (lectureNumber < numberOfLectures)
+            {
+                this.mainPanel.Controls.Add(new StoryPanel(this.mainPanel, this.lectureNumber + 1, this.currentUser));
+                this.mainPanel.Controls.Remove(this);
+            }
+        }
 
     }
 }

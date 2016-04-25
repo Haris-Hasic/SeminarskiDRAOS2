@@ -61,7 +61,7 @@
             // 
             // bLectureIntro
             // 
-            this.bLectureIntro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLectureIntro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.bLectureIntro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLectureIntro.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLectureIntro.ForeColor = System.Drawing.Color.White;
@@ -75,7 +75,7 @@
             // 
             // bLecture1
             // 
-            this.bLecture1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.bLecture1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture1.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture1.ForeColor = System.Drawing.Color.White;
@@ -89,7 +89,7 @@
             // 
             // bLecture2
             // 
-            this.bLecture2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.bLecture2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture2.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture2.ForeColor = System.Drawing.Color.White;
@@ -103,7 +103,7 @@
             // 
             // bLecture3
             // 
-            this.bLecture3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.bLecture3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture3.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture3.ForeColor = System.Drawing.Color.White;
@@ -117,7 +117,7 @@
             // 
             // bLecture4
             // 
-            this.bLecture4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.bLecture4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture4.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture4.ForeColor = System.Drawing.Color.White;
@@ -131,7 +131,7 @@
             // 
             // bLecture5
             // 
-            this.bLecture5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.bLecture5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture5.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture5.ForeColor = System.Drawing.Color.White;
@@ -145,7 +145,7 @@
             // 
             // bLecture6
             // 
-            this.bLecture6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.bLecture6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture6.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture6.ForeColor = System.Drawing.Color.White;
@@ -159,7 +159,7 @@
             // 
             // bLecture7
             // 
-            this.bLecture7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.bLecture7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture7.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture7.ForeColor = System.Drawing.Color.White;
@@ -184,7 +184,7 @@
             // 
             // bLecture8
             // 
-            this.bLecture8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.bLecture8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture8.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture8.ForeColor = System.Drawing.Color.White;
@@ -198,7 +198,7 @@
             // 
             // bLecture9
             // 
-            this.bLecture9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.bLecture9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture9.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture9.ForeColor = System.Drawing.Color.White;
@@ -212,7 +212,7 @@
             // 
             // bLecture10
             // 
-            this.bLecture10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.bLecture10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture10.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture10.ForeColor = System.Drawing.Color.White;
@@ -226,7 +226,7 @@
             // 
             // bLecture11
             // 
-            this.bLecture11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.bLecture11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture11.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture11.ForeColor = System.Drawing.Color.White;
@@ -240,7 +240,7 @@
             // 
             // bLecture12
             // 
-            this.bLecture12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.bLecture12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.bLecture12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bLecture12.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLecture12.ForeColor = System.Drawing.Color.White;
@@ -281,7 +281,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(202)))), ((int)(((byte)(241)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bLecture12);
             this.Controls.Add(this.bLecture11);

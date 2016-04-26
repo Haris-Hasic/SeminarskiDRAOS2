@@ -772,7 +772,7 @@ namespace JapaneseLearningApp
             
             // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
             this.Refresh();
-            for (int i = 0; i < 300000000; i++)
+            for (int i = 0; i < 1000000000; i++)
             {
                 Int32 br = 1; 
                 br = br + 1;
@@ -788,7 +788,7 @@ namespace JapaneseLearningApp
             
             // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
             this.Refresh();
-            for (int i = 0; i < 300000000; i++)
+            for (int i = 0; i < 1000000000; i++)
             {
                 Int32 br = 1;
                 br = br + 1;
@@ -804,7 +804,7 @@ namespace JapaneseLearningApp
 
             // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
             this.Refresh();
-            for (int i = 0; i < 300000000; i++)
+            for (int i = 0; i < 1000000000; i++)
             {
                 Int32 br = 1;
                 br = br + 1;
@@ -820,7 +820,7 @@ namespace JapaneseLearningApp
 
             // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
             this.Refresh();
-            for (int i = 0; i < 300000000; i++)
+            for (int i = 0; i < 1000000000; i++)
             {
                 Int32 br = 1;
                 br = br + 1;
@@ -836,7 +836,7 @@ namespace JapaneseLearningApp
 
             // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
             this.Refresh();
-            for (int i = 0; i < 300000000; i++)
+            for (int i = 0; i < 1000000000; i++)
             {
                 Int32 br = 1;
                 br = br + 1;
@@ -852,7 +852,7 @@ namespace JapaneseLearningApp
 
             // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
             this.Refresh();
-            for (int i = 0; i < 300000000; i++)
+            for (int i = 0; i < 1000000000; i++)
             {
                 Int32 br = 1;
                 br = br + 1;
@@ -868,7 +868,7 @@ namespace JapaneseLearningApp
 
             // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
             this.Refresh();
-            for (int i = 0; i < 300000000; i++)
+            for (int i = 0; i < 1000000000; i++)
             {
                 Int32 br = 1;
                 br = br + 1;
@@ -884,7 +884,7 @@ namespace JapaneseLearningApp
 
             // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
             this.Refresh();
-            for (int i = 0; i < 300000000; i++)
+            for (int i = 0; i < 1000000000; i++)
             {
                 Int32 br = 1;
                 br = br + 1;
@@ -1038,7 +1038,7 @@ namespace JapaneseLearningApp
 
             // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
             this.Refresh();
-            for (int i = 0; i < 300000000; i++)
+            for (int i = 0; i < 1000000000; i++)
             {
                 Int32 br = 1;
                 br = br + 1;
@@ -1054,7 +1054,7 @@ namespace JapaneseLearningApp
 
             // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
             this.Refresh();
-            for (int i = 0; i < 300000000; i++)
+            for (int i = 0; i < 1000000000; i++)
             {
                 Int32 br = 1;
                 br = br + 1;
@@ -1070,7 +1070,7 @@ namespace JapaneseLearningApp
 
             // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
             this.Refresh();
-            for (int i = 0; i < 300000000; i++)
+            for (int i = 0; i < 1000000000; i++)
             {
                 Int32 br = 1;
                 br = br + 1;
@@ -1086,7 +1086,7 @@ namespace JapaneseLearningApp
 
             // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
             this.Refresh();
-            for (int i = 0; i < 300000000; i++)
+            for (int i = 0; i < 1000000000; i++)
             {
                 Int32 br = 1;
                 br = br + 1;
@@ -1302,7 +1302,7 @@ namespace JapaneseLearningApp
 
             // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
             this.Refresh();
-            for (int i = 0; i < 300000000; i++)
+            for (int i = 0; i < 1000000000; i++)
             {
                 Int32 br = 1;
                 br = br + 1;
@@ -1318,7 +1318,7 @@ namespace JapaneseLearningApp
 
             // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
             this.Refresh();
-            for (int i = 0; i < 300000000; i++)
+            for (int i = 0; i < 1000000000; i++)
             {
                 Int32 br = 1;
                 br = br + 1;
@@ -1334,7 +1334,7 @@ namespace JapaneseLearningApp
 
             // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
             this.Refresh();
-            for (int i = 0; i < 300000000; i++)
+            for (int i = 0; i < 1000000000; i++)
             {
                 Int32 br = 1;
                 br = br + 1;
@@ -1350,7 +1350,7 @@ namespace JapaneseLearningApp
 
             // Ovo je manualna zadrška određeno vrijeme da se ofarbaju tačan i netačan odgovor, threadovi useru
             this.Refresh();
-            for (int i = 0; i < 300000000; i++)
+            for (int i = 0; i < 1000000000; i++)
             {
                 Int32 br = 1;
                 br = br + 1;
@@ -1777,20 +1777,20 @@ namespace JapaneseLearningApp
         {
             if(tip.Equals("VOCAB")) 
             {
-                tpTESTLIST.BackColor = Color.FromArgb(120, 200, 180);
-                postaviBojeButtona(Color.FromArgb(120, 200, 180));
+                tpTESTLIST.BackColor = Color.Thistle;
+                postaviBojeButtona(Color.Thistle);
                 this.tabControl1.SelectedTab = tpTESTLIST;
             }
             else if (tip.Equals("KANJI"))
             {
-                tpTESTLIST.BackColor = Color.FromArgb(255, 192, 128);
-                postaviBojeButtona(Color.FromArgb(255, 192, 128));
+                tpTESTLIST.BackColor = Color.Thistle;
+                postaviBojeButtona(Color.Thistle);
                 this.tabControl1.SelectedTab = tpTESTLIST;
             }
             else 
             {
-                tpTESTLIST.BackColor = Color.FromArgb(80, 120, 100);
-                postaviBojeButtona(Color.FromArgb(80, 120, 100));
+                tpTESTLIST.BackColor = Color.Thistle;
+                postaviBojeButtona(Color.Thistle);
                 this.tabControl1.SelectedTab = tpTESTLIST;
             }
         }
@@ -1844,10 +1844,10 @@ namespace JapaneseLearningApp
 
         void TestResultsPage(Color c, Int32 sk, String tipTesta)
         {
-            tpTESTRESULT.BackColor = c;
+            tpTESTRESULT.BackColor = Color.Thistle;
 
             foreach (Control cont in tpTESTRESULT.Controls)
-                cont.BackColor = c;
+                cont.BackColor = Color.Thistle;
 
             this.tabControl1.SelectedTab = tpTESTRESULT;
 
@@ -1977,7 +1977,7 @@ namespace JapaneseLearningApp
 
         public void pointGrafTestBodovi()
         {
-            tbGRAPHDESC.Text = "This graph represents results from your earlier taken tests. The X axis represents the score, and Y axis represents the level of the test taken.";
+            tbGRAPHDESC.Text = "This graph represents results from your earlier taken tests. The X axis represents the level of the test taken, and Y axis represents the number of points. The color matches the category of the test taken.";
 
             MySqlConnection konekcija = new MySqlConnection(konekcioniString);
             MySqlCommand komanda = new MySqlCommand();
@@ -1989,7 +1989,25 @@ namespace JapaneseLearningApp
                 MarkerStyle = MarkerStyle.Circle
             };
 
-            chart2.ChartAreas["ChartArea1"].AxisX.Title = "Field: 1-Vocab, 2-Grammar, 3-Writting";
+            Title t1 = new Title("");
+
+            Title t2 = new Title("Vaocabulary");
+            t2.BackColor = Color.Khaki;
+
+            Title t3 = new Title("Grammar");
+            t3.BackColor = Color.FromArgb(80, 120, 100);
+
+            Title t4 = new Title("Writing");
+            t4.BackColor = Color.Crimson;
+
+            chart2.Titles.Clear();
+
+            chart2.Titles.Add(t1);
+            chart2.Titles.Add(t2);
+            chart2.Titles.Add(t3);
+            chart2.Titles.Add(t4);
+
+            chart2.ChartAreas["ChartArea1"].AxisX.Title = "Level";
             chart2.ChartAreas["ChartArea1"].AxisY.Title = "Number of points";
             chart2.Series.Add(series1);
 
@@ -2014,22 +2032,22 @@ namespace JapaneseLearningApp
 
                         if (tip.Equals("VOCAB"))
                         {
-                            series1.Points.Add(skor, skor).XValue = 1;
+                            series1.Points.Add(skor, skor).XValue = niv;
                             var p1 = series1.Points[i];
 
-                            p1.Color = Color.FromArgb(120, 200, 180 + skor*2);
+                            p1.Color = Color.Khaki;
                         }
                         else if (tip.Equals("GRAMMAR"))
                         {
-                            series1.Points.Add(skor, skor).XValue = 2;
+                            series1.Points.Add(skor, skor).XValue = niv;
                             var p2 = series1.Points[i];
-                            p2.Color = Color.FromArgb(80, 120, 100 + skor*2);
+                            p2.Color = Color.FromArgb(80, 120, 100);
                         }
                         else
                         {
-                            series1.Points.Add(skor, skor).XValue = 3;
+                            series1.Points.Add(skor, skor).XValue = niv;
                             var p3 = series1.Points[i];
-                            p3.Color = Color.FromArgb(255, 192, 128);
+                            p3.Color = Color.Crimson;
                         }
 
                         i++;
@@ -2059,6 +2077,7 @@ namespace JapaneseLearningApp
         public void lineGrafTestMjeseci()
         {
             tbGRAPHDESC.Text = "This graph represents results from your activity in the last month. The X axis represents the dates, and Y axis represents the number of test taken.";
+            chart2.Titles.Clear();
 
             MySqlConnection konekcija = new MySqlConnection(konekcioniString);
             MySqlCommand komanda = new MySqlCommand();
